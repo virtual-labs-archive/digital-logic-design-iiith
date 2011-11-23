@@ -1,151 +1,130 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-
+<!DOCTYPE html> 
+<html lang="eng">
 <head>
-  
-  <!--It is a good practice to declare the encoding even for an 
-  English Web site. One function of this is to tag is to "reset"
-  the user's browser back to Latin-1 and ensure proper font 
-  settings. The Unicode "utf-8" encoding also ensures that any 
-  special characters inserted such as "Smart quotes", currency 
-  symbols, em-dashes and so forth will be properly displayed in
-  most browsers.-->
-  <meta http-equiv="Content-Type" content="text/html; 
-  charset=utf-8" >
+	<meta http-eqiv="content-Type" content="text/html;charset=utf-8"/>
+	<title> Virtual Labs | Digital Logic Design </title>
+
+	<link href="css/common.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type='text/javascript' src='js/jquery-1.4.2.min.js'></script>
+	</head>
+
+<body>
+	<header id="site_head">
+		<div class="header_cont"> <!-- 960px header-->
+			<!-- LOGO of the company-->
+			<div id="logo">
+			<h1> <a href="index.html"> Virtual Labs </a> </h1>
+			</div>
+			<header id="main-title"> | Digital Logic Design</header>
+			
+			<div id="help-menu">
+			<!--<h1> <a href="help/index.html"> Help </a> </h1>-->
+			</div>
+		</div>
+			<!-- Menu -->
+	</header>
+
+	<article id="main_content"> <!--960px limit -->
+		<hr/>
+		<section id="left-content">
+			<ul class="experiment-list">
+				<li class="experiment-thumb">
+				<h2> Introduction </h2>					
+				<p> Welcome to the Digital Logic Design Lab. Here you can make all the basic digital circuit of your choice and simulate it . </p>
+				<h2> Target Audience </h2>
+				<ul>
+				<li> Students doing courses on Digital Logic Circuit will be benifited </li>
+				<li> Some basic prior knowledge of the logic gates are required </li>
+				</ul>
+			
+				<h2> Relevant Courses </h2>
+				<p> All the courses related to the Digital Logical circuit are relevant . For ex:- Digital Logical Processing </p>
+			
+				<h2> Objectives </h2>
+				<ul>
+				<li>To allow user to build and understand the working of digital Logic Circuit</li>
+				<li>User should be also be able to save its own circuit and reuse it.</li>
+				<li>User should be understand working of circuit in presence of  time variant input pulses</li>
+				<li>Starting from beginner level to advance level , all the important concepts related to DLD should be covered.</li>
+				</ul>
+					
+	
+					<h2> Experiments List </h2>
+					<a href="exp1/index.html">
+						1.  
+						<strong> Adder Circuit </strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp2/index.html">
+						2.  
+						<strong> Multiplexer </strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp3/index.html">
+						3.  
+						<strong> Decoder with 7-Segment Display </strong>
+					</a>
+				</li> 
+				<li class="experiment-thumb">
+					<a href="exp4/index.html">
+						4.  
+						<strong> ALU with function </strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp5/index.html">
+						5. 
+						<strong> Latch and Flip Flops </strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp6/index.html">
+						6. 
+						<strong> Registers </strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp7/index.html">
+						7.  
+						<strong> Counters </strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp8/index.html">
+						8. 
+						<strong>Multipliers</strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp9/index.html">
+						9. 
+						<strong>State Digrams</strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp10/index.html">
+						10. 
+						<strong>ALU-Register Controller</strong>
+					</a>
+				</li>
+<br />			
+<h4><a href="resource.zip"> Click Here To Get Experiment Circuit</a></h4>					
+			</ul>
+	
+		</section>
+			
+<br />
 
 
-  <!-- The following meta element gives the appearance of using 
-  Internet Explorer (IE) but actually renders the page in google 
-  chrome thus rescuing the older IE versions and providing the 
-  speed and standards compliance, and security of Chrome 
-  http://tech18.com/google-chrome-frame-rescue-older-ie.html -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<aside>
+			
+		</aside>
 
-
-  <!-- The default title of the lab. -->
-  <title class="custom" id="page-title">Virtual Labs</title>
-  
-
-  <!-- Following meta tags store the information about the 
-  author and any other relevant information about the  code -->
-  <meta name="author" content="" class="custom">
-  <meta name="description" content="" class="custom">
-
-
-  <!-- Place the relative address of the favicon 
-  ("images/logo.jpeg" here). All major browsers support the link
-  rel="shortcut icon"  tag to associate a small icon with the 
-  page -->
-  <link rel="shortcut icon" href="images/favicon.png" 
-  class="custom">
-
-
-  <!-- These are the stylesheets used for the lab. Please don't
-  edit them; If you do, you will lose the edits in subsequent 
-  releases of this User Interface. -->
-  <link rel="stylesheet" href="css/default.css"/>
-  <link rel="stylesheet" href="css/style.css"/>
-
-  <!-- Instead add your custom styles to override the defaults 
-  coming from the above style sheets. -->
-  <link rel="stylesheet" href="css/override.css"/>  
-  
-  <!-- ***************************************************** -->
-
-  <!-- All JavaScript at the bottom, except for Modernizr which
-  enables HTML5 elements & feature detects -->
-  <script type="text/javascript" src="js/modernizr-1.5.min.js">
-  </script>
-
-</head>
-
-<body> 
-  <div id="container"></div>
-<style type="text/css">
-#lab-footer, .footer {
-    float:left;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    text-align: center;
-    
- width: 90%;
-}
-</style>
-
-<footer  class="footer">
-    <!-- Put the content here-->
-    <a href="http://http://virtual-labs.ac.in/nmeict" >Sponsered by MHRD (NME-ICT) </a> | <a href="http://http://virtual-labs.ac.in/licensing" target="_blank"> Licensing Terms </a>
-  </footer>
-  <div id="hidden-content" />
-		
-  <!-- Javascript at the bottom for fast page loading -->
-
-  <script src="js/jquery-1.4.2.min.js"></script>
-
-  <script type="text/javascript">
-  $(document).ready(function() 
-  {
-                
-    $('#hidden-content').load('default.html #lab', function(response,status,xhr)
-    {
-      //alert("loaded successfully");
-    });
-       
-    $('#container').load('content.html #lab', function(response,status,xhr)
-    {
-                        
-      $("#container .default").each(function()
-      {
-                                
-        sectionId = $(this).attr('id');
-        sectionContent = $("#hidden-content #" + sectionId).html();
-        $("#container #" + sectionId).html(sectionContent);
-                                
-      });
-
-      $("#container #lab-article-sections > section").each(function() 
-      {
-
-        sectionId = $(this).attr('id');
-        headerId = $("#" + sectionId + "-heading").html();
-        iconId = $("#" + sectionId + "-icon").html();
-                                        
-        $("#container #lab-article-navigation ul").append(
-                "<li> <a href=\'#\' id=\'"+ sectionId + 
-                "-menu\'>" + iconId +"<br />" + headerId + 
-                "</a> </li>");
-                                        
-      });
-      /*                          
-      $("#lab-article-sections").after("<div id='lab-article-sections-view'> </div>");
-      $("#lab-article-sections-view").html($("#lab-article-sections section:first").html());*/
-      $("#lab-article-sections section").hide();
-	  $("#lab-article-sections section:first").show();
-      $("#lab-article-navigation ul > li a").live('click', function() 
-      {
-                                                
-        menuId = $(this).attr('id'); // this points to the current element
-        sectionId = menuId.replace(/-menu/i, "");
-        $("#lab-article-sections section").hide();
-		$("#lab-article-sections #" + sectionId).show();
-        /*$("#lab-article-sections-view").html($("#lab-article-sections #" + sectionId).html());*/
-
-      });
-    });		
-  });
-
-  </script>
-
-
-  <!--<script type="text/javascript" src="js/MathJax/MathJax.js"> -->
-  </script>
-
-
-  <!-- ******* ADD/OVERRIDE JAVASCRIPT FILES HERE ********** -->
-  
-
-  <!-- ***************************************************** -->
-  
-  
+		<footer class="bottom">
+		</footer>
+	</div>
 </body>
 </html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<div id="welcome">
+	<h2> welcome </h2>
+	<p>	
+		This step-wise manual will guide you through the process of installing and using this template.
+	</p>
+	<h2>		
+		So let's get started!!! Click on the Step 1 :installation menu.
+	</h2>
+</div>
+<div id="step1">
+	<h2> Step 1: Installation </h2>
+	<p>
+		The installation process is very simple and involves the following steps. 
+	</p>
+	<h3> Three easy steps </h3>
+	<p>
+	<ol>
+		<li>1. Download the zip file from this link <a href="http://pascal.iiit.ac.in/~rohit/template.zip"> template.zip </a> 
+		</li>
+		<li>2. Unzip the file you just downloaded into a folder. </li>
+		<li>3. Open the index.html file in the browser. </li>
+	</ol>
+	</p>
+	<h2>  Thats it! You now have the template running on your system. </h2>
+</div>
+<div id="step2">
+	<h2> Step 2: Directory structure </h2>
+	<p>
+	If you look into the directory where you just unzipped the template files, you will see the following file structure.
+	<img src="images/newsitemap.png" alt="site map">
+	<table>
+		<tr>
+			<td> <a href="#step2" id="homepage"> index.html </a></td>
+			<td> This is the home page for your lab. It lists all of your experiments. </td>
+		</tr>
+		<tr>
+			<td> <a href="#step2" id="css-folder"> css/</a></td>
+			<td> All css files that affects global styling of the lab should be placed here. </td>
+		</tr>
+		<tr>
+			<td> <a href="#step2" id="basic-css"> css/common.css </a></td>
+			<td> This file contains the basic style formatting for all the html elements. </td>
+		</tr>
+		<tr>
+			<td> <a href="#step2" id="style-css"> css/style.css </a></td>
+			<td> This file is the main style file describing the layout, typography and colors for all the html elements. </td>
+		</tr>
+		<tr>
+			<td> <a href="#step2" id="js-folder"> js/</a></td>
+			<td> All javascript files that affects the complete interactivity of the lab should be placed here. </td>
+		</tr>
+		<tr>
+			<td> <a href="#" id="jquery"> js/jquery.js </a></td>
+			<td> This is source jquery file needed for improved interactivity and ajax. </td>
+		</tr>
+		<tr>
+			<td> <a href="#" id="exp-folder"> exp1/</a></td>
+			<td> This folder contains all the files related to an experiment 1. </td>
+		</tr>
+		<tr>
+			<td> <a href="#" id="css-folder"> exp1/index.html</a></td>
+			<td> The experiment page that acts as a container for the content and the simulations of the experiment 1. </td>
+		</tr>
+		<tr>
+			<td> <a href="#" id="css-folder"> exp1/content.html</a></td>
+			<td> This files describes the theory (content) behind the experiment 1. </td>
+		</tr>
+		<tr>
+			<td> <a href="#" id="css-folder"> exp1/experiment demo</a></td>
+			<td> This is a simulation file (java applet/flash swf /etc) for the experiment 1. Its link should be included in content.html file. </td>
+		</tr>
+	</table>
+</div>
+
+<div id="step3">
+	<h2> Step 3: Configure </h2>
+	<p>
+	This template features a demo of a science lab with a sample "simple pendulum" experiment. To configure this template so that it features your 		lab and its experiments, follow the steps given below.
+	</p>	
+	<h3> Adding/Modifing the content </h3>
+	<p>
+	Locate content.html file (It is situated in exp1/ folder) and open it in your favorite html editor. 
+	Enter the title of the experiment inside the h1 tag, you see at the top of the page.
+	As you can see, this file is divided into number of sections (called divs in html).
+	Each section has a unique id which is used to refer to its content globally (from other files). For example, in the sample content.html file, the id for the first div is "introduction" so that it points to introduction part of your experiment content. 
+Change the given ids of all the sections of you want to the id-names that you like. Just remember ids should be unique and they should not contain spaces. Use" -" symbol to connect multiple words. For example, "new-simulations" is a valid id. 
+	</p>
+	<p>  
+	Inside the div, you have an h2 tag which is used to create the menu for the experiment page. Therefore, Whatever text you will enter here, will also appear on the main navigational menu on the experiment page (exp1/index.html). 
+	</p>
+	<p>
+	Finally, we can write any text content after the h2 tag. You can also insert images with img tag.
+	</p>
+	<p>
+	Refer to w3school page for nice introduction to HTML tags.
+	<a href="http://www.w3schools.com/html/default.asp"> W3schools HTML reference </a>
+	</p>
+<h3> Add the experiment </h3>
+	<p>
+	First, replace the pendulum.swf file with your experiment.
+	Then locate the section with an id as "experiments" inside the content.html file. Replace the embed code so that it points to your experiment.
+	For flash based experiments it is easy, just replace the name of swf file with name of your experiment file.
+	Refer to web tutorials on embedding java applets or flash objects in HTML pages.
+	</p>
+</div>	

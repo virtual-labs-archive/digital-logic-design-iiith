@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html lang="eng">
+<head>
+	<meta http-eqiv="content-Type" content="text/html;charset=utf-8"/>
+	<title> Virtual Labs | Digital Logic Design </title>
+
+	<link href="../css/common.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type='text/javascript' src='../js/jquery-1.4.2.min.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$('#main-title').load('content.html span#main-title', function() 
+				{
+					//alert('load successful');
+				});
+
+			$('#hidden-content').load('content.html', function(response,status,xhr) 
+				{
+					$("#hidden-content > div").each(function() 
+					{
+						sectionId = $(this).attr('id');
+						headerId = $(this).attr('header');//$("#" + sectionId + " h2").html();
+							
+						$("#head-nav ul").append("<li> <a href=\'#\' id=\'"+ sectionId + "-menu\'>" + headerId + "</a> </li>");
+
+						$("#head-nav ul > li a").first().addClass('menu-active');
+					});
+					$("#left-content").html($("#hidden-content div:first").html());
+					$("#head-nav ul > li a").click(function() 
+					{
+						menuId = $(this).attr('id'); // this points to the current element
+						sectionId = menuId.replace(/-menu/i, "");
+						sectionContent = $("#hidden-content div#" + sectionId).html();
+						$("#left-content").html(sectionContent);
+						$('#section-title').html("| " + $(this).html());
+
+						$("#head-nav ul > li a").removeClass('menu-active');
+						$(this).addClass('menu-active');
+					});
+				});
+       });
+    </script>
+</head>
+
+<body>
+	<header id="site_head">
+		<div class="header_cont"> <!-- 960px header-->
+			<!-- LOGO of the company-->
+			<div id="logo">
+			<h1> <a href="../index.html"> Virtual Labs | Digital Logic Design| </a> </h1>
+			</div>
+			<header id="main-title"></header>
+			<header id="section-title">| Introduction</header>
+		</div>
+			<!-- Menu -->
+	</header>
+
+	<article id="main_content"> <!--960px limit -->
+		<nav id="head-nav">
+			<ul>
+			</ul>
+		</nav>
+		<section id="hidden-content">
+		</section>
+		<section id="left-content">			
+		</section>
+		<aside>
+		</aside>
+		<footer class="bottom">
+		</footer>
+	</div>
+</body>
+</html>

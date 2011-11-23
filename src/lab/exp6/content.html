@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head></head>
+<span id="main-title">
+Registers
+</span>
+
+<div id="introduction" header="Introduction">
+
+<p>	
+ This module explains about how to build registers which are the units of memory storage in computers.
+In computer architecture, a processor register is a small amount of storage available as part of a CPU or other digital processor. Such registers are (typically) addressed by other mechanisms than main memory and can be accessed more quickly. Almost all computers, load-store architecture or not, load data from a larger memory into registers where it is used for arithmetic, manipulated, or tested, by some machine instruction. Manipulated data is then often stored back in main memory, either by the same instruction or a subsequent one. 
+ </p>
+ 	
+</div>
+<div id="theory" header="Theory">
+<p>
+Registers can move two types of digital information: parallel and serial. Registers also have two basic ways of moving it: FIFO and LIFO. The simplest register is a FIFO, which is only one level deep and one bit wide. It is basically a single D Type Flip/Flop.
+<h3> FIFO </h3>
+A FIFO (First In First Out) is a digital device that moves data in the same way a queue would. The first chunk of information in is moved over as more is loaded in behind it. This continues until it is pushed out the end. Like a grocery line.
+<h3> LIFO </h3>
+A LIFO (Last In First Out) is a like a FIFO only the data comes out in the reverse order it came in. Data is processed like a stack data structure. Imagine putting items onto a stack, the first item taken off would be at the top of the stack. Thus, the last item in (item at the top of the stack), would be the first item out
+<h3> Parallel </h3>
+Parallel Registers take in mulitple bits at a time.
+<h3> Shift Registers </h3>
+Shift Registers are the simplest serial interfaces. They take serial data in one bit at a time and convert it to parallel form or the other way around. The first way is Serial In Parallel Out and the ladder is Parallel In Serial Out. Shift Registers are used to make larger state machines like counters and UARTs.
+
+</p> 
+</div>
+<div id="objective" header="Objective">
+<ol>
+<li> The objective of this experiment is to understand the working of the Shift Registers. </li>
+<li> Try to make basic Shift Register and Parallel Shift Register.</li>
+</ol>
+</div> 
+<div id="procedure" header="Procedure">
+<ol>
+<li> With The help of Theory Page , try to build the Register Circuit. </li>
+<li> First of all build the Simple Shift Register.</li>
+<li> Then try to build the Parallel Load shift Register</li>
+<li>If You are unable to make it , load or export the circuit directly and use it </li>
+<li> Use time variant input pulses to analyze the output</li>
+</ol>
+</div> 
+<div id="experiment" header="Experiment">
+<div id="test1"><applet code='dldvirtuallabs.simulationApplet' archive='../DLDVirtualLabs.jar' width="1201" height="1000">
+<param name="file_name" value="line.txt">
+<param name="content1" value="Make simple shift register and also parallel load shift register">
+<param name="file_list" value="shift_reg,parallel_shift_reg">
+</applet>
+</div>
+</div>
+
+<div id="manual" header="Manual">
+
+	<div>
+		<h2>Digital Logic Design</h2><br/>
+		This experiment is designed to simulate any digital logical circuit.Following are the instruction for building the circuit.The whole Applet consist of mainly four pannels i.e Left Pannel , Mid Pannel , Right Pannel and Top Pannel.
+		<ol>
+		<li>
+		<b>Left Pannel</b> 
+
+		</li>
+		<ol>
+		<li>
+			<b>Gate Buttons: </b> So this buttons are used to draw basic gates like and,or,exor,not,nor,nand and exnor .After clicking this you just have to click on mid pannel drawing area.
+		</li>
+	<li>
+	<b>Probe:</b>Generaly terminal output is shown by default, if you want explicitly Input and output of various node , then you have to probe it.
+</li>
+<li>
+	<b>None:</b>It is used to get default cursor option back, so that you can do basic operation like drag and drop .
+</li>
+
+<li><b>Delete Element:</b> This is used for explicitly deleting certain element. You just have to click on those element.
+</li>
+<li><b>Connect/Disconnect:</b>This used for establishing and removing connection between various element. Connection can be established only from output to input.You have to first click to the output node then to the input node(consist of red square box) . For disconnection , also same procedure but this time you can start by clicking either of  input or output node.</li>
+<li><b>Naming:</b>This is used for giving name to either input or output node. Just click on the node, then one input box will pop out in which you can give the name.
+</li>
+<li><b>Output:</b>Generally this is used for explicitly defining yhe output node. Its purpose will be more clear in explanation of import button.</li>
+<li><b>Time Pulse</b>You have to enter time pulse in definate pattern i.e <timepulse_name>:<uptime>,<downtime>,<uptime>,<downtime> and so on.For ex: 0,10,10,10,10 . After that press enter or click on the new timepulse. Then, it will be created and available as input in list box.</li>
+<li><b>Binary One And Zero</b>These are used to give value to terminal input and output</b></li>
+</ol>
+<li><b>Top Pannel</b></li>
+<ol>
+<li><b>Clear:</b>It is used to clear every element on the circuit</li>
+<li><b>Save:</b>It is used for saving the circuit as file which can be loaded and imported.</li>
+<li><b>Load:</b>It load the save circuit as it is without any change. It would be fresh circuit with no previous value stored.</li>
+<li><b>Import:</b>Now it is a very important feature. It is simmilar to load , but circuit will appear as black box with terminal input ,terminal output and those output which are set by the output button on left pannel. So, in this recursively you can make many circuit.The input and output nodes will come in order of top to bottom on the basis of there vertical position while saving.It is imported as geeneric element whose name is derived from saved file's name.</li>
+<li><b>Simulate:</b>This is used to compute the whole circuit , if all the terminal inputs are present . It also compute the gate delays , which can be known by hovering the mouse over the gates. By default gate delay is kept to be -1. Simulation can fail or give ambiguous result if circuit do not stablizes with time. This generally happens in the case of improper construction of feedbacks. For ex : If You use direct feedback in flip flop it will give You wrong or no result , i.e why use master slave architecture to build flip flop. </li>
+</ol>
+
+<li><b>Mid Pannel:</b>It is the just drawing area used for building various circuits.You can move various element in mid pannel by simple drag and drop.</li>
+
+
+<li><b>Right Pannel:</b>It is used for showing time varying terminal inputs ,outputs and also probed input and output.It will have element name and input or output index associated with it. Indexes are given top to bottom.</li>
+
+</ol>
+<li><b>Note:</b>There is sample circuit for each experiment is given at the home page. You can try them with the help of save or import button.</li>
+
+
+
+</ol>
+		
+	</div>
+	
+</div>
+
+<div id="quizzes" header="Quizzes">
+<strong>
+	<p>
+		1) Design a simple register using 4 'D' flip flops and a common clock pulse. The register should copy new information from input to output at negative edge of every clock cycle.
+		<br/><br/>
+		2) Design a register with parallel load using 4 'D' flip flops, a common clock pulse and basic gates. The register should copy new information from input to output at negative edge of clock whenever the LOAD signal is 1 and should retain the old values when LOAD signal is 0.
+		<br/><br/>
+		3) Design a shift register which shifts its contents by 1 bit to the right at negative edge of the clock pulse. There will be a 'serial input' (SI) which comes at the output of leftmost flip flop. For ex:-  if register contains 0011 now and 1 is given as the serial input, then at next falling edge of clock pulse, register should contain 1001.
+		<br/>
+		HINT: Connect output of one flip flop to the input of next flip flop 
+	</p> 
+</strong>
+</div>
+
+<div id="reading" header="Further Reading"> 
+	<ol>	
+		<li>
+			<a href="http://en.wikipedia.org/wiki/Processor_register" target="_blank"> Registers - Wikipedia </a>
+		</li>
+		<li>
+			<a href="http://en.wikipedia.org/wiki/Shift_register" target="_blank"> Shift Registers - Wikipedia </a>
+		</li>
+		<li>
+			Chapter 7 : Registers, Counters and Memory unit, "Digital Logic and Computer Design" - M. Morris Mano
+		</li>
+	</ol>
+</div>
+

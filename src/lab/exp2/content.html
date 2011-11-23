@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head></head>
+<span id="main-title">
+Multiplexer
+</span>
+
+<div id="introduction" header="Introduction">
+	
+	<p>
+	This module explains how to build a 4 X 1 Multiplexer.In electronics, a multiplexer or mux is a device that selects one of several analog or digital input signals and forwards the selected input into a single line.
+	Multiplexers were logically designed and used as electronic selector switches.
+	A multiplexer of 2n inputs has n select lines, which are used to select which input line to send to the output.
+	Multiplexers are mainly used to increase the amount of data that can be sent over the network within a certain amount of time and bandwidth.
+	On the other hand, a demultiplexer (or demux) is a device taking a single input signal and selecting one of many data-output-lines, which is connected to the single input. 
+	A multiplexer is often used with a complementary demultiplexer on the receiving end
+	</p>
+	<img src="../images/mux4.png" alt="Position vector"/>  
+</div>
+<div id="theory" header="Theory">
+<p>	
+</p>
+<br />
+<p>
+An electronic multiplexer can be considered as a multiple-input, single-output switch, and a demultiplexer as a single-input, multiple-output switch.
+<br />
+<h2> 2 X 1 Multiplexer </h2>
+In digital circuit design, the selector wires are of digital value. In the case of a 2-to-1 multiplexer, a logic value of 0 would connect 
+I0 to the output while a logic value of 1 would connect I1 to the output. In larger multiplexers, the number of selector pins is equal to 
+log2(n) where n is the number of inputs.
+
+<br />
+<br />
+<p>
+A 2-to-1 multiplexer has a boolean equation where A and B are the two inputs,  S is the selector input, and Z is the output:
+<br />
+    Z = ( A . S') + (B . S)
+    
+    <img src="../images/2X1mux.jpg" alt="2-d vectors" width="200px" style="float:left; margin:10px;"/>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h3> Truth Table </h3>
+    <table border="3">
+	<tr><td>S</td><td>A</td><td>B</td><td>Z</td></tr>
+	<tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+	<tr><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+	<tr><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+	<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+	<tr><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+	<tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
+</p>
+</p>
+<p>
+<h2> 4 X 1 Multiplexer </h2>
+
+Larger multiplexers are also common and requires ceil(log2(n)) selector pins for n inputs.
+Other common sizes are 4-to-1, 8-to-1, and 16-to-1. Since digital logic uses binary values, powers of 2 are used (4, 8, 16) to maximally control a number of inputs for the given number of selector inputs.
+
+	<img src="../images/multiplexer.gif" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
+</p>
+<p>	
+<h2> Truth Table </h2>
+	<img src="../images/mux_truth.png" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
+
+</p>
+ 
+</div>
+
+<div id="objective" header="Objective">
+<ol>
+<li> The objective of this experiment is to make multiplexers. </li>
+<li> First of all make 2 bits multiplexer then use it to make 4 bits multiplexer.</li>
+</ol>
+</div> 
+<div id="procedure" header="Procedure">
+<ol>
+<li> With The help of Theory Page , try to build the Multiplexer Circuit. </li>
+<li> First of all build the 2 X 1 Multiplexer.</li>
+<li> Then use it to build the 8 X 1 multiplexer</li>
+<li>If You are unable to make it , load or export the circuit directly and use it </li>
+</ol>
+</div> 
+<div id="experiment" header="Experiment">
+<applet code='dldvirtuallabs.simulationApplet' archive='../DLDVirtualLabs.jar' width="1201" height="1000">
+<param name="file_name" value="line.txt">
+<param name="content1" value="Make 8 X 1 multiplexer with the help of 2 X 1 multiplexer">
+<param name="file_list" value="Multiplexer,8_1_multiplexer">
+
+
+</applet>
+</div>
+
+
+<div id="manual" header="Manual">
+
+	<div>
+		<h2>Digital Logic Design</h2><br/>
+		This experiment is designed to simulate any digital logical circuit.Following are the instruction for building the circuit.The whole Applet consist of mainly four pannels i.e Left Pannel , Mid Pannel , Right Pannel and Top Pannel.
+		<ol>
+		<li>
+		<b>Left Pannel</b> 
+
+		</li>
+		<ol>
+		<li>
+			<b>Gate Buttons: </b> So this buttons are used to draw basic gates like and,or,exor,not,nor,nand and exnor .After clicking this you just have to click on mid pannel drawing area.
+		</li>
+	<li>
+	<b>Probe:</b>Generaly terminal output is shown by default, if you want explicitly Input and output of various node , then you have to probe it.
+</li>
+<li>
+	<b>None:</b>It is used to get default cursor option back, so that you can do basic operation like drag and drop .
+</li>
+
+<li><b>Delete Element:</b> This is used for explicitly deleting certain element. You just have to click on those element.
+</li>
+<li><b>Connect/Disconnect:</b>This used for establishing and removing connection between various element. Connection can be established only from output to input.You have to first click to the output node then to the input node(consist of red square box) . For disconnection , also same procedure but this time you can start by clicking either of  input or output node.</li>
+<li><b>Naming:</b>This is used for giving name to either input or output node. Just click on the node, then one input box will pop out in which you can give the name.
+</li>
+<li><b>Output:</b>Generally this is used for explicitly defining yhe output node. Its purpose will be more clear in explanation of import button.</li>
+<li><b>Time Pulse</b>You have to enter time pulse in definate pattern i.e <timepulse_name>:<uptime>,<downtime>,<uptime>,<downtime> and so on.For ex: 0,10,10,10,10 . After that press enter or click on the new timepulse. Then, it will be created and available as input in list box.</li>
+<li><b>Binary One And Zero</b>These are used to give value to terminal input and output</b></li>
+</ol>
+<li><b>Top Pannel</b></li>
+<ol>
+<li><b>Clear:</b>It is used to clear every element on the circuit</li>
+<li><b>Save:</b>It is used for saving the circuit as file which can be loaded and imported.</li>
+<li><b>Load:</b>It load the save circuit as it is without any change. It would be fresh circuit with no previous value stored.</li>
+<li><b>Import:</b>Now it is a very important feature. It is simmilar to load , but circuit will appear as black box with terminal input ,terminal output and those output which are set by the output button on left pannel. So, in this recursively you can make many circuit.The input and output nodes will come in order of top to bottom on the basis of there vertical position while saving.It is imported as geeneric element whose name is derived from saved file's name.</li>
+<li><b>Simulate:</b>This is used to compute the whole circuit , if all the terminal inputs are present . It also compute the gate delays , which can be known by hovering the mouse over the gates. By default gate delay is kept to be -1. Simulation can fail or give ambiguous result if circuit do not stablizes with time. This generally happens in the case of improper construction of feedbacks. For ex : If You use direct feedback in flip flop it will give You wrong or no result , i.e why use master slave architecture to build flip flop. </li>
+</ol>
+
+<li><b>Mid Pannel:</b>It is the just drawing area used for building various circuits.You can move various element in mid pannel by simple drag and drop.</li>
+
+
+<li><b>Right Pannel:</b>It is used for showing time varying terminal inputs ,outputs and also probed input and output.It will have element name and input or output index associated with it. Indexes are given top to bottom.</li>
+
+</ol>
+<li><b>Note:</b>There is sample circuit for each experiment is given at the home page. You can try them with the help of save or import button.</li>
+
+
+
+</ol>
+		
+	</div>
+	
+</div>
+<div id="quizzes" header="Quizzes">
+<strong>	
+	<p>
+		1) Design 2:1, 4:1 and 8:1 multiplexers by referring the theory section. Save these circuits separately so that they can be imported and used for designing other things.  
+		<br/><br/>
+		2) Import two 4:1 multiplexers designed in 1st part and implement a Half adder circuit using these multiplexers. One mux will generate SUM (A ex-or B) and another mux will generate Carry (A.B). 
+Now Implement the same using two 2:1 multiplexers. (Hint: choose any one out of A and B as the select bit for multiplexers) 
+		<br/><br/>
+		3) Import two 4:1 multiplexers designed in 1st question and design a 8:1 mux using them. You can use  additional hardware to choose between the outputs of the two multiplexers. (Hint: Use 1 of the three select bits s2s1s0 as enable input for one of the 4:1 mux and its compliment for the other mux)
+
+	</p>
+</strong> 
+</div>
+
+<div id="reading" header="Further Reading"> 
+	<ol>	
+		<li>
+			<a href="http://en.wikipedia.org/wiki/Multiplexer" target="_blank"> Multiplexers - Wikipedia </a>
+		</li>
+		<li>
+			Chapter 5 : Combinational Logic with MSI and LSI, "Digital Logic and Computer Design" - M. Morris Mano
+		</li>
+	</ol>
+</div>
+
