@@ -82,8 +82,25 @@ The objective of this experiment is to design, assemble and test a BCD to 7-segm
 <li> Analyze the values of a,b,c,d,e,f,g corresponding to the image given in theory page to see how different number are formed </li>
 </ol>
 </div> 
+<script type="text/javascript">
+var x=screen.availWidth-60;var y=screen.availHeight-50;
+if(x<1024)
+{
+x=1024;
+}
+if(y<660)
+{
+y=660;
+}
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make BCD to 7 Segment Decoder"><param name="file_list" value="decoder,Multiplexer"></applet>' ;
+</script>
 <div id="experiment" header="Experiment">
-<div id="test1"><applet code='dldvirtuallabs.simulationApplet' archive='../DLDVirtualLabs.jar' width="1201" height="1000">
+<div id="applet_embed"></div>
+
+</div>
+<!--
+<div id="experiment" header="Experiment">
+<div id="test1"><applet code='dldvirtuallabs.simulationApplet' archive='../DLDVirtualLabs.jar' width="100%" height="100%">
 <param name="file_name" value="line.txt">
 <param name="content1" value="Make BCD to 7 Segment Decoder ">
 <param name="file_list" value="decoder,Multiplexer">
@@ -91,6 +108,7 @@ The objective of this experiment is to design, assemble and test a BCD to 7-segm
 </applet>
 </div>
 </div>
+-->
 <div id="manual" header="Manual">
 
 	<div>
