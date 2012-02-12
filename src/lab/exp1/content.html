@@ -11,7 +11,7 @@ edit -->
 <head>
 
 </head>
-<body onload="setsize()">
+<body >
 
 <div id="experiment"> <!-- The Experiment Document Container-->
 
@@ -244,8 +244,6 @@ edit -->
 	
           <p>
 <script Language="JavaScript">
-function setsize()
-{
 var x=screen.availWidth-60;var y=screen.availHeight-50;
 if(x<1024)
 {
@@ -257,7 +255,7 @@ y=660;
 }
 document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make 4 bit adder circuit with the help of 1 bit adder circuit"><param name="file_list" value="Full_Adder,4_bit_adder"></applet>' ;
 alert("yeah");
-}
+
 </script>
 	      <div id="applet_embed"></div>
 	        
