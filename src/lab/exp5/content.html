@@ -1,0 +1,467 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">DLD Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        JK Flip-Flop
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+          <img src="../images/jk.gif" alt="Position vector"/>  
+	<p>
+	In electronics, a flip-flop or latch is a circuit that has two stable states and can be used to store state information. The circuit can be made to change state by signals applied to one or more control inputs and will have one or two outputs. Flip-flops and latches are a fundamental building block of digital electronics systems used in computers, communications, and many other types of systems.
+Flip-flops and latches are used as data storage elements. Such data storage can be used for storage of state, and such a circuit is described as sequential logic. When used in a finite-state machine, the output and next state depend not only on its current input, but also on its current state (and hence, previous inputs.) It can also be used for counting of pulses, and for synchronizing variably-timed input signals to some reference timing signal.
+Flip-flops can be either simple (transparent or opaque) or clocked (synchronous or edge-triggered); the simple ones are commonly called latches. The word latch is mainly used for storage elements, while clocked devices are described as flip-flops.
+	</p>
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+          
+<h2> NAND and NOR Latches</h2>
+<h3> NOR Latch</h3>
+	<img src="../images/NOR.png" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
+	<p>
+	It can be constructed from a pair of cross-coupled NOR logic gates. The stored bit is present on the output marked Q.
+
+While the S and R inputs are both low, feedback maintains the Q and Q outputs in a constant state, with Q the complement of Q. If S (Set) is pulsed high while R (Reset) is held low, then the Q output is forced high, and stays high when S returns to low; similarly, if R is pulsed high while S is held low, then the Q output is forced low, and stays low when R returns to low.
+
+	</p>
+	<h3> NAND Latch</h3>
+	<img src="../images/NAND.png" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
+
+	<p>
+	This is an alternate model of the simple SR latch built with NAND logic gates. Set and reset now become active low signals, denoted S and R respectively. Otherwise, operation is identical to that of the SR latch. Historically, SR-latches have been predominant despite the notational inconvenience of active-low inputs
+	</p>
+	<br />
+	<br />
+	<br />
+	<h2> JK Flip Flop </h2>
+	<img src="../images/master_slave.gif" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
+	<p>
+JK flip flop is mostly implemented as Master Slave flip flop. The information present at at J and K inputs is transmitted to master flip-flop on positive edge of a clock pulse and held there until negative pulse occurs, after which it is allowed to pass through the slave flip-flop.
+	</p>
+<h2> JK Timing Digram </h2>
+	<img src="../images/JK_flipflop_timing.gif" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
+
+	<p>
+	The following Digram depicts the change of JK flip flop Output with time pulse. It is negativve edge triggered.
+	</p>
+<br/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2> Truth Table </h2>
+	<img src="../images/jk_truth.png" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
+<p>
+The following digram depicts the truth table of JK Flip Flop.
+</p>
+ 
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+         <ol>
+<li> The objective of this experiment is to understand the working of the Flip Flops. </li>
+<li> Try to make basic Flip Flops like JK, RS , T , D Flip Flops.</li>
+</ol>
+
+        </div>
+
+      </section>
+<script type="text/javascript">
+var x=screen.availWidth-60;var y=screen.availHeight-50;
+if(x<1024)
+{
+x=1024;
+}
+if(y<660)
+{
+y=660;
+}
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make the various flipflops"><param name="file_list" value="JK_FlipFlop,rs_flip_flop,flipflop_t,flipflop_d,Nand_Latch"></applet>' ;
+</script>
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Experiment
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+	      <div id="applet_embed"></div>
+	        
+            
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+         
+		<h2>Digital Logic Design</h2><br/>
+		This experiment is designed to simulate any digital logical circuit.Following are the instruction for building the circuit.The whole Applet consist of mainly four pannels i.e Left Pannel , Mid Pannel , Right Pannel and Top Pannel.
+		<ol>
+		<li>
+		<b>Left Pannel</b> 
+
+		</li>
+		<ol>
+		<li>
+			<b>Gate Combobox: </b> So this combox box is used to select basic gates like and,or,exor,not,nor,nand ,exnor and connector .Once Gate is selected then corresponding number of inputs can be selected from the combo box adjacent to it.After clicking this you just have to click on mid pannel drawing area, and gate will be placed at that particular location.
+		</li>
+	<li>
+	<b>Probe:</b>Generaly terminal output is shown by default, if you want explicitly Input and output of various node , then you have to probe it.
+</li>
+<li>
+	<b>None:</b>It is used to get default cursor option back, so that you can do basic operation like drag and drop .
+</li>
+
+<li><b>Delete Element:</b> This is used for explicitly deleting certain element. You just have to click on those element.
+</li>
+<li><b>Connect/Disconnect:</b>This used for establishing and removing connection between various element. Connection can be established only from output to input.You have to first click to the output node then to the input node(consist of red square box) . For disconnection , also same procedure but this time you can start by clicking either of  input or output node.</li>
+<li><b>Naming:</b>This is used for giving name to either input or output node. Just click on the node, then one input box will pop out in which you can give the name.
+</li>
+<li><b>Output:</b>Generally this is used for explicitly defining yhe output node. Its purpose will be more clear in explanation of import button.</li>
+<li><b>Time Pulse</b>You have to enter time pulse in definate pattern i.e <timepulse_name>:<uptime>,<downtime>,<uptime>,<downtime> and so on.For ex: 0,10,10,10,10 . After that press enter or click on the new timepulse. Then, it will be created and available as input in list box.</li>
+<li><b>Binary One And Zero</b>These are used to give value to terminal input and output</b></li>
+</ol>
+<li><b>Top Pannel</b></li>
+<ol>
+<li><b>Clear:</b>It is used to clear every element on the circuit</li>
+<li><b>Save:</b>It is used for saving the circuit as file which can be loaded and imported.</li>
+<li><b>Load:</b>It load the save circuit as it is without any change. It would be fresh circuit with no previous value stored.</li>
+<li><b>Import:</b>Now it is a very important feature. It is simmilar to load , but circuit will appear as black box with terminal input ,terminal output and those output which are set by the output button on left pannel. So, in this recursively you can make many circuit.The input and output nodes will come in order of top to bottom on the basis of there vertical position while saving.It is imported as geeneric element whose name is derived from saved file's name.</li>
+<li><b>Simulate:</b>This is used to compute the whole circuit , if all the terminal inputs are present . It also compute the gate delays , which can be known by hovering the mouse over the gates. By default gate delay is kept to be -1. Simulation can fail or give ambiguous result if circuit do not stablizes with time. This generally happens in the case of improper construction of feedbacks. For ex : If You use direct feedback in flip flop it will give You wrong or no result , i.e why use master slave architecture to build flip flop. </li>
+</ol>
+
+<li><b>Mid Pannel:</b>It is the just drawing area used for building various circuits.You can move various element in mid pannel by simple drag and drop.</li>
+
+
+<li><b>Right Pannel:</b>It is used for showing time varying terminal inputs ,outputs and also probed input and output.It will have element name and input or output index associated with it. Indexes are given top to bottom.</li>
+
+</ol>
+<li><b>Note:</b>There is sample circuit for each experiment is given at the home page. You can try them with the help of save or import button.</li>
+
+
+
+</ol>
+		
+	
+
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quizzes
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+           <strong>	
+	<p>
+		1) Design a master slave J-K flip flop as given in the Theory section. Use any of the clock cycles available. Give a sequence of J-K inputs for eg: 01, 10 , 00 , 00, 11 , 11, 01 etc and verify the output of the filp flop. Save this flip flop by marking appropriate inputs and outputs.
+		<br/><br/>
+		2) Import the J-K flip flop designed in 1st question. Connect the J-K to each other and label it as 'T'. The resulting flip flop is called a toggle flip flop. Generate a clock pulse or use any of the available ones. Verify that when T is 0, the output of flip flop does not change. When T=1, the output toggles at every negative edge of the clock. Save this circuit as a 'T' flip flop
+		<br/><br/>
+		3) Import the J-K flip flop designed in 1st question. Connect the compliment of J to K and label J as 'D'. The resulting flip flop is called a D flip flop. Generate a clock pulse or use any of the available ones. Verify that when D=1, output of flip flop is Q=1 and when D=0, output of flip flop is Q=0.  Save this circuit as 'D' flip flop.
+		<br/><br/>
+		4) You are given a master slave RS flip flop made from NOR gates. Using this, design a circuit which behaves like a JK flip flop. The design can be like this :<br/>
+		<img src="../images/quiz_image.png" />
+	</p>
+</strong> 
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab. -->
+	    <img src="../images/procedure.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Procedure
+	  </div>
+	
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	  <ol>
+<li> With The help of Theory Page , try to build the  Flip Flop Circuit. </li>
+<li> First of all build the RS Flip Flop Circuit </li>
+<li> Then use RS Flip Flop to build D Flip Flop</li>
+<li> Then make J K Flip Flop<li>
+<li> Use J K Flip Flop to make T Flip Flop</li>
+<li>If You are unable to make it , load or export the circuit directly and use it </li>
+<li> Use time variant Input pulse to analyze the output <li>
+</ol>
+	  </div>
+	
+        </section>
+			
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Further Readings
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+          <ol>	
+		<li>
+			<a href="http://en.wikipedia.org/wiki/Flip-flop_(electronics)" target="_blank"> Flip Flops - Wikipedia </a>
+		</li>
+		<li>
+			Chapter 6 : Sequential Logic, "Digital Logic and Computer Design" - M. Morris Mano
+		</li>
+	</ol>
+          </div>
+
+        </section>
+	<section id="lab-article-section-6">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/manual.jpg" />
+</div>
+
+
+<!-- The heading for the section can be enclosed in a
+div tag and shown with a <h2> tag -->
+<div id="lab-article-section-6-heading" class="heading">
+Feedback
+</div>
+
+<!-- Write the section content inside a paragraph
+element, You can also include images with <img> tag -->
+<div id="lab-article-section-6-content" class="content">
+<p>
+<ul>
+<li><a href="http://virtual-labs.ac.in/feedback/" >Sponsered by MHRD
+(NME-ICT) <a>.</li>
+
+</ul>
+</p>
+</div>
+
+</section>
+
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <!-- Links to other labs, about us page can be kept the lab  footer-->
+<style type="text/css">
+#lab-footer, .footer {
+float:left;
+margin-top: 200px;
+margin-bottom: 100px;
+text-align: center;
+
+width: 90%;
+}
+</style>
+
+<footer id="lab-footer" class="footer">
+<!-- Put the content here-->
+<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT)
+<a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank">
+Licensing Terms <a>
+</footer>
+
+
+</div>		
+
+</body>
+</html>
