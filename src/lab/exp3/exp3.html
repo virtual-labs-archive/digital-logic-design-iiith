@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<div id="applet_embed"></div> 
+</body>
+<script type="text/javascript">
+var x=screen.availWidth-60;var y=screen.availHeight-100;
+if(x<1050)
+{
+	x=1050;
+}
+if(y<660)
+{
+	y=660;
+}
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make BCD to 7 Segment Decoder"><param name="file_list" value="decoder,Multiplexer"></applet>' ;
+
+
+</script>
+
+</html>
