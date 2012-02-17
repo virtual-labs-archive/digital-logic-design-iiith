@@ -269,52 +269,104 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
         <div id="experiment-article-section-5-content" 
         class="content">
-         
-		<h2>Digital Logic Design</h2><br/>
-		This experiment is designed to simulate any digital logical circuit.Following are the instruction for building the circuit.The whole Applet consist of mainly four pannels i.e Left Pannel , Mid Pannel , Right Pannel and Top Pannel.
-		<ol>
-		<li>
-		<b>Left Pannel</b> 
-
-		</li>
-		<ol>
-		<li>
-			<b>Gate Combobox: </b> So this combox box is used to select basic gates like and,or,exor,not,nor,nand ,exnor and connector .Once Gate is selected then corresponding number of inputs can be selected from the combo box adjacent to it.After clicking this you just have to click on mid pannel drawing area, and gate will be placed at that particular location.
-		</li>
-	<li>
-	<b>Probe:</b>Generaly terminal output is shown by default, if you want explicitly Input and output of various node , then you have to probe it.
-</li>
-<li>
-	<b>None:</b>It is used to get default cursor option back, so that you can do basic operation like drag and drop .
-</li>
-
-<li><b>Delete Element:</b> This is used for explicitly deleting certain element. You just have to click on those element.
-</li>
-<li><b>Connect/Disconnect:</b>This used for establishing and removing connection between various element. Connection can be established only from output to input.You have to first click to the output node then to the input node(consist of red square box) . For disconnection , also same procedure but this time you can start by clicking either of  input or output node.</li>
-<li><b>Naming:</b>This is used for giving name to either input or output node. Just click on the node, then one input box will pop out in which you can give the name.
-</li>
-<li><b>Output:</b>Generally this is used for explicitly defining yhe output node. Its purpose will be more clear in explanation of import button.</li>
-<li><b>Time Pulse</b>You have to enter time pulse in definate pattern i.e <timepulse_name>:<uptime>,<downtime>,<uptime>,<downtime> and so on.For ex: 0,10,10,10,10 . After that press enter or click on the new timepulse. Then, it will be created and available as input in list box.</li>
-<li><b>Binary One And Zero</b>These are used to give value to terminal input and output</b></li>
-</ol>
-<li><b>Top Pannel</b></li>
-<ol>
-<li><b>Clear:</b>It is used to clear every element on the circuit</li>
-<li><b>Save:</b>It is used for saving the circuit as file which can be loaded and imported.</li>
-<li><b>Load:</b>It load the save circuit as it is without any change. It would be fresh circuit with no previous value stored.</li>
-<li><b>Import:</b>Now it is a very important feature. It is simmilar to load , but circuit will appear as black box with terminal input ,terminal output and those output which are set by the output button on left pannel. So, in this recursively you can make many circuit.The input and output nodes will come in order of top to bottom on the basis of there vertical position while saving.It is imported as geeneric element whose name is derived from saved file's name.</li>
-<li><b>Simulate:</b>This is used to compute the whole circuit , if all the terminal inputs are present . It also compute the gate delays , which can be known by hovering the mouse over the gates. By default gate delay is kept to be -1. Simulation can fail or give ambiguous result if circuit do not stablizes with time. This generally happens in the case of improper construction of feedbacks. For ex : If You use direct feedback in flip flop it will give You wrong or no result , i.e why use master slave architecture to build flip flop. </li>
-</ol>
-
-<li><b>Mid Pannel:</b>It is the just drawing area used for building various circuits.You can move various element in mid pannel by simple drag and drop.</li>
-
-
-<li><b>Right Pannel:</b>It is used for showing time varying terminal inputs ,outputs and also probed input and output.It will have element name and input or output index associated with it. Indexes are given top to bottom.</li>
-
-</ol>
-<li><b>Note:</b>There is sample circuit for each experiment is given at the home page. You can try them with the help of save or import button.</li>
-
-
+         <H2>Digital Logic Design</H2>
+	<P><BR>This lab allows you to design and simulate any digital
+	combinational or sequential circuit. Following instruction help you
+	build the circuit. A Java-based basic tool and simulation enigne is
+	at the hear of this laboratory. You can create many circuits and
+	test them with fixed or time-varying input signals. You can also see
+	the outputs as values or time-varying waveforms. 
+	</P>
+	<P>The tool consist of mainly four pannels: Left Pannel, Mid Pannel,
+	Right Pannel, and Top Pannel. 
+	</P>
+	<OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Left Pannel</B> 
+		</P>
+		<OL>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Gate Buttons: </B>These
+			buttons are used to draw basic gates like <FONT SIZE=2><B>AND, OR,
+			XOR, NOT, NOR, NAND,XNOR </B></FONT><FONT SIZE=3><SPAN STYLE="font-weight: normal">and</SPAN></FONT><FONT SIZE=2><B>CONNECTOR
+			</B></FONT>. Click on these by drop down menu then select the proper number of inputs . Once You have finalized the gate & number of inputs then click on SELECT Button and place the gate where you want
+			to in the  mid pannel drawing area. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Probe:</B> Output at each
+			terminal is shown by default against it. Iif you want explicitly
+			to watch another node, you can probe it using a feature from the
+			left panel.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>None: </B>It is used to get
+			default cursor option back, so that you can do basic operation
+			like drag and drop.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Delete Element:</B> This is
+			used for explicitly deleting an element. Click on <SPAN STYLE="text-decoration: none">the</SPAN>
+			element after selecting delete mode.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Connect/Disconnect: </B>This
+			mode allows establishing and removing connection between various
+			points. Connection can be established only from output to input.
+			You have to first click to the output node then to the input node
+			(consisting of red square box). For disconnection, you can start
+			by clicking either the input or the output node. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Naming: </B>This is used to
+			give a user-selected name to an input or output node. Click on the
+			node and give the name into the input box that pops up.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Output:</B> This is used to
+			define an output node. See the explanation of import button to
+			learn why this may be necessary.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Time Pulse:</B> Enter the
+			time pulse pattern separated by commas. For example: 0,10,10,10,10
+			defines a clock that is 0 for 10 units and 1 for 10 units. Press
+			enter or click on the new timepulse to create it. It will be
+			available as input in list box.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Binary One And Zero: </B>These
+			can be used to give fixed values to terminals</P>
+			<P STYLE="margin-bottom: 0cm"></P>
+		</OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Top Pannel</B> 
+		</P>
+		<OL>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Clear: </B>Use this to clear
+			every element on the circuit. Caution: <U><B>Everything on the
+			design panel will be lost;  there is no undo</B></U>!</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Save: </B>Use this to save
+			the designed circuit as a file on your machine. This file can be
+			loaded and imported later.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Load:</B> A circuit saved on
+			your machine can be loaded onto the mid panel to as a fresh
+			circuit that can be further edited. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Import:</B> This is an
+			important feature that lets you construct building blocks. A
+			circuit from your machine is imported to the mid panel, but will
+			appear as a block or a box with input and output terminals. The
+			name of the element is that of the imported file. The named
+			terminals will have their saved names. The input and output nodes
+			will come in the same order from top to bottom as created. This
+			allows one to build on circuits saved as blocks. For instance, an
+			full adder you design using gates can be saved as a block and used
+			in later circuits as an adder-block.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Simulate: </B>Use this to
+			simulate or compute the intermediate and final outputs of the
+			whole circuit, if all the terminal inputs are present. It also
+			computes the gate delays, which is diplayed when the mouse hovers
+			over each element. The default gate delay is -1. Simulation can
+			fail or give ambiguous result if the circuit does not stablizes
+			with time. This can happen due to improper feedback circuitry. The
+			underlying engine is not a full fledged circuit simulator and can
+			get stuck at constructions involving certain feedback.</P>
+			<P STYLE="margin-bottom: 0cm"></P>
+		</OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Mid Pannel:</B> This is the
+		drawing area used to build the circuit. You can move the elements
+		by clicking and dragging.</P>
+		<P STYLE="margin-bottom: 0cm"></P>
+		<LI><P><B>Right Pannel:</B> This area shows the time-varying
+		inputs, outputs, and probed points. Name or index associated with
+		points are displayed. Indexes are given top to bottom.</P>
+	</OL>
+	<P STYLE="margin-bottom: 0cm"><B>Note:</B> Sample circuit for each
+	experiment will be given as default. You can try them with the help
+	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</P>
 
 </ol>
 		
@@ -439,6 +491,23 @@ element, You can also include images with <img> tag -->
 
 
       </div>
+<style type="text/css">
+#lab-footer, .footer {
+float:left;
+margin-top: 200px;
+margin-bottom: 100px;
+text-align: center;
+
+width: 90%;
+}
+</style>
+
+<footer id="lab-footer" class="footer">
+<!-- Put the content here-->
+<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT)
+<a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank">
+Licensing Terms <a>
+</footer>
 
 
     <!-- An article can have a sidebar that contain related 
@@ -462,23 +531,6 @@ element, You can also include images with <img> tag -->
   <!-- Links to other labs, about us page can be kept the lab 
   footer-->
   <!-- Links to other labs, about us page can be kept the lab  footer-->
-<style type="text/css">
-#lab-footer, .footer {
-float:left;
-margin-top: 200px;
-margin-bottom: 100px;
-text-align: center;
-
-width: 90%;
-}
-</style>
-
-<footer id="lab-footer" class="footer">
-<!-- Put the content here-->
-<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT)
-<a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank">
-Licensing Terms <a>
-</footer>
 
 
 </div>		
