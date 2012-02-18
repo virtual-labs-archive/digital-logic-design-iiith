@@ -125,14 +125,16 @@ edit -->
 
         <!-- Write the section content inside a paragraph 
         element, we can also include images with <img> tag -->
+
         <div id="experiment-article-section-2-content" 
-        class="content">
+        class="content" >
           
 <p>
 An electronic multiplexer can be considered as a multiple-input, single-output switch, and a demultiplexer as a single-input, multiple-output switch.
 </p>
 <p>
-<h2> 2 X 1 Multiplexer </h2>
+<bold> 2 X 1 Multiplexer </bold>
+<br />
 In digital circuit design, the selector wires are of digital value. In the case of a 2-to-1 multiplexer, a logic value of 0 would connect 
 I0 to the output while a logic value of 1 would connect I1 to the output. In larger multiplexers, the number of selector pins is equal to 
 log2(n) where n is the number of inputs.
@@ -141,22 +143,19 @@ log2(n) where n is the number of inputs.
 <br />
 
 <p>
+<img src="../images/2X1mux.jpg" alt="2-d vectors" width="200px" style="float:center; margin:10px;"/>
+<br />
 A 2-to-1 multiplexer has a boolean equation where A and B are the two inputs,  S is the selector input, and Z is the output:
-</p>
-<p>
     Z = ( A . S') + (B . S)
     
-    <img src="../images/2X1mux.jpg" alt="2-d vectors" width="200px" style="float:left; margin:10px;"/>
+<br />
 </p>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <p>
 
-    <h3> Truth Table </h3>
-
-    <table border="3">
+    <bold> Truth Table </bold>
+	<br />
+</p>
+    <table border="3" style="float:center;">
 	<tr><td>S</td><td>A</td><td>B</td><td>Z</td></tr>
 	<tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
 	<tr><td>0</td><td>1</td><td>0</td><td>1</td></tr>
@@ -167,18 +166,22 @@ A 2-to-1 multiplexer has a boolean equation where A and B are the two inputs,  S
 	<tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
 	<tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
 </table>
+<br />
+<br />
 <p>
-<h2> 4 X 1 Multiplexer </h2>
-
+<bold> 4 X 1 Multiplexer </bold>
+<br/>
 Larger multiplexers are also common and requires ceil(log2(n)) selector pins for n inputs.
 Other common sizes are 4-to-1, 8-to-1, and 16-to-1. Since digital logic uses binary values, powers of 2 are used (4, 8, 16) to maximally control a number of inputs for the given number of selector inputs.
 
-	<img src="../images/multiplexer.gif" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
+	<img src="../images/multiplexer.gif" alt="2-d vectors" width="400px" style="float:center; margin:10px;"/>
 </p>
 <p>	
-<h2> Truth Table </h2>
-	<img src="../images/mux_truth.png" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
-
+<bold> Truth Table </bold>
+<br/>
+</p>
+<p>
+	<img src="../images/mux_truth.png" alt="2-d vectors" width="400px" style="float:center; margin:10px;"/>
 </p>
 
         </div>
