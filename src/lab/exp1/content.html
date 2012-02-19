@@ -101,7 +101,7 @@ edit -->
 	units, but also in other parts of the processor, to calculate
 	addresses, table indices, etc. Adder is a simple circuit, but a
 	fundamental one.</P>
-	<P><IMG SRC="../images/adder1.svg.png" NAME="graphics1" ALIGN=BOTTOM WIDTH=75 HEIGHT=38 BORDER=0>
+	<P><IMG SRC="../images/adder1.svg.png" NAME="graphics1" ALIGN=BOTTOM WIDTH=500 HEIGHT=430 BORDER=0>
 		</P>
         </div>
 
@@ -131,30 +131,7 @@ edit -->
         class="content">
 <H2><B>Half Adder </B>
 	</H2>
-	<P><IMG SRC="../images/Half_Adder.svg.png" NAME="graphics2" ALIGN=LEFT HSPACE=10 VSP#lab-article-sections-view, #experiment-article-sections-view
-{
-	padding-top:30px;
-	width:500px;
-	min-height:200px;
-	
-	font-size: 16px;
-  	line-height: 24px;
-	margin:0 auto;
-	background: url(../images/content_bg.jpg);	
-}
-
-#lab-article-sections, #experiment-article-sections
-{
-	padding-top:30px;
-	width:500px;
-	min-height:200px;
-	
-	font-size: 16px;
-  	line-height: 24px;
-	margin:0 auto;
-	background: url(../images/content_bg.jpg);
-		
-}ACE=10 WIDTH=200 HEIGHT=38 BORDER=0>A
+	<P><IMG SRC="../images/Half_Adder.svg.png" NAME="graphics2" ALIGN=LEFT HSPACE=10 ACE=10 WIDTH=200 HEIGHT=111 BORDER=0 />A
 	half adder adds two 1-bit binary numbers A and B to generate a 1-bit
 	SUM (S) and a 1-bit CARRY (C) as output. The carry is theoretically
 	carried on to the next bit position. The final sum numerically
@@ -249,16 +226,16 @@ edit -->
 	</CENTER>
 	<H2>Full Adder 
 	</H2>
-	<P><IMG SRC="../images/Full_Adder.svg.png" NAME="graphics3" ALIGN=LEFT HSPACE=10 VSPACE=10 WIDTH=200 HEIGHT=38 BORDER=0>A
+	<P><IMG SRC="../images/Full_Adder.svg.png" NAME="graphics3" ALIGN=LEFT HSPACE=10 VSPACE=10 WIDTH=500 HEIGHT=225 BORDER=0 />A
 	full adder adds two 1-bit binary numbers along with a carry brought
-	in and produces a sum and carry out as ouputs. A 1-bit full adder
+	in and produces a sum and carry out as ouputs.1-bit full adder
 	adds three 1-bit numbers, often written as A, B, and Cin, where A
 	and B are the operands, and Cin is a bit carried in from a “past”
-	addition. The circuit produces a 2-bit output sum typically
+	addition.Circuit produces a 2-bit output sum typically
 	represented by the signals Cout and S, where the sum numerically
 	equals 2Cout + S . A full adder can be implemented in many different
 	ways using custom transistor-level circuits or using other gates.
-	One implementation, shown in the figure as a circuit, is:</P>
+	</P>
 	<P STYLE="margin-left: 2cm"><B>S = A </B><FONT SIZE=2><B>XOR</B></FONT><B>
 	B</B> <FONT SIZE=2><B>XOR</B></FONT> <B>Cin<BR>Cout = (A </B><FONT SIZE=2><B>AND</B></FONT><B>
 	B) </B><FONT SIZE=2><B>OR</B></FONT><B> (Cin </B><FONT SIZE=2><B>AND</B></FONT><B>
@@ -428,7 +405,7 @@ edit -->
 	</CENTER>
 	<H2>Ripple Carry Adder 
 	</H2>
-	<P><IMG SRC="../images/ripple_carry_adder.svg.png" NAME="graphics4" ALIGN=LEFT HSPACE=10 VSPACE=10 WIDTH=200 HEIGHT=38 BORDER=0>Multiple
+	<P><IMG SRC="../images/ripple_carry_adder.svg.png" NAME="graphics4" ALIGN=LEFT HSPACE=10 VSPACE=10 WIDTH=500 HEIGHT=200 BORDER=0 />Multiple
 	full adders can be used to create adders of greater bit lengths.
 	Each full adder uses the Cout of the previous adder as its Cin. This
 	kind of adder is a <I>ripple carry adder</I>, since the carry bits
@@ -642,7 +619,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-6-heading" 
           class="heading">
-            Quizzes
+            Quiz
           </div>
 
           <div id="experiment-article-section-6-content" 
@@ -743,7 +720,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 <!-- The heading for the section can be enclosed in a
 div tag and shown with a <h2> tag -->
 <div id="lab-article-section-9-heading" class="heading">
-Feedback
+Feedback S/W
 </div>
 
 <!-- Write the section content inside a paragraph
