@@ -127,12 +127,16 @@ Usually, counter circuits are digital in nature, and count in natural binary. Ma
 Occasionally there are advantages to using a counting sequence other than the natural binary sequence such as the binary coded decimal counter, a linear feedback shift register counter, or a Gray-code counter.
 Counters are useful for digital clocks and timers, and in oven timers, VCR clocks, etc.
 <br />
-The counters will be assembled using two 74LS73 dual J-K flip-flop chips and a 74LS02 quad NOR chip. Note that each flip-flop has an asynchronous Reset (R’) input besides the synchronous J-K inputs. This enables one to reset any of the flip-flops by making R’ = 0 irrespective of the status of the clock (CK) input. The asynchronous R’ input will be utilised in this experiment to initialise the flip-flop outputs as well as to obtain counters having cycle length N < 16.
-<br />
+The counters will be assembled using two 74LS73 dual J-K flip-flop chips and a 74LS02 quad NOR chip. Note that each flip-flop has an asynchronous Reset (R’) input besides the synchronous J-K inputs. This enables one to reset any of the flip-flops by making R’ = 0 irrespective of the status of the clock (CK) input. The asynchronous R’ input will be utilised in this experiment to initialise the flip-flop outputs as well as to obtain counters having cycle length N is less than 16.
+</p>
+
 <h3> Pin connections: </h3>
+<p>
 <img src="../images/counters.png">
+</p>
 <br />
 <h2> Binary Ripple Counter </h2>
+<p>
 1. Make J = K = 1 for all the flip-flops, thereby converting the J-K flip-flops to T flip-flops. Connect all R’ inputs together to an Input Switch, and the outputs Q0,Q1,Q2,Q3 to four LED Displays.
 <br />
 2. Set up an Up-counting Binary Ripple Counter by making clock connections as follows: CK0 = Manual Clock (CLK-M), CK1 = Q0, CK2 = Q1, CK3 = Q2.
@@ -143,10 +147,11 @@ The counters will be assembled using two 74LS73 dual J-K flip-flop chips and a 7
 <br />
 5. Now change the clock input connections to CK1 = Q0’, CK2 = Q1’, CK3 = Q2’, to obtain a Down-counting Binary Ripple counter.
 <br />
-
+</p>
 <h2>Asynchronous (ripple) counter:</h2>
+<p>
 An asynchronous (ripple) counter is a single JK-type flip-flop, with its J (data) input fed from its own inverted output. This circuit can store one bit, and hence can count from zero to one before it overflows (starts over from 0). This counter will increment once for every clock cycle and takes two clock cycles to overflow, so every cycle it will alternate between a transition from 0 to 1 and a transition from 1 to 0. Notice that this creates a new clock with a 50% duty cycle at exactly half the frequency of the input clock. If this output is then used as the clock signal for a similarly arranged D flip-flop (remembering to invert the output to the input), you will get another 1 bit counter that counts half as fast. Putting them together yields a two-bit counter:
-<br />
+</p>
 <br />
 <table border="3">
 	<tr><td>Cycle</td><td>Q1</td><td>Q2</td><td>(Q1:Q0)dec</td></tr>
@@ -158,33 +163,34 @@ An asynchronous (ripple) counter is a single JK-type flip-flop, with its J (data
 </table>
 
 <br />
-<br />
 <h2>Synchronous counter:</h2>
+<p>
 A simple way of implementing the logic for each bit of an ascending counter (which is what is depicted in the image to the right) is for each bit to toggle when all of the less significant bits are at a logic high state. For example, bit 1 toggles when bit 0 is logic high; bit 2 toggles when both bit 1 and bit 0 are logic high; bit 3 toggles when bit 2, bit 1 and bit 0 are all high; and so on.
 Synchronous counters can also be implemented with hardware finite state machines, which are more complex but allow for smoother, more stable transitions.
 Hardware-based counters are of this type.
-
-<br />
+</p>
 <br />
 <h3>Decade counter:</h3>
+<p>
 A decade counter is one that counts in decimal digits, rather than binary. A decade counter may have each digit binary encoded (that is, it may count in binary-coded decimal, as the 7490 integrated circuit did) or other binary encodings (such as the bi-quinary encoding of the 7490 integrated circuit). Alternatively, it may have a "fully decoded" or one-hot output code in which each output goes high in turn (the 4017 is such a circuit). The latter type of circuit finds applications in multiplexers and demultiplexers, or wherever a scanning type of behavior is useful. Similar counters with different numbers of outputs are also common.
 The decade counter is also known as a mod-counter when it counts to ten (0, 1, 2, 3, 4, 5, 6, 7, 8, 9). A Mod Counter that counts to 64 stops at 63 because 0 counts as a valid digit.
 <br />
 A decade counter has the count sequence 0 → 1 → 2 →.....→ 8 → 9 → 0.., which can be achieved by making R’ = (Q3 •Q1)’ for all the flip-flops in a 4-bit binary counter. This forces the counter to go to the state 0000 as soon as the counter makes the transition from the state 1001 representing count 9 to the next state 1010 according to the normal up counting sequence.
+</p>
 <h3>Decade synchronous counter </h3>
+<p>
 The logic for the J-K inputs required for a Decade Synchronous Counter is as follows:
 <br />
 J0 = K0 = 1; J1 = Q0•Q3’, K1 = Q0; J2 = K2 = Q0•Q1; J3 = Q0•Q1•Q2, K3 = Q0.
-
+</p>
 <h2>Multipurpose 4-bit Synchronous Counter</h2>
+<p>
 CD4029 is a multipurpose 4-bit counter capable of operating in all the four combinations of Binary/BCD and Up/Down modes, depending on the values of the control inputs B/D’ and U/D’.
 <br />
 In addition, the 4-bit output Q3Q2Q1Q0 of the counter can be preset to any value by applying the desired bits to the direct inputs D3D2D1D0 and making the Set ENable control SEN = 1.
 <img src="../images/CD4029codes.png">
-
-
 </p> 
-
+<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
 
         </div>
       </section>
@@ -386,7 +392,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-6-heading" 
           class="heading">
-            Quizzes
+            Quiz
           </div>
 
           <div id="experiment-article-section-6-content" 
@@ -472,7 +478,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 <!-- The heading for the section can be enclosed in a
 div tag and shown with a <h2> tag -->
 <div id="lab-article-section-9-heading" class="heading">
-Feedback
+Feedback S/W
 </div>
 
 <!-- Write the section content inside a paragraph

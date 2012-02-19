@@ -130,14 +130,17 @@ In this section we will learn how to design and build such sequential circuits.
 In order to see how this procedure works, we will use an example.
 <br />
 So let's suppose we have a digital quiz game that works on a clock and reads an input from a manual button. However, we want the switch to transmit only one HIGH pulse to the circuit. If we hook the button directly on the game circuit it will transmit HIGH for as few clock cycles as our finger can achieve. On a common clock frequency our finger can never be fast enough.
-
+</p>
 <h3>Step 1 </h3>
-
+<p>
 The first step of the design procedure is to define with simple but clear words what we want our circuit to do.
-
+</p>
 <h3>Step 2 </h3>
+<p>
 The next step is to design a State Diagram. This is a diagram that is made from circles and arrows and describes visually the operation of our circuit. In mathematic terms, this diagram that describes the operation of our sequential circuit is a Finite State Machine.
+</p>
 <h3>A state Diagram </h3>
+<p>
 Every circle represents a "state", a well-defined condition that our machine can be found at.
 <br />
 In the upper half of the circle we describe that condition. The description helps us remember what our circuit is supposed to do at that condition.
@@ -146,14 +149,17 @@ In the lower part of the circle is the output of our circuit. If we want our cir
 <br />
 Every arrow represents a "transition" from one state to another. A transition happens once every clock cycle. Depending on the current Input, we may go to a different state each time.
 <br />
-
+</p>
 <h3> Step 3 </h3>
+<p>
 Next, we replace the words that describe the different states of the diagram with binary numbers. We start the enumeration from 0 which is assigned always on the initial state. We then continue the enumeration with any state we like, until all states have their number.
-
+</p>
 <h3> Step 4 </h3>
+<p>
 Afterwards, we fill the State Table. This table has a very specific form. 
-
+</p>
 <h3>A State Table</h3>
+<p>
 The first columns are as many as the bits of the highest number we assigned the State Diagram.These columns describe the Current State of our circuit.
 <br />
 To the right of the Current State columns we write the Input Columns. These will be as many as our Input variables.
@@ -167,27 +173,32 @@ Each row of the Next State columns is filled as follows: We fill it in with the 
 The outputs column is filled by the output of the corresponding Current State in the State Diagram.
 <br />
 The State Table is complete! It describes the behaviour of our circuit as fully as the State Diagram does.
+</p>
 <h3> Step 5a </h3>
+<p>
 The next step is to take that theoretical "Machine" and implement it in a circuit. Most often than not, this implementation involves Flip Flops. This guide is dedicated to this kind of implementation and will describe the procedure for both D - Flip Flops as well as JK - Flip Flops. T - Flip Flops will not be included as they are too similar to the two previous cases.
 
 The selection of the Flip Flop to use is arbitrary and usually is determined by cost factors. The best choice is to perform both analysis and decide which type of Flip Flop results in minimum number of logic gates and lesser cost.
 <br />
 We will need as many D - Flip Flops as the State columns.For every Flip Flop we will add one one more column in our State table with the name of the Flip Flop's input. The column that corresponds to each Flip Flop describes what input we must give the Flip Flop in order to go from the Current State to the Next State. For the D - Flip Flop this is easy: The necessary input is equal to the Next State. In the rows that contain X's we fill X's in this column as well.
-
+</p>
 <h3> Step 5b </h3>
+<p>
 We can do the same steps with JK - Flip Flops. There are some differences however. A JK - Flip Flop has two inputs, therefore we need to add two columns for each Flip Flop.
-
+</p>
 <h3> Step 6 </h3>
+<p>
 We are in the final stage of our procedure. What remains, is to determine the Boolean functions that determine the inputs of our Flip Flops and the Output. We will extract one Boolean funtion for each Flip Flop input we have. This can be done with a Karnaugh Map. The input variables of this map are the Current State variables as well as the Inputs.
-
+</p>
 <h3> Step 7 </h3>
+<p>
 We design our circuit. We place the Flip Flops and use logic gates to form the Boolean functions that we calculated. The gates take input from the output of the Flip Flops and the Input of the circuit.
-
+</p>
 <br />
-<br />
+<p>
 We have successfully designed and constructed a Sequential Circuit.Sequential Circuits can come in handy as control parts of bigger circuits and can perform any sequential logic task that we can think of.
 </p>
-
+<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
 
         </div>
       </section>
@@ -389,7 +400,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-6-heading" 
           class="heading">
-            Quizzes
+            Quiz
           </div>
 
           <div id="experiment-article-section-6-content" 
@@ -478,7 +489,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 <!-- The heading for the section can be enclosed in a
 div tag and shown with a <h2> tag -->
 <div id="lab-article-section-9-heading" class="heading">
-Feedback
+Feedback S/W
 </div>
 
 <!-- Write the section content inside a paragraph
