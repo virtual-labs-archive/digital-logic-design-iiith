@@ -126,48 +126,39 @@ Flip-flops can be either simple (transparent or opaque) or clocked (synchronous 
           
 <h2> NAND and NOR Latches</h2>
 <h3> NOR Latch</h3>
-	<img src="../images/NOR.png" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
 	<p>
+	<img src="../images/NOR.png" alt="2-d vectors"  />
 	It can be constructed from a pair of cross-coupled NOR logic gates. The stored bit is present on the output marked Q.
 
 While the S and R inputs are both low, feedback maintains the Q and Q outputs in a constant state, with Q the complement of Q. If S (Set) is pulsed high while R (Reset) is held low, then the Q output is forced high, and stays high when S returns to low; similarly, if R is pulsed high while S is held low, then the Q output is forced low, and stays low when R returns to low.
 
 	</p>
 	<h3> NAND Latch</h3>
-	<img src="../images/NAND.png" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
-
-	<p>
+<p>
+	<img src="../images/NAND.png" alt="2-d vectors"  />
 	This is an alternate model of the simple SR latch built with NAND logic gates. Set and reset now become active low signals, denoted S and R respectively. Otherwise, operation is identical to that of the SR latch. Historically, SR-latches have been predominant despite the notational inconvenience of active-low inputs
 	</p>
-	<br />
-	<br />
-	<br />
 	<h2> JK Flip Flop </h2>
-	<img src="../images/master_slave.gif" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
-	<p>
+<p>
+	<img src="../images/master_slave.gif" alt="2-d vectors" width="400px" />
 JK flip flop is mostly implemented as Master Slave flip flop. The information present at at J and K inputs is transmitted to master flip-flop on positive edge of a clock pulse and held there until negative pulse occurs, after which it is allowed to pass through the slave flip-flop.
 	</p>
 <h2> JK Timing Digram </h2>
+<p>
 	<img src="../images/JK_flipflop_timing.gif" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
 
-	<p>
+	
 	The following Digram depicts the change of JK flip flop Output with time pulse. It is negativve edge triggered.
 	</p>
-<br/>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
 <h2> Truth Table </h2>
-	<img src="../images/jk_truth.png" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
+	
 <p>
 The following digram depicts the truth table of JK Flip Flop.
+<br/>
+<img src="../images/jk_truth.png" alt="2-d vectors" width="400px" style="float:left; margin:10px;"/>
 </p>
- 
+ <P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
         </div>
       </section>
 
@@ -371,7 +362,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-6-heading" 
           class="heading">
-            Quizzes
+            Quiz
           </div>
 
           <div id="experiment-article-section-6-content" 
@@ -412,10 +403,10 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 <li> With The help of Theory Page , try to build the  Flip Flop Circuit. </li>
 <li> First of all build the RS Flip Flop Circuit </li>
 <li> Then use RS Flip Flop to build D Flip Flop</li>
-<li> Then make J K Flip Flop<li>
+<li> Then make J K Flip Flop</li>
 <li> Use J K Flip Flop to make T Flip Flop</li>
 <li>If You are unable to make it , load or export the circuit directly and use it </li>
-<li> Use time variant Input pulse to analyze the output <li>
+<li> Use time variant Input pulse to analyze the output </li>
 </ol>
 	  </div>
 	
@@ -459,7 +450,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 <!-- The heading for the section can be enclosed in a
 div tag and shown with a <h2> tag -->
 <div id="lab-article-section-9-heading" class="heading">
-Feedback
+Feedback S/W
 </div>
 
 <!-- Write the section content inside a paragraph
