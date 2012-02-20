@@ -51,7 +51,7 @@ edit -->
       <header id="experiment-article-heading" class="heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
-        ALU Register Controller
+        Comparator
         <!-- Add any additional element if required with proper 
         enclosing-->
       </header>
@@ -91,7 +91,10 @@ edit -->
           element, You can also include images with <img> tag -->
           <div id="experiment-article-section-1-content" 
           class="content">	
-        
+        <p>
+A digital comparator or magnitude comparator is a hardware electronic device that takes two numbers as input in binary form and determines whether one number is greater than, less than or equal to the other number. Comparators are used in a central processing units (CPU) and microcontrollers. Examples of digital comparator include the CMOS 4063 and 4585 and the TTL 7485 and 74682-'89.
+</p>
+<p> <img src="../images/comp2.png" /> </p>
         </div>
 
 
@@ -118,8 +121,241 @@ edit -->
         element, we can also include images with <img> tag -->
         <div id="experiment-article-section-2-content" 
         class="content">
-          	
-
+          	<p>The operation of a single bit digital comparator can be expressed as a truth table:</p>
+<table style="text-align: center;">
+<tbody><tr>
+<th colspan="2">Inputs</th>
+<th colspan="3">Outputs</th>
+</tr>
+<tr>
+<th><span class="texhtml" dir="ltr"><i>A</i></span></th>
+<th><span class="texhtml" dir="ltr"><i>B</i></span></th>
+<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
+<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
+<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p><br>
+The operation of a two bit digital comparator cannot be expressed as a truth table:</p>
+<table class="wikitable" style="text-align: center;">
+<tbody><tr>
+<th colspan="4">Inputs</th>
+<th colspan="3">Outputs</th>
+</tr>
+<tr>
+<th><span class="texhtml" dir="ltr"><i>A</i><sub>1</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>A</i><sub>0</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>B</i><sub>1</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>B</i><sub>0</sub></span></th>
+<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
+<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
+<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p> Following is the circuit digram for the two bit comparator : </p>
+<p> <img src="../images/comp1.png" /> </p>
+<P><FONT SIZE=2><I><B>Image Source: forum.allaboutcircuits.com/showthread.php?t=10561</B></I></FONT></P>
+<h2> Implementation </h2>
+<p><span ><i>A</i> = <i>A</i><sub>3</sub><i>A</i><sub>2</sub><i>A</i><sub>1</sub><i>A</i><sub>0</sub></span></p>
+<p><span ><i>B</i> = <i>B</i><sub>3</sub><i>B</i><sub>2</sub><i>B</i><sub>1</sub><i>B</i><sub>0</sub></span></p>
+<p>Here each subscript represents one of the digits in the numbers.</p>
+<h2> Equality </h2>
+<p>The binary numbers A and B will be equal if all the pairs of significant digits of both numbers are equal, i.e.,</p>
+<p><span ><i>A</i><sub>3</sub> = <i>B</i><sub>3</sub></span>, <span ><i>A</i><sub>2</sub> = <i>B</i><sub>2</sub></span>, <span ><i>A</i><sub>1</sub> = <i>B</i><sub>1</sub></span> and <span ><i>A</i><sub>0</sub> = <i>B</i><sub>0</sub></span></p>
+<p>Since the numbers are binary, the digits are either 0 or 1 and the boolean function for equality of any two digits <span ><i>A</i><sub><i>i</i></sub></span> and <span ><i>B</i><sub><i>i</i></sub></span> can be expressed as</p>
+<p><img src="../images/comp_form1.png"></p>
+<p>
+<span ><i>x</i><sub><i>i</i></sub></span> is 1 <i>only if</i> <span ><i>A</i><sub><i>i</i></sub></span> and <span><i>B</i><sub><i>i</i></sub></span> are equal.</p>
+<p>For the equality of A and B, all <span ><i>x</i><sub><i>i</i></sub></span> variables (for i=0,1,2,3) must be 1.</p>
+<p>So the quality condition of A and B can be implemented using the AND operation as</p>
+<p><span >(<i>A</i> = <i>B</i>) = <i>x</i><sub>3</sub><i>x</i><sub>2</sub><i>x</i><sub>1</sub><i>x</i><sub>0</sub></span></p>
+<p>The binary variable (A=B) is 1 only if all pairs of digits of the two numbers are equal.</p>
+<h2>Inequality</h2>
+<p>In order to manually determine the greater of two binary numbers, we 
+inspect the relative magnitudes of pairs of significant digits, starting
+ from the most significant bit,
+ gradually proceeding towards lower significant bits until an inequality
+ is found. When an inequality is found, if the corresponding bit of A is
+ 1 and that of B is 0 then we conclude that A&gt;B.</p>
+<p>This sequential comparison can be expressed logically as:</p>
+<p><img src="../images/comp_form2.png"></p>
+<p><img  src="../images/comp_form3.png"></p>
+<p><br>
+(A&gt;B) and (A &lt; B) are output binary variables, which are equal to 1 when A&gt;B or A&lt;B respectively.<br>
+<br></p>
+<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
         </div>
       </section>
 
@@ -140,7 +376,7 @@ edit -->
         <div id="experiment-article-section-3-content" 
         class="content">
          <ol>
-<li> The objective of this experiment is to make ALU controlled Register Circuit. </li>
+<li> The objective of this experiment is to make 2 bits comparator and to understand its working. </li>
 </ol>
 
         </div>
@@ -318,12 +554,20 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-6-heading" 
           class="heading">
-            Quizzes
+            Quiz
           </div>
 
           <div id="experiment-article-section-6-content" 
           class="content">
-            
+            <strong>
+	<p>
+		1) Design the 1 bit comparator. Then analyze its output corresponding to various inputs and compute the truth table.
+		<br/><br/>
+		2) Design the 4 bits comparator. Then analyze its output corresponding to various inputs and compute the truth table.
+		<br/>
+		
+	</p>
+</strong> 
            
           </div>
 
@@ -346,10 +590,9 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
           class="content">
 	    <ol>
 <li> With The help of Theory Page , try to build the Circuit. </li>
-<li> First of all build the ALU.</li>
-<li> Then make the Shift Register</li>
+<li> First of all build 2 bits comparator.</li>
+<li> Then analyze its output  and compute the truth table</li>
 <li>If You are unable to make it , load or export the circuit component directly and use it </li>
-<li> Use Time variant input pulses to analyze the output <li>
 </ol>
 	  </div>
 	
@@ -373,10 +616,10 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
           class="content">
             <ol>	
 		<li>
-			<a href="http://en.wikipedia.org/wiki/Adder_(electronics)" target="_blank"> Adders - Wikipedia </a>
+			<a href="http://en.wikipedia.org/wiki/Digital_comparator" target="_blank"> Digital Comparator - Wikipedia </a>
 		</li>
 		<li>
-			Chapter 6 : Combinational Logic, "Digital Logic and Computer Design" - M. Morris Mano
+			Chapter 5 : Combinational Logic With MSI and LSI, "Digital Logic and Computer Design" - M. Morris Mano
 		</li>
 	</ol>
           </div>
@@ -393,7 +636,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 <!-- The heading for the section can be enclosed in a
 div tag and shown with a <h2> tag -->
 <div id="lab-article-section-9-heading" class="heading">
-Feedback
+Feedback S/W
 </div>
 
 <!-- Write the section content inside a paragraph
