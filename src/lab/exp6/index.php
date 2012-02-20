@@ -38,7 +38,7 @@ $data['nav'] = $nav;
 $vlab_url = "http://virtual-labs.ac.in/"; 
 $css_js   = "http://deploy.virtual-labs.ac.in/labs/cse15/"; 
 $lab_url  = "http://deploy.virtual-labs.ac.in/labs/cse15/index.php";
-$exp_url  =  "http://deploy.virtual-labs.ac.in/labs/cse15/exp5/index.php";
+$exp_url  =  "http://deploy.virtual-labs.ac.in/labs/cse15/exp6/index.php";
 $base_url = $exp_url;
 
 include('../exp_template.php');
