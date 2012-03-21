@@ -42,7 +42,7 @@ $html = file_get_html('./content.html');
         //print_r($nav);
 
 $vlab_url = "http://virtual-labs.ac.in/"; 
-$css_js   = "../";
+$css_js   = "";
  $lab_url  = "http://".$_SERVER['HTTP_HOST'] . "/labs/cse15/index.php";
 $exp_url  = "http://".$_SERVER['HTTP_HOST'] . "/labs/cse15/exp/index.php";
 $base_url = "http://".$_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME']; 
