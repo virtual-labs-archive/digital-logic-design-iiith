@@ -1,0 +1,817 @@
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+2
+
+# Number of Outputs for the whole circuit
+3
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+5
+3, And_Gate3, 47, 13
+2
+6, 0, in, 3, 44, 12, 17
+7, 1, in, 3, 44, 14, 15
+1
+6, 0, out, 3, 50, 13, 1, 18
+8, Generic_Element_flipflop_t8, 30, 30
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+2
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+11
+0, Generic_Element0, 21, 12
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+3
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+3
+0, And_Gate0, 15, 14
+2
+0, 0, in, 0, 12, 13, -1
+1, 1, in, 0, 12, 15, -1
+1
+0, 0, out, 0, 18, 14, 1, 3
+1, And_Gate1, 22, 7
+2
+2, 0, in, 1, 19, 6, -1
+3, 1, in, 1, 19, 8, 0
+1
+1, 0, out, 1, 25, 7, 1, 4
+2, Not_Gate2, 35, 7
+1
+4, 0, in, 2, 32, 7, 1
+1
+2, 0, out, 2, 38, 7, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+3, 0, 1, 2
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 2
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 1, 0
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 2
+3
+0, 0, in, 0, 17, 10, 12
+1, 1, J, 0, 17, 12, 11
+2, 2, in, 0, 17, 14, 8
+1
+0, 0, out, 0, 25, 12, 1, 6
+1, Generic_Element1, 22, 32
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+3
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+3
+0, And_Gate0, 15, 14
+2
+0, 0, in, 0, 12, 13, -1
+1, 1, in, 0, 12, 15, -1
+1
+0, 0, out, 0, 18, 14, 1, 3
+1, And_Gate1, 22, 7
+2
+2, 0, in, 1, 19, 6, -1
+3, 1, in, 1, 19, 8, 0
+1
+1, 0, out, 1, 25, 7, 1, 4
+2, Not_Gate2, 35, 7
+1
+4, 0, in, 2, 32, 7, 1
+1
+2, 0, out, 2, 38, 7, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+3, 0, 1, 2
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 2
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 1, 0
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 2
+3
+3, 0, in, 1, 18, 30, 8
+4, 1, K, 1, 18, 32, 11
+5, 2, in, 1, 18, 34, 6
+1
+1, 0, out, 1, 26, 32, 1, 9
+2, Nand_Gate2, 28, 7
+2
+6, 0, in, 2, 25, 6, 0
+7, 1, in, 2, 25, 8, 3
+1
+2, 0, out, 2, 31, 7, 2, 10, 8
+3, Nand_Gate3, 31, 31
+2
+8, 0, in, 3, 28, 30, 2
+9, 1, in, 3, 28, 32, 1
+1
+3, 0, out, 3, 34, 31, 2, 7, 13
+4, Nand_Gate4, 46, 8
+2
+10, 0, in, 4, 43, 7, 2
+11, 1, in, 4, 43, 9, 9
+1
+4, 0, out, 4, 49, 8, 1, 14
+5, Nand_Gate5, 44, 29
+2
+12, 0, in, 5, 41, 28, 9
+13, 1, in, 5, 41, 30, 3
+1
+5, 0, out, 5, 47, 29, 1, 22
+6, Nand_Gate6, 70, 11
+2
+14, 0, in, 6, 67, 10, 4
+15, 1, in, 6, 67, 12, 12
+1
+6, 0, Q, 6, 73, 11, 2, 21, 5
+8, Generic_Element8, 7, 32
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+1
+
+# Number of Outputs for the whole circuit
+2
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+2
+0, Not_Gate0, 15, 14
+1
+0, 0, in, 0, 12, 14, -1
+1
+0, 0, O', 0, 18, 14, 1, 1
+1, Not_Gate1, 29, 12
+1
+1, 0, in, 1, 26, 12, 0
+1
+1, 0, O, 1, 32, 12, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+1, 0
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+2, 0, 1
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 0
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 1, 0
+1
+18, 0, ck, 8, 4, 32, -1
+2
+8, 0, O, 8, 10, 31, 2, 2, 3
+9, 1, O', 8, 10, 33, 2, 11, 12
+9, Not_Gate9, 8, 26
+1
+19, 0, T, 9, 5, 26, -1
+1
+10, 0, out, 9, 11, 26, 1, 20
+10, Not_Gate10, 12, 21
+1
+20, 0, in, 10, 9, 21, 10
+1
+11, 0, out, 10, 15, 21, 2, 1, 4
+11, Nand_Gate11, 61, 24
+2
+21, 0, in, 11, 58, 23, 6
+22, 1, in, 11, 58, 25, 5
+1
+12, 0, out, 11, 64, 24, 2, 0, 15
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+2, 19, 18
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 6
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 8, 9
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 6
+2
+16, 0, T, 8, 27, 29, -1
+17, 1, ck, 8, 27, 31, 18
+1
+15, 0, Q0, 8, 33, 30, 2, 7, 20
+9, Generic_Element_flipflop_t9, 24, 6
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+2
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+11
+0, Generic_Element0, 21, 12
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+3
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+3
+0, And_Gate0, 15, 14
+2
+0, 0, in, 0, 12, 13, -1
+1, 1, in, 0, 12, 15, -1
+1
+0, 0, out, 0, 18, 14, 1, 3
+1, And_Gate1, 22, 7
+2
+2, 0, in, 1, 19, 6, -1
+3, 1, in, 1, 19, 8, 0
+1
+1, 0, out, 1, 25, 7, 1, 4
+2, Not_Gate2, 35, 7
+1
+4, 0, in, 2, 32, 7, 1
+1
+2, 0, out, 2, 38, 7, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+3, 0, 1, 2
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 2
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 0, 1
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 2
+3
+0, 0, in, 0, 17, 10, 12
+1, 1, J, 0, 17, 12, 11
+2, 2, in, 0, 17, 14, 8
+1
+0, 0, out, 0, 25, 12, 1, 6
+1, Generic_Element1, 22, 32
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+3
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+3
+0, And_Gate0, 15, 14
+2
+0, 0, in, 0, 12, 13, -1
+1, 1, in, 0, 12, 15, -1
+1
+0, 0, out, 0, 18, 14, 1, 3
+1, And_Gate1, 22, 7
+2
+2, 0, in, 1, 19, 6, -1
+3, 1, in, 1, 19, 8, 0
+1
+1, 0, out, 1, 25, 7, 1, 4
+2, Not_Gate2, 35, 7
+1
+4, 0, in, 2, 32, 7, 1
+1
+2, 0, out, 2, 38, 7, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+3, 0, 1, 2
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 2
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 0, 1
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 2
+3
+3, 0, in, 1, 18, 30, 8
+4, 1, K, 1, 18, 32, 11
+5, 2, in, 1, 18, 34, 6
+1
+1, 0, out, 1, 26, 32, 1, 9
+2, Nand_Gate2, 28, 7
+2
+6, 0, in, 2, 25, 6, 0
+7, 1, in, 2, 25, 8, 3
+1
+2, 0, out, 2, 31, 7, 2, 10, 8
+3, Nand_Gate3, 31, 31
+2
+8, 0, in, 3, 28, 30, 2
+9, 1, in, 3, 28, 32, 1
+1
+3, 0, out, 3, 34, 31, 2, 7, 13
+4, Nand_Gate4, 46, 8
+2
+10, 0, in, 4, 43, 7, 2
+11, 1, in, 4, 43, 9, 9
+1
+4, 0, out, 4, 49, 8, 1, 14
+5, Nand_Gate5, 44, 29
+2
+12, 0, in, 5, 41, 28, 9
+13, 1, in, 5, 41, 30, 3
+1
+5, 0, out, 5, 47, 29, 1, 22
+6, Nand_Gate6, 70, 11
+2
+14, 0, in, 6, 67, 10, 4
+15, 1, in, 6, 67, 12, 12
+1
+6, 0, Q, 6, 73, 11, 2, 21, 5
+8, Generic_Element8, 7, 32
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+1
+
+# Number of Outputs for the whole circuit
+2
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+2
+0, Not_Gate0, 15, 14
+1
+0, 0, in, 0, 12, 14, -1
+1
+0, 0, O', 0, 18, 14, 1, 1
+1, Not_Gate1, 29, 12
+1
+1, 0, in, 1, 26, 12, 0
+1
+1, 0, O, 1, 32, 12, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+1, 0
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+2, 0, 1
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 0
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 0, 1
+1
+18, 0, ck, 8, 4, 32, -1
+2
+8, 0, O, 8, 10, 31, 2, 2, 3
+9, 1, O', 8, 10, 33, 2, 11, 12
+9, Not_Gate9, 8, 26
+1
+19, 0, T, 9, 5, 26, -1
+1
+10, 0, out, 9, 11, 26, 1, 20
+10, Not_Gate10, 12, 21
+1
+20, 0, in, 10, 9, 21, 10
+1
+11, 0, out, 10, 15, 21, 2, 1, 4
+11, Nand_Gate11, 61, 24
+2
+21, 0, in, 11, 58, 23, 6
+22, 1, in, 11, 58, 25, 5
+1
+12, 0, out, 11, 64, 24, 2, 0, 15
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+2, 19, 18
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 6
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 8, 9
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 6
+2
+18, 0, T, 9, 21, 5, 6
+19, 1, ck, 9, 21, 7, 18
+1
+16, 0, Q2, 9, 27, 6, 0
+10, Generic_Element_flipflop_t10, 24, 16
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+2
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+11
+0, Generic_Element0, 21, 12
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+3
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+3
+0, And_Gate0, 15, 14
+2
+0, 0, in, 0, 12, 13, -1
+1, 1, in, 0, 12, 15, -1
+1
+0, 0, out, 0, 18, 14, 1, 3
+1, And_Gate1, 22, 7
+2
+2, 0, in, 1, 19, 6, -1
+3, 1, in, 1, 19, 8, 0
+1
+1, 0, out, 1, 25, 7, 1, 4
+2, Not_Gate2, 35, 7
+1
+4, 0, in, 2, 32, 7, 1
+1
+2, 0, out, 2, 38, 7, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+3, 0, 1, 2
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 2
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 1, 0
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 2
+3
+0, 0, in, 0, 17, 10, 12
+1, 1, J, 0, 17, 12, 11
+2, 2, in, 0, 17, 14, 8
+1
+0, 0, out, 0, 25, 12, 1, 6
+1, Generic_Element1, 22, 32
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+3
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+3
+0, And_Gate0, 15, 14
+2
+0, 0, in, 0, 12, 13, -1
+1, 1, in, 0, 12, 15, -1
+1
+0, 0, out, 0, 18, 14, 1, 3
+1, And_Gate1, 22, 7
+2
+2, 0, in, 1, 19, 6, -1
+3, 1, in, 1, 19, 8, 0
+1
+1, 0, out, 1, 25, 7, 1, 4
+2, Not_Gate2, 35, 7
+1
+4, 0, in, 2, 32, 7, 1
+1
+2, 0, out, 2, 38, 7, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+3, 0, 1, 2
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 2
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 0, 1
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 2
+3
+3, 0, in, 1, 18, 30, 8
+4, 1, K, 1, 18, 32, 11
+5, 2, in, 1, 18, 34, 6
+1
+1, 0, out, 1, 26, 32, 1, 9
+2, Nand_Gate2, 28, 7
+2
+6, 0, in, 2, 25, 6, 0
+7, 1, in, 2, 25, 8, 3
+1
+2, 0, out, 2, 31, 7, 2, 10, 8
+3, Nand_Gate3, 31, 31
+2
+8, 0, in, 3, 28, 30, 2
+9, 1, in, 3, 28, 32, 1
+1
+3, 0, out, 3, 34, 31, 2, 7, 13
+4, Nand_Gate4, 46, 8
+2
+10, 0, in, 4, 43, 7, 2
+11, 1, in, 4, 43, 9, 9
+1
+4, 0, out, 4, 49, 8, 1, 14
+5, Nand_Gate5, 44, 29
+2
+12, 0, in, 5, 41, 28, 9
+13, 1, in, 5, 41, 30, 3
+1
+5, 0, out, 5, 47, 29, 1, 22
+6, Nand_Gate6, 70, 11
+2
+14, 0, in, 6, 67, 10, 4
+15, 1, in, 6, 67, 12, 12
+1
+6, 0, Q, 6, 73, 11, 2, 21, 5
+8, Generic_Element8, 7, 32
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+1
+
+# Number of Outputs for the whole circuit
+2
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+2
+0, Not_Gate0, 15, 14
+1
+0, 0, in, 0, 12, 14, -1
+1
+0, 0, O', 0, 18, 14, 1, 1
+1, Not_Gate1, 29, 12
+1
+1, 0, in, 1, 26, 12, 0
+1
+1, 0, O, 1, 32, 12, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+1, 0
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+2, 0, 1
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 0
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 0, 1
+1
+18, 0, ck, 8, 4, 32, -1
+2
+8, 0, O, 8, 10, 31, 2, 2, 3
+9, 1, O', 8, 10, 33, 2, 11, 12
+9, Not_Gate9, 8, 26
+1
+19, 0, T, 9, 5, 26, -1
+1
+10, 0, out, 9, 11, 26, 1, 20
+10, Not_Gate10, 12, 21
+1
+20, 0, in, 10, 9, 21, 10
+1
+11, 0, out, 10, 15, 21, 2, 1, 4
+11, Nand_Gate11, 61, 24
+2
+21, 0, in, 11, 58, 23, 6
+22, 1, in, 11, 58, 25, 5
+1
+12, 0, out, 11, 64, 24, 2, 0, 15
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+2, 19, 18
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 6
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 9, 8
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 6
+2
+20, 0, T, 10, 21, 15, 15
+21, 1, ck, 10, 21, 17, 18
+1
+17, 0, Q1, 10, 27, 16, 1, 6
+11, Generic_Element_connector11, 8, 21
+# Circuit ID
+1
+
+# Circuit Name
+Circuit-1
+
+# Number of Inputs for the whole circuit
+1
+
+# Number of Outputs for the whole circuit
+1
+
+# Total Number of Elements in the Circuit
+# List of all Elements
+# ID, Name, Location.x, Location.y
+# Num_Inputs_For_Element
+# InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
+# Num_Outputs_For_Element
+# OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2... 
+2
+0, Not_Gate0, 17, 14
+1
+0, 0, in, 0, 14, 14, -1
+1
+0, 0, out, 0, 20, 14, 1, 1
+1, Not_Gate1, 31, 14
+1
+1, 0, in, 1, 28, 14, 0
+1
+1, 0, out, 1, 34, 14, 0
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+1, 0
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+1, 1
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 0
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+1, 1
+1
+22, 0, ck, 11, 6, 21, -1
+1
+18, 0, out, 11, 10, 21, 3, 19, 21, 17
+
+# Num_Inputs_For_Whole_Circuit, InpID1, InpID2, InpID3...
+2, 16, 22
+
+# Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+3, 17, 16, 15
+
+# Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+2, 11, 8
+
+# Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+3, 10, 9, 8
