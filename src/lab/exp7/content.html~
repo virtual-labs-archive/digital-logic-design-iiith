@@ -51,7 +51,7 @@ edit -->
       <header id="experiment-article-heading" class="heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
-        Comparator
+       Registers
         <!-- Add any additional element if required with proper 
         enclosing-->
       </header>
@@ -91,10 +91,10 @@ edit -->
           element, You can also include images with <img> tag -->
           <div id="experiment-article-section-1-content" 
           class="content">	
-        <p>
-A digital comparator or magnitude comparator is a hardware electronic device that takes two numbers as input in binary form and determines whether one number is greater than, less than or equal to the other number. Comparators are used in a central processing units (CPU) and microcontrollers. Examples of digital comparator include the CMOS 4063 and 4585 and the TTL 7485 and 74682-'89.
-</p>
-<p> <img src="../images/comp2.png" /> </p>
+           <p>	
+ This module explains about how to build registers which are the units of memory storage in computers.
+In computer architecture, a processor register is a small amount of storage available as part of a CPU or other digital processor. Such registers are (typically) addressed by other mechanisms than main memory and can be accessed more quickly. Almost all computers, load-store architecture or not, load data from a larger memory into registers where it is used for arithmetic, manipulated, or tested, by some machine instruction. Manipulated data is then often stored back in main memory, either by the same instruction or a subsequent one. 
+ </p>
         </div>
 
 
@@ -121,241 +121,28 @@ A digital comparator or magnitude comparator is a hardware electronic device tha
         element, we can also include images with <img> tag -->
         <div id="experiment-article-section-2-content" 
         class="content">
-          	<p>The operation of a single bit digital comparator can be expressed as a truth table:</p>
-<table style="text-align: center;">
-<tbody><tr>
-<th colspan="2">Inputs</th>
-<th colspan="3">Outputs</th>
-</tr>
-<tr>
-<th><span class="texhtml" dir="ltr"><i>A</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p><br>
-The operation of a two bit digital comparator cannot be expressed as a truth table:</p>
-<table class="wikitable" style="text-align: center;">
-<tbody><tr>
-<th colspan="4">Inputs</th>
-<th colspan="3">Outputs</th>
-</tr>
-<tr>
-<th><span class="texhtml" dir="ltr"><i>A</i><sub>1</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i><sub>0</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i><sub>1</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i><sub>0</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p> Following is the circuit digram for the two bit comparator : </p>
-<p> <img src="../images/comp1.png" /> </p>
-<P><FONT SIZE=2><I><B>Image Source: forum.allaboutcircuits.com/showthread.php?t=10561</B></I></FONT></P>
-<h2> Implementation </h2>
-<p><span ><i>A</i> = <i>A</i><sub>3</sub><i>A</i><sub>2</sub><i>A</i><sub>1</sub><i>A</i><sub>0</sub></span></p>
-<p><span ><i>B</i> = <i>B</i><sub>3</sub><i>B</i><sub>2</sub><i>B</i><sub>1</sub><i>B</i><sub>0</sub></span></p>
-<p>Here each subscript represents one of the digits in the numbers.</p>
-<h2> Equality </h2>
-<p>The binary numbers A and B will be equal if all the pairs of significant digits of both numbers are equal, i.e.,</p>
-<p><span ><i>A</i><sub>3</sub> = <i>B</i><sub>3</sub></span>, <span ><i>A</i><sub>2</sub> = <i>B</i><sub>2</sub></span>, <span ><i>A</i><sub>1</sub> = <i>B</i><sub>1</sub></span> and <span ><i>A</i><sub>0</sub> = <i>B</i><sub>0</sub></span></p>
-<p>Since the numbers are binary, the digits are either 0 or 1 and the boolean function for equality of any two digits <span ><i>A</i><sub><i>i</i></sub></span> and <span ><i>B</i><sub><i>i</i></sub></span> can be expressed as</p>
-<p><img src="../images/comp_form1.png"></p>
+          	<p>
+Registers can move two types of digital information: parallel and serial. Registers also have two basic ways of moving it: FIFO and LIFO. The simplest register is a FIFO, which is only one level deep and one bit wide. It is basically a single D Type Flip/Flop.
+</p>
+<h3> FIFO </h3>
 <p>
-<span ><i>x</i><sub><i>i</i></sub></span> is 1 <i>only if</i> <span ><i>A</i><sub><i>i</i></sub></span> and <span><i>B</i><sub><i>i</i></sub></span> are equal.</p>
-<p>For the equality of A and B, all <span ><i>x</i><sub><i>i</i></sub></span> variables (for i=0,1,2,3) must be 1.</p>
-<p>So the quality condition of A and B can be implemented using the AND operation as</p>
-<p><span >(<i>A</i> = <i>B</i>) = <i>x</i><sub>3</sub><i>x</i><sub>2</sub><i>x</i><sub>1</sub><i>x</i><sub>0</sub></span></p>
-<p>The binary variable (A=B) is 1 only if all pairs of digits of the two numbers are equal.</p>
-<h2>Inequality</h2>
-<p>In order to manually determine the greater of two binary numbers, we 
-inspect the relative magnitudes of pairs of significant digits, starting
- from the most significant bit,
- gradually proceeding towards lower significant bits until an inequality
- is found. When an inequality is found, if the corresponding bit of A is
- 1 and that of B is 0 then we conclude that A&gt;B.</p>
-<p>This sequential comparison can be expressed logically as:</p>
-<p><img src="../images/comp_form2.png"></p>
-<p><img  src="../images/comp_form3.png"></p>
-<p><br>
-(A&gt;B) and (A &lt; B) are output binary variables, which are equal to 1 when A&gt;B or A&lt;B respectively.<br>
-<br></p>
-<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
+A FIFO (First In First Out) is a digital device that moves data in the same way a queue would. The first chunk of information in is moved over as more is loaded in behind it. This continues until it is pushed out the end. Like a grocery line.
+</p>
+<h3> LIFO </h3>
+<p>
+A LIFO (Last In First Out) is a like a FIFO only the data comes out in the reverse order it came in. Data is processed like a stack data structure. Imagine putting items onto a stack, the first item taken off would be at the top of the stack. Thus, the last item in (item at the top of the stack), would be the first item out
+</p>
+<h3> Parallel </h3>
+<p>
+Parallel Registers take in mulitple bits at a time.
+</p>
+<h3> Shift Registers </h3>
+<p>
+Shift Registers are the simplest serial interfaces. They take serial data in one bit at a time and convert it to parallel form or the other way around. The first way is Serial In Parallel Out and the ladder is Parallel In Serial Out. Shift Registers are used to make larger state machines like counters and UARTs.
+</p>
+<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P> 
+
+
         </div>
       </section>
 
@@ -376,7 +163,8 @@ inspect the relative magnitudes of pairs of significant digits, starting
         <div id="experiment-article-section-3-content" 
         class="content">
          <ol>
-<li> The objective of this experiment is to make 2 bits comparator and to understand its working. </li>
+<li> The objective of this experiment is to understand the working of the Shift Registers. </li>
+<li> Try to make basic Shift Register and Parallel Shift Register.</li>
 </ol>
 
         </div>
@@ -393,7 +181,7 @@ if(y<660)
 {
 y=660;
 }
-document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make an ALU Register controller"><param name="file_list" value="parallel_shift_reg,ALU"></applet>' ;
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make simple shift register and also parallel load shift register"><param name="file_list" value="shift_reg,parallel_shift_reg"></applet>' ;
 </script>
 -->
       <section id="experiment-article-section-4">
@@ -408,13 +196,12 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
         class="heading">
           Experiment
         </div>
-	
-	<p><a href="../documents/java-and-icedtea-plugin.docx">Install prerequisites to run the simulation</a></p>
+
         <div id="experiment-article-section-4-content" 
         class="content">
           <p>
-	  <!--    <div id="applet_embed"></div> -->
-	        <a href="./exp5.html" class="qtlink" onclick="window.open('./exp5.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
+	   <!--   <div id="applet_embed"></div>-->
+<a href="./exp7.html" class="qtlink" onclick="window.open('./exp7.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
 
 	For performing experiment Click here
 	</a>
@@ -539,6 +326,8 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</P>
 
 </ol>
+		
+		
 	
 
           </div>
@@ -560,16 +349,18 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-6-content" 
           class="content">
-            <strong>
+            
+           <strong>
 	<p>
-		1) Design the 1 bit comparator. Then analyze its output corresponding to various inputs and compute the truth table.
+		1) Design a simple register using 4 'D' flip flops and a common clock pulse. The register should copy new information from input to output at negative edge of every clock cycle.
 		<br/><br/>
-		2) Design the 4 bits comparator. Then analyze its output corresponding to various inputs and compute the truth table.
+		2) Design a register with parallel load using 4 'D' flip flops, a common clock pulse and basic gates. The register should copy new information from input to output at negative edge of clock whenever the LOAD signal is 1 and should retain the old values when LOAD signal is 0.
+		<br/><br/>
+		3) Design a shift register which shifts its contents by 1 bit to the right at negative edge of the clock pulse. There will be a 'serial input' (SI) which comes at the output of leftmost flip flop. For ex:-  if register contains 0011 now and 1 is given as the serial input, then at next falling edge of clock pulse, register should contain 1001.
 		<br/>
-		
-	</p>
-</strong> 
-           
+		HINT: Connect output of one flip flop to the input of next flip flop 
+	</p> 
+</strong>
           </div>
 
         </section>
@@ -590,10 +381,11 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
           <div id="experiment-article-section-7-content" 
           class="content">
 	    <ol>
-<li> With The help of Theory Page , try to build the Circuit. </li>
-<li> First of all build 2 bits comparator.</li>
-<li> Then analyze its output  and compute the truth table</li>
-<li>If You are unable to make it , load or export the circuit component directly and use it </li>
+<li> With The help of Theory Page , try to build the Register Circuit. </li>
+<li> First of all build the Simple Shift Register.</li>
+<li> Then try to build the Parallel Load shift Register</li>
+<li>If You are unable to make it , load or export the circuit directly and use it </li>
+<li> Use time variant input pulses to analyze the output</li>
 </ol>
 	  </div>
 	
@@ -615,12 +407,15 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-8-content" 
           class="content">
-            <ol>	
+           <ol>	
 		<li>
-			<a href="http://en.wikipedia.org/wiki/Digital_comparator" target="_blank"> Digital Comparator - Wikipedia </a>
+			<a href="http://en.wikipedia.org/wiki/Processor_register" target="_blank"> Registers - Wikipedia </a>
 		</li>
 		<li>
-			Chapter 5 : Combinational Logic With MSI and LSI, "Digital Logic and Computer Design" - M. Morris Mano
+			<a href="http://en.wikipedia.org/wiki/Shift_register" target="_blank"> Shift Registers - Wikipedia </a>
+		</li>
+		<li>
+			Chapter 7 : Registers, Counters and Memory unit, "Digital Logic and Computer Design" - M. Morris Mano
 		</li>
 	</ol>
           </div>

@@ -51,7 +51,7 @@ edit -->
       <header id="experiment-article-heading" class="heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
-        Comparator
+        JK Flip-Flop
         <!-- Add any additional element if required with proper 
         enclosing-->
       </header>
@@ -91,10 +91,12 @@ edit -->
           element, You can also include images with <img> tag -->
           <div id="experiment-article-section-1-content" 
           class="content">	
-        <p>
-A digital comparator or magnitude comparator is a hardware electronic device that takes two numbers as input in binary form and determines whether one number is greater than, less than or equal to the other number. Comparators are used in a central processing units (CPU) and microcontrollers. Examples of digital comparator include the CMOS 4063 and 4585 and the TTL 7485 and 74682-'89.
-</p>
-<p> <img src="../images/comp2.png" /> </p>
+          <img src="../images/jk.gif" alt="Position vector"/>  
+	<p>
+	In electronics, a flip-flop or latch is a circuit that has two stable states and can be used to store state information. The circuit can be made to change state by signals applied to one or more control inputs and will have one or two outputs. Flip-flops and latches are a fundamental building block of digital electronics systems used in computers, communications, and many other types of systems.
+Flip-flops and latches are used as data storage elements. Such data storage can be used for storage of state, and such a circuit is described as sequential logic. When used in a finite-state machine, the output and next state depend not only on its current input, but also on its current state (and hence, previous inputs.) It can also be used for counting of pulses, and for synchronizing variably-timed input signals to some reference timing signal.
+Flip-flops can be either simple (transparent or opaque) or clocked (synchronous or edge-triggered); the simple ones are commonly called latches. The word latch is mainly used for storage elements, while clocked devices are described as flip-flops.
+	</p>
         </div>
 
 
@@ -121,241 +123,43 @@ A digital comparator or magnitude comparator is a hardware electronic device tha
         element, we can also include images with <img> tag -->
         <div id="experiment-article-section-2-content" 
         class="content">
-          	<p>The operation of a single bit digital comparator can be expressed as a truth table:</p>
-<table style="text-align: center;">
-<tbody><tr>
-<th colspan="2">Inputs</th>
-<th colspan="3">Outputs</th>
-</tr>
-<tr>
-<th><span class="texhtml" dir="ltr"><i>A</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p><br>
-The operation of a two bit digital comparator cannot be expressed as a truth table:</p>
-<table class="wikitable" style="text-align: center;">
-<tbody><tr>
-<th colspan="4">Inputs</th>
-<th colspan="3">Outputs</th>
-</tr>
-<tr>
-<th><span class="texhtml" dir="ltr"><i>A</i><sub>1</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i><sub>0</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i><sub>1</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i><sub>0</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p> Following is the circuit digram for the two bit comparator : </p>
-<p> <img src="../images/comp1.png" /> </p>
-<P><FONT SIZE=2><I><B>Image Source: forum.allaboutcircuits.com/showthread.php?t=10561</B></I></FONT></P>
-<h2> Implementation </h2>
-<p><span ><i>A</i> = <i>A</i><sub>3</sub><i>A</i><sub>2</sub><i>A</i><sub>1</sub><i>A</i><sub>0</sub></span></p>
-<p><span ><i>B</i> = <i>B</i><sub>3</sub><i>B</i><sub>2</sub><i>B</i><sub>1</sub><i>B</i><sub>0</sub></span></p>
-<p>Here each subscript represents one of the digits in the numbers.</p>
-<h2> Equality </h2>
-<p>The binary numbers A and B will be equal if all the pairs of significant digits of both numbers are equal, i.e.,</p>
-<p><span ><i>A</i><sub>3</sub> = <i>B</i><sub>3</sub></span>, <span ><i>A</i><sub>2</sub> = <i>B</i><sub>2</sub></span>, <span ><i>A</i><sub>1</sub> = <i>B</i><sub>1</sub></span> and <span ><i>A</i><sub>0</sub> = <i>B</i><sub>0</sub></span></p>
-<p>Since the numbers are binary, the digits are either 0 or 1 and the boolean function for equality of any two digits <span ><i>A</i><sub><i>i</i></sub></span> and <span ><i>B</i><sub><i>i</i></sub></span> can be expressed as</p>
-<p><img src="../images/comp_form1.png"></p>
+          
+<h2> NAND and NOR Latches</h2>
+<h3> NOR Latch</h3>
+	<p>
+	<img src="../images/NOR.png" alt="2-d vectors"  />
+<br />
+	It can be constructed from a pair of cross-coupled NOR logic gates. The stored bit is present on the output marked Q.
+
+While the S and R inputs are both low, feedback maintains the Q and Q outputs in a constant state, with Q the complement of Q. If S (Set) is pulsed high while R (Reset) is held low, then the Q output is forced high, and stays high when S returns to low; similarly, if R is pulsed high while S is held low, then the Q output is forced low, and stays low when R returns to low.
+
+	</p>
+	<h3> NAND Latch</h3>
 <p>
-<span ><i>x</i><sub><i>i</i></sub></span> is 1 <i>only if</i> <span ><i>A</i><sub><i>i</i></sub></span> and <span><i>B</i><sub><i>i</i></sub></span> are equal.</p>
-<p>For the equality of A and B, all <span ><i>x</i><sub><i>i</i></sub></span> variables (for i=0,1,2,3) must be 1.</p>
-<p>So the quality condition of A and B can be implemented using the AND operation as</p>
-<p><span >(<i>A</i> = <i>B</i>) = <i>x</i><sub>3</sub><i>x</i><sub>2</sub><i>x</i><sub>1</sub><i>x</i><sub>0</sub></span></p>
-<p>The binary variable (A=B) is 1 only if all pairs of digits of the two numbers are equal.</p>
-<h2>Inequality</h2>
-<p>In order to manually determine the greater of two binary numbers, we 
-inspect the relative magnitudes of pairs of significant digits, starting
- from the most significant bit,
- gradually proceeding towards lower significant bits until an inequality
- is found. When an inequality is found, if the corresponding bit of A is
- 1 and that of B is 0 then we conclude that A&gt;B.</p>
-<p>This sequential comparison can be expressed logically as:</p>
-<p><img src="../images/comp_form2.png"></p>
-<p><img  src="../images/comp_form3.png"></p>
-<p><br>
-(A&gt;B) and (A &lt; B) are output binary variables, which are equal to 1 when A&gt;B or A&lt;B respectively.<br>
-<br></p>
-<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
+	<img src="../images/NAND.png" alt="2-d vectors"  />
+<br />
+	This is an alternate model of the simple SR latch built with NAND logic gates. Set and reset now become active low signals, denoted S and R respectively. Otherwise, operation is identical to that of the SR latch. Historically, SR-latches have been predominant despite the notational inconvenience of active-low inputs
+	</p>
+	<h2> JK Flip Flop </h2>
+<p>
+	<img src="../images/master_slave.gif" alt="2-d vectors"  /><br />
+JK flip flop is mostly implemented as Master Slave flip flop. The information present at at J and K inputs is transmitted to master flip-flop on positive edge of a clock pulse and held there until negative pulse occurs, after which it is allowed to pass through the slave flip-flop.
+	</p>
+<h2> JK Timing Digram </h2>
+<p>
+The following Digram depicts the change of JK flip flop Output with time pulse. It is negativve edge triggered.
+<br />
+	<img src="../images/JK_flipflop_timing.gif" alt="2-d vectors"  />
+</p>
+
+<h2> Truth Table </h2>
+	
+<p>
+The following digram depicts the truth table of JK Flip Flop.
+<br/>
+<img src="../images/jk_truth.png" alt="2-d vectors" />
+</p>
+ <P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
         </div>
       </section>
 
@@ -376,7 +180,8 @@ inspect the relative magnitudes of pairs of significant digits, starting
         <div id="experiment-article-section-3-content" 
         class="content">
          <ol>
-<li> The objective of this experiment is to make 2 bits comparator and to understand its working. </li>
+<li> The objective of this experiment is to understand the working of the Flip Flops. </li>
+<li> Try to make basic Flip Flops like JK, RS , T , D Flip Flops.</li>
 </ol>
 
         </div>
@@ -393,7 +198,7 @@ if(y<660)
 {
 y=660;
 }
-document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make an ALU Register controller"><param name="file_list" value="parallel_shift_reg,ALU"></applet>' ;
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make the various flipflops"><param name="file_list" value="JK_FlipFlop,rs_flip_flop,flipflop_t,flipflop_d,Nand_Latch"></applet>' ;
 </script>
 -->
       <section id="experiment-article-section-4">
@@ -408,16 +213,17 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
         class="heading">
           Experiment
         </div>
-	
-	<p><a href="../documents/java-and-icedtea-plugin.docx">Install prerequisites to run the simulation</a></p>
+
         <div id="experiment-article-section-4-content" 
         class="content">
           <p>
-	  <!--    <div id="applet_embed"></div> -->
-	        <a href="./exp5.html" class="qtlink" onclick="window.open('./exp5.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
+<!--	      <div id="applet_embed"></div> -->
+	<a href="./exp6.html" class="qtlink" onclick="window.open('./exp6.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
 
 	For performing experiment Click here
 	</a>
+	        
+            
           </p>
         </div>
 
@@ -539,6 +345,8 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</P>
 
 </ol>
+		
+	
 	
 
           </div>
@@ -560,16 +368,19 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-6-content" 
           class="content">
-            <strong>
+            
+           <strong>	
 	<p>
-		1) Design the 1 bit comparator. Then analyze its output corresponding to various inputs and compute the truth table.
+		1) Design a master slave J-K flip flop as given in the Theory section. Use any of the clock cycles available. Give a sequence of J-K inputs for eg: 01, 10 , 00 , 00, 11 , 11, 01 etc and verify the output of the filp flop. Save this flip flop by marking appropriate inputs and outputs.
 		<br/><br/>
-		2) Design the 4 bits comparator. Then analyze its output corresponding to various inputs and compute the truth table.
-		<br/>
-		
+		2) Import the J-K flip flop designed in 1st question. Connect the J-K to each other and label it as 'T'. The resulting flip flop is called a toggle flip flop. Generate a clock pulse or use any of the available ones. Verify that when T is 0, the output of flip flop does not change. When T=1, the output toggles at every negative edge of the clock. Save this circuit as a 'T' flip flop
+		<br/><br/>
+		3) Import the J-K flip flop designed in 1st question. Connect the compliment of J to K and label J as 'D'. The resulting flip flop is called a D flip flop. Generate a clock pulse or use any of the available ones. Verify that when D=1, output of flip flop is Q=1 and when D=0, output of flip flop is Q=0.  Save this circuit as 'D' flip flop.
+		<br/><br/>
+		4) You are given a master slave RS flip flop made from NOR gates. Using this, design a circuit which behaves like a JK flip flop. The design can be like this :<br/>
+		<img src="../images/quiz_image.png" />
 	</p>
 </strong> 
-           
           </div>
 
         </section>
@@ -589,11 +400,14 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 	
           <div id="experiment-article-section-7-content" 
           class="content">
-	    <ol>
-<li> With The help of Theory Page , try to build the Circuit. </li>
-<li> First of all build 2 bits comparator.</li>
-<li> Then analyze its output  and compute the truth table</li>
-<li>If You are unable to make it , load or export the circuit component directly and use it </li>
+	  <ol>
+<li> With The help of Theory Page , try to build the  Flip Flop Circuit. </li>
+<li> First of all build the RS Flip Flop Circuit </li>
+<li> Then use RS Flip Flop to build D Flip Flop</li>
+<li> Then make J K Flip Flop</li>
+<li> Use J K Flip Flop to make T Flip Flop</li>
+<li>If You are unable to make it , load or export the circuit directly and use it </li>
+<li> Use time variant Input pulse to analyze the output </li>
 </ol>
 	  </div>
 	
@@ -615,12 +429,12 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-8-content" 
           class="content">
-            <ol>	
+          <ol>	
 		<li>
-			<a href="http://en.wikipedia.org/wiki/Digital_comparator" target="_blank"> Digital Comparator - Wikipedia </a>
+			<a href="http://en.wikipedia.org/wiki/Flip-flop_(electronics)" target="_blank"> Flip Flops - Wikipedia </a>
 		</li>
 		<li>
-			Chapter 5 : Combinational Logic With MSI and LSI, "Digital Logic and Computer Design" - M. Morris Mano
+			Chapter 6 : Sequential Logic, "Digital Logic and Computer Design" - M. Morris Mano
 		</li>
 	</ol>
           </div>

@@ -51,7 +51,7 @@ edit -->
       <header id="experiment-article-heading" class="heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
-        Comparator
+       Counters
         <!-- Add any additional element if required with proper 
         enclosing-->
       </header>
@@ -91,10 +91,11 @@ edit -->
           element, You can also include images with <img> tag -->
           <div id="experiment-article-section-1-content" 
           class="content">	
-        <p>
-A digital comparator or magnitude comparator is a hardware electronic device that takes two numbers as input in binary form and determines whether one number is greater than, less than or equal to the other number. Comparators are used in a central processing units (CPU) and microcontrollers. Examples of digital comparator include the CMOS 4063 and 4585 and the TTL 7485 and 74682-'89.
+           <p>
+In digital logic and computing, a counter is a device which stores (and sometimes displays) the number of times a particular event or process has occurred, often in relationship to a clock signal.
+In this experiment, different types of counters will be studied, both for the full binary sequence and for cycle lengths (N) different from powers of 2.
+
 </p>
-<p> <img src="../images/comp2.png" /> </p>
         </div>
 
 
@@ -121,241 +122,76 @@ A digital comparator or magnitude comparator is a hardware electronic device tha
         element, we can also include images with <img> tag -->
         <div id="experiment-article-section-2-content" 
         class="content">
-          	<p>The operation of a single bit digital comparator can be expressed as a truth table:</p>
-<table style="text-align: center;">
-<tbody><tr>
-<th colspan="2">Inputs</th>
-<th colspan="3">Outputs</th>
-</tr>
-<tr>
-<th><span class="texhtml" dir="ltr"><i>A</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p><br>
-The operation of a two bit digital comparator cannot be expressed as a truth table:</p>
-<table class="wikitable" style="text-align: center;">
-<tbody><tr>
-<th colspan="4">Inputs</th>
-<th colspan="3">Outputs</th>
-</tr>
-<tr>
-<th><span class="texhtml" dir="ltr"><i>A</i><sub>1</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i><sub>0</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i><sub>1</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i><sub>0</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p> Following is the circuit digram for the two bit comparator : </p>
-<p> <img src="../images/comp1.png" /> </p>
-<P><FONT SIZE=2><I><B>Image Source: forum.allaboutcircuits.com/showthread.php?t=10561</B></I></FONT></P>
-<h2> Implementation </h2>
-<p><span ><i>A</i> = <i>A</i><sub>3</sub><i>A</i><sub>2</sub><i>A</i><sub>1</sub><i>A</i><sub>0</sub></span></p>
-<p><span ><i>B</i> = <i>B</i><sub>3</sub><i>B</i><sub>2</sub><i>B</i><sub>1</sub><i>B</i><sub>0</sub></span></p>
-<p>Here each subscript represents one of the digits in the numbers.</p>
-<h2> Equality </h2>
-<p>The binary numbers A and B will be equal if all the pairs of significant digits of both numbers are equal, i.e.,</p>
-<p><span ><i>A</i><sub>3</sub> = <i>B</i><sub>3</sub></span>, <span ><i>A</i><sub>2</sub> = <i>B</i><sub>2</sub></span>, <span ><i>A</i><sub>1</sub> = <i>B</i><sub>1</sub></span> and <span ><i>A</i><sub>0</sub> = <i>B</i><sub>0</sub></span></p>
-<p>Since the numbers are binary, the digits are either 0 or 1 and the boolean function for equality of any two digits <span ><i>A</i><sub><i>i</i></sub></span> and <span ><i>B</i><sub><i>i</i></sub></span> can be expressed as</p>
-<p><img src="../images/comp_form1.png"></p>
+          <p>
+Usually, counter circuits are digital in nature, and count in natural binary. Many types of counter circuits are available as digital building blocks, for example a number of chips in the 4000 series implement different counters.
+Occasionally there are advantages to using a counting sequence other than the natural binary sequence such as the binary coded decimal counter, a linear feedback shift register counter, or a Gray-code counter.
+Counters are useful for digital clocks and timers, and in oven timers, VCR clocks, etc.
+<br />
+The counters will be assembled using two 74LS73 dual J-K flip-flop chips and a 74LS02 quad NOR chip. Note that each flip-flop has an asynchronous Reset (R’) input besides the synchronous J-K inputs. This enables one to reset any of the flip-flops by making R’ = 0 irrespective of the status of the clock (CK) input. The asynchronous R’ input will be utilised in this experiment to initialise the flip-flop outputs as well as to obtain counters having cycle length N is less than 16.
+</p>
+
+<h3> Pin connections: </h3>
 <p>
-<span ><i>x</i><sub><i>i</i></sub></span> is 1 <i>only if</i> <span ><i>A</i><sub><i>i</i></sub></span> and <span><i>B</i><sub><i>i</i></sub></span> are equal.</p>
-<p>For the equality of A and B, all <span ><i>x</i><sub><i>i</i></sub></span> variables (for i=0,1,2,3) must be 1.</p>
-<p>So the quality condition of A and B can be implemented using the AND operation as</p>
-<p><span >(<i>A</i> = <i>B</i>) = <i>x</i><sub>3</sub><i>x</i><sub>2</sub><i>x</i><sub>1</sub><i>x</i><sub>0</sub></span></p>
-<p>The binary variable (A=B) is 1 only if all pairs of digits of the two numbers are equal.</p>
-<h2>Inequality</h2>
-<p>In order to manually determine the greater of two binary numbers, we 
-inspect the relative magnitudes of pairs of significant digits, starting
- from the most significant bit,
- gradually proceeding towards lower significant bits until an inequality
- is found. When an inequality is found, if the corresponding bit of A is
- 1 and that of B is 0 then we conclude that A&gt;B.</p>
-<p>This sequential comparison can be expressed logically as:</p>
-<p><img src="../images/comp_form2.png"></p>
-<p><img  src="../images/comp_form3.png"></p>
-<p><br>
-(A&gt;B) and (A &lt; B) are output binary variables, which are equal to 1 when A&gt;B or A&lt;B respectively.<br>
-<br></p>
+<img src="../images/counters.png">
+</p>
+<br />
+<h2> Binary Ripple Counter </h2>
+<p>
+1. Make J = K = 1 for all the flip-flops, thereby converting the J-K flip-flops to T flip-flops. Connect all R’ inputs together to an Input Switch, and the outputs Q0,Q1,Q2,Q3 to four LED Displays.
+<br />
+2. Set up an Up-counting Binary Ripple Counter by making clock connections as follows: CK0 = Manual Clock (CLK-M), CK1 = Q0, CK2 = Q1, CK3 = Q2.
+<br />
+3. Using the Input Switch connected to the common R’ input, initialise the counter to the stat
+<br />
+4. Apply Manual Clock pulses and tabulate the state sequence for the entire cycle.
+<br />
+5. Now change the clock input connections to CK1 = Q0’, CK2 = Q1’, CK3 = Q2’, to obtain a Down-counting Binary Ripple counter.
+<br />
+</p>
+<h2>Asynchronous (ripple) counter:</h2>
+<p>
+An asynchronous (ripple) counter is a single JK-type flip-flop, with its J (data) input fed from its own inverted output. This circuit can store one bit, and hence can count from zero to one before it overflows (starts over from 0). This counter will increment once for every clock cycle and takes two clock cycles to overflow, so every cycle it will alternate between a transition from 0 to 1 and a transition from 1 to 0. Notice that this creates a new clock with a 50% duty cycle at exactly half the frequency of the input clock. If this output is then used as the clock signal for a similarly arranged D flip-flop (remembering to invert the output to the input), you will get another 1 bit counter that counts half as fast. Putting them together yields a two-bit counter:
+</p>
+<br />
+<table border="3">
+	<tr><td>Cycle</td><td>Q1</td><td>Q2</td><td>(Q1:Q0)dec</td></tr>
+	<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+	<tr><td>2</td><td>1</td><td>0</td><td>2</td></tr>
+	<tr><td>3</td><td>1</td><td>1</td><td>3</td></tr>
+	<tr><td>4</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
+
+<br />
+<h2>Synchronous counter:</h2>
+<p>
+A simple way of implementing the logic for each bit of an ascending counter (which is what is depicted in the image to the right) is for each bit to toggle when all of the less significant bits are at a logic high state. For example, bit 1 toggles when bit 0 is logic high; bit 2 toggles when both bit 1 and bit 0 are logic high; bit 3 toggles when bit 2, bit 1 and bit 0 are all high; and so on.
+Synchronous counters can also be implemented with hardware finite state machines, which are more complex but allow for smoother, more stable transitions.
+Hardware-based counters are of this type.
+</p>
+<br />
+<h3>Decade counter:</h3>
+<p>
+A decade counter is one that counts in decimal digits, rather than binary. A decade counter may have each digit binary encoded (that is, it may count in binary-coded decimal, as the 7490 integrated circuit did) or other binary encodings (such as the bi-quinary encoding of the 7490 integrated circuit). Alternatively, it may have a "fully decoded" or one-hot output code in which each output goes high in turn (the 4017 is such a circuit). The latter type of circuit finds applications in multiplexers and demultiplexers, or wherever a scanning type of behavior is useful. Similar counters with different numbers of outputs are also common.
+The decade counter is also known as a mod-counter when it counts to ten (0, 1, 2, 3, 4, 5, 6, 7, 8, 9). A Mod Counter that counts to 64 stops at 63 because 0 counts as a valid digit.
+<br />
+A decade counter has the count sequence 0 → 1 → 2 →.....→ 8 → 9 → 0.., which can be achieved by making R’ = (Q3 •Q1)’ for all the flip-flops in a 4-bit binary counter. This forces the counter to go to the state 0000 as soon as the counter makes the transition from the state 1001 representing count 9 to the next state 1010 according to the normal up counting sequence.
+</p>
+<h3>Decade synchronous counter </h3>
+<p>
+The logic for the J-K inputs required for a Decade Synchronous Counter is as follows:
+<br />
+J0 = K0 = 1; J1 = Q0•Q3’, K1 = Q0; J2 = K2 = Q0•Q1; J3 = Q0•Q1•Q2, K3 = Q0.
+</p>
+<h2>Multipurpose 4-bit Synchronous Counter</h2>
+<p>
+CD4029 is a multipurpose 4-bit counter capable of operating in all the four combinations of Binary/BCD and Up/Down modes, depending on the values of the control inputs B/D’ and U/D’.
+<br />
+In addition, the 4-bit output Q3Q2Q1Q0 of the counter can be preset to any value by applying the desired bits to the direct inputs D3D2D1D0 and making the Set ENable control SEN = 1.
+<img src="../images/CD4029codes.png">
+</p> 
 <P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
+
         </div>
       </section>
 
@@ -376,7 +212,8 @@ inspect the relative magnitudes of pairs of significant digits, starting
         <div id="experiment-article-section-3-content" 
         class="content">
          <ol>
-<li> The objective of this experiment is to make 2 bits comparator and to understand its working. </li>
+<li> The objective of this experiment is to understand working of  the counters. </li>
+<li> Try to make basic ripple counter and ring counter.</li>
 </ol>
 
         </div>
@@ -393,7 +230,7 @@ if(y<660)
 {
 y=660;
 }
-document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make an ALU Register controller"><param name="file_list" value="parallel_shift_reg,ALU"></applet>' ;
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make counter and also ring counter"><param name="file_list" value="counter,ring_counter"></applet>' ;
 </script>
 -->
       <section id="experiment-article-section-4">
@@ -408,16 +245,16 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
         class="heading">
           Experiment
         </div>
-	
-	<p><a href="../documents/java-and-icedtea-plugin.docx">Install prerequisites to run the simulation</a></p>
+
         <div id="experiment-article-section-4-content" 
         class="content">
           <p>
-	  <!--    <div id="applet_embed"></div> -->
-	        <a href="./exp5.html" class="qtlink" onclick="window.open('./exp5.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
+	<!--      <div id="applet_embed"></div>-->
+	        <a href="./exp8.html" class="qtlink" onclick="window.open('./exp8.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
 
 	For performing experiment Click here
 	</a>
+	        
           </p>
         </div>
 
@@ -438,8 +275,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
         <div id="experiment-article-section-5-content" 
         class="content">
-         
-		<H2>Digital Logic Design</H2>
+         <H2>Digital Logic Design</H2>
 	<P><BR>This lab allows you to design and simulate any digital
 	combinational or sequential circuit. Following instruction help you
 	build the circuit. A Java-based basic tool and simulation enigne is
@@ -539,6 +375,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</P>
 
 </ol>
+		
 	
 
           </div>
@@ -560,16 +397,19 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-6-content" 
           class="content">
-            <strong>
+            
+            <strong>	
 	<p>
-		1) Design the 1 bit comparator. Then analyze its output corresponding to various inputs and compute the truth table.
+		1) Design a 4 bit Synchronous UP counter using 4 JK flip flops, a common clock pulse, and basic gates. 
 		<br/><br/>
-		2) Design the 4 bits comparator. Then analyze its output corresponding to various inputs and compute the truth table.
-		<br/>
-		
-	</p>
+		2) Design a synchromous BCD counter which counts from 0000 (0) to 1001 (9) and then back to 0000 (0).You can use 'T' flip flops / Jk flip flops and some basic gates in the design. All the flip flops should have a common clock pulse. There must be a 'Count Enable' input which enables the counter. Save this counter so that it can be used in other designs.
+		<br/><br/>
+		3) Import the BCD counter designed in 2nd question. Import 3 such counters. Design a 3-decade decimal counter using these 3 BCD counters. The entire system should be able to count from 000 to 999, where each counter individually generates 1 digit of the number. <br/><br/>
+		HINT: The 'Count enable' input of 2nd BCD counter will be 1 only when first counter is at 9, and 'Count enable' of 3rd counter will be 1 only when both first and second counters are at 9.
+		<br/><br/>		
+		4) Import the BCD to seven segment display decoder circuit designed in experiment 3. It takes BCD code as input and displays its decimal equivalent on 7-segment LED display. Import the BCD counter designed in question 2. Connect the output lines of BCD counter to the input lines of 'BCD to seven segment display' circuit. Verify that appropriate number is being displayed by the LED in the count sequence.
+		</p>
 </strong> 
-           
           </div>
 
         </section>
@@ -589,11 +429,12 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 	
           <div id="experiment-article-section-7-content" 
           class="content">
-	    <ol>
-<li> With The help of Theory Page , try to build the Circuit. </li>
-<li> First of all build 2 bits comparator.</li>
-<li> Then analyze its output  and compute the truth table</li>
-<li>If You are unable to make it , load or export the circuit component directly and use it </li>
+	  <ol>
+<li> With The help of Theory Page , try to build the Counter Circuit. </li>
+<li> First of all build the basic counter .</li>
+<li> Then make the Ring Counter</li>
+<li>If You are unable to make it , load or export the circuit directly and use it </li>
+<li> Use Time variant input pulses to analyze the output </li>
 </ol>
 	  </div>
 	
@@ -615,12 +456,12 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-8-content" 
           class="content">
-            <ol>	
+           <ol>	
 		<li>
-			<a href="http://en.wikipedia.org/wiki/Digital_comparator" target="_blank"> Digital Comparator - Wikipedia </a>
+			<a href="http://en.wikipedia.org/wiki/Counter" target="_blank"> Counters - Wikipedia </a>
 		</li>
 		<li>
-			Chapter 5 : Combinational Logic With MSI and LSI, "Digital Logic and Computer Design" - M. Morris Mano
+			Chapter 7 : Registers, Counters and Memory unit, "Digital Logic and Computer Design" - M. Morris Mano
 		</li>
 	</ol>
           </div>
@@ -673,6 +514,7 @@ width: 90%;
 Licensing Terms <a>
 </footer>
 
+
     <!-- An article can have a sidebar that contain related 
     links and additional material (however it is kept optional 
     at this moment) -->
@@ -694,7 +536,6 @@ Licensing Terms <a>
   <!-- Links to other labs, about us page can be kept the lab 
   footer-->
   <!-- Links to other labs, about us page can be kept the lab  footer-->
-
 
 
 </div>		

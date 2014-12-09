@@ -51,7 +51,7 @@ edit -->
       <header id="experiment-article-heading" class="heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
-        Comparator
+       Multipliers
         <!-- Add any additional element if required with proper 
         enclosing-->
       </header>
@@ -91,10 +91,9 @@ edit -->
           element, You can also include images with <img> tag -->
           <div id="experiment-article-section-1-content" 
           class="content">	
-        <p>
-A digital comparator or magnitude comparator is a hardware electronic device that takes two numbers as input in binary form and determines whether one number is greater than, less than or equal to the other number. Comparators are used in a central processing units (CPU) and microcontrollers. Examples of digital comparator include the CMOS 4063 and 4585 and the TTL 7485 and 74682-'89.
+           <p>
+In electronics, an analog multiplier is a device which takes two analog signals and produces an output which is their product. Such circuits can be used to implement related functions such as squares (apply same signal to both inputs), and square roots.
 </p>
-<p> <img src="../images/comp2.png" /> </p>
         </div>
 
 
@@ -121,240 +120,26 @@ A digital comparator or magnitude comparator is a hardware electronic device tha
         element, we can also include images with <img> tag -->
         <div id="experiment-article-section-2-content" 
         class="content">
-          	<p>The operation of a single bit digital comparator can be expressed as a truth table:</p>
-<table style="text-align: center;">
-<tbody><tr>
-<th colspan="2">Inputs</th>
-<th colspan="3">Outputs</th>
-</tr>
-<tr>
-<th><span class="texhtml" dir="ltr"><i>A</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p><br>
-The operation of a two bit digital comparator cannot be expressed as a truth table:</p>
-<table class="wikitable" style="text-align: center;">
-<tbody><tr>
-<th colspan="4">Inputs</th>
-<th colspan="3">Outputs</th>
-</tr>
-<tr>
-<th><span class="texhtml" dir="ltr"><i>A</i><sub>1</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i><sub>0</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i><sub>1</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>B</i><sub>0</sub></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &lt; <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> = <i>B</i></span></th>
-<th><span class="texhtml" dir="ltr"><i>A</i> &gt; <i>B</i></span></th>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p> Following is the circuit digram for the two bit comparator : </p>
-<p> <img src="../images/comp1.png" /> </p>
-<P><FONT SIZE=2><I><B>Image Source: forum.allaboutcircuits.com/showthread.php?t=10561</B></I></FONT></P>
-<h2> Implementation </h2>
-<p><span ><i>A</i> = <i>A</i><sub>3</sub><i>A</i><sub>2</sub><i>A</i><sub>1</sub><i>A</i><sub>0</sub></span></p>
-<p><span ><i>B</i> = <i>B</i><sub>3</sub><i>B</i><sub>2</sub><i>B</i><sub>1</sub><i>B</i><sub>0</sub></span></p>
-<p>Here each subscript represents one of the digits in the numbers.</p>
-<h2> Equality </h2>
-<p>The binary numbers A and B will be equal if all the pairs of significant digits of both numbers are equal, i.e.,</p>
-<p><span ><i>A</i><sub>3</sub> = <i>B</i><sub>3</sub></span>, <span ><i>A</i><sub>2</sub> = <i>B</i><sub>2</sub></span>, <span ><i>A</i><sub>1</sub> = <i>B</i><sub>1</sub></span> and <span ><i>A</i><sub>0</sub> = <i>B</i><sub>0</sub></span></p>
-<p>Since the numbers are binary, the digits are either 0 or 1 and the boolean function for equality of any two digits <span ><i>A</i><sub><i>i</i></sub></span> and <span ><i>B</i><sub><i>i</i></sub></span> can be expressed as</p>
-<p><img src="../images/comp_form1.png"></p>
+          	
+<h2>Analog multiplier devices</h2>
 <p>
-<span ><i>x</i><sub><i>i</i></sub></span> is 1 <i>only if</i> <span ><i>A</i><sub><i>i</i></sub></span> and <span><i>B</i><sub><i>i</i></sub></span> are equal.</p>
-<p>For the equality of A and B, all <span ><i>x</i><sub><i>i</i></sub></span> variables (for i=0,1,2,3) must be 1.</p>
-<p>So the quality condition of A and B can be implemented using the AND operation as</p>
-<p><span >(<i>A</i> = <i>B</i>) = <i>x</i><sub>3</sub><i>x</i><sub>2</sub><i>x</i><sub>1</sub><i>x</i><sub>0</sub></span></p>
-<p>The binary variable (A=B) is 1 only if all pairs of digits of the two numbers are equal.</p>
-<h2>Inequality</h2>
-<p>In order to manually determine the greater of two binary numbers, we 
-inspect the relative magnitudes of pairs of significant digits, starting
- from the most significant bit,
- gradually proceeding towards lower significant bits until an inequality
- is found. When an inequality is found, if the corresponding bit of A is
- 1 and that of B is 0 then we conclude that A&gt;B.</p>
-<p>This sequential comparison can be expressed logically as:</p>
-<p><img src="../images/comp_form2.png"></p>
-<p><img  src="../images/comp_form3.png"></p>
-<p><br>
-(A&gt;B) and (A &lt; B) are output binary variables, which are equal to 1 when A&gt;B or A&lt;B respectively.<br>
-<br></p>
+Analog multiplication can be accomplished by using the Hall Effect.
+Integrated circuits analog multipliers are incorporated into many applications, such as a true RMS converter, but a number of general purpose analog multiplier building blocks are available such as the Linear Four Quadrant Multiplier. General-purpose devices will usually include attenuators or amplifiers on the inputs or outputs in order to allow the signal to be scaled within the voltage limits of the circuit.
+Although analog multiplier circuits are very similar to operational amplifiers, they are far more susceptible to noise and offset voltage-related problems as these errors may become multiplied. When dealing with high frequency signals, phase-related problems may be quite complex. For this reason, manufacturing wide-range general-purpose analog multipliers is far more difficult than ordinary operational amplifiers, and such devices are typically produced using specialist technologies and laser trimming, as are those used for high-performance amplifiers such as instrumentation amplifiers. This means they have a relatively high cost and so they are generally used only for circuits where they are indispensable.
+</p>
+<br />
+<br />
+<h2>Voltage-controlled amplifier versus analog multiplier</h2>
+<p>
+If one input of an analog multiplier is held at a steady state voltage, a signal at the second input will be scaled in proportion to the level on the fixed input. In this case the analog multiplier may be considered to be a voltage controlled amplifier. Obvious applications would be for electronic volume control and automatic gain control. Although analog multipliers are often used for such applications, voltage-controlled amplifiers are not necessarily true analog multipliers. For example, an integrated circuit designed to be used as a volume control may have a signal input designed for 1 Vp-p, and a control input designed for 0-5 V dc; that is, the two inputs are not symmetrical and the control input will have a limited bandwidth.
+By contrast, in what is generally considered to be a true analog multiplier, the two signal inputs have identical characteristics. Applications specific to a true analog multiplier are those where both inputs are signals, for example in a frequency mixer or an analog circuit to implement a discrete Fourier transform.
+A four-quadrant multiplier is one where inputs and outputs may swing positive and negative. Many multipliers only work in 2 quadrants (one input may only have one polarity), or single quadrant (inputs and outputs have only one polarity, usually all positive).
+</p>
+<p> Circuit Digram for 4 bits Shift register </p>
+<p> <img src="../images/multi1.png" /> </p>
+<p> Circuit Digram for  Multiplication</p>
+<p> <img src="../images/multi2.png" /> </p>
+
 <P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
         </div>
       </section>
@@ -375,8 +160,8 @@ inspect the relative magnitudes of pairs of significant digits, starting
 
         <div id="experiment-article-section-3-content" 
         class="content">
-         <ol>
-<li> The objective of this experiment is to make 2 bits comparator and to understand its working. </li>
+        <ol>
+<li> The objective of this experiment is to make a circuit for the 4 bits multiplication. </li>
 </ol>
 
         </div>
@@ -393,7 +178,7 @@ if(y<660)
 {
 y=660;
 }
-document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make an ALU Register controller"><param name="file_list" value="parallel_shift_reg,ALU"></applet>' ;
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Perform multiplication with the help of shift register, 4 bit adder, quad 2 input and gate "><param name="file_list" value="parallel_shift_reg,4_bit_adder"></applet>' ;
 </script>
 -->
       <section id="experiment-article-section-4">
@@ -408,13 +193,12 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
         class="heading">
           Experiment
         </div>
-	
-	<p><a href="../documents/java-and-icedtea-plugin.docx">Install prerequisites to run the simulation</a></p>
+
         <div id="experiment-article-section-4-content" 
         class="content">
           <p>
-	  <!--    <div id="applet_embed"></div> -->
-	        <a href="./exp5.html" class="qtlink" onclick="window.open('./exp5.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
+	    <!--  <div id="applet_embed"></div> -->
+	        <a href="./exp9.html" class="qtlink" onclick="window.open('./exp9.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
 
 	For performing experiment Click here
 	</a>
@@ -539,6 +323,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</P>
 
 </ol>
+		
 	
 
           </div>
@@ -560,16 +345,13 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-6-content" 
           class="content">
+            
             <strong>
+
 	<p>
-		1) Design the 1 bit comparator. Then analyze its output corresponding to various inputs and compute the truth table.
-		<br/><br/>
-		2) Design the 4 bits comparator. Then analyze its output corresponding to various inputs and compute the truth table.
-		<br/>
-		
+		1) Design the serial-parallel multiplier circuit as given in the Theory section
 	</p>
-</strong> 
-           
+</strong>
           </div>
 
         </section>
@@ -590,10 +372,10 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
           <div id="experiment-article-section-7-content" 
           class="content">
 	    <ol>
-<li> With The help of Theory Page , try to build the Circuit. </li>
-<li> First of all build 2 bits comparator.</li>
-<li> Then analyze its output  and compute the truth table</li>
-<li>If You are unable to make it , load or export the circuit component directly and use it </li>
+<li> With the help of Theory Page , try to build the Multiplier Circuit. </li>
+<li>If you are unable to make it , load or export the circuit component directly and use it </li>
+<li> Then combine these component according to theory page in order to make the multiplier circuit </li>
+<li> Then test the circuit with various input</li>
 </ol>
 	  </div>
 	
@@ -610,17 +392,17 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
           <div id="experiment-article-section-8-heading" 
           class="heading">
-            Read
+           Read
           </div>
 
           <div id="experiment-article-section-8-content" 
           class="content">
-            <ol>	
+           <ol>	
 		<li>
-			<a href="http://en.wikipedia.org/wiki/Digital_comparator" target="_blank"> Digital Comparator - Wikipedia </a>
+			<a href="http://en.wikipedia.org/wiki/Binary_multiplier" target="_blank"> Binary Multipliers - Wikipedia </a>
 		</li>
 		<li>
-			Chapter 5 : Combinational Logic With MSI and LSI, "Digital Logic and Computer Design" - M. Morris Mano
+			Chapter 7 : Registers, Counters and Memory unit, "Digital Logic and Computer Design" - M. Morris Mano
 		</li>
 	</ol>
           </div>
@@ -655,6 +437,7 @@ element, You can also include images with <img> tag -->
 
 
       </div>
+
 <style type="text/css">
 #lab-footer, .footer {
 float:left;
