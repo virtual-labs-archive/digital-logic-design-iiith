@@ -1,3 +1,14 @@
+JCC = javac
+JFLAGS = -g
+sources = $(lab*.java)
+classes = $(sources: .java=.class)
+all: $(classes)
+%.class* : %.java*
+	$(JAVAC) $<
+
+clean:
+	$(RM) *.class
+
 build-dir=../build
 lib-dir=lib
 build-js-dir=${build-dir}/js
