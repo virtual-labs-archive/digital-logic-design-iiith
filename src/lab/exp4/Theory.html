@@ -40,7 +40,8 @@
 			                    <span class="icon-bar" style="background-color: #77BB41"></span>
 			                    <span class="icon-bar" style="background-color: #77BB41"></span>
 			                </button>
-			                <a class="navbar-brand main-logo-a" href="http://vlabs.ac.in/index.html"><img src="../images/logo-new.png" class="img-responsive main-logo" /></a>
+			                <!--<a class="navbar-brand main-logo-a" href="http://vlabs.ac.in/index.html"><img src="../images/logo-new.png" class="img-responsive main-logo" /></a>-->
+					    <a class="navbar-brand main-logo-a" href="http://vlabs.ac.in/"><img src="../images/logo-new.png" class="img-responsive main-logo" /></a>
 			            </div>			
 			                        
 			            <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,15 +58,19 @@
 			                
 			             <ul class="nav navbar-nav navbar-right menu-ul">
 			                    <li class="page-scroll menu-li " >
-			                        <a href="http://vlabs.ac.in/index.html" class="menu-a" >HOME</a>
+			                        <!--<a href="http://vlabs.ac.in/index.html" class="menu-a" >HOME</a>-->
+						    <a href="http://vlabs.ac.in/" class="menu-a" >HOME</a>
 			                    </li>
 			                    <li class="page-scroll menu-li menu-li-active">
-			                        <a href="http://vlabs.ac.in/labs.html"  class="menu-a menu-a-active" >ALL LABS</a>
+			                        <!--<a href="http://vlabs.ac.in/labs.html"  class="menu-a menu-a-active" >ALL LABS</a>-->
+						    <a href="http://vlab.co.in/institute_detail.php?ins=008"  class="menu-a menu-a-active" >ALL LABS</a>
 			                    </li>
 			                    <li class="page-scroll menu-li " >
-			                        <a href="http://vlabs.ac.in/index.html#partner" class="menu-a" >PARTNERS</a>
+			                        <!--<a href="http://vlabs.ac.in/index.html#partner" class="menu-a" >PARTNERS</a>-->
+						    <a href="http://vlabs.ac.in/#partner" class="menu-a" >PARTNERS</a>
 			                    </li><li class="page-scroll menu-li " >
-			                        <a href="http://vlabs.ac.in/index.html#contact" class="menu-a" >CONTACT</a>
+			                        <!--<a href="http://vlabs.ac.in/index.html#contact" class="menu-a" >CONTACT</a>-->
+					     <a href="#contact" class="menu-a" >CONTACT</a>
 			                    </li>
 			                </ul>
 			                
@@ -88,8 +93,8 @@
 			
 			<!-- =================================================================================================================================== -->
 			<div class="container-fluid"  style="margin-left: 35px; margin-right: 35px;">
-				<h2 class="text-h2-lightblue" style=" margin-bottom: 20px; margin-top: 10px; "><a href="http://vlabs.ac.in/computer-science-and-engineering-labs.html" class="sidebar-a" >Computer Science & Engineering</a> &rarr;<a href="../Introduction.html" class="sidebar-a" >DLD Lab</a>&nbsp&rarr;<a href="../List of experiments.html" class="sidebar-a" >List Of Experiments</a><br/></h2>
-					
+				<!--<h2 class="text-h2-lightblue" style=" margin-bottom: 20px; margin-top: 10px; "><a href="http://vlabs.ac.in/computer-science-and-engineering-labs.html" class="sidebar-a" >Computer Science & Engineering</a> &rarr;<a href="../Introduction.html" class="sidebar-a" >DLD Lab</a>&nbsp&rarr;<a href="../List of experiments.html" class="sidebar-a" >List Of Experiments</a><br/></h2>-->
+					<h2 class="text-h2-lightblue" style=" margin-bottom: 20px; margin-top: 10px; "><a href="http://vlab.co.in/ba_labs_all.php?id=2" class="sidebar-a" >Computer Science & Engineering</a> &rarr;<a href="../Introduction.html" class="sidebar-a" >DLD Lab</a>&nbsp&rarr;<a href="../List of experiments.html" class="sidebar-a" >List Of Experiments</a><br/></h2>
 					<div class="row">
 						<div class="col-md-2 sidebar-col-2">
 						<!--edit1-->
@@ -98,40 +103,32 @@
 						<div class="col-md-10 lab-list-col-10">
 							
 							<!--edit -->
-<h1 class="text-h2-lightblue">ALU with function</h1><div class="content" id="experiment-article-section-2-content">
-<h2> Programmable 1-bit ALU </h2>
+<h1 class="text-h2-lightblue">ALU with function</h1><div class="content" id="experiment-article-section-1-content">
 <p>
-	In this experiment, an Arithmetic and Logic Unit (ALU) capable of performing 8 Arithmetic/Logic functions on 1-bit operands,
-	will be designed, assembled and tested.
-	The circuit will consist of two 8-input multiplexers (74LS151), one quad 2-input multiplexer (74LS157) and one quad 2-input XOR gate (74LS86), all belonging to the TTL family.
-
-<h3> ALU Function Table </h3>
-<table border="3">
-<tr><td>F2F1F0</td><td>ALU Function</td><td>Y1</td><td>Y0</td></tr>
-<tr><td>000</td><td>0(Zero)</td><td>-</td><td>0</td></tr>
-<tr><td>001</td><td>A OR B</td><td>-</td><td>A+B</td></tr>
-<tr><td>010</td><td>A AND B</td><td>-</td><td>A.B</td></tr>
-<tr><td>011</td><td>A EXOR B</td><td>-</td><td>A^B	</td></tr>
-<tr><td>100</td><td>A PLUS B</td><td>Carry</td><td>Sum</td></tr>
-<tr><td>101</td><td>A MINUS B</td><td>Borrow</td><td>Difference</td></tr>
-<tr><td>110</td><td>A PLUS B PLUS C</td><td>Carry </td><td>Sum</td></tr>
-<tr><td>111</td><td>A MINUS B MINUS C</td><td>Borrow</td><td>Difference</td></tr>
-</table>
+	This module explains how to build a Programmable 1-bit ALU. 
+	In computing, an arithmetic logic unit (ALU) is a digital circuit that performs arithmetic and logical operations. The ALU is a fundamental building block of the central processing unit of a computer, and even the simplest microprocessors contain one for purposes such as maintaining timers.
+	
+	
+	
+	</p>
+<img alt="ALU" src="../images/ALU_symbol.png"/>
+<br/>
+<p>
+Most ALUs can perform the following operations:
+<br/>
+    Bitwise logic operations (AND, NOT, OR, XOR)
+    <br/>
+    Integer arithmetic operations (addition, subtraction, and sometimes multiplication and division, though this is more expensive)
+    <br/>
+    Bit-shifting operations (shifting or rotating a word by a specified number of bits to the left or right, with or without sign extension). Shifts can be seen as multiplications and divisions by a power of two.
+    <br/>
+<br/>
 </p>
-<h3> PIN connections for the IC's </h3>
-<img src="../images/ALU_chips.png"/>
-<br/>
+<h3> Inputs and Outputs</h3>
 <p>
- The final ALU output bits Y0 and Y1 will be generated by the two 8-input multiplexers – referred to as MUX0 and MUX1 respectively(both 74LS157).
-MUX0 is always enabled, while MUX1 is enabled only when F2 = 1, i.e. for Arithmetic functions only. This is because Y1 is required only to provide the CARRY/BORROW output for Arithmetic functions.
-<br/>
-<br/>
-<img src="../images/ALUmux.png" width="875"/>
-<br/>
-<br/>
-The two 8-input multiplexers MUX0 and MUX1 require 16 inputs, they involve only 6 distinct Boolean functions of A, B, C – A • B, A’ • B, A + B, A’ + B, A ⊕ B and A ⊕ B ⊕ C. The first four terms are realised by four 2-input multiplexers
- </p>
-<p><font size="2"><i><b>Source: Wikipedia</b></i></font></p>
+    The inputs to the ALU are the data to be operated on (called operands) and a code from the control unit indicating which operation to perform. Its output is the result of the computation.
+	
+	</p>
 </div>						</div>
 					</div>
 			</div>
