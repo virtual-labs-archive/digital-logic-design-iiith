@@ -826,7 +826,7 @@ font-size: 30px;
   margin-top: 2px;
 }
 
-//To move navigation buttons outside use these settings:
+/*To move navigation buttons outside use these settings:*/
 
 #owl-demo .owl-controls .owl-buttons div, #owl-partner-institutions .owl-controls .owl-buttons div{
   position: absolute;
