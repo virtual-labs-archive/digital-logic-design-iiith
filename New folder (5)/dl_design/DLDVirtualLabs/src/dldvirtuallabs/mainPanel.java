@@ -121,7 +121,7 @@ public final class mainPanel extends javax.swing.JPanel  {
     private boolean draggingElement;
     private boolean dragAction;
     private Point temp1;
-    private Point temp2;
+   // private Point temp2;
     private String gen_name;
     private Point srcDragPoint;
     private HashMap<String, Vector<Integer>> timePulses;
