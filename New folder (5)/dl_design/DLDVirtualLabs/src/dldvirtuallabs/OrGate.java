@@ -36,7 +36,7 @@ public class OrGate extends Element {
     OrGate() {
         elementID = 0;
         elementType = "Or_Gate";
-        String elementName = "elementName"
+        String elementName = "elementName";
         numInputs = 0;
         numOutputs = 0;
         maxIO = 3;
