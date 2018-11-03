@@ -484,7 +484,8 @@ Queue<Element> initial_currSet1 = new  LinkedList<Element>();
             initial_currSet1.add((Element) it.next());
         }
 
-int ele_count=0,ele_count1=0;
+int ele_count=0;
+int ele_count1=0;
 int flag_first=0;
 //System.out.println("**************************************");
 while(true)
@@ -498,7 +499,8 @@ while(true)
 
          for (Iterator it = allElementsList.keySet().iterator(); it.hasNext();) {
             Element currElement = (Element) allElementsList.get((Integer) it.next());
-         int temp_flag=0,temp_flag1=0;
+         int temp_flag=0;
+             int temp_flag1=0;
          for (int p_cnt = 0; p_cnt < currElement.getNumInputs(); p_cnt++) {
                 
                     if (currElement.getInputAt(p_cnt).getNewValue() != -1) {   // All inputs are not available
