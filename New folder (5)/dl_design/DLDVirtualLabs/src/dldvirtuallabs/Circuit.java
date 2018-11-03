@@ -1069,10 +1069,8 @@ if(loop_flag==0)
         /*
          * Initialize local variables
          */
-        String currentLine = new String();          // current line (non-blank, non-comment[# ...]) being read
-        String comment = new String();              // comment line [# ...] being read
-        String blankLine = new String();            // blank line being read []
-
+          // current line (non-blank, non-comment[# ...]) being read
+        
         /*
          * Load metadata about the circuit
          */
@@ -1216,7 +1214,7 @@ if(loop_flag==0)
                 scan = new Scanner(line);                                           // Line 2 - inputs for that element
                 scan.useDelimiter(", ");
                 Input newInp = new Input(scan.nextInt(), scan.nextInt(), newElement,scan.next());
-                int ancestorID = scan.nextInt();
+                
                 newInp.setLocation(new Point(scan.nextInt(), scan.nextInt()));
                 int srcOutID = scan.nextInt();
                 if (srcOutID == -1) {                                               // if srcOutID is -1 => its a cirucit level input
@@ -1243,7 +1241,7 @@ if(loop_flag==0)
                 scan = new Scanner(line);                                           // Line 3 - outputs for that element
                 scan.useDelimiter(", ");
                 Output newOut = new Output(scan.nextInt(), scan.nextInt(), newElement, scan.next());
-                int parentID = scan.nextInt();                                      // ancestorID
+                                                      // ancestorID
                 newOut.setLocation(new Point(scan.nextInt(), scan.nextInt()));
                 int numDestInp = scan.nextInt();                                    // number of inputs to which this output is connected
 
@@ -1334,7 +1332,7 @@ if(loop_flag==0)
         scanIO.reset();
         scanIO = new Scanner(bufReader.readLine());
         scanIO.useDelimiter(", ");
-        int temp = scanIO.nextInt();
+        
         while (scanIO.hasNextInt()) {
             this.inputElementSet.add(allElementsList.get(scanIO.nextInt()));
         }
