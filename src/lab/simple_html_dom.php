@@ -147,14 +147,6 @@ class simple_html_dom_node {
         $lead = str_repeat('    ', $deep);
 
         echo $lead.$this->tag;
-        if ($show_attr && count($this->attr)>0)
-        {
-            echo '(';
-            foreach ($this->attr as $k=>$v)
-                echo "[$k]=>\"".$this->$k.'", ';
-            echo ')';
-        }
-        echo "\n";
 
         foreach ($this->nodes as $c)
             $c->dump($show_attr, $deep+1);
@@ -814,7 +806,6 @@ class simple_html_dom {
 
     // load html from string
     function load($str, $lowercase=true, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT) {
-        global $debugObject;
 
         // prepare
         $this->prepare($str, $lowercase, $stripRN, $defaultBRText);
@@ -850,10 +841,7 @@ class simple_html_dom {
         $this->load(call_user_func_array('file_get_contents', $args), true);
         // Per the simple_html_dom repositiry this is a planned upgrade to the codebase.
         // Throw an error if we can't properly load the dom.
-        if (($error=error_get_last())!==null) {
-            $this->clear();
-            return false;
-        }
+
     }
 
     // set callback function
@@ -971,12 +959,7 @@ class simple_html_dom {
                     {
                         $charset = $matches[1];
                     }
-                    else
-                    {
-                        // If there is a meta tag, and they don't specify the character set, research says that it's typically ISO-8859-1
-                        if (is_object($debugObject)) {$debugObject->debugLog(2, 'meta content-type tag couldn\'t be parsed. using iso-8859 default.');}
-                        $charset = 'ISO-8859-1';
-                    }
+                    
                 }
             }
         }
@@ -986,8 +969,7 @@ class simple_html_dom {
         {
             // Have php try to detect the encoding from the text given to us.
             $charset = mb_detect_encoding($this->root->plaintext . "ascii", $encoding_list = array( "UTF-8", "CP1252" ) );
-            if (is_object($debugObject)) {$debugObject->debugLog(2, 'mb_detect found: ' . $charset);}
-
+            
             // and if this doesn't work...  then we need to just wrongheadedly assume it's UTF-8 so that we can move on - cause this will usually give us most of what we need...
             if ($charset === false)
             {
