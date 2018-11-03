@@ -36,7 +36,7 @@ public class NandGate3 extends Element {
     NandGate3() {
         elementID = 0;
         elementType = "Nand_Gate3";
-        elementName = new String();
+        String elementName = "elementName";
         numInputs = 0;
         numOutputs = 0;
         maxIO = 4;
