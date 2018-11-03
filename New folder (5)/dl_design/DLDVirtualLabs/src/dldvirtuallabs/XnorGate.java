@@ -35,7 +35,7 @@ public class XnorGate extends Element {
     XnorGate() {
         elementID = 0;
         elementType = "Xnor_Gate";
-        elementName = new String();
+        String elementName = "elementName"
         numInputs = 0;
         numOutputs = 0;
         maxIO = 3;
