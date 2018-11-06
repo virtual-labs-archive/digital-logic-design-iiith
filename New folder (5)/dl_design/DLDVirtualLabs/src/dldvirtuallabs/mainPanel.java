@@ -255,71 +255,61 @@ public final class mainPanel extends javax.swing.JPanel  {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wireActionPerformed(evt);
             }
-        });
-
+        }
         disconnectButton.setText("DISCONNECT");
         disconnectButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 disconnectButtonActionPerformed(evt);
             }
-        });
-
+        }
         deleteElementButton.setText("Delete Element");
         deleteElementButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteElementButtonActionPerformed(evt);
             }
-        });
-
+        }
         probeButton.setText("Probe");
         probeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 probeButtonActionPerformed(evt);
             }
-        });
-
+        }
         output.setText("output");
         output.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 outputActionPerformed(evt);
             }
-        });
-
+        }
         Naming.setText("Naming");
         Naming.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NamingActionPerformed(evt);
             }
-        });
-
+        }
         jButton1.setText("None");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
-        });
-
+        }
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AND", "OR", "NAND", "NOR", "XOR", "XNOR", "NOT", "CONN" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
-        });
-
+        }
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2", "3", "4" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
             }
-        });
-
+        }
         select_gate.setText("Select");
         select_gate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 select_gateActionPerformed(evt);
             }
-        });
-
+        }
         javax.swing.GroupLayout leftPanelLayout = new javax.swing.GroupLayout(leftPanel);
         leftPanel.setLayout(leftPanelLayout);
         leftPanelLayout.setHorizontalGroup(
@@ -379,29 +369,25 @@ public final class mainPanel extends javax.swing.JPanel  {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 simulateButtonActionPerformed(evt);
             }
-        });
-
+        }
         loadButton.setText("Load");
         loadButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loadButtonActionPerformed(evt);
             }
-        });
-
+        }
         saveButton.setText("Save");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveButtonActionPerformed(evt);
             }
-        });
-
+        }
         clearButton.setText("Clear");
         clearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearButtonActionPerformed(evt);
             }
-        });
-
+        }
         genericElement.setText("Import");
         genericElement.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -410,27 +396,24 @@ public final class mainPanel extends javax.swing.JPanel  {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 genericElementMouseExited(evt);
             }
-        });
+        }
         genericElement.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 genericElementActionPerformed(evt);
             }
-        });
-
+        }
         jButton2.setText("Load_it");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
-        });
-
+        }
         jButton3.setText("Import_it");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
-        });
-
+        }
         javax.swing.GroupLayout topPanelLayout = new javax.swing.GroupLayout(topPanel);
         topPanel.setLayout(topPanelLayout);
         topPanelLayout.setHorizontalGroup(
@@ -475,8 +458,7 @@ public final class mainPanel extends javax.swing.JPanel  {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logFieldActionPerformed(evt);
             }
-        });
-
+        }
         inputPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Inputs"));
         inputPanel.setPreferredSize(new java.awt.Dimension(179, 302));
 
@@ -485,29 +467,26 @@ public final class mainPanel extends javax.swing.JPanel  {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 zeroButtonActionPerformed(evt);
             }
-        });
-
+        }
         oneButton.setText("1");
         oneButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 oneButtonActionPerformed(evt);
             }
-        });
-
+        }
         timePulse.setText("New Time Pulse");
         timePulse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 timePulseActionPerformed(evt);
             }
-        });
-
+        }
         timePulseList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         timePulseList.setValueIsAdjusting(true);
         timePulseList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
                 timePulseListValueChanged(evt);
             }
-        });
+        }
         jScrollPane1.setViewportView(timePulseList);
 
         jLabel1.setText("Available Time Pulses :");
@@ -519,14 +498,13 @@ public final class mainPanel extends javax.swing.JPanel  {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 currentTimePulseActionPerformed(evt);
             }
-        });
-
+        }
         pulseParams.setPreferredSize(new java.awt.Dimension(6, 64));
         pulseParams.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pulseParamsMouseClicked(evt);
             }
-        });
+        }
         pulseParams.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 pulseParamsKeyPressed(evt);
@@ -534,7 +512,7 @@ public final class mainPanel extends javax.swing.JPanel  {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 pulseParamsKeyReleased(evt);
             }
-        });
+        }
         jScrollPane2.setViewportView(pulseParams);
 
         javax.swing.GroupLayout inputPanelLayout = new javax.swing.GroupLayout(inputPanel);
@@ -643,8 +621,7 @@ public final class mainPanel extends javax.swing.JPanel  {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 midPanelMouseMoved(evt);
             }
-        });
-
+        }
         javax.swing.GroupLayout midPanelLayout = new javax.swing.GroupLayout(midPanel);
         midPanel.setLayout(midPanelLayout);
         midPanelLayout.setHorizontalGroup(
@@ -655,7 +632,6 @@ public final class mainPanel extends javax.swing.JPanel  {
             midPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1171, Short.MAX_VALUE)
         );
-
         jScrollPane3.setViewportView(midPanel);
 
         content1.setEditable(false);
