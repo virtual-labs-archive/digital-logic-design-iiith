@@ -1228,7 +1228,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * this function updates the workPanelSize to the current midPanel's size.
      * it is called whenever, the midPanel gets resized.
      */
-    private void midPanelComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_midPanelComponentResized
+    private void midPanelComponentResized() {//GEN-FIRST:event_midPanelComponentResized
         // TODO add your handling code here:
         workPanelSize = midPanel.getSize();
         repaint();
@@ -1264,7 +1264,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      *          - the node where the connection/disconnection starts
      *          - beginning of a drag action, i.e. dragging an element
      */
-    private void midPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_midPanelMousePressed
+    private void midPanelMousePressed() {//GEN-FIRST:event_midPanelMousePressed
         // TODO add your handling code here:
 
         // the following buttons are not related to this event, so return
@@ -1701,7 +1701,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the CONNECT button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to WIRE, so that the necessary happens in the mouseClick event function
      */
-    private void wireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wireActionPerformed
+    private void wireActionPerformed() {//GEN-FIRST:event_wireActionPerformed
         // TODO add your handling code here:
         activeButton = buttons.WIRE;
         //midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
@@ -1719,7 +1719,7 @@ public final class mainPanel extends javax.swing.JPanel  {
     /*
      * This function clears the current circuit, and re-initializes everything to a fresh new state
      */
-    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
+    private void clearButtonActionPerformed() {//GEN-FIRST:event_clearButtonActionPerformed
         // TODO add your handling code here:
         currCircuit = new Circuit();
         initializeData();
@@ -1730,7 +1730,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the 0 input button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to BINARY_ZERO, so that the necessary happens in the mouseClick event function
      */
-    private void zeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroButtonActionPerformed
+    private void zeroButtonActionPerformed() {//GEN-FIRST:event_zeroButtonActionPerformed
         // TODO add your handling code here:
         midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         activeButton = buttons.BINARY_ZERO;
@@ -1740,7 +1740,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the 1 input button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to BINARY_ONE, so that the necessary happens in the mouseClick event function
      */
-    private void oneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneButtonActionPerformed
+    private void oneButtonActionPerformed() {//GEN-FIRST:event_oneButtonActionPerformed
         // TODO add your handling code here:
         midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         activeButton = buttons.BINARY_ONE;
@@ -1750,7 +1750,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the DELETE button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to DELETE, so that the necessary happens in the mouseClick event function
      */
-    private void deleteElementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteElementButtonActionPerformed
+    private void deleteElementButtonActionPerformed() {//GEN-FIRST:event_deleteElementButtonActionPerformed
         // TODO add your handling code here:
         midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         activeButton = buttons.DELETE;
@@ -1760,7 +1760,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the PROBE button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to PROBE, so that the necessary happens in the mouseClick event function
      */
-    private void probeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_probeButtonActionPerformed
+    private void probeButtonActionPerformed() {//GEN-FIRST:event_probeButtonActionPerformed
         // TODO add your handling code here:
         midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         activeButton = buttons.PROBE;
@@ -1770,7 +1770,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the DISCONNECT button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to DISCONNECT, so that the necessary happens in the mouseClick event function
      */
-    private void disconnectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disconnectButtonActionPerformed
+    private void disconnectButtonActionPerformed() {//GEN-FIRST:event_disconnectButtonActionPerformed
         // TODO add your handling code here:
         //midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
          midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -1782,7 +1782,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * It is responsible for saving the currentCircuit to a file, so as to load it later.
      * Invokes a file-chooser dialog, to choose the file where the circuit is to be saved, and saves the circuit to it.
      */
-    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+    private void saveButtonActionPerformed() {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
@@ -1819,7 +1819,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * It is responsible for loading the circuit from a file.
      * Invokes a file-chooser dialog, to choose the file from which the circuit is to be loaded, and creates the corresponding circuit.
      */
-    private void loadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadButtonActionPerformed
+    private void loadButtonActionPerformed() {//GEN-FIRST:event_loadButtonActionPerformed
         // TODO add your handling code here:
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
@@ -1885,7 +1885,7 @@ public final class mainPanel extends javax.swing.JPanel  {
         }
     }//GEN-LAST:event_loadButtonActionPerformed
 
-    private void genericElementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_genericElementMouseEntered
+    private void genericElementMouseEntered() {//GEN-FIRST:event_genericElementMouseEntered
         // TODO add your handling code here:
         if (activeButton == buttons.NONE) {
             selectedGate.setIcon(new ImageIcon(getClass().getResource("/dldvirtuallabs/images/genericElement.gif")));
