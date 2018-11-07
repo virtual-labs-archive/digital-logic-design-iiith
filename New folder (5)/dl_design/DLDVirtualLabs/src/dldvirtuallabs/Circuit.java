@@ -138,31 +138,10 @@ public class Circuit {
     /*
      * setCircuitName(name) sets the circuitName(name)
      */
-    public void setCiruitName(String name) {
+    public void setCiruitName(String name,int number,Element newElement,int xIndex, int yIndex, int nodeType, int nodeId) {
         circuitName = name;
-    }
-
-    /*
-     * setNumInputs(number) sets the numInputs(number)
-     * It is called while loading a circuit from a saved file
-     */
-    public void setNumInputs(int number) {
         numInputs = number;
-    }
-
-    /*
-     * setNumOutputs(number) sets numOutputs(number)
-     * It is called while loading a circuit from a saved file
-     */
-    public void setNumOutputs(int number) {
         numOutputs = number;
-    }
-
-    /*
-     * addElement(newElement) adds newElement to the list of all the constituent elements
-     * Along with this, the inputs and outputs of newElement are added to corresponding lists
-     */
-    public void addElement(Element newElement) {
         allElementsList.put(newElement.getElementID(), newElement);
         for (int i = 0; i < newElement.getNumInputs(); i++) {
             allInputsList.put(newElement.getInputAt(i).getInputID(), newElement.getInputAt(i));
@@ -170,16 +149,48 @@ public class Circuit {
         for (int i = 0; i < newElement.getNumOutputs(); i++) {
             allOutputsList.put(newElement.getOutputAt(i).getOutputID(), newElement.getOutputAt(i));
         }
+        meshType[yIndex][xIndex] = nodeType;
+        meshID[yIndex][xIndex] = nodeId;   
+    }
+
+    /*
+     * setNumInputs(number) sets the numInputs(number)
+     * It is called while loading a circuit from a saved file
+     */
+    /*public void setNumInputs(int number) {
+        numInputs = number;
+    }*/
+
+    /*
+     * setNumOutputs(number) sets numOutputs(number)
+     * It is called while loading a circuit from a saved file
+     */
+    /*public void setNumOutputs(int number) {
+        numOutputs = number;
+    }*/
+
+    /*
+     * addElement(newElement) adds newElement to the list of all the constituent elements
+     * Along with this, the inputs and outputs of newElement are added to corresponding lists
+     */
+    /*public void addElement(Element newElement) {
+        allElementsList.put(newElement.getElementID(), newElement);
+        for (int i = 0; i < newElement.getNumInputs(); i++) {
+            allInputsList.put(newElement.getInputAt(i).getInputID(), newElement.getInputAt(i));
+        }
+        for (int i = 0; i < newElement.getNumOutputs(); i++) {
+            allOutputsList.put(newElement.getOutputAt(i).getOutputID(), newElement.getOutputAt(i));
+        }*/
     }
 
     /*
      * setMeshValues(xIndex, yIndex, nodeType, nodeId) sets the meshType and meshID matrices
      * at (yIndex, xIndex) to nodeType and nodeID values
      */
-    public void setMeshValues(int xIndex, int yIndex, int nodeType, int nodeId) {
+    /*public void setMeshValues(int xIndex, int yIndex, int nodeType, int nodeId) {
         meshType[yIndex][xIndex] = nodeType;
         meshID[yIndex][xIndex] = nodeId;
-    }
+    }*/
 
     /***************************************************************************
      * Functions that gets values/parameters for a particular circuit instance *

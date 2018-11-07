@@ -112,7 +112,7 @@ class simple_html_dom_node {
     public $children = array();
     public $nodes = array();
     public $parent = null;
-    public $_ = array();
+    public $parent_array = array();
     public $tag_start = 0;
     private $dom = null;
 
@@ -400,17 +400,17 @@ class simple_html_dom_node {
         if (isset($this->_[HDOM_INFO_TEXT])) return $this->dom->restore_noise($this->_[HDOM_INFO_TEXT]);
 
         $ret = '<'.$this->tag;
-        $i = -1;
+        $start = -1;
 
         foreach ($this->attr as $key=>$val)
         {
-            ++$i;
+            ++$start;
 
             // skip removed attribute
             if ($val===null || $val===false)
                 continue;
 
-            $ret .= $this->_[HDOM_INFO_SPACE][$i][0];
+            $ret .= $this->_[HDOM_INFO_SPACE][$start][0];
             //no value attr: nowrap, checked selected...
             if ($val===true)
                 $ret .= $key;
@@ -421,7 +421,7 @@ class simple_html_dom_node {
                     case HDOM_QUOTE_SINGLE: $quote = '\''; break;
                     default: $quote = '';
                 }
-                $ret .= $key.$this->_[HDOM_INFO_SPACE][$i][1].'='.$this->_[HDOM_INFO_SPACE][$i][2].$quote.$val.$quote;
+                $ret .= $key.$this->_[HDOM_INFO_SPACE][$start][1].'='.$this->_[HDOM_INFO_SPACE][$start][2].$quote.$val.$quote;
             }
         }
         $ret = $this->dom->restore_noise($ret);
@@ -736,8 +736,8 @@ class simple_html_dom_node {
     function setAttribute($name, $value) {$this->__set($name, $value);}
     function hasAttribute($name) {return $this->__isset($name);}
     function removeAttribute($name) {$this->__set($name, null);}
-    function getElementById($id) {return $this->find("#$id", 0);}
-    function getElementsById($id, $idx=null) {return $this->find("#$id", $idx);}
+    function getElementById($parentid) {return $this->find("#$parentid", 0);}
+    function getElementsById($parentid, $idx=null) {return $this->find("#$parentid", $idx);}
     function getElementByTagName($name) {return $this->find($name, 0);}
     function getElementsByTagName($name, $idx=null) {return $this->find($name, $idx);}
     function parentNode() {return $this->parent();}
@@ -924,13 +924,13 @@ class simple_html_dom {
 
     // parse html content
     protected function parse() {
-        if (($s = $this->copy_until_char('<'))==='')
+        if (($set_content = $this->copy_until_char('<'))==='')
             return $this->read_tag();
 
         // text
         $node = new simple_html_dom_node($this);
         ++$this->cursor;
-        $node->_[HDOM_INFO_TEXT] = $s;
+        $node->_[HDOM_INFO_TEXT] = $set_content;
         $this->link_nodes($node, false);
         return true;
     }
@@ -958,10 +958,10 @@ class simple_html_dom {
 
         if (empty($charset))
         {
-            $el = $this->root->find('meta[http-equiv=Content-Type]',0);
-            if (!empty($el))
+            $element = $this->root->find('meta[http-equiv=Content-Type]',0);
+            if (!empty($element))
             {
-                $fullvalue = $el->content;
+                $fullvalue = $element->content;
                 if (is_object($debugObject)) {$debugObject->debugLog(2, 'meta content-type tag found' . $fullValue);}
 
                 if (!empty($fullvalue))
