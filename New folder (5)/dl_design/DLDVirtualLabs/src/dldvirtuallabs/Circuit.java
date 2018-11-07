@@ -484,7 +484,8 @@ Queue<Element> initial_currSet1 = new  LinkedList<Element>();
             initial_currSet1.add((Element) it.next());
         }
 
-int ele_count=0,ele_count1=0;
+int ele_count=0;
+int ele_count1=0;
 int flag_first=0;
 //System.out.println("**************************************");
 while(true)
@@ -498,7 +499,8 @@ while(true)
 
          for (Iterator it = allElementsList.keySet().iterator(); it.hasNext();) {
             Element currElement = (Element) allElementsList.get((Integer) it.next());
-         int temp_flag=0,temp_flag1=0;
+         int temp_flag=0;
+             int temp_flag1=0;
          for (int p_cnt = 0; p_cnt < currElement.getNumInputs(); p_cnt++) {
                 
                     if (currElement.getInputAt(p_cnt).getNewValue() != -1) {   // All inputs are not available
@@ -1069,41 +1071,32 @@ if(loop_flag==0)
         /*
          * Initialize local variables
          */
-        String currentLine = new String();          // current line (non-blank, non-comment[# ...]) being read
-        String comment = new String();              // comment line [# ...] being read
-        String blankLine = new String();            // blank line being read []
-
+          // current line (non-blank, non-comment[# ...]) being read
+        
         /*
          * Load metadata about the circuit
          */
-        comment = bufReader.readLine();                             // # Circuit ID
+                                     // # Circuit ID
         circuitID = Integer.valueOf(bufReader.readLine());
-        blankLine = bufReader.readLine();
+        
 
-        comment = bufReader.readLine();                             // # Circuit Name
+                                 // # Circuit Name
         circuitName = bufReader.readLine();
-        blankLine = bufReader.readLine();
+        
 
-        comment = bufReader.readLine();                             // # Number of Inputs for the whole circuit
+                                     // # Number of Inputs for the whole circuit
         numInputs = Integer.valueOf(bufReader.readLine());
-        blankLine = bufReader.readLine();
+       
 
-        comment = bufReader.readLine();                             // # Number of Outputs for the whole circuit
+                                // # Number of Outputs for the whole circuit
         numOutputs = Integer.valueOf(bufReader.readLine());
-        blankLine = bufReader.readLine();
+       
 
 
         /*
          * Load the list of all the elements in the circuit
          * The next few comment lines define the format in which the elements were saved
          */
-        comment = bufReader.readLine();                             // # Total Number of Elements in the Circuit
-        comment = bufReader.readLine();                             // # List of all Elements
-        comment = bufReader.readLine();                             // # ID, Name, Location.x, Location.y
-        comment = bufReader.readLine();                             // # Num_Inputs_For_Element
-        comment = bufReader.readLine();                             // # InputID1, InputIndex, AncestorID, Location.x, Location.y, OutputSrcNode
-        comment = bufReader.readLine();                             // # Num_Outputs_For_Element
-        comment = bufReader.readLine();                             // # OutputID1, OutputIndex, AncestorID, Location.x, Locaiton.y, NumInpDest, InpId1, InpId2...
         int numElements = Integer.valueOf(bufReader.readLine());        // Number of Elements in the Circuit
         for (int i = 0; i < numElements; i++) {                         // For each such element in the circuit
             Element newElement;
@@ -1216,7 +1209,7 @@ if(loop_flag==0)
                 scan = new Scanner(line);                                           // Line 2 - inputs for that element
                 scan.useDelimiter(", ");
                 Input newInp = new Input(scan.nextInt(), scan.nextInt(), newElement,scan.next());
-                int ancestorID = scan.nextInt();
+                
                 newInp.setLocation(new Point(scan.nextInt(), scan.nextInt()));
                 int srcOutID = scan.nextInt();
                 if (srcOutID == -1) {                                               // if srcOutID is -1 => its a cirucit level input
@@ -1243,7 +1236,7 @@ if(loop_flag==0)
                 scan = new Scanner(line);                                           // Line 3 - outputs for that element
                 scan.useDelimiter(", ");
                 Output newOut = new Output(scan.nextInt(), scan.nextInt(), newElement, scan.next());
-                int parentID = scan.nextInt();                                      // ancestorID
+                                                      // ancestorID
                 newOut.setLocation(new Point(scan.nextInt(), scan.nextInt()));
                 int numDestInp = scan.nextInt();                                    // number of inputs to which this output is connected
 
@@ -1273,7 +1266,7 @@ if(loop_flag==0)
             newElement.updateMatrix(newElement.getLocation(), meshType, meshID, null);
             scan.close();
         }
-        blankLine = bufReader.readLine();
+     
 
         /*
          * Now that all the elements are read and so are their input nodes,
@@ -1306,14 +1299,14 @@ if(loop_flag==0)
         while (scanIO.hasNextInt()) {
             this.circuitInputsList.add(allInputsList.get(scanIO.nextInt()));
         }
-        blankLine = bufReader.readLine();
+       
 
 
         /*
          * Load a list of outputs that act as inputs for the entire circuit
          * i.e. circuit level outputs, those outputs which directly give their values to the user
          */
-        comment = bufReader.readLine();                                     // # Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
+                                        // # Num_Outputs_For_Whole_Circuit, OutID1, OutID2, OutID3...
         scanIO.reset();
         scanIO = new Scanner(bufReader.readLine());
         scanIO.useDelimiter(", ");
@@ -1323,29 +1316,29 @@ if(loop_flag==0)
             op1.setstatevalue(1);
             this.circuitOutputsList.add(op1);
         }
-        blankLine = bufReader.readLine();
+      
 
 
         /*
          * Load a list of elements that act as inputs for the entire circuit
          * i.e. those elements that have atleast one circuit level input
          */
-        comment = bufReader.readLine();                                     // # Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+                                          // # Num_Input_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
         scanIO.reset();
         scanIO = new Scanner(bufReader.readLine());
         scanIO.useDelimiter(", ");
-        int temp = scanIO.nextInt();
+        
         while (scanIO.hasNextInt()) {
             this.inputElementSet.add(allElementsList.get(scanIO.nextInt()));
         }
-        blankLine = bufReader.readLine();
+       
 
 
         /*
          * Load a list of outputs that act as inputs for the entire circuit
          * i.e. those elements that have atleast one circuit level output
          */
-        comment = bufReader.readLine();                                     // # Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
+                                         // # Num_Output_Elements_For_Whole_Circuit, ElementID1, ElementID2, ElementID3...
         scanIO.reset();
         scanIO = new Scanner(bufReader.readLine());
         scanIO.useDelimiter(", ");
