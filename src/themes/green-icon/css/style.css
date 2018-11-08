@@ -111,7 +111,7 @@ background: #FFF1AF;
 
 .container-fluid .calender  tbody td.hilite {
 padding: 1px 1px 1px 1px;
-background:#444 !important;
+background:#444;
 color:#fff !important;
 }
 
@@ -364,10 +364,10 @@ margin-top:120px;
 	font-size: 14px !important;
 	font-family: 'Raleway' !important;
   color: #2C99CD !important;
-  padding-left: 10px !important;
-  padding-bottom: 5px !important;
+  padding-left: 10px;
+  padding-bottom: 5px;
   padding-top: 5px !important;
-  padding-right: 10px !important;
+  padding-right: 10px;
 
 }
 
@@ -386,7 +386,7 @@ margin-top:120px;
 
 .menu-li:HOVER
 {
-	background-color: #77BB41 !important;
+	background-color: #77BB41;
 }
 
 .menu-a:HOVER
@@ -427,7 +427,7 @@ margin-top:120px;
 	.custom-toggle
 	{
 		margin-bottom: 0px !important;
-		margin-top: 27px !important;
+		margin-top: 27px;
 	}
 }
 
@@ -533,7 +533,7 @@ margin-top:120px;
 
 	.banner-text-medium
 	{
-		font-size: 1.7em !important;
+		font-size: 1.7em;
 	}
 
 	.banner-text-big
@@ -658,9 +658,9 @@ margin-top:120px;
 
 .featured-labs-div
 {
-	margin-left: 0px !important;
+	margin-left: 0px;
 	margin-right: 0px !important;
-	padding-left: 15px !important;
+	padding-left: 15px;
 }
 .border-bottom-img
 {
