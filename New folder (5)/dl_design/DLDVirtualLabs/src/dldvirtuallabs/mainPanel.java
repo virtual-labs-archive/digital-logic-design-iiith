@@ -121,7 +121,6 @@ public final class mainPanel extends javax.swing.JPanel  {
     private boolean draggingElement;
     private boolean dragAction;
     private Point temp1;
-    private Point temp2;
     private String gen_name;
     private Point srcDragPoint;
     private HashMap<String, Vector<Integer>> timePulses;
@@ -175,7 +174,7 @@ public final class mainPanel extends javax.swing.JPanel  {
         workPanelSize = midPanel.getSize();
         draggingElement = false;
         dragAction = false;
-        temp1 = temp2 = null;
+        temp1 = null;
         gen_name="Generic_Element";
         srcDragPoint = new Point();
       // timePulses = new HashMap<String, Vector<Integer>>();
