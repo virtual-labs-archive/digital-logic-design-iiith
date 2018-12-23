@@ -61,7 +61,7 @@ public class Element implements ElementInterface {
     protected Vector<Output> outputList;
     protected Point location;
     protected Circuit inbuiltCkt;
-    protected boolean process_state;
+    protected boolean processstate;
 
     /*
      * Null Constructor - Used while loading a previously saved circuit.
@@ -80,7 +80,7 @@ public class Element implements ElementInterface {
         inputList = new Vector<Input>();
         outputList = new Vector<Output>();
         location = new Point();
-        process_state=true;
+        processstate=true;
     }
 
     /*
@@ -90,7 +90,7 @@ public class Element implements ElementInterface {
      */
     Element(int id, String type, int inpID, int numInp, int outID, int numOut, Point loc) {
         elementID = id;
-        process_state=true;
+        processstate=true;
         delay=-1;
         elementType = type;
         elementName = type+Integer.valueOf(id);
@@ -116,11 +116,11 @@ public class Element implements ElementInterface {
      * setNumInputs(inpCount) sets the number of inputs to inpCount
      * This function is used during loadCircuit when the numInputs is specified
      */
-  public boolean getprocess_state() {
-        return process_state;
+  public boolean getprocessstate() {
+        return processstate;
     }
-public void setprocess_state(boolean st) {
-        process_state = st;
+public void setprocessstate(boolean st) {
+        processstate = st;
     }
 
     public void setNumInputs(int inpCount) {

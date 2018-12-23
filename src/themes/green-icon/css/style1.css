@@ -7,7 +7,6 @@ Description: The theme to accompany the profile site for vlabs.ac.in
 Version: 1.0
 */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
-/
 /*
 try to alter with above URL and check which fit the best
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
@@ -575,7 +574,7 @@ a:focus
   margin-top: 2px;
 }
  
-//To move navigation buttons outside use these settings:
+/*To move navigation buttons outside use these settings:*/
  
 #owl-demo .owl-controls .owl-buttons div, #owl-partner-institutions .owl-controls .owl-buttons div{
   position: absolute;
@@ -734,12 +733,12 @@ a:focus
 
 .banner-caption-text
 {
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
 	font-size: 2.0em;	
 	text-align: left;
-=======
+/*=======*/
 	font-size: 1.2em;	
->>>>>>> f3b4f22ca1ec6639cf95185650d5427a8bca30ee
+/*>>>>>>> f3b4f22ca1ec6639cf95185650d5427a8bca30ee*/
 	line-height: normal;
 	color: black;
 	
