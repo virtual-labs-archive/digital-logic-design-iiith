@@ -21,15 +21,12 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
-import java.awt.geom.Line2D;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.AbstractCollection;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -40,7 +37,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
-import javax.swing.JComboBox;
+
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -56,7 +53,7 @@ import javax.swing.ListModel;
  *      - rightPanel    : the panel where the time pulse graphs are drawn
  *      - inputPanel    : the panel containing the inputs
  */
-public final class mainPanel extends javax.swing.JPanel  {
+public final class MainPanel extends JPanel {
 
     /*
      * An enumeration of all buttons, so as to toggle the corresponding state
@@ -121,7 +118,6 @@ public final class mainPanel extends javax.swing.JPanel  {
     private boolean draggingElement;
     private boolean dragAction;
     private Point temp1;
-    private Point temp2;
     private String gen_name;
     private Point srcDragPoint;
     private HashMap<String, Vector<Integer>> timePulses;
@@ -193,40 +189,40 @@ public final class mainPanel extends javax.swing.JPanel  {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        leftPanel = new javax.swing.JPanel();
-        selectedGate = new javax.swing.JLabel();
-        wire = new javax.swing.JButton();
-        disconnectButton = new javax.swing.JButton();
-        deleteElementButton = new javax.swing.JButton();
-        probeButton = new javax.swing.JButton();
-        output = new javax.swing.JButton();
-        Naming = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
-        select_gate = new javax.swing.JButton();
-        topPanel = new javax.swing.JPanel();
-        simulateButton = new javax.swing.JButton();
-        loadButton = new javax.swing.JButton();
-        saveButton = new javax.swing.JButton();
-        clearButton = new javax.swing.JButton();
-        genericElement = new javax.swing.JButton();
-        load_combo = new javax.swing.JComboBox();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        logField = new javax.swing.JTextField();
-        inputPanel = new javax.swing.JPanel();
-        zeroButton = new javax.swing.JButton();
-        oneButton = new javax.swing.JButton();
-        timePulse = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        timePulseList = new javax.swing.JList();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        currentTimePulse = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane(pulseParams);
-        pulseParams = new javax.swing.JTextPane();
-        rightPanel1 = new javax.swing.JScrollPane(rightPanel);
+        leftPanel = new JPanel();
+        selectedGate = new JLabel();
+        wire = new JButton();
+        disconnectButton = new JButton();
+        deleteElementButton = new JButton();
+        probeButton = new JButton();
+        output = new JButton();
+        Naming = new JButton();
+        jButton1 = new JButton();
+        jComboBox1 = new JComboBox();
+        jComboBox2 = new JComboBox();
+        select_gate = new JButton();
+        topPanel = new JPanel();
+        simulateButton = new JButton();
+        loadButton = new JButton();
+        saveButton = new JButton();
+        clearButton = new JButton();
+        genericElement = new JButton();
+        load_combo = new JComboBox();
+        jButton2 = new JButton();
+        jButton3 = new JButton();
+        logField = new JTextField();
+        inputPanel = new JPanel();
+        zeroButton = new JButton();
+        oneButton = new JButton();
+        timePulse = new JButton();
+        jScrollPane1 = new JScrollPane();
+        timePulseList = new JList();
+        jLabel1 = new JLabel();
+        jLabel2 = new JLabel();
+        currentTimePulse = new JButton();
+        jScrollPane2 = new JScrollPane(pulseParams);
+        pulseParams = new JTextPane();
+        rightPanel1 = new JScrollPane(rightPanel);
         rightPanel1.getHorizontalScrollBar().addAdjustmentListener(new MyAction());
         rightPanel1.getVerticalScrollBar().addAdjustmentListener(new MyAction());
         rightPanel = new OutputPanel();
@@ -236,17 +232,17 @@ public final class mainPanel extends javax.swing.JPanel  {
         midPanel = new WorkPanel();
         content1 = new javax.swing.JTextField();
 
-        setMinimumSize(new java.awt.Dimension(512, 128));
-        setPreferredSize(new java.awt.Dimension(1000, 660));
+        setMinimumSize(new Dimension(512, 128));
+        setPreferredSize(new Dimension(1000, 660));
 
         leftPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Basic Elements"));
-        leftPanel.setPreferredSize(new java.awt.Dimension(179, 445));
+        leftPanel.setPreferredSize(new Dimension(179, 445));
 
         selectedGate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         selectedGate.setLabelFor(leftPanel);
         selectedGate.setText("Selected Icon");
         selectedGate.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        selectedGate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        selectedGate.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0)));
         selectedGate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         selectedGate.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
@@ -372,7 +368,7 @@ public final class mainPanel extends javax.swing.JPanel  {
         );
 
         topPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        topPanel.setPreferredSize(new java.awt.Dimension(878, 42));
+        topPanel.setPreferredSize(new Dimension(878, 42));
 
         simulateButton.setText("Simulate");
         simulateButton.addActionListener(new java.awt.event.ActionListener() {
@@ -468,9 +464,9 @@ public final class mainPanel extends javax.swing.JPanel  {
         );
 
         logField.setEditable(false);
-        logField.setFont(new java.awt.Font("Tahoma", 1, 18));
+        logField.setFont(new Font("Tahoma", 1, 18));
         logField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        logField.setPreferredSize(new java.awt.Dimension(1000, 26));
+        logField.setPreferredSize(new Dimension(1000, 26));
         logField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logFieldActionPerformed(evt);
@@ -478,7 +474,7 @@ public final class mainPanel extends javax.swing.JPanel  {
         });
 
         inputPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Inputs"));
-        inputPanel.setPreferredSize(new java.awt.Dimension(179, 302));
+        inputPanel.setPreferredSize(new Dimension(179, 302));
 
         zeroButton.setText("0");
         zeroButton.addActionListener(new java.awt.event.ActionListener() {
@@ -521,7 +517,7 @@ public final class mainPanel extends javax.swing.JPanel  {
             }
         });
 
-        pulseParams.setPreferredSize(new java.awt.Dimension(6, 64));
+        pulseParams.setPreferredSize(new Dimension(6, 64));
         pulseParams.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pulseParamsMouseClicked(evt);
@@ -593,9 +589,9 @@ public final class mainPanel extends javax.swing.JPanel  {
                 .addComponent(currentTimePulse))
         );
 
-        rightPanel1.setPreferredSize(new java.awt.Dimension(160, 719));
+        rightPanel1.setPreferredSize(new Dimension(160, 719));
 
-        rightPanel.setPreferredSize(new java.awt.Dimension(160, 719));
+        rightPanel.setPreferredSize(new Dimension(160, 719));
         rightPanel.setRequestFocusEnabled(false);
         rightPanel.setVerifyInputWhenFocusTarget(false);
 
@@ -612,11 +608,11 @@ public final class mainPanel extends javax.swing.JPanel  {
 
         rightPanel1.setViewportView(rightPanel);
 
-        jScrollPane3.setPreferredSize(new java.awt.Dimension(650, 719));
+        jScrollPane3.setPreferredSize(new Dimension(650, 719));
 
         midPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Workspace"));
         midPanel.setAutoscrolls(true);
-        midPanel.setPreferredSize(new java.awt.Dimension(2400, 1200));
+        midPanel.setPreferredSize(new Dimension(2400, 1200));
         midPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 midPanelMouseClicked(evt);
@@ -659,7 +655,7 @@ public final class mainPanel extends javax.swing.JPanel  {
         jScrollPane3.setViewportView(midPanel);
 
         content1.setEditable(false);
-        content1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        content1.setFont(new Font("Tahoma", 1, 18)); // NOI18N
         content1.setText("jTextField1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -1216,11 +1212,6 @@ public final class mainPanel extends javax.swing.JPanel  {
         } else if (activeButton == buttons.DISCONNECT) {        // disconnect two nodes
             logField.setText("Disconnecting ");
         }
-        if(activeButton!=buttons.WIRE1 && activeButton!=buttons.DISCONNECT1)
-        {
-        //activeButton = buttons.NONE;
-        //midPanel.setCursor(Cursor.getDefaultCursor());
-        }
         repaint();
     }//GEN-LAST:event_midPanelMouseClicked
 
@@ -1228,7 +1219,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * this function updates the workPanelSize to the current midPanel's size.
      * it is called whenever, the midPanel gets resized.
      */
-    private void midPanelComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_midPanelComponentResized
+    private void midPanelComponentResized() {//GEN-FIRST:event_midPanelComponentResized
         // TODO add your handling code here:
         workPanelSize = midPanel.getSize();
         repaint();
@@ -1536,7 +1527,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      *          and then the process circuit is called.
      *          The corresponding output values are also stored for each state-change in timePulseOutputs.
      */
-    private void simulateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simulateButtonActionPerformed
+    private void simulateButtonActionPerformed() {//GEN-FIRST:event_simulateButtonActionPerformed
         // TODO add your handling code here:
 //System.out.println("new simulation");
         timePulseOutputs = new HashMap<Output, Vector<Integer>>();
@@ -1701,7 +1692,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the CONNECT button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to WIRE, so that the necessary happens in the mouseClick event function
      */
-    private void wireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wireActionPerformed
+    private void wireActionPerformed() {//GEN-FIRST:event_wireActionPerformed
         // TODO add your handling code here:
         activeButton = buttons.WIRE;
         //midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
@@ -1719,7 +1710,7 @@ public final class mainPanel extends javax.swing.JPanel  {
     /*
      * This function clears the current circuit, and re-initializes everything to a fresh new state
      */
-    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
+    private void clearButtonActionPerformed() {//GEN-FIRST:event_clearButtonActionPerformed
         // TODO add your handling code here:
         currCircuit = new Circuit();
         initializeData();
@@ -1730,7 +1721,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the 0 input button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to BINARY_ZERO, so that the necessary happens in the mouseClick event function
      */
-    private void zeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroButtonActionPerformed
+    private void zeroButtonActionPerformed() {//GEN-FIRST:event_zeroButtonActionPerformed
         // TODO add your handling code here:
         midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         activeButton = buttons.BINARY_ZERO;
@@ -1740,7 +1731,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the 1 input button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to BINARY_ONE, so that the necessary happens in the mouseClick event function
      */
-    private void oneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneButtonActionPerformed
+    private void oneButtonActionPerformed() {//GEN-FIRST:event_oneButtonActionPerformed
         // TODO add your handling code here:
         midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         activeButton = buttons.BINARY_ONE;
@@ -1750,7 +1741,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the DELETE button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to DELETE, so that the necessary happens in the mouseClick event function
      */
-    private void deleteElementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteElementButtonActionPerformed
+    private void deleteElementButtonActionPerformed() {//GEN-FIRST:event_deleteElementButtonActionPerformed
         // TODO add your handling code here:
         midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         activeButton = buttons.DELETE;
@@ -1760,7 +1751,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the PROBE button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to PROBE, so that the necessary happens in the mouseClick event function
      */
-    private void probeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_probeButtonActionPerformed
+    private void probeButtonActionPerformed() {//GEN-FIRST:event_probeButtonActionPerformed
         // TODO add your handling code here:
         midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         activeButton = buttons.PROBE;
@@ -1770,7 +1761,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * called when the user presses the DISCONNECT button, and then clicks on the midPanel.
      * It is responsible for setting the activeButton to DISCONNECT, so that the necessary happens in the mouseClick event function
      */
-    private void disconnectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disconnectButtonActionPerformed
+    private void disconnectButtonActionPerformed() {//GEN-FIRST:event_disconnectButtonActionPerformed
         // TODO add your handling code here:
         //midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
          midPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -1782,7 +1773,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * It is responsible for saving the currentCircuit to a file, so as to load it later.
      * Invokes a file-chooser dialog, to choose the file where the circuit is to be saved, and saves the circuit to it.
      */
-    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+    private void saveButtonActionPerformed() {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
@@ -1819,7 +1810,7 @@ public final class mainPanel extends javax.swing.JPanel  {
      * It is responsible for loading the circuit from a file.
      * Invokes a file-chooser dialog, to choose the file from which the circuit is to be loaded, and creates the corresponding circuit.
      */
-    private void loadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadButtonActionPerformed
+    private void loadButtonActionPerformed() {//GEN-FIRST:event_loadButtonActionPerformed
         // TODO add your handling code here:
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
@@ -1885,7 +1876,7 @@ public final class mainPanel extends javax.swing.JPanel  {
         }
     }//GEN-LAST:event_loadButtonActionPerformed
 
-    private void genericElementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_genericElementMouseEntered
+    private void genericElementMouseEntered() {//GEN-FIRST:event_genericElementMouseEntered
         // TODO add your handling code here:
         if (activeButton == buttons.NONE) {
             selectedGate.setIcon(new ImageIcon(getClass().getResource("/dldvirtuallabs/images/genericElement.gif")));
