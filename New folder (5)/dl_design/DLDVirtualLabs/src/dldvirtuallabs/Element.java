@@ -88,7 +88,7 @@ public class Element implements ElementInterface {
      * "numInp" inputs starting with "inpID", "numOut" outputs starting with "outID"
      * Element is placed at downscaled location "loc"
      */
-    Element(int id, String type, int inpID, int numInp, int outID, int numOut, Point loc) {
+    Element(int id, String type, int numInp, int numOut, Point loc) {
         elementID = id;
         process_state=true;
         delay=-1;
