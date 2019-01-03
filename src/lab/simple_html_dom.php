@@ -93,7 +93,7 @@ function str_get_html($str, $lowercase=true, $forceTagsClosed=true, $target_char
 }
 
 // dump html dom tree
-function dump_html_tree($node, $show_attr=true, $deep=0)
+function dump_html_tree($node,$deep=0)
 {
     $node->dump($node);
 }
@@ -150,7 +150,7 @@ class simple_html_dom_node {
         if ($show_attr && count($this->attr)>0)
         {
             echo '(';
-            foreach ($this->attr as $k=>$v)
+            foreach ($this->attr as $k=>)
                 echo "[$k]=>\"".$this->$k.'", ';
             echo ')';
         }
@@ -187,9 +187,8 @@ class simple_html_dom_node {
                         echo "[$k2]=>\"".$v2.'", ';
                     }
                     echo ")";
-                } else {
-                    echo "[$k]=>\"".$v.'", ';
-                }
+                } 
+                 echo "[$k]=>\"".$v.'", ';
             }
             echo ")";
         }
@@ -400,7 +399,7 @@ class simple_html_dom_node {
         if (isset($this->_[HDOM_INFO_TEXT])) return $this->dom->restore_noise($this->_[HDOM_INFO_TEXT]);
 
         $ret = '<'.$this->tag;
-        $i = -1;
+        $inte = -1;
 
         foreach ($this->attr as $key=>$val)
         {
@@ -414,7 +413,7 @@ class simple_html_dom_node {
             //no value attr: nowrap, checked selected...
             if ($val===true)
                 $ret .= $key;
-            else {
+            
                 switch ($this->_[HDOM_INFO_QUOTE][$i])
                 {
                     case HDOM_QUOTE_DOUBLE: $quote = '"'; break;
@@ -422,7 +421,7 @@ class simple_html_dom_node {
                     default: $quote = '';
                 }
                 $ret .= $key.$this->_[HDOM_INFO_SPACE][$i][1].'='.$this->_[HDOM_INFO_SPACE][$i][2].$quote.$val.$quote;
-            }
+            
         }
         $ret = $this->dom->restore_noise($ret);
         return $ret . $this->_[HDOM_INFO_ENDSPACE] . '>';
@@ -737,7 +736,7 @@ class simple_html_dom_node {
     function hasAttribute($name) {return $this->__isset($name);}
     function removeAttribute($name) {$this->__set($name, null);}
     function getElementById($id) {return $this->find("#$id", 0);}
-    function getElementsById($id, $idx=null) {return $this->find("#$id", $idx);}
+    function getElementsById($idii, $idx=null) {return $this->find("#$idii", $idx);}
     function getElementByTagName($name) {return $this->find($name, 0);}
     function getElementsByTagName($name, $idx=null) {return $this->find($name, $idx);}
     function parentNode() {return $this->parent();}
@@ -924,7 +923,7 @@ class simple_html_dom {
 
     // parse html content
     protected function parse() {
-        if (($s = $this->copy_until_char('<'))==='')
+        if (($sanj = $this->copy_until_char('<'))==='')
             return $this->read_tag();
 
         // text
