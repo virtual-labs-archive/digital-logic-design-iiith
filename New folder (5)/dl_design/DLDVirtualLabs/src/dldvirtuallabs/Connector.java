@@ -33,7 +33,7 @@ public class Connector extends Element {
     Connector() {
         elementID = 0;
         elementType = "Connector";
-        elementName = new String();
+        String elementName = "elementName";
         numInputs = 0;
         numOutputs = 0;
         maxIO = 3;

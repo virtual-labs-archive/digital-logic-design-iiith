@@ -1069,9 +1069,9 @@ if(loop_flag==0)
         /*
          * Initialize local variables
          */
-        String currentLine = new String();          // current line (non-blank, non-comment[# ...]) being read
-        String comment = new String();              // comment line [# ...] being read
-        String blankLine = new String();            // blank line being read []
+        String currentLine = "currentLine";          // current line (non-blank, non-comment[# ...]) being read
+        String comment = "comment";              // comment line [# ...] being read
+        String blankLine = "blankLine";            // blank line being read []
 
         /*
          * Load metadata about the circuit

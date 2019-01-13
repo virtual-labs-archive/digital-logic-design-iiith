@@ -35,7 +35,7 @@ public class XorGate4 extends Element {
     XorGate4() {
         elementID = 0;
         elementType = "Xor_Gate4";
-        elementName = new String();
+        String elementName = "elementName";
         numInputs = 0;
         numOutputs = 0;
         maxIO = 5;

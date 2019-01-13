@@ -35,7 +35,7 @@ public class NorGate extends Element {
     NorGate() {
         elementID = 0;
         elementType = "Nor_Gate";
-        elementName = new String();
+        String elementName = "elementName";
         numInputs = 0;
         numOutputs = 0;
         maxIO = 3;
