@@ -37,7 +37,7 @@ public interface ElementInterface {
     public void setInbuiltCkt(Circuit newCkt);
     public void setInputAt(int ind, Input inp);
     public void setOutputAt(int ind, Output out);
-    public void setprocess_state(boolean st);
+    public void setprocessstate(boolean st);
     public void setgatedelay(int state);
 
     /*
@@ -55,7 +55,7 @@ public interface ElementInterface {
     public int getMaxIO();
     public Point getLocation();
     public Circuit getInbuiltCircuit();
-    public boolean getprocess_state();
+    public boolean getprocessstate();
     public int getgatedelay();
     /*
      * Processing functions that are overridden by all the sub classes of class Element
