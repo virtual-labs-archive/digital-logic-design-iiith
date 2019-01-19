@@ -116,10 +116,10 @@ public class Element implements ElementInterface {
      * setNumInputs(inpCount) sets the number of inputs to inpCount
      * This function is used during loadCircuit when the numInputs is specified
      */
-  public boolean getprocess_state() {
+  public boolean getprocessstate() {
         return process_state;
     }
-public void setprocess_state(boolean st) {
+public void setprocessstate(boolean st) {
         process_state = st;
     }
 
