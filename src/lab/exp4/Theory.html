@@ -26,11 +26,28 @@
 	<script type="text/javascript" src = 'tabs.js'></script>
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-67558473-1', 'auto');ga('send', 'pageview');</script>	
 </head>
+
+
+
+
+
+
 <body id="page-top" class="index">
-<div id="top">
+
+<style>
+.sticky {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+  }
+</style>
+
+
+
+    <div id="top">
 	<header>
 	<!-- Navigation -->
-	    <nav class="navbar navbar-default " style="background-color: white !important; margin-bottom: 0px !important;">
+	    <nav id="responsivenav" class="navbar navbar-default " style="background-color: white !important; margin-bottom: 0px !important;">
 	        <div class="container-fluid">
 			            <!-- Brand and toggle get grouped for better mobile display -->
 			            <div class="navbar-header page-scroll">
@@ -198,6 +215,23 @@ The two 8-input multiplexers MUX0 and MUX1 require 16 inputs, they involve only 
 
 
 </div> <!-- top div -->
+
+<script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("responsivenav");
+        var sticky = navbar.offsetTop;
+        function myFunction()
+        {
+          if (window.pageYOffset >= sticky) 
+          {
+            navbar.classList.add("sticky")
+          }
+          else 
+          {
+            navbar.classList.remove("sticky");
+          }
+        }
+        </script>
 
 </body>
 
