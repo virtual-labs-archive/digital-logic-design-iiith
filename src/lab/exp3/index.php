@@ -35,7 +35,7 @@ $labarticleheading =$html->getElementById("experiment-article-heading")->innerte
 $data['nav'] = $nav;
 //print_r($nav);
 
-$vlab_url = "http://virtual-labs.ac.in/"; 
+$vlab_url = "http://vlab.co.in"; 
 $css_js   = "../"; 
 $lab_url  = "../index.php";
 $exp_url  =  "./index.php";
