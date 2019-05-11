@@ -1,8 +1,0 @@
-S.no		Test case link
-1. 	[[https://github.com/Virtual-Labs/digital-logic-design-iiith/blob/master/test-cases/integration_test-cases/System/DLD%20l_01_Usability_smk.org][DLD l_01_Usability_smk.org]]
-2. 	[[https://github.com/Virtual-Labs/digital-logic-design-iiith/blob/master/test-cases/integration_test-cases/System/DLD%20l_02_Introduction_smk.org][DLD l_02_Introduction_smk.org]]
-3. 	[[https://github.com/Virtual-Labs/digital-logic-design-iiith/blob/master/test-cases/integration_test-cases/System/DLD%20l_03_Target%20Audience_smk.org][DLD l_03_Target Audience_smk.org]]
-4. 	[[https://github.com/Virtual-Labs/digital-logic-design-iiith/blob/master/test-cases/integration_test-cases/System/DLD%20l_04_Courses%20Align_smk.org][DLD l_04_Courses Align_smk.org]]
-5. 	[[https://github.com/Virtual-Labs/digital-logic-design-iiith/blob/master/test-cases/integration_test-cases/System/DLD%20l_05_Pre-requisite%20SW_smk.org][DLD l_05_Pre-requisite SW_smk.org]]
-6. 	[[https://github.com/Virtual-Labs/digital-logic-design-iiith/blob/master/test-cases/integration_test-cases/System/DLD%20l_06_Feedback_smk.org][DLD l_06_Feedback_smk.org]]
-7. 	[[https://github.com/Virtual-Labs/digital-logic-design-iiith/blob/master/test-cases/integration_test-cases/System/DLD%20l_07_Prerequisites_p1.org][DLD l_07_Prerequisites_p1.org]]
