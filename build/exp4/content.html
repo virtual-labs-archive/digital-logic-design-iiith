@@ -1,0 +1,525 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.php">DLD Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+     ALU with function
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+          <p>
+	This module explains how to build a Programmable 1-bit ALU. 
+	In computing, an arithmetic logic unit (ALU) is a digital circuit that performs arithmetic and logical operations. The ALU is a fundamental building block of the central processing unit of a computer, and even the simplest microprocessors contain one for purposes such as maintaining timers.
+	
+	
+	
+	</p>
+	<img src="../images/ALU_symbol.png" alt="ALU"/>
+	<br />
+	<p>
+Most ALUs can perform the following operations:
+<br />
+    Bitwise logic operations (AND, NOT, OR, XOR)
+    <br />
+    Integer arithmetic operations (addition, subtraction, and sometimes multiplication and division, though this is more expensive)
+    <br />
+    Bit-shifting operations (shifting or rotating a word by a specified number of bits to the left or right, with or without sign extension). Shifts can be seen as multiplications and divisions by a power of two.
+    <br />
+    <br />
+</p>
+    <h3> Inputs and Outputs</h3>
+<p>
+    The inputs to the ALU are the data to be operated on (called operands) and a code from the control unit indicating which operation to perform. Its output is the result of the computation.
+	
+	</p>  
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+          <h2> Programmable 1-bit ALU </h2>
+	<p>
+	In this experiment, an Arithmetic and Logic Unit (ALU) capable of performing 8 Arithmetic/Logic functions on 1-bit operands,
+	will be designed, assembled and tested.
+	The circuit will consist of two 8-input multiplexers (74LS151), one quad 2-input multiplexer (74LS157) and one quad 2-input XOR gate (74LS86), all belonging to the TTL family.
+
+<h3> ALU Function Table </h3>
+<table border="3">
+	<tr><td>F2F1F0</td><td>ALU Function</td><td>Y1</td><td>Y0</td></tr>
+	<tr><td>000</td><td>0(Zero)</td><td>-</td><td>0</td></tr>
+	<tr><td>001</td><td>A OR B</td><td>-</td><td>A+B</td></tr>
+	<tr><td>010</td><td>A AND B</td><td>-</td><td>A.B</td></tr>
+	<tr><td>011</td><td>A EXOR B</td><td>-</td><td>A^B	</td></tr>
+	<tr><td>100</td><td>A PLUS B</td><td>Carry</td><td>Sum</td></tr>
+	<tr><td>101</td><td>A MINUS B</td><td>Borrow</td><td>Difference</td></tr>
+	<tr><td>110</td><td>A PLUS B PLUS C</td><td>Carry </td><td>Sum</td></tr>
+	<tr><td>111</td><td>A MINUS B MINUS C</td><td>Borrow</td><td>Difference</td></tr>
+</table>	
+	</p>
+ 
+ 
+ <h3> PIN connections for the IC's </h3>
+ <img src="../images/ALU_chips.png" />
+ 
+ <br/>
+ <p>
+ The final ALU output bits Y0 and Y1 will be generated by the two 8-input multiplexers – referred to as MUX0 and MUX1 respectively(both 74LS157).
+MUX0 is always enabled, while MUX1 is enabled only when F2 = 1, i.e. for Arithmetic functions only. This is because Y1 is required only to provide the CARRY/BORROW output for Arithmetic functions.
+<br />
+<br />
+
+<img src="../images/ALUmux.png"  WIDTH=875 />
+
+<br />
+<br />
+The two 8-input multiplexers MUX0 and MUX1 require 16 inputs, they involve only 6 distinct Boolean functions of A, B, C – A • B, A’ • B, A + B, A’ + B, A ⊕ B and A ⊕ B ⊕ C. The first four terms are realised by four 2-input multiplexers
+ </p>
+
+<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+         <ol>
+<li> The objective of this experiment is to understand working of ALU. </li>
+<li> First of all make ALU according to the theory page.And analyze its output for different values.</li>
+</ol>
+
+        </div>
+
+      </section>
+<!--
+<script type="text/javascript">
+var x=screen.availWidth-60;var y=screen.availHeight-50;
+if(x<1024)
+{
+x=1024;
+}
+if(y<660)
+{
+y=660;
+}
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make the ALU according to given conditions."><param name="file_list" value="ALU,8_1_multiplexer"></applet>' ;
+</script>
+-->
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Experiment
+        </div>
+	<p><a href="../documents/java-and-icedtea-plugin.pdf">Install prerequisites to run the simulation</a></p>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+	    <!--  <div id="applet_embed"></div> -->
+	        <a href="./exp4.html" class="qtlink" onclick="window.open('./exp4.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
+
+	For performing experiment Click here
+	</a>
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+         <H2>Digital Logic Design</H2>
+	<P><BR>This lab allows you to design and simulate any digital
+	combinational or sequential circuit. Following instruction help you
+	build the circuit. A Java-based basic tool and simulation enigne is
+	at the hear of this laboratory. You can create many circuits and
+	test them with fixed or time-varying input signals. You can also see
+	the outputs as values or time-varying waveforms. 
+	</P>
+	<P>The tool consist of mainly four pannels: Left Pannel, Mid Pannel,
+	Right Pannel, and Top Pannel. 
+	</P>
+	<OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Left Pannel</B> 
+		</P>
+		<OL>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Gate Buttons: </B>These
+			buttons are used to draw basic gates like <FONT SIZE=2><B>AND, OR,
+			XOR, NOT, NOR, NAND,XNOR </B></FONT><FONT SIZE=3><SPAN STYLE="font-weight: normal">and</SPAN></FONT><FONT SIZE=2><B>CONNECTOR
+			</B></FONT>. Click on these by drop down menu then select the proper number of inputs . Once You have finalized the gate & number of inputs then click on SELECT Button and place the gate where you want
+			to in the  mid pannel drawing area. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Probe:</B> Output at each
+			terminal is shown by default against it. Iif you want explicitly
+			to watch another node, you can probe it using a feature from the
+			left panel.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>None: </B>It is used to get
+			default cursor option back, so that you can do basic operation
+			like drag and drop.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Delete Element:</B> This is
+			used for explicitly deleting an element. Click on <SPAN STYLE="text-decoration: none">the</SPAN>
+			element after selecting delete mode.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Connect/Disconnect: </B>This
+			mode allows establishing and removing connection between various
+			points. Connection can be established only from output to input.
+			You have to first click to the output node then to the input node
+			(consisting of red square box). For disconnection, you can start
+			by clicking either the input or the output node. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Naming: </B>This is used to
+			give a user-selected name to an input or output node. Click on the
+			node and give the name into the input box that pops up.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Output:</B> This is used to
+			define an output node. See the explanation of import button to
+			learn why this may be necessary.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Time Pulse:</B> Enter the
+			time pulse pattern separated by commas. For example: 0,10,10,10,10
+			defines a clock that is 0 for 10 units and 1 for 10 units. Press
+			enter or click on the new timepulse to create it. It will be
+			available as input in list box.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Binary One And Zero: </B>These
+			can be used to give fixed values to terminals</P>
+			<P STYLE="margin-bottom: 0cm"></P>
+		</OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Top Pannel</B> 
+		</P>
+		<OL>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Clear: </B>Use this to clear
+			every element on the circuit. Caution: <U><B>Everything on the
+			design panel will be lost;  there is no undo</B></U>!</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Save: </B>Use this to save
+			the designed circuit as a file on your machine. This file can be
+			loaded and imported later.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Load:</B> A circuit saved on
+			your machine can be loaded onto the mid panel to as a fresh
+			circuit that can be further edited. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Import:</B> This is an
+			important feature that lets you construct building blocks. A
+			circuit from your machine is imported to the mid panel, but will
+			appear as a block or a box with input and output terminals. The
+			name of the element is that of the imported file. The named
+			terminals will have their saved names. The input and output nodes
+			will come in the same order from top to bottom as created. This
+			allows one to build on circuits saved as blocks. For instance, an
+			full adder you design using gates can be saved as a block and used
+			in later circuits as an adder-block.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Simulate: </B>Use this to
+			simulate or compute the intermediate and final outputs of the
+			whole circuit, if all the terminal inputs are present. It also
+			computes the gate delays, which is diplayed when the mouse hovers
+			over each element. The default gate delay is -1. Simulation can
+			fail or give ambiguous result if the circuit does not stablizes
+			with time. This can happen due to improper feedback circuitry. The
+			underlying engine is not a full fledged circuit simulator and can
+			get stuck at constructions involving certain feedback.</P>
+			<P STYLE="margin-bottom: 0cm"></P>
+		</OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Mid Pannel:</B> This is the
+		drawing area used to build the circuit. You can move the elements
+		by clicking and dragging.</P>
+		<P STYLE="margin-bottom: 0cm"></P>
+		<LI><P><B>Right Pannel:</B> This area shows the time-varying
+		inputs, outputs, and probed points. Name or index associated with
+		points are displayed. Indexes are given top to bottom.</P>
+	</OL>
+	<P STYLE="margin-bottom: 0cm"><B>Note:</B> Sample circuit for each
+	experiment will be given as default. You can try them with the help
+	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</P>
+
+</ol>
+		
+	
+	
+
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quiz
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <strong>	
+	<p>
+		1) Design the ALU circuit as given in the theory section.
+	</p>
+</strong> 
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab. -->
+	    <img src="../images/procedure.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Procedure
+	  </div>
+	
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	  <ol>
+<li> With The help of Theory Page , try to build the ALU Circuit. </li>
+<li>If You are unable to make it , load or export the circuit directly and use it </li>
+<li> Try to put various values and see whether it satisfies the Truth Tabel or not </li>
+</ol>
+	  </div>
+	
+        </section>
+			
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Read
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+           <ol>	
+		<li>
+			<a href="http://en.wikipedia.org/wiki/Arithmetic_logic_unit" target="_blank"> ALU - Wikipedia </a>
+		</li>
+		<li>
+			Chapter 5 : Combinational Logic with MSI and LSI, "Digital Logic and Computer Design" - M. Morris Mano
+		</li>
+	</ol>
+          </div>
+
+        </section>
+	<section id="lab-article-section-9">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/manual.jpg" />
+</div>
+
+
+<!-- The heading for the section can be enclosed in a
+div tag and shown with a <h2> tag -->
+<div id="lab-article-section-9-heading" class="heading">
+Feedback S/W
+</div>
+
+<!-- Write the section content inside a paragraph
+element, You can also include images with <img> tag -->
+<div id="lab-article-section-9-content" class="content">
+<p>
+<ul>
+<li><a href="http://virtual-labs.ac.in/feedback/?lab=cse15" >Feedback <a>.</li>
+
+</ul>
+</p>
+</div>
+
+</section>
+
+
+      </div>
+<style type="text/css">
+#lab-footer, .footer {
+float:left;
+margin-top: 200px;
+margin-bottom: 100px;
+text-align: center;
+
+width: 90%;
+}
+</style>
+
+<footer id="lab-footer" class="footer">
+<!-- Put the content here-->
+<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT)
+<a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank">
+Licensing Terms <a>
+</footer>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <!-- Links to other labs, about us page can be kept the lab  footer-->
+
+
+</div>		
+
+</body>
+</html>

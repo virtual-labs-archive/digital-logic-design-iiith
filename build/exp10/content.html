@@ -1,0 +1,555 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.php">DLD Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        State Diagrams
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+           <p>
+In a digital circuit, an Finite State Machine may be built using a programmable logic device, a programmable logic controller, logic gates and flip flops or relays. 
+More specifically, a hardware implementation requires a register to store state variables, a block of combinational logic which determines the state transition, and a second block of combinational logic that determines the output of an Finte State Machine.
+
+
+</p>
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+          	<p>
+There are many applications where there is a need for our circuits to have "memory"; to remember previous inputs and calculate their outputs according to them. A circuit whose output depends not only on the present input but also on the history of the input is called a sequential circuit.
+In this section we will learn how to design and build such sequential circuits.
+<br />
+In order to see how this procedure works, we will use an example.
+<br />
+So let's suppose we have a digital quiz game that works on a clock and reads an input from a manual button. However, we want the switch to transmit only one HIGH pulse to the circuit. If we hook the button directly on the game circuit it will transmit HIGH for as few clock cycles as our finger can achieve. On a common clock frequency our finger can never be fast enough.
+</p>
+<h3>Step 1 </h3>
+<p>
+The first step of the design procedure is to define with simple but clear words what we want our circuit to do.
+</p>
+<h3>Step 2 </h3>
+<p>
+The next step is to design a State Diagram. This is a diagram that is made from circles and arrows and describes visually the operation of our circuit. In mathematic terms, this diagram that describes the operation of our sequential circuit is a Finite State Machine.
+</p>
+<h3>A state Diagram </h3>
+<p>
+Every circle represents a "state", a well-defined condition that our machine can be found at.
+<br />
+In the upper half of the circle we describe that condition. The description helps us remember what our circuit is supposed to do at that condition.
+<br />
+In the lower part of the circle is the output of our circuit. If we want our circuit to transmit a HIGH on a specific state, we put a 1 on that state. Ohterwise we put a 0.
+<br />
+Every arrow represents a "transition" from one state to another. A transition happens once every clock cycle. Depending on the current Input, we may go to a different state each time.
+<br />
+</p>
+<h3> Step 3 </h3>
+<p>
+Next, we replace the words that describe the different states of the diagram with binary numbers. We start the enumeration from 0 which is assigned always on the initial state. We then continue the enumeration with any state we like, until all states have their number.
+</p>
+<h3> Step 4 </h3>
+<p>
+Afterwards, we fill the State Table. This table has a very specific form. 
+</p>
+<h3>A State Table</h3>
+<p>
+The first columns are as many as the bits of the highest number we assigned the State Diagram.These columns describe the Current State of our circuit.
+<br />
+To the right of the Current State columns we write the Input Columns. These will be as many as our Input variables.
+<br />
+Next, we write the Next State Columns. These are as many as the Current State columns.
+<br />
+Finally, we write the Outputs Columns. These are as many as our outputs. 
+<br />
+Each row of the Next State columns is filled as follows: We fill it in with the state that we reach when, in the State Diagram, from the Current State of the same row we follow the Input of the same row. If we get to a row whose Current State number doesn't correspond to any actual State in the State Diagram we fill it with Don't Care terms (X). After all, we don't care where we can go from a State that doesn't exist. We wouldn't be there in the first place! Again it is simpler than it sounds.
+<br />
+The outputs column is filled by the output of the corresponding Current State in the State Diagram.
+<br />
+The State Table is complete! It describes the behaviour of our circuit as fully as the State Diagram does.
+</p>
+<h3> Step 5a </h3>
+<p>
+The next step is to take that theoretical "Machine" and implement it in a circuit. Most often than not, this implementation involves Flip Flops. This guide is dedicated to this kind of implementation and will describe the procedure for both D - Flip Flops as well as JK - Flip Flops. T - Flip Flops will not be included as they are too similar to the two previous cases.
+
+The selection of the Flip Flop to use is arbitrary and usually is determined by cost factors. The best choice is to perform both analysis and decide which type of Flip Flop results in minimum number of logic gates and lesser cost.
+<br />
+We will need as many D - Flip Flops as the State columns.For every Flip Flop we will add one one more column in our State table with the name of the Flip Flop's input. The column that corresponds to each Flip Flop describes what input we must give the Flip Flop in order to go from the Current State to the Next State. For the D - Flip Flop this is easy: The necessary input is equal to the Next State. In the rows that contain X's we fill X's in this column as well.
+</p>
+<h3> Step 5b </h3>
+<p>
+We can do the same steps with JK - Flip Flops. There are some differences however. A JK - Flip Flop has two inputs, therefore we need to add two columns for each Flip Flop.
+</p>
+<h3> Step 6 </h3>
+<p>
+We are in the final stage of our procedure. What remains, is to determine the Boolean functions that determine the inputs of our Flip Flops and the Output. We will extract one Boolean funtion for each Flip Flop input we have. This can be done with a Karnaugh Map. The input variables of this map are the Current State variables as well as the Inputs.
+</p>
+<h3> Step 7 </h3>
+<p>
+We design our circuit. We place the Flip Flops and use logic gates to form the Boolean functions that we calculated. The gates take input from the output of the Flip Flops and the Input of the circuit.
+</p>
+<br />
+<p>
+We have successfully designed and constructed a Sequential Circuit.Sequential Circuits can come in handy as control parts of bigger circuits and can perform any sequential logic task that we can think of.
+</p>
+<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
+
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+       <ol>
+<li> The objective of this experiment is to understand working of the state digram. </li>
+<li> Try to make circuit for following sequence in state digram(000,001,010,100,101,110,000) .</li>
+</ol>
+
+        </div>
+
+      </section>
+<!--
+<script type="text/javascript">
+var x=screen.availWidth-60;var y=screen.availHeight-50;
+if(x<1024)
+{
+x=1024;
+}
+if(y<660)
+{
+y=660;
+}
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make circuit for following sequence in state digram(000,001,010,100,101,110,000)"><param name="file_list" value="circuit,J_K_FlipFlop"></applet>' ;
+</script>
+-->
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Experiment
+        </div>
+	<p><a href="../documents/java-and-icedtea-plugin.pdf">Install prerequisites to run the simulation</a></p>
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+	      <!--<div id="applet_embed"></div>-->
+	       <a href="./exp10.html" class="qtlink" onclick="window.open('./exp10.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
+
+	For performing experiment Click here
+	</a>
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+         
+		<H2>Digital Logic Design</H2>
+	<P><BR>This lab allows you to design and simulate any digital
+	combinational or sequential circuit. Following instruction help you
+	build the circuit. A Java-based basic tool and simulation enigne is
+	at the hear of this laboratory. You can create many circuits and
+	test them with fixed or time-varying input signals. You can also see
+	the outputs as values or time-varying waveforms. 
+	</P>
+	<P>The tool consist of mainly four pannels: Left Pannel, Mid Pannel,
+	Right Pannel, and Top Pannel. 
+	</P>
+	<OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Left Pannel</B> 
+		</P>
+		<OL>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Gate Buttons: </B>These
+			buttons are used to draw basic gates like <FONT SIZE=2><B>AND, OR,
+			XOR, NOT, NOR, NAND,XNOR </B></FONT><FONT SIZE=3><SPAN STYLE="font-weight: normal">and</SPAN></FONT><FONT SIZE=2><B>CONNECTOR
+			</B></FONT>. Click on these by drop down menu then select the proper number of inputs . Once You have finalized the gate & number of inputs then click on SELECT Button and place the gate where you want
+			to in the  mid pannel drawing area. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Probe:</B> Output at each
+			terminal is shown by default against it. Iif you want explicitly
+			to watch another node, you can probe it using a feature from the
+			left panel.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>None: </B>It is used to get
+			default cursor option back, so that you can do basic operation
+			like drag and drop.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Delete Element:</B> This is
+			used for explicitly deleting an element. Click on <SPAN STYLE="text-decoration: none">the</SPAN>
+			element after selecting delete mode.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Connect/Disconnect: </B>This
+			mode allows establishing and removing connection between various
+			points. Connection can be established only from output to input.
+			You have to first click to the output node then to the input node
+			(consisting of red square box). For disconnection, you can start
+			by clicking either the input or the output node. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Naming: </B>This is used to
+			give a user-selected name to an input or output node. Click on the
+			node and give the name into the input box that pops up.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Output:</B> This is used to
+			define an output node. See the explanation of import button to
+			learn why this may be necessary.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Time Pulse:</B> Enter the
+			time pulse pattern separated by commas. For example: 0,10,10,10,10
+			defines a clock that is 0 for 10 units and 1 for 10 units. Press
+			enter or click on the new timepulse to create it. It will be
+			available as input in list box.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Binary One And Zero: </B>These
+			can be used to give fixed values to terminals</P>
+			<P STYLE="margin-bottom: 0cm"></P>
+		</OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Top Pannel</B> 
+		</P>
+		<OL>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Clear: </B>Use this to clear
+			every element on the circuit. Caution: <U><B>Everything on the
+			design panel will be lost;  there is no undo</B></U>!</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Save: </B>Use this to save
+			the designed circuit as a file on your machine. This file can be
+			loaded and imported later.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Load:</B> A circuit saved on
+			your machine can be loaded onto the mid panel to as a fresh
+			circuit that can be further edited. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Import:</B> This is an
+			important feature that lets you construct building blocks. A
+			circuit from your machine is imported to the mid panel, but will
+			appear as a block or a box with input and output terminals. The
+			name of the element is that of the imported file. The named
+			terminals will have their saved names. The input and output nodes
+			will come in the same order from top to bottom as created. This
+			allows one to build on circuits saved as blocks. For instance, an
+			full adder you design using gates can be saved as a block and used
+			in later circuits as an adder-block.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Simulate: </B>Use this to
+			simulate or compute the intermediate and final outputs of the
+			whole circuit, if all the terminal inputs are present. It also
+			computes the gate delays, which is diplayed when the mouse hovers
+			over each element. The default gate delay is -1. Simulation can
+			fail or give ambiguous result if the circuit does not stablizes
+			with time. This can happen due to improper feedback circuitry. The
+			underlying engine is not a full fledged circuit simulator and can
+			get stuck at constructions involving certain feedback.</P>
+			<P STYLE="margin-bottom: 0cm"></P>
+		</OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Mid Pannel:</B> This is the
+		drawing area used to build the circuit. You can move the elements
+		by clicking and dragging.</P>
+		<P STYLE="margin-bottom: 0cm"></P>
+		<LI><P><B>Right Pannel:</B> This area shows the time-varying
+		inputs, outputs, and probed points. Name or index associated with
+		points are displayed. Indexes are given top to bottom.</P>
+	</OL>
+	<P STYLE="margin-bottom: 0cm"><B>Note:</B> Sample circuit for each
+	experiment will be given as default. You can try them with the help
+	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</P>
+
+</ol>
+		
+	
+
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quiz
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <strong>
+	<p>
+		1) A student was asked to design the state diagram of a circuit to detect 1011 occurs in a given input sequence. So, he came up with the following design. <br/><br/>
+		<img src="../images/state_diagram.png" width="60%"/>
+		<br/><br/>	
+		a) What will be the sequence of states and outputs for the following input sequence 10101101011000<br/>
+		b) Does the circuit correctly solve the problem. Why/why not? If not then what should be the change in the state diagram?<br/><br/>
+		
+		2) Design a clocked sequential circuit for the following state diagram : <br/><br/>
+		<img src="../images/state_diagram2.png" width="60%"/><br/><br/>
+		Use JK flip flops and combinational logic in the design. Import the flip flops as black boxes. There will be an input x to the circuit.<br/><br/>
+		(HINT: Make excitation tables for J,K of the flip flops. The present state, and input x will be fed to combinational logic, which will generate J,K for each flip flop.)  
+	</p>
+</strong>
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab. -->
+	    <img src="../images/procedure.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Procedure
+	  </div>
+	
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	   <ol>
+<li> With The help of Theory Page , try to build the Circuit for given state digram. </li>
+<li>If You are unable to make it , load or export the circuit directly and use it </li>
+<li> Use Time variant input pulses to analyze the output </li>
+</ol>
+	  </div>
+	
+        </section>
+			
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Read
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+          <ol>	
+		<li>
+			<a href="http://en.wikipedia.org/wiki/State_diagram" target="_blank"> State Diagrams - Wikipedia </a>
+		</li>
+		<li>
+			<a href="http://en.wikipedia.org/wiki/Finite-state_machine" target="_blank"> Finite State Machines - Wikipedia </a>
+		</li>
+		<li>
+			Chapter 6 : Sequential Logic, "Digital Logic and Computer Design" - M. Morris Mano
+		</li>
+	</ol>
+          </div>
+
+        </section>
+	<section id="lab-article-section-9">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/manual.jpg" />
+</div>
+
+
+<!-- The heading for the section can be enclosed in a
+div tag and shown with a <h2> tag -->
+<div id="lab-article-section-9-heading" class="heading">
+Feedback S/W
+</div>
+
+<!-- Write the section content inside a paragraph
+element, You can also include images with <img> tag -->
+<div id="lab-article-section-9-content" class="content">
+<p>
+<ul>
+<li><a href="http://virtual-labs.ac.in/feedback/?lab=cse15" >Feedback <a>.</li>
+
+</ul>
+</p>
+</div>
+
+</section>
+
+
+      </div>
+
+<style type="text/css">
+#lab-footer, .footer {
+float:left;
+margin-top: 200px;
+margin-bottom: 100px;
+text-align: center;
+
+width: 90%;
+}
+</style>
+
+<footer id="lab-footer" class="footer">
+<!-- Put the content here-->
+<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT)
+<a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank">
+Licensing Terms <a>
+</footer>
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <!-- Links to other labs, about us page can be kept the lab  footer-->
+
+
+</div>		
+
+</body>
+</html>

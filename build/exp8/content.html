@@ -1,0 +1,544 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.php">DLD Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+       Counters
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+           <p>
+In digital logic and computing, a counter is a device which stores (and sometimes displays) the number of times a particular event or process has occurred, often in relationship to a clock signal.
+In this experiment, different types of counters will be studied, both for the full binary sequence and for cycle lengths (N) different from powers of 2.
+
+</p>
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+          <p>
+Usually, counter circuits are digital in nature, and count in natural binary. Many types of counter circuits are available as digital building blocks, for example a number of chips in the 4000 series implement different counters.
+Occasionally there are advantages to using a counting sequence other than the natural binary sequence such as the binary coded decimal counter, a linear feedback shift register counter, or a Gray-code counter.
+Counters are useful for digital clocks and timers, and in oven timers, VCR clocks, etc.
+<br />
+The counters will be assembled using two 74LS73 dual J-K flip-flop chips and a 74LS02 quad NOR chip. Note that each flip-flop has an asynchronous Reset (R’) input besides the synchronous J-K inputs. This enables one to reset any of the flip-flops by making R’ = 0 irrespective of the status of the clock (CK) input. The asynchronous R’ input will be utilised in this experiment to initialise the flip-flop outputs as well as to obtain counters having cycle length N is less than 16.
+</p>
+
+<h3> Pin connections: </h3>
+<p>
+<img src="../images/counters.png">
+</p>
+<br />
+<h2> Binary Ripple Counter </h2>
+<p>
+1. Make J = K = 1 for all the flip-flops, thereby converting the J-K flip-flops to T flip-flops. Connect all R’ inputs together to an Input Switch, and the outputs Q0,Q1,Q2,Q3 to four LED Displays.
+<br />
+2. Set up an Up-counting Binary Ripple Counter by making clock connections as follows: CK0 = Manual Clock (CLK-M), CK1 = Q0, CK2 = Q1, CK3 = Q2.
+<br />
+3. Using the Input Switch connected to the common R’ input, initialise the counter to the stat
+<br />
+4. Apply Manual Clock pulses and tabulate the state sequence for the entire cycle.
+<br />
+5. Now change the clock input connections to CK1 = Q0’, CK2 = Q1’, CK3 = Q2’, to obtain a Down-counting Binary Ripple counter.
+<br />
+</p>
+<h2>Asynchronous (ripple) counter:</h2>
+<p>
+An asynchronous (ripple) counter is a single JK-type flip-flop, with its J (data) input fed from its own inverted output. This circuit can store one bit, and hence can count from zero to one before it overflows (starts over from 0). This counter will increment once for every clock cycle and takes two clock cycles to overflow, so every cycle it will alternate between a transition from 0 to 1 and a transition from 1 to 0. Notice that this creates a new clock with a 50% duty cycle at exactly half the frequency of the input clock. If this output is then used as the clock signal for a similarly arranged D flip-flop (remembering to invert the output to the input), you will get another 1 bit counter that counts half as fast. Putting them together yields a two-bit counter:
+</p>
+<br />
+<table border="3">
+	<tr><td>Cycle</td><td>Q1</td><td>Q2</td><td>(Q1:Q0)dec</td></tr>
+	<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+	<tr><td>2</td><td>1</td><td>0</td><td>2</td></tr>
+	<tr><td>3</td><td>1</td><td>1</td><td>3</td></tr>
+	<tr><td>4</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
+
+<br />
+<h2>Synchronous counter:</h2>
+<p>
+A simple way of implementing the logic for each bit of an ascending counter (which is what is depicted in the image to the right) is for each bit to toggle when all of the less significant bits are at a logic high state. For example, bit 1 toggles when bit 0 is logic high; bit 2 toggles when both bit 1 and bit 0 are logic high; bit 3 toggles when bit 2, bit 1 and bit 0 are all high; and so on.
+Synchronous counters can also be implemented with hardware finite state machines, which are more complex but allow for smoother, more stable transitions.
+Hardware-based counters are of this type.
+</p>
+<br />
+<h3>Decade counter:</h3>
+<p>
+A decade counter is one that counts in decimal digits, rather than binary. A decade counter may have each digit binary encoded (that is, it may count in binary-coded decimal, as the 7490 integrated circuit did) or other binary encodings (such as the bi-quinary encoding of the 7490 integrated circuit). Alternatively, it may have a "fully decoded" or one-hot output code in which each output goes high in turn (the 4017 is such a circuit). The latter type of circuit finds applications in multiplexers and demultiplexers, or wherever a scanning type of behavior is useful. Similar counters with different numbers of outputs are also common.
+The decade counter is also known as a mod-counter when it counts to ten (0, 1, 2, 3, 4, 5, 6, 7, 8, 9). A Mod Counter that counts to 64 stops at 63 because 0 counts as a valid digit.
+<br />
+A decade counter has the count sequence 0 → 1 → 2 →.....→ 8 → 9 → 0.., which can be achieved by making R’ = (Q3 •Q1)’ for all the flip-flops in a 4-bit binary counter. This forces the counter to go to the state 0000 as soon as the counter makes the transition from the state 1001 representing count 9 to the next state 1010 according to the normal up counting sequence.
+</p>
+<h3>Decade synchronous counter </h3>
+<p>
+The logic for the J-K inputs required for a Decade Synchronous Counter is as follows:
+<br />
+J0 = K0 = 1; J1 = Q0•Q3’, K1 = Q0; J2 = K2 = Q0•Q1; J3 = Q0•Q1•Q2, K3 = Q0.
+</p>
+<h2>Multipurpose 4-bit Synchronous Counter</h2>
+<p>
+CD4029 is a multipurpose 4-bit counter capable of operating in all the four combinations of Binary/BCD and Up/Down modes, depending on the values of the control inputs B/D’ and U/D’.
+<br />
+In addition, the 4-bit output Q3Q2Q1Q0 of the counter can be preset to any value by applying the desired bits to the direct inputs D3D2D1D0 and making the Set ENable control SEN = 1.
+<img src="../images/CD4029codes.png">
+</p> 
+<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
+
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+         <ol>
+<li> The objective of this experiment is to understand working of  the counters. </li>
+<li> Try to make basic ripple counter and ring counter.</li>
+</ol>
+
+        </div>
+
+      </section>
+<!--
+<script type="text/javascript">
+var x=screen.availWidth-60;var y=screen.availHeight-50;
+if(x<1024)
+{
+x=1024;
+}
+if(y<660)
+{
+y=660;
+}
+document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.simulationApplet" archive="../DLDVirtualLabs.jar"'+' HEIGHT='+y+' WIDTH='+x+'>' +'<param name="file_name" value="line.txt"><param name="content1" value="Make counter and also ring counter"><param name="file_list" value="counter,ring_counter"></applet>' ;
+</script>
+-->
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Experiment
+        </div>
+	<p><a href="../documents/java-and-icedtea-plugin.pdf">Install prerequisites to run the simulation</a></p>
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+	<!--      <div id="applet_embed"></div>-->
+	        <a href="./exp8.html" class="qtlink" onclick="window.open('./exp8.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
+
+	For performing experiment Click here
+	</a>
+	        
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+         <H2>Digital Logic Design</H2>
+	<P><BR>This lab allows you to design and simulate any digital
+	combinational or sequential circuit. Following instruction help you
+	build the circuit. A Java-based basic tool and simulation enigne is
+	at the hear of this laboratory. You can create many circuits and
+	test them with fixed or time-varying input signals. You can also see
+	the outputs as values or time-varying waveforms. 
+	</P>
+	<P>The tool consist of mainly four pannels: Left Pannel, Mid Pannel,
+	Right Pannel, and Top Pannel. 
+	</P>
+	<OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Left Pannel</B> 
+		</P>
+		<OL>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Gate Buttons: </B>These
+			buttons are used to draw basic gates like <FONT SIZE=2><B>AND, OR,
+			XOR, NOT, NOR, NAND,XNOR </B></FONT><FONT SIZE=3><SPAN STYLE="font-weight: normal">and</SPAN></FONT><FONT SIZE=2><B>CONNECTOR
+			</B></FONT>. Click on these by drop down menu then select the proper number of inputs . Once You have finalized the gate & number of inputs then click on SELECT Button and place the gate where you want
+			to in the  mid pannel drawing area. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Probe:</B> Output at each
+			terminal is shown by default against it. Iif you want explicitly
+			to watch another node, you can probe it using a feature from the
+			left panel.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>None: </B>It is used to get
+			default cursor option back, so that you can do basic operation
+			like drag and drop.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Delete Element:</B> This is
+			used for explicitly deleting an element. Click on <SPAN STYLE="text-decoration: none">the</SPAN>
+			element after selecting delete mode.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Connect/Disconnect: </B>This
+			mode allows establishing and removing connection between various
+			points. Connection can be established only from output to input.
+			You have to first click to the output node then to the input node
+			(consisting of red square box). For disconnection, you can start
+			by clicking either the input or the output node. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Naming: </B>This is used to
+			give a user-selected name to an input or output node. Click on the
+			node and give the name into the input box that pops up.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Output:</B> This is used to
+			define an output node. See the explanation of import button to
+			learn why this may be necessary.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Time Pulse:</B> Enter the
+			time pulse pattern separated by commas. For example: 0,10,10,10,10
+			defines a clock that is 0 for 10 units and 1 for 10 units. Press
+			enter or click on the new timepulse to create it. It will be
+			available as input in list box.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Binary One And Zero: </B>These
+			can be used to give fixed values to terminals</P>
+			<P STYLE="margin-bottom: 0cm"></P>
+		</OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Top Pannel</B> 
+		</P>
+		<OL>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Clear: </B>Use this to clear
+			every element on the circuit. Caution: <U><B>Everything on the
+			design panel will be lost;  there is no undo</B></U>!</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Save: </B>Use this to save
+			the designed circuit as a file on your machine. This file can be
+			loaded and imported later.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Load:</B> A circuit saved on
+			your machine can be loaded onto the mid panel to as a fresh
+			circuit that can be further edited. 
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Import:</B> This is an
+			important feature that lets you construct building blocks. A
+			circuit from your machine is imported to the mid panel, but will
+			appear as a block or a box with input and output terminals. The
+			name of the element is that of the imported file. The named
+			terminals will have their saved names. The input and output nodes
+			will come in the same order from top to bottom as created. This
+			allows one to build on circuits saved as blocks. For instance, an
+			full adder you design using gates can be saved as a block and used
+			in later circuits as an adder-block.</P>
+			<LI><P STYLE="margin-bottom: 0cm"><B>Simulate: </B>Use this to
+			simulate or compute the intermediate and final outputs of the
+			whole circuit, if all the terminal inputs are present. It also
+			computes the gate delays, which is diplayed when the mouse hovers
+			over each element. The default gate delay is -1. Simulation can
+			fail or give ambiguous result if the circuit does not stablizes
+			with time. This can happen due to improper feedback circuitry. The
+			underlying engine is not a full fledged circuit simulator and can
+			get stuck at constructions involving certain feedback.</P>
+			<P STYLE="margin-bottom: 0cm"></P>
+		</OL>
+		<LI><P STYLE="margin-bottom: 0cm"><B>Mid Pannel:</B> This is the
+		drawing area used to build the circuit. You can move the elements
+		by clicking and dragging.</P>
+		<P STYLE="margin-bottom: 0cm"></P>
+		<LI><P><B>Right Pannel:</B> This area shows the time-varying
+		inputs, outputs, and probed points. Name or index associated with
+		points are displayed. Indexes are given top to bottom.</P>
+	</OL>
+	<P STYLE="margin-bottom: 0cm"><B>Note:</B> Sample circuit for each
+	experiment will be given as default. You can try them with the help
+	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</P>
+
+</ol>
+		
+	
+
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quiz
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <strong>	
+	<p>
+		1) Design a 4 bit Synchronous UP counter using 4 JK flip flops, a common clock pulse, and basic gates. 
+		<br/><br/>
+		2) Design a synchromous BCD counter which counts from 0000 (0) to 1001 (9) and then back to 0000 (0).You can use 'T' flip flops / Jk flip flops and some basic gates in the design. All the flip flops should have a common clock pulse. There must be a 'Count Enable' input which enables the counter. Save this counter so that it can be used in other designs.
+		<br/><br/>
+		3) Import the BCD counter designed in 2nd question. Import 3 such counters. Design a 3-decade decimal counter using these 3 BCD counters. The entire system should be able to count from 000 to 999, where each counter individually generates 1 digit of the number. <br/><br/>
+		HINT: The 'Count enable' input of 2nd BCD counter will be 1 only when first counter is at 9, and 'Count enable' of 3rd counter will be 1 only when both first and second counters are at 9.
+		<br/><br/>		
+		4) Import the BCD to seven segment display decoder circuit designed in experiment 3. It takes BCD code as input and displays its decimal equivalent on 7-segment LED display. Import the BCD counter designed in question 2. Connect the output lines of BCD counter to the input lines of 'BCD to seven segment display' circuit. Verify that appropriate number is being displayed by the LED in the count sequence.
+		</p>
+</strong> 
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab. -->
+	    <img src="../images/procedure.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Procedure
+	  </div>
+	
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	  <ol>
+<li> With The help of Theory Page , try to build the Counter Circuit. </li>
+<li> First of all build the basic counter .</li>
+<li> Then make the Ring Counter</li>
+<li>If You are unable to make it , load or export the circuit directly and use it </li>
+<li> Use Time variant input pulses to analyze the output </li>
+</ol>
+	  </div>
+	
+        </section>
+			
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Read
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+           <ol>	
+		<li>
+			<a href="http://en.wikipedia.org/wiki/Counter" target="_blank"> Counters - Wikipedia </a>
+		</li>
+		<li>
+			Chapter 7 : Registers, Counters and Memory unit, "Digital Logic and Computer Design" - M. Morris Mano
+		</li>
+	</ol>
+          </div>
+
+        </section>
+	<section id="lab-article-section-9">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/manual.jpg" />
+</div>
+
+
+<!-- The heading for the section can be enclosed in a
+div tag and shown with a <h2> tag -->
+<div id="lab-article-section-9-heading" class="heading">
+Feedback S/W
+</div>
+
+<!-- Write the section content inside a paragraph
+element, You can also include images with <img> tag -->
+<div id="lab-article-section-9-content" class="content">
+<p>
+<ul>
+<li><a href="http://virtual-labs.ac.in/feedback/?lab=cse15" >Feedback <a>.</li>
+
+</ul>
+</p>
+</div>
+
+</section>
+
+
+      </div>
+<style type="text/css">
+#lab-footer, .footer {
+float:left;
+margin-top: 200px;
+margin-bottom: 100px;
+text-align: center;
+
+width: 90%;
+}
+</style>
+
+<footer id="lab-footer" class="footer">
+<!-- Put the content here-->
+<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT)
+<a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank">
+Licensing Terms <a>
+</footer>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <!-- Links to other labs, about us page can be kept the lab  footer-->
+
+
+</div>		
+
+</body>
+</html>
