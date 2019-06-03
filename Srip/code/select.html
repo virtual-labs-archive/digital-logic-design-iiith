@@ -1,0 +1,20 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+    <option value="/home/keerthana/Downloads/gates/a.png">AND</option><
+    <option value="/home/keerthana/Downloads/gates/b.png">OR</option>
+    <option value="/home/keerthana/Downloads/gates/c.png">NAND</option>
+    <option value="/home/keerthana/Downloads/gates/d.png">NOR</option>
+    <option value="/home/keerthana/Downloads/gates/e.png">XOR</option>
+    <option value="/home/keerthana/Downloads/gates/g.png">XNOR</option>
+    <option value="/home/keerthana/Downloads/gates/h.png">NOT</option>
+    <option value="/home/keerthana/Downloads/gates/i.png">CONN</option>
+
+</select>
+  
+<br><br>
+
+<img id="imageToSwap" class="profile" src="/home/keerthana/Downloads/gates/a.png">
+
