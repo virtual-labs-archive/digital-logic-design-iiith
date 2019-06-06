@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../libraries/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="libraries/bootstrap/css/bootstrap.css">
         <title>Counters</title>
         <style type="text/css">
         	.drag{
@@ -10,6 +10,13 @@
           .img-thumbnail{
             background-color: transparent;
             border: none;
+          }
+          #connector_canvas{
+            position:absolute;
+            width:100%;
+            height:100%;
+            stroke:#5c96bc;
+            stroke-width:2
           }
         </style>
     </head>
@@ -28,40 +35,40 @@
 
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                       <div class="card-body">
-						<div id="basic_elements">
-						    <div class="row">
-						    	<div class="col-6 mg-0 drag tool_1" id="hpi">
-						    		<img src="images/and_gate.png" class="img-thumbnail">
-						    	</div>
-						    	<div class="col-6 mg-0 drag tool_2">
-						    		<img src="images/and_gate.png" class="img-thumbnail">
-						    	</div>
-						    </div>
-						    <div class="row">
-						    	<div class="col-6 mg-0 drag tool_3">
-						    		<img src="images/and_gate.png" class="img-thumbnail">
-						    	</div>
-						    	<div class="col-6 mg-0 drag tool_4">
-						    		<img src="images/and_gate.png" class="img-thumbnail">
-						    	</div>
-						    </div>
-						    <div class="row">
-						    	<div class="col-6 mg-0 drag tool_5">
-						    		<img src="images/and_gate.png" class="img-thumbnail">
-						    	</div>
-						    	<div class="col-6 mg-0 drag tool_6">
-						    		<img src="images/and_gate.png" class="img-thumbnail">
-						    	</div>
-						    </div>
-						    <div class="row">
-						    	<div class="col-6 mg-0 drag tool_7">
-						    		<img src="images/and_gate.png" class="img-thumbnail">
-						    	</div>
-						    	<div class="col-6 mg-0 drag tool_8">
-						    		<img src="images/and_gate.png" class="img-thumbnail">
-						    	</div>
-						    </div>
-						</div>
+            						<div id="basic_elements">
+            						    <div class="row">
+            						    	<div class="col-6 mg-0 drag tool_1" id="hpi">
+            						    		<img src="images/and.svg" class="img-thumbnail">
+            						    	</div>
+            						    	<div class="col-6 mg-0 drag tool_2">
+            						    		<img src="images/or.svg" class="img-thumbnail">
+            						    	</div>
+            						    </div>
+            						    <div class="row">
+            						    	<div class="col-6 mg-0 drag tool_3">
+            						    		<img src="images/nand.svg" class="img-thumbnail">
+            						    	</div>
+            						    	<div class="col-6 mg-0 drag tool_4">
+            						    		<img src="images/nor.svg" class="img-thumbnail">
+            						    	</div>
+            						    </div>
+            						    <div class="row">
+            						    	<div class="col-6 mg-0 drag tool_5">
+            						    		<img src="images/xnor.svg" class="img-thumbnail">
+            						    	</div>
+            						    	<div class="col-6 mg-0 drag tool_6">
+            						    		<img src="images/xor.svg" class="img-thumbnail">
+            						    	</div>
+            						    </div>
+            						    <div class="row">
+            						    	<div class="col-6 mg-0 drag tool_7">
+            						    		<img src="images/and_gate.png" class="img-thumbnail">
+            						    	</div>
+            						    	<div class="col-6 mg-0 drag tool_8">
+            						    		<img src="images/and_gate.png" class="img-thumbnail">
+            						    	</div>
+            						    </div> 
+            						</div>
                       </div>
                     </div>
                   </div>
@@ -95,15 +102,16 @@
                   </div>
                 </div>
             </div>
-            <div class="col-10 p-0" id="drop_zone" style="background: lightgoldenrodyellow;">
+            <div class="col-10 p-0" id="drop_zone" >
+              <svg id="connector_canvas"></svg>
             </div>
         </div>
 
         
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script type="text/javascript" src="../libraries/bootstrap/js/bootstrap.js"></script>
-        <script type="text/javascript" src="../libraries/bootstrap/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="libraries/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="libraries/bootstrap/js/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
