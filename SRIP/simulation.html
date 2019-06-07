@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--BOOTSTRAP JS CSS LINKS -->
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gudea|PT+Mono" rel="stylesheet">
+  <!--LIBRARIES-->
+  <script src="javascripts/libraries/p5.min.js" type="text/javascript"></script>
+  <script src="javascripts/libraries/p5.dom.js" type="text/javascript"></script>
+  <script src="javascripts/libraries/lodash.js" type="text/javascript"></script>
+  <!--JS-->
+  <script src="#" type="text/javascript"></script>
+  <script src="#" type="text/javascript"></script>
+  <script src="#" type="text/javascript"></script>
+  <script src="#" type="text/javascript"></script>
+  <!--STYLESHEETS-->
+  <link rel="stylesheet" href="Code/css/style.css">
+
+</head>
+
+<body>
+<div class="container">
+ 
+
+<div class="top-menubar">
+  <div align="left">
+    <button>LOAD</button>
+     <button>IMPORT</button>
+     <button>SAVE</button>
+     <button>CLEAR</button>
+    </div>
+    <div align="center" class="right-menu">
+      <button>LOAD-IT </button>
+      
+      <button>IMPORT</button>
+      <button>STIMULATE</button>
+      <form align="right" padding=25px left=50px top=2px bottom=2px>
+         <select name = "dropdown" align=right>
+            <option value = "COM">Comparator</option>
+            <option value = "2bit-comparator" selected>2-bit Comparator</option>
+         </select>
+      </form>
+    </div>
+</div>
+</div>
+<header>
+<div class="side-menubar">
+    <nav>
+      <div class="panel panel-default">
+        <h4>Basic Elements</h4><!--side bar head -->
+  <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+    <option value="Code/images/and.png" selected>AND</option><
+    <option value="Code/images/or.png">OR</option>
+    <option value="Code/images/nand.png">NAND</option>
+    <option value="Code/images/nor.png">NOR</option>
+    <option value="Code/images/xor.png">XOR</option>
+    <option value="Code/images/xnor.png">XNOR</option>
+    <option value="Code/images/not.png">NOT</option>
+   </select>
+  
+<br><br>
+
+<img id="imageToSwap" class="profile" src="Code/images/and.png">
+         <form>
+           <select name = "dropdown">
+            <option value = "2" selected>2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+           </select>
+         </form> 
+         
+                <button> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSELECT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                 <br>
+                <button>&nbsp&nbspPROBE&nbsp&nbsp&nbsp</button>
+                <button>&nbsp&nbspOUT&nbsp&nbsp&nbsp</button>
+                <br>
+                <button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNONE&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                </button>
+                <br>
+                <button>&nbsp&nbsp&nbspDELETE ELEMENTS&nbsp&nbsp</button>
+                <br>
+                <button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDISCONNECT&nbsp&nbsp&nbsp&nbsp&nbsp
+                </button>
+                <br>
+                <button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCONNECT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                <br>
+                <button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNAMING&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+
+     
+    </nav>
+    <article>
+      <p>Input place box</p>
+    </article>
+     </div>
+   </section>
+     </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="libraries/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="libraries/bootstrap/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
