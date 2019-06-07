@@ -50,6 +50,17 @@ section{
    display: flex;
 }
 
+#check1 {
+  background-color: lightgray;
+  color: black;
+  text-align: center;
+  border: 2px solid #696969;
+  padding: 5px;
+  
+}
+#check1:hover {background-color: white; text-align: center;}
+
+
 nav {
    -webkit-flex: 1;
    -ms-flex: 1;
@@ -68,7 +79,7 @@ nav ul {
 article {
    -webkit-flex: 3;
    -ms-flex: 3;
-   background-color: #f1f1f1;
+   background-color: #ccc;
    padding: 10px;
 }
 
@@ -112,7 +123,7 @@ article {
 .show {display: block;}
 
 /* Responsive layout - makes the menu and the content (inside the section) 
-    sit on top of each other instead of next to each other */
+    sit on top of each other instead of next to each other //google */
 
 @media (max-width: 600px) {
     .display {
@@ -120,3 +131,31 @@ article {
     flex-direction: column;
     }
    }
+
+legend.scheduler-border {
+    width:inherit; 
+    padding:0 10px; 
+    border-bottom:none;
+    background-color: #ccc
+}
+textarea.md-textarea {
+  padding: 5px 3px;
+  border-width: 2px;
+  resize: vertical;
+  min-height: 3rem;
+}
+
+#company{
+  border-color: #696969;
+  position: relative;
+  width: 50%;
+  left: 15px;
+}
+#company2{
+  border-color: #696969;
+  position:relative;
+  left:120px;
+  top:-34px;
+  width: 30%;
+
+}
