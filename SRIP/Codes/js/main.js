@@ -67,29 +67,9 @@ var canvas=$("#drop_zone").droppable({
 		};
 		node.position.left-=$('#tools').width();
 		id=id+1;
-		if(ui.helper.hasClass("tool_1")){
-			node.type="Tool_1";
-		}
-		else if(ui.helper.hasClass("tool_2")){
-			node.type="Tool_2";
-		}
-		else if(ui.helper.hasClass("tool_3")){
-			node.type="Tool_3";
-		}
-		else if(ui.helper.hasClass("tool_4")){
-			node.type="Tool_4";
-		}
-		else if(ui.helper.hasClass("tool_5")){
-			node.type="Tool_5";
-		}
-		else if(ui.helper.hasClass("tool_6")){
-			node.type="Tool_6";
-		}
-		else if(ui.helper.hasClass("tool_7")){
-			node.type="Tool_7";
-		}
-		else if(ui.helper.hasClass("tool_8")){
-			node.type="Tool_8";
+		if(ui.helper.hasClass("drag")){
+			node.type=ui.helper.prevObject.attr("id");
+			console.log(node.type);
 		}
 		else{
 			id=id-1;
@@ -118,8 +98,13 @@ function interact()
 		else cur_con = cur_gate.data('line');
 
 		connector.append(cur_con);
+
 		var start= cur_gate.position();
-		cur_con.attr('x1', start.left + cur_gate.width()-5).attr('y1', start.top+(0.50 * cur_gate.height())).attr('x2',start.left+cur_gate.width()).attr('y2',start.top+(0.48 * cur_gate.height()));
+		var output_position= $(this).position();
+		var x1=start.left+output_position.left+($(this).width()/2);
+		y1=start.top+output_position.top+($(this).height()/2);
+
+		cur_con.attr('x1',x1).attr('y1', y1).attr('x2',x1+1).attr('y2',y1);
 	});
 
 	$(".output").draggable({
@@ -149,7 +134,8 @@ function interact()
 		accept: '.output',
 		drop: function(event,ui){
 			var gate=ui.draggable.closest('.gate'); //the gate whose output is being dragged
-			$(this).data('connected-gate',gate);
+			var gate_id=gate.attr('id');
+			
 			ui.draggable.css({
 				top:"45%",
 				right:"-2px",
@@ -159,17 +145,33 @@ function interact()
 
 			var x_abs=parseInt(gate.data('line').attr('x2'));
 		    var y_abs=parseInt(gate.data('line').attr('y2'));
-		    // console.log(x_abs,y_abs);
-		    // var xx=parseInt($(this).attr('left')) - x_abs;
-		    // var yy=parseInt($(this).attr('top')) - y_abs;
-		    // console.log(xx,yy);
 		    var this_x=parseInt($(this).css('left'));
 		    var this_y=parseInt($(this).css('top'));
-		    // console.log(this_x,this_y);
-		    // console.log($(this).height());
 		    if((x_abs - this_x)< $(this).width()/2 && (y_abs - this_y)< $(this).height()/2)
-		    	console.log("left upper");
-		}	
+		    {
+		    	if($(this).data('inp1'))
+		    		$(this).data('inp1').remove();
+		    	$(this).data('inp1',gate.data('line'));
+		    	css_selector='#'+gate_id+" .input1";
+		    	x2=$(this).position().left + $(css_selector).position().left+3;
+		    	y2=$(this).position().top + $(css_selector).position().top+3;
+		    	gate.data('line').attr('x2', x2).attr('y2', y2);
+		    	
+		    	
+		    }
+		    else if((x_abs - this_x)< $(this).width()/2 && (y_abs - this_y)> $(this).height()/2)
+		    {
+		    	if($(this).data('inp2'))
+		    		$(this).data('inp2').remove();
+		    	$(this).data('inp2',gate.data('line'));
+		    	css_selector='#'+gate_id+" .input2";
+		    	x2=$(this).position().left + $(css_selector).position().left+3;
+		    	y2=$(this).position().top + $(css_selector).position().top+3;
+		    	gate.data('line').attr('x2', x2).attr('y2', y2);
+		    }
+		    else gate.data('line').remove();
+		    gate.data('line', null);
+		}
 	});
 }
 
@@ -180,7 +182,9 @@ function renderDiagram(diagram){
 	for(var d in diagram.devices)
 	{
 		var node=diagram.devices[d];
-		html='<div><img src="images/and_gate.png" class="img-thumbnail"></div>';
+		var image="images/"+node.type+".svg";
+		console.log(image);
+		html='<div><img src="'+image+'" class="img-thumbnail"></div>';
 		var dom=$(html).css({
 			position:"absolute",
 			top: node.position.top,
@@ -189,6 +193,28 @@ function renderDiagram(diagram){
 			"max-width":"7%"
 		}).draggable({
 			containment:"parent",
+
+			drag: function(event,ui){
+				var lines= $(this).data('output_lines');
+				var inp_1= $(this).data('inp1');
+				var inp_2= $(this).data('inp2');
+
+				if(lines){
+					lines.forEach(function(line,id){
+						$(line).attr('x1', $(this).position().left + $(this).width()).attr('y1', $(this).position().top + ($(this).height())/2);
+					}.bind(this));
+				}
+
+				if(inp_1){
+					console.log($(this).position());
+					$(inp_1).attr('x2', $(this).position().left + 2).attr('y2', $(this).position().top+ $('.input1').position().top+5);
+				}
+
+				if(inp_2)
+				{
+					$(inp_2).attr('x2', $(this).position().left + 2).attr('y2', $(this).position().top+ $('.input2').position().top+5);
+				}
+			},
 
 			stop: function(event,ui){
 				var id=ui.helper.attr("id");
