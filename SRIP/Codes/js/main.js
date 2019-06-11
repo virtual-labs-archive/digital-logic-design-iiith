@@ -1,5 +1,10 @@
+//this file contains additional features written by me
+
+//for variable size of the simulator according to screen size
 var x=$(".simcir_outer_div").width();
 x=x*0.90;
+
+//the if else block decides which circuit to display according to user settings
 if(sessionStorage.getItem('8bitCounter'))
 {
 	var counter={
@@ -90,6 +95,8 @@ if(sessionStorage.getItem('8bitCounter'))
 		{"from":"dev18.in0","to":"dev0.out0"}
 		]
 	};
+
+	//sets the Frequency of the OSC.
 	if(sessionStorage.getItem('OSCfreq'))
 	{
 		$("#freq").val(sessionStorage.getItem('OSCfreq'));
@@ -112,12 +119,14 @@ if(sessionStorage.getItem('8bitCounter'))
 			"type":"8BitRingCounter"
 		});
 	}
+
+	//set all the settings as string inside div
 	var html1=JSON.stringify(counter);
 	document.querySelector(".simcir").innerHTML=html1;
 
 }
-else if(sessionStorage.getItem('8bitRingCounter'))
-{
+
+else if(sessionStorage.getItem('8bitRingCounter')){
 	var counter={
 		"width":x,
 		"height":800,
@@ -211,6 +220,7 @@ else if(sessionStorage.getItem('8bitRingCounter'))
 	var html1=JSON.stringify(counter);
 	document.querySelector(".simcir").innerHTML=html1;
 }
+
 else{
 	var obj={
 		"width":x,

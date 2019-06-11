@@ -1,3 +1,6 @@
+// this file is to be executed in the end, because the functions and variables used are declared in the library simcir files
+
+// This D-FF-custom is made by me which has additional preset and clear feature required to make the ring counter
 simcir.registerDevice('D-FF-custom',
 {
 	"width":520,
@@ -51,6 +54,8 @@ simcir.registerDevice('D-FF-custom',
 }
 );
 
+
+// the 8bit ring counter made by me
 simcir.registerDevice('8BitRingCounter',
 {
 	"width":520,
