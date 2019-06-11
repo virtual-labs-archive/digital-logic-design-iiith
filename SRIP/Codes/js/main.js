@@ -4,7 +4,7 @@ if(sessionStorage.getItem('8bitCounter'))
 {
 	var counter={
 		"width":x,
-		"height":500,
+		"height":800,
 		"showToolbox":true,
 		"toolbox":[
 		{"type":"Joint"},
@@ -104,15 +104,117 @@ if(sessionStorage.getItem('8bitCounter'))
 			"type":"8bitCounter"
 		});
 	}
+
+	if(sessionStorage.getItem('8bitRingCounter_module'))
+	{
+		$("#ringcounter").attr('checked', true);
+		counter.toolbox.push({
+			"type":"8BitRingCounter"
+		});
+	}
 	var html1=JSON.stringify(counter);
 	document.querySelector(".simcir").innerHTML=html1;
 
-
-}else
+}
+else if(sessionStorage.getItem('8bitRingCounter'))
 {
+	var counter={
+		"width":x,
+		"height":800,
+		"showToolbox":true,
+		"toolbox":[
+		{"type":"In"},
+		{"type":"Out"},
+		{"type":"Joint"},
+		{"type":"DC"},
+		{"type":"LED"},
+		{"type":"PushOff"},
+		{"type":"PushOn"},
+		{"type":"Toggle"},
+		{"type":"BUF"},
+		{"type":"NOT"},
+		{"type":"AND"},
+		{"type":"NAND"},
+		{"type":"NAND","numInputs":3},
+		{"type":"OR"},
+		{"type":"NOR"},
+		{"type":"XOR"},
+		{"type":"XNOR"},
+		{"type":"OSC"},
+		{"type":"BusIn"},
+		{"type":"BusOut"},
+		{"type":"RS-FF"},
+		{"type":"JK-FF"},
+		{"type":"T-FF"},
+		{"type":"D-FF-custom"},
+		{"type":"DSO","numInputs":8}
+		],
+		"devices":[
+		{"type":"D-FF-custom","id":"dev0","x":232,"y":32,"label":"D-FF-custom"},
+		{"type":"D-FF-custom","id":"dev1","x":232,"y":128,"label":"D-FF-custom"},
+		{"type":"Toggle","id":"dev2","x":80,"y":120,"label":"Toggle","state":{"on":true}},
+		{"type":"DC","id":"dev3","x":24,"y":176,"label":"DC"},
+		{"type":"D-FF-custom","id":"dev4","x":232,"y":312,"label":"D-FF-custom"},
+		{"type":"D-FF-custom","id":"dev5","x":232,"y":216,"label":"D-FF-custom"},
+		{"type":"OSC","id":"dev6","x":40,"y":256,"label":"OSC"},
+		{"type":"LED","id":"dev7","x":408,"y":40,"label":"LED"},
+		{"type":"LED","id":"dev8","x":408,"y":136,"label":"LED"},
+		{"type":"LED","id":"dev9","x":408,"y":232,"label":"LED"},
+		{"type":"LED","id":"dev10","x":408,"y":328,"label":"LED"}
+		],
+		"connectors":[
+		{"from":"dev0.in0","to":"dev4.out0"},
+		{"from":"dev0.in1","to":"dev6.out0"},
+		{"from":"dev0.in2","to":"dev3.out0"},
+		{"from":"dev0.in3","to":"dev2.out0"},
+		{"from":"dev1.in0","to":"dev0.out0"},
+		{"from":"dev1.in1","to":"dev6.out0"},
+		{"from":"dev1.in2","to":"dev2.out0"},
+		{"from":"dev1.in3","to":"dev3.out0"},
+		{"from":"dev2.in0","to":"dev3.out0"},
+		{"from":"dev4.in0","to":"dev5.out0"},
+		{"from":"dev4.in1","to":"dev6.out0"},
+		{"from":"dev4.in2","to":"dev2.out0"},
+		{"from":"dev4.in3","to":"dev3.out0"},
+		{"from":"dev5.in0","to":"dev1.out0"},
+		{"from":"dev5.in1","to":"dev6.out0"},
+		{"from":"dev5.in2","to":"dev2.out0"},
+		{"from":"dev5.in3","to":"dev3.out0"},
+		{"from":"dev7.in0","to":"dev0.out0"},
+		{"from":"dev8.in0","to":"dev1.out0"},
+		{"from":"dev9.in0","to":"dev5.out0"},
+		{"from":"dev10.in0","to":"dev4.out0"}
+		]
+	};
+	if(sessionStorage.getItem('OSCfreq'))
+	{
+		$("#freq").val(sessionStorage.getItem('OSCfreq'));
+		counter.toolbox[14]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
+		counter.devices[6]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
+	}
+	
+	if(sessionStorage.getItem('8bitCounter_module'))
+	{
+		$("#counter").attr("checked", true);
+		counter.toolbox.push({
+			"type":"8bitCounter"
+		});
+	}
+
+	if(sessionStorage.getItem('8bitRingCounter_module'))
+	{
+		$("#ringcounter").attr('checked', true);
+		counter.toolbox.push({
+			"type":"8BitRingCounter"
+		});
+	}
+	var html1=JSON.stringify(counter);
+	document.querySelector(".simcir").innerHTML=html1;
+}
+else{
 	var obj={
 		"width":x,
-		"height":500,
+		"height":800,
 		"showToolbox":true,
 		"toolbox":[
 		{"type":"Joint"},
@@ -136,6 +238,7 @@ if(sessionStorage.getItem('8bitCounter'))
 		{"type":"JK-FF"},
 		{"type":"T-FF"},
 		{"type":"D-FF"},
+		{"type":"D-FF-custom"},
 		{"type":"DSO", "numInputs":8}
 		],
 		"devices":[
@@ -144,20 +247,33 @@ if(sessionStorage.getItem('8bitCounter'))
 		]
 	};
 
-	var html=JSON.stringify(obj);
-	document.querySelector(".simcir").innerHTML=html;
 	if(sessionStorage.getItem('OSCfreq'))
 	{
 		$("#freq").val(sessionStorage.getItem('OSCfreq'));
 		obj.toolbox[14]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
 	}
+	else
+	{
+		$("#freq").val('');
+	}
 	if(sessionStorage.getItem('8bitCounter_module'))
 	{
 		$("#counter").attr("checked", true);
 		obj.toolbox.push({
-			"type":"8bitCounter_module"
+			"type":"8bitCounter"
 		});
 	}
+
+	if(sessionStorage.getItem('8bitRingCounter_module'))
+	{
+		$("#ringcounter").attr('checked', true);
+		obj.toolbox.push({
+			"type":"8BitRingCounter"
+		});
+	}
+
+	var html=JSON.stringify(obj);
+	document.querySelector(".simcir").innerHTML=html;
 }
 
 
@@ -175,20 +291,36 @@ $("#counter").change(function(event) {
 $("#ringcounter").change(function(event) {
 	if(this.checked)
 	{
-		sessionStorage.setItem('8bitRingCounter');
+		sessionStorage.setItem('8bitRingCounter_module',1);
 	}
 	else
 	{
-		sessionStorage.removeItem('8bitRingCounter');
+		sessionStorage.removeItem('8bitRingCounter_module');
 	}
 });
 
 $("#load_counter").click(function(event) {
-	
-	// location.reload(true);
+	sessionStorage.setItem('8bitCounter',1);
+	sessionStorage.removeItem('8bitRingCounter');
+	location.reload();
+});
+
+$("#load_rcounter").click(function(event) {
+	sessionStorage.setItem('8bitRingCounter',1);
+	sessionStorage.removeItem('8bitCounter');
+	location.reload();
+});
+
+$("#clear_workspace").click(function(event) {
+	sessionStorage.removeItem('8bitRingCounter');
+	sessionStorage.removeItem('8bitCounter');
+	location.reload();
 });
 
 $("#freq").change(function(event) {
 	sessionStorage.setItem('OSCfreq', parseInt(this.value));
 });
 
+$("#clear_settings").click(function(event) {
+	sessionStorage.clear();
+});
