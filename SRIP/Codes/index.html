@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="../libraries/simcir/simcir.css" />
+	<link rel="stylesheet" type="text/css" href="../libraries/simcir/simcir-basicset.css" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<style type="text/css">
+		#content{
+			text-align: center;
+		}
+	</style>
+	<style type="text/css">
+		.container{
+			max-width: 90%;
+		}
+	</style>
+	<title></title>
+</head>
+<body class="bg-light">
+	<div id="content" class="container ">
+		<h1>Counters</h1>
+		<h3>Simulate a counter and a ring counter</h3>
+		<hr>
+		<div class="row">
+			<div class="col-lg-3 border border-secondary">
+				<div class="mx-auto">
+					<h2>Settings</h2>
+					<form>
+						<div class="form-group">
+							<label for="freq">Frequency of Oscillator</label>
+							<input type="number" class="form-control" id="freq" aria-describedby="range" placeholder="Frequency">
+							<small id="range" class="form-text text-muted">Enter frequence between 1 and 10</small>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="counter">
+							<label class="form-check-label" for="counter">Show 8 bit counter module</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="ringcounter">
+							<label class="form-check-label" for="ringcounter">Show 8 bit ring counter module</label>
+						</div><br>
+						<button type="submit" class="btn  btn-outline-success">Save Settings</button><br><br>
+						<button type="submit" class="btn  btn-outline-danger" id="clear_settings">Clear Settings</button>
+					</form>
+					<hr>
+					<div class="mx-auto">
+						<button type="submit" class="btn  btn-outline-info" id="load_counter">Load Counter</button><br><br>
+						<button type="submit" class="btn  btn-outline-info" id="load_rcounter">Load Ring Counter</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 simcir_outer_div">
+				<div>
+					<h2>
+						Instructions
+					</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					consequat.</p>
+					<p>sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua</p>
+					<p>Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+				</div>
+				<div class="simcir">
+
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="js/main.js">
+			
+
+		</script>
+		<script type="text/javascript" src="../libraries/simcir/simcir.js"></script>
+		<script type="text/javascript" src="../libraries/simcir/simcir-basicset.js"></script>
+		<script type="text/javascript" src="../libraries/simcir/simcir-library.js"></script>
+		<script type="text/javascript" src="../libraries/simcir/simcir-dso.js"></script>
+
+	</body>
+	</html>
