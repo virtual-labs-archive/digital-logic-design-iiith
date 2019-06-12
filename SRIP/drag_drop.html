@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<style type="text/css">
+		.dragzone,.dropzone{
+
+			height: 500px;
+			width: 40%;
+			border: 2px solid black;
+			float: left;
+			margin-top: 150px;
+			margin-left: 7%;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="dragzone"><h1> DRAG</h1>
+		<img src="Codes/images/and.png" id="dragelement" height="100px" 
+		ondragstart="dragStart(event)">
+		<img src="Codes/images/or.png" id="dragelement" height="100px" 
+		ondragstart="dragStart(event)">
+		<br><br>
+		<img src="Codes/images/nor.png" id="dragelement" height="100px" 
+		ondragstart="dragStart(event)">
+
+	</div>
+	
+	<div class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+		<h1>DROP</h1>
+		
+		
+	</div>
+
+
+<script type="text/javascript" src="drag_drop.js"></script>
+
+</body>
+</html>
