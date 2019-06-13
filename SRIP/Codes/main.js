@@ -1,4 +1,10 @@
 
+$("#check1").click(function(event) {
+  /*sessionStorage.removeItem('8bitRingCounter');
+  sessionStorage.removeItem('8bitCounter');*/
+  location.reload();
+});
+/*  Go JS ..junction later on changed the library
 function goIntro() {
 
   var diagram =new go.Diagram("myDiagramDiv");
@@ -14,7 +20,7 @@ function goIntro() {
 }
 
 
-/*
+  Go JS ..junction later on changed the library
 function init() {
   // body...
   var $ =go.GraphObject.make;

@@ -1,38 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 <head>
-	<style type="text/css">
-		.dragzone,.dropzone{
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Droppable</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+ 
+ <style>
+  	  #gallery { float: left; width: 65%; min-height: 12em;border: 2px solid black; }
+      .gallery.custom-state-active { background: #eee; }
+      .gallery li { float: left; width: 96px; padding: 0.4em; margin: 0 0.4em 0.4em 0; text-align: center; }
+      .gallery li h5 { margin: 0 0 0.4em; cursor: move; }
+      .gallery li a { float: right; }
+      .gallery li a.ui-icon-zoomin { float: left; }
+      .gallery li img { width: 100%; cursor: move; }
+     
+      #workspace { float: left; width: 32%; min-height: 18em; padding: 1%; border: 2px solid black;}
+      #workspace h4 { line-height: 16px; margin: 0 0 0.4em; }
+      #workspace h4 .ui-icon { float: left; }
+      #workspace .gallery h5 { display: none; }
+  </style>
 
-			height: 500px;
-			width: 40%;
-			border: 2px solid black;
-			float: left;
-			margin-top: 150px;
-			margin-left: 7%;
+  <!--Link to JQuery & JS-->
 
-		}
-	</style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="drag_drop.js"></script>
+
 </head>
-<body>
-	<div class="dragzone"><h1> DRAG</h1>
-		<img src="Codes/images/and.png" id="dragelement" height="100px" 
-		ondragstart="dragStart(event)">
-		<img src="Codes/images/or.png" id="dragelement" height="100px" 
-		ondragstart="dragStart(event)">
-		<br><br>
-		<img src="Codes/images/nor.png" id="dragelement" height="100px" 
-		ondragstart="dragStart(event)">
-
-	</div>
-	
-	<div class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
-		<h1>DROP</h1>
-		
-		
-	</div>
 
 
-<script type="text/javascript" src="drag_drop.js"></script>
+<body> 
+<div class="ui-widget ui-helper-clearfix">
+ 
+		<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+			  <h4 class="ui-widget-header"><span class="ui-icon ui-icon-workspace"></span>DRAG</h4>
+			  
+			  <li class="ui-widget-content ui-corner-tr">
+			    <h5 class="ui-widget-header">AND</h5>
+			    <img src="Codes/images/and.png" alt="AND" width="96" height="72">
+			    
+			    <a href="#link " title="Delete this image" class="ui-icon ui-icon-workspace">Drag gate</a>
+			  </li>
 
+			  <li class="ui-widget-content ui-corner-tr">
+			    <h5 class="ui-widget-header">OR</h5>
+			    <img src="Codes/images/or.png" alt="And" width="96" height="72">
+			   
+			    <a href="link/to/workspace/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-workspace">Drag gate</a>
+			  </li>
+			  <li class="ui-widget-content ui-corner-tr">
+			    <h5 class="ui-widget-header">NAND</h5>
+			    <img src="Codes/images/nand.png" alt="And" width="96" height="72">
+			    
+			    <a href="link/to/workspace/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-workspace">Drag gate</a>
+			  </li>
+			  <li class="ui-widget-content ui-corner-tr">
+			    <h5 class="ui-widget-header">NOR</h5>
+			    <img src="Codes/images/nor.png" alt="And" width="96" height="72">
+			  
+			    <a href="link/to/workspace/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-workspace">Drag gate</a>
+			  </li>
+			  <li class="ui-widget-content ui-corner-tr">
+			    <h5 class="ui-widget-header">XOR</h5>
+			    <img src="Codes/images/xor.png" alt="XOR" width="96" height="72">
+			   
+			    <a href="link/to/workspace/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-workspace">Drag gate</a>
+
+			  </li><li class="ui-widget-content ui-corner-tr">
+			    <h5 class="ui-widget-header">XNOR</h5>
+			    <img src="Codes/images/xnor.png" alt="Xnor" width="96" height="72">
+			   
+			    <a href="link/to/workspace/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-workspace">Drag gate</a>
+			  </li>
+			  <li class="ui-widget-content ui-corner-tr">
+			    <h5 class="ui-widget-header">NOT</h5>
+			    <img src="Codes/images/not.png" alt="And" width="96" height="72">
+			    
+			    <a href="link/to/workspace/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-workspace">Drag gate</a>
+			  </li>
+
+			  <!--li class="ui-widget-content ui-corner-tr">
+			    <h5 class="ui-widget-header">CONNECTOR</h5>
+			    <img src="Codes/images/Connector.png" alt="Connector" width="96" height="72">
+			    
+			    <a href="link/to/workspace/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-workspace">Drag</a>
+			  </li-->
+		</ul>
+
+		 <!--Work Space-->
+		<div id="workspace" class="ui-widget-content ui-state-default">
+		  <h4 class="ui-widget-header"><span class="ui-icon ui-icon-workspace"></span> DROP</h4>
+		</div>
+ 
+</div>
+ 
+ 
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 
 <head>
@@ -23,13 +23,15 @@
 
 </head>
 
-<body onload="goIntro()">
+<body>
 <div class="container">
  
 <header>
 <div class="top-menubar">
-  <div align="left">
-    <button>LOAD</button>
+  <div align="center">
+    <h1>DLD LAB-COMPARATOR</h1>
+    <h3>To Understand & Simulate a 4-bit Comparator </h3>
+    <!--button>LOAD</button>
      <button>IMPORT</button>
      <button>SAVE</button>
      <button>CLEAR</button>
@@ -45,7 +47,7 @@
             <option value = "2bit-comparator" selected>2-bit Comparator</option>
          </select>
       </form>
-    </div>
+    </div-->
 </div>
 </div>
 </header>
@@ -54,10 +56,11 @@
     <nav>
       <div class="panel panel-default">
          <fieldset class="scheduler-border" >
-              <legend class="scheduler-border" style="font-size: 15px"><b>Basic Elements</b>
+              <legend class="scheduler-border" style="font-size: 15px"><b>OPTIONS</b>
               </legend>
-              
-   <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+              <div style="margin-top: 40px;">
+                <button type="button" id="check1" class="clear_workspace" style="font-size: 15px">CLEAR WORKSPACE </button>
+   <!--select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
     <option value="Codes/images/and.png" selected>AND</option><
     <option value="Codes/images/or.png">OR</option>
     <option value="Codes/images/nand.png">NAND</option>
@@ -92,24 +95,24 @@
                 <br>
                 <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">CONNECT</button>
                 <br>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px; border: 2px solid #696969;">NAMING</button>
+                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px; border: 2px solid #696969;">NAMING</button-->
 
-     
+    </div>     
     </nav>
   </fieldset>
     <article> 
       <fieldset class="scheduler-border" >
-              <legend class="scheduler-border" style="font-size: 15px"><b>Inputs</b></legend>
+              <legend class="scheduler-border" style="font-size: 15px"><b>INPUTS</b></legend>
               <div style="margin-top: 40px;">
-                 <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">0</button>
-               <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">1</button>
+                 <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">LOAD-IT </button>
+               <!--button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">1</button>
                <br>
               </div>
               <label style="position: relative; top:-40px; left: 5px;">Available Time Pulse :</label><br><br>
               <div id="box1" > <textarea type="text" id="textarea" class="md-textarea"></textarea>
               </div>
                 <button type="button" id="check1" style="margin-top: 50px;" class="btn btn-primary btn-md" style="font-size: 15px">New Time Pulse</button>
-                <!--<label style="position: relative; top:-40px; left: 5px;">Available Time Pulse :</label><-->
+                <<label style="position: relative; top:-40px; left: 5px;">Available Time Pulse :</label>
                 <div style="width:105%; position: relative; top:-40px; left:33px;">
                    <div id="shift" >
                    <select id="company" class="form-control">
@@ -120,7 +123,7 @@
                   </select>
                 </div>
                 <label style="position: relative; top:5px; left: -28px;">Selected Time Pulse :</label>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px; margin-top: 50px;margin-bottom: -90px; margin-left: -30px; width: 100%;">None</button>
+                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px; margin-top: 50px;margin-bottom: -90px; margin-left: -30px; width: 100%;">None</button-->
                 </div>
             </fieldset>
     </article>
@@ -129,7 +132,7 @@
      
 <div class="row col-sm-9" style="background-color: white; margin-top: 0px; border: solid 2px; margin-left: -5px; width: 100%;height: 15%">
       <p style="padding-top: 0px; text-align: center; font-size: 18px;" align="right">
-        <b>Perform a Simulation of 2 bits Comparator and to understand its working.</b>
+        <b>Develop the Circuit Diagram</b>
       </p>
       <div class="col-lg-9 simcir_outer_div">
         <div class="simcir">
