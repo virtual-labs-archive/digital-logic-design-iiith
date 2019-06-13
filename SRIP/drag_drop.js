@@ -52,7 +52,7 @@ $( function() {
     });
  
     // Image deletion function
-    var replace_icon = "<a href='link/to/replace/script/when/we/have/js/off' title='replace this image' class='ui-icon ui-icon-refresh'>replace gate</a>";
+    var replace_icon = "<a href='#link' title='replace this image' class='ui-icon ui-icon-refresh'>replace gate</a>";
     function deleteImage( $item ) {
       $item.fadeOut(function() {
         var $list = $( "ul", $workspace ).length ?
@@ -70,7 +70,7 @@ $( function() {
     }
  
     // Image replace function
-    var workspace_icon = "<a href='link/to/workspace/script/when/we/have/js/off' title='Delete this image' class='ui-icon ui-icon-workspace'>Delete gate</a>";
+    var workspace_icon = "<a href='#link' title='Delete this image' class='ui-icon ui-icon-workspace'>Delete gate</a>";
     function replaceImage( $item ) {
       $item.fadeOut(function() {
         $item
