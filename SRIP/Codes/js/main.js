@@ -16,23 +16,11 @@ if(sessionStorage.getItem('8bitCounter'))
 		{"type":"DC"},
 		{"type":"LED"},
 		{"type":"PushOff"},
-		{"type":"PushOn"},
 		{"type":"Toggle"},
-		{"type":"BUF"},
-		{"type":"NOT"},
-		{"type":"AND"},
-		{"type":"NAND"},
-		{"type":"OR"},
-		{"type":"NOR"},
-		{"type":"XOR"},
-		{"type":"XNOR"},
 		{"type":"OSC"},
-		{"type":"BusIn"},
-		{"type":"BusOut"},
-		{"type":"RS-FF"},
 		{"type":"JK-FF"},
 		{"type":"T-FF"},
-		{"type":"D-FF"},
+		{"type":"D-FF-custom"},
 		{"type":"DSO","numInputs":8}
 		],
 		"devices":[
@@ -100,8 +88,8 @@ if(sessionStorage.getItem('8bitCounter'))
 	if(sessionStorage.getItem('OSCfreq'))
 	{
 		$("#freq").val(sessionStorage.getItem('OSCfreq'));
-		counter.toolbox[14]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
-		counter.devices[19]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
+		counter.toolbox[5]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
+		counter.devices[17]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
 	}
 	
 	if(sessionStorage.getItem('8bitCounter_module'))
@@ -132,27 +120,12 @@ else if(sessionStorage.getItem('8bitRingCounter')){
 		"height":800,
 		"showToolbox":true,
 		"toolbox":[
-		{"type":"In"},
-		{"type":"Out"},
 		{"type":"Joint"},
 		{"type":"DC"},
 		{"type":"LED"},
 		{"type":"PushOff"},
-		{"type":"PushOn"},
 		{"type":"Toggle"},
-		{"type":"BUF"},
-		{"type":"NOT"},
-		{"type":"AND"},
-		{"type":"NAND"},
-		{"type":"NAND","numInputs":3},
-		{"type":"OR"},
-		{"type":"NOR"},
-		{"type":"XOR"},
-		{"type":"XNOR"},
 		{"type":"OSC"},
-		{"type":"BusIn"},
-		{"type":"BusOut"},
-		{"type":"RS-FF"},
 		{"type":"JK-FF"},
 		{"type":"T-FF"},
 		{"type":"D-FF-custom"},
@@ -198,7 +171,7 @@ else if(sessionStorage.getItem('8bitRingCounter')){
 	if(sessionStorage.getItem('OSCfreq'))
 	{
 		$("#freq").val(sessionStorage.getItem('OSCfreq'));
-		counter.toolbox[14]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
+		counter.toolbox[5]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
 		counter.devices[6]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
 	}
 	
@@ -231,23 +204,10 @@ else{
 		{"type":"DC"},
 		{"type":"LED"},
 		{"type":"PushOff"},
-		{"type":"PushOn"},
 		{"type":"Toggle"},
-		{"type":"BUF"},
-		{"type":"NOT"},
-		{"type":"AND"},
-		{"type":"NAND"},
-		{"type":"OR"},
-		{"type":"NOR"},
-		{"type":"XOR"},
-		{"type":"XNOR"},
 		{"type":"OSC"},
-		{"type":"BusIn"},
-		{"type":"BusOut"},
-		{"type":"RS-FF"},
 		{"type":"JK-FF"},
 		{"type":"T-FF"},
-		{"type":"D-FF"},
 		{"type":"D-FF-custom"},
 		{"type":"DSO", "numInputs":8}
 		],
@@ -260,7 +220,7 @@ else{
 	if(sessionStorage.getItem('OSCfreq'))
 	{
 		$("#freq").val(sessionStorage.getItem('OSCfreq'));
-		obj.toolbox[14]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
+		obj.toolbox[5]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
 	}
 	else
 	{

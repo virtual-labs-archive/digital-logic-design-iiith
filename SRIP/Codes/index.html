@@ -27,7 +27,7 @@
 <body class="bg-light">
 	<div id="content" class="container ">
 		<h1>Counters</h1>
-		<h3>Simulate a counter and a ring counter</h3>
+		<h3>Simulate a counter and a ring counter(<a href="help.html">Click Here to see the instructions</a>)</h3>
 		<hr>
 		<div class="row">
 			<div class="col-lg-3 border border-secondary" style="height: 800px">
@@ -36,16 +36,17 @@
 					<form>
 						<div class="form-group">
 							<label for="freq">Frequency of Oscillator</label>
-							<input type="number" class="form-control" id="freq" aria-describedby="range" placeholder="Frequency">
+							<input type="number" class="form-control" id="freq" aria-describedby="range" placeholder="Frequency" min="1", max="10">
 							<small id="range" class="form-text text-muted">Enter frequence between 1 and 10</small>
 						</div>
-						<div class="form-check">
-							<input type="checkbox" class="form-check-input" id="counter">
-							<label class="form-check-label" for="counter">Show 8 bit counter module</label>
+						<h6>Avaliable Modules for this experiment</h6>
+						<div class="custom-control custom-switch">
+							<input type="checkbox" class="custom-control-input" id="counter">
+							<label class="custom-control-label" for="counter">8 bit counter</label>
 						</div>
-						<div class="form-check">
-							<input type="checkbox" class="form-check-input" id="ringcounter">
-							<label class="form-check-label" for="ringcounter">Show 8 bit ring counter module</label>
+						<div class="custom-control custom-switch">
+							<input type="checkbox" class="custom-control-input" id="ringcounter">
+							<label class="custom-control-label" for="ringcounter">8 bit ring counter</label>
 						</div><br>
 						<button type="submit" class="btn  btn-outline-success">Save Settings</button><br><br>
 						<button type="submit" class="btn  btn-outline-danger" id="clear_settings">Clear Settings</button>
