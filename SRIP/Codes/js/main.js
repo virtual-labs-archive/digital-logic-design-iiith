@@ -107,10 +107,11 @@ if(sessionStorage.getItem("8bitCounter"))
 			"type":"8BitRingCounter"
 		});
 	}
-
+	document.querySelector(".simcir")
 	//set all the settings as string inside div
 	var html1=JSON.stringify(counter);
 	document.querySelector(".simcir").innerHTML=html1;
+	document.querySelector(".simcir").classList.add("unclickable");
 
 }
 
@@ -192,6 +193,7 @@ else if(sessionStorage.getItem("8bitRingCounter")){
 	}
 	var html1=JSON.stringify(counter);
 	document.querySelector(".simcir").innerHTML=html1;
+	document.querySelector(".simcir").classList.add("unclickable");
 }
 
 else{
