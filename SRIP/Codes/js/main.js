@@ -5,7 +5,7 @@ var x=$(".simcir_outer_div").width();
 x=x*0.90;
 
 //the if else block decides which circuit to display according to user settings
-if(sessionStorage.getItem('8bitCounter'))
+if(sessionStorage.getItem("8bitCounter"))
 {
 	var counter={
 		"width":x,
@@ -85,14 +85,14 @@ if(sessionStorage.getItem('8bitCounter'))
 	};
 
 	//sets the Frequency of the OSC.
-	if(sessionStorage.getItem('OSCfreq'))
+	if(sessionStorage.getItem("OSCfreq"))
 	{
-		$("#freq").val(sessionStorage.getItem('OSCfreq'));
-		counter.toolbox[5]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
-		counter.devices[17]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
+		$("#freq").val(sessionStorage.getItem("OSCfreq"));
+		counter.toolbox[5]["freq"]=parseInt(sessionStorage.getItem("OSCfreq"),10);
+		counter.devices[17]["freq"]=parseInt(sessionStorage.getItem("OSCfreq"),10);
 	}
 	
-	if(sessionStorage.getItem('8bitCounter_module'))
+	if(sessionStorage.getItem("8bitCounter_module"))
 	{
 		$("#counter").attr("checked", true);
 		counter.toolbox.push({
@@ -100,9 +100,9 @@ if(sessionStorage.getItem('8bitCounter'))
 		});
 	}
 
-	if(sessionStorage.getItem('8bitRingCounter_module'))
+	if(sessionStorage.getItem("8bitRingCounter_module"))
 	{
-		$("#ringcounter").attr('checked', true);
+		$("#ringcounter").attr("checked", true);
 		counter.toolbox.push({
 			"type":"8BitRingCounter"
 		});
@@ -114,7 +114,7 @@ if(sessionStorage.getItem('8bitCounter'))
 
 }
 
-else if(sessionStorage.getItem('8bitRingCounter')){
+else if(sessionStorage.getItem("8bitRingCounter")){
 	var counter={
 		"width":x,
 		"height":800,
@@ -168,14 +168,14 @@ else if(sessionStorage.getItem('8bitRingCounter')){
 		{"from":"dev10.in0","to":"dev4.out0"}
 		]
 	};
-	if(sessionStorage.getItem('OSCfreq'))
+	if(sessionStorage.getItem("OSCfreq"))
 	{
-		$("#freq").val(sessionStorage.getItem('OSCfreq'));
-		counter.toolbox[5]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
-		counter.devices[6]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
+		$("#freq").val(sessionStorage.getItem("OSCfreq"));
+		counter.toolbox[5]["freq"]=parseInt(sessionStorage.getItem("OSCfreq"),10);
+		counter.devices[6]["freq"]=parseInt(sessionStorage.getItem("OSCfreq"),10);
 	}
 	
-	if(sessionStorage.getItem('8bitCounter_module'))
+	if(sessionStorage.getItem("8bitCounter_module"))
 	{
 		$("#counter").attr("checked", true);
 		counter.toolbox.push({
@@ -183,9 +183,9 @@ else if(sessionStorage.getItem('8bitRingCounter')){
 		});
 	}
 
-	if(sessionStorage.getItem('8bitRingCounter_module'))
+	if(sessionStorage.getItem("8bitRingCounter_module"))
 	{
-		$("#ringcounter").attr('checked', true);
+		$("#ringcounter").attr("checked", true);
 		counter.toolbox.push({
 			"type":"8BitRingCounter"
 		});
@@ -217,16 +217,16 @@ else{
 		]
 	};
 
-	if(sessionStorage.getItem('OSCfreq'))
+	if(sessionStorage.getItem("OSCfreq"))
 	{
-		$("#freq").val(sessionStorage.getItem('OSCfreq'));
-		obj.toolbox[5]["freq"]=parseInt(sessionStorage.getItem('OSCfreq'));
+		$("#freq").val(sessionStorage.getItem("OSCfreq"));
+		obj.toolbox[5]["freq"]=parseInt(sessionStorage.getItem("OSCfreq"),10);
 	}
 	else
 	{
-		$("#freq").val('');
+		$("#freq").val("");
 	}
-	if(sessionStorage.getItem('8bitCounter_module'))
+	if(sessionStorage.getItem("8bitCounter_module"))
 	{
 		$("#counter").attr("checked", true);
 		obj.toolbox.push({
@@ -234,9 +234,9 @@ else{
 		});
 	}
 
-	if(sessionStorage.getItem('8bitRingCounter_module'))
+	if(sessionStorage.getItem("8bitRingCounter_module"))
 	{
-		$("#ringcounter").attr('checked', true);
+		$("#ringcounter").attr("checked", true);
 		obj.toolbox.push({
 			"type":"8BitRingCounter"
 		});
@@ -250,45 +250,45 @@ else{
 $("#counter").change(function(event) {
 	if(this.checked)
 	{
-		sessionStorage.setItem('8bitCounter_module',1);
+		sessionStorage.setItem("8bitCounter_module",1);
 	}
 	else
 	{
-		sessionStorage.removeItem('8bitCounter_module');
+		sessionStorage.removeItem("8bitCounter_module");
 	}
 });
 
 $("#ringcounter").change(function(event) {
 	if(this.checked)
 	{
-		sessionStorage.setItem('8bitRingCounter_module',1);
+		sessionStorage.setItem("8bitRingCounter_module",1);
 	}
 	else
 	{
-		sessionStorage.removeItem('8bitRingCounter_module');
+		sessionStorage.removeItem("8bitRingCounter_module");
 	}
 });
 
 $("#load_counter").click(function(event) {
-	sessionStorage.setItem('8bitCounter',1);
-	sessionStorage.removeItem('8bitRingCounter');
+	sessionStorage.setItem("8bitCounter",1);
+	sessionStorage.removeItem("8bitRingCounter");
 	location.reload();
 });
 
 $("#load_rcounter").click(function(event) {
-	sessionStorage.setItem('8bitRingCounter',1);
-	sessionStorage.removeItem('8bitCounter');
+	sessionStorage.setItem("8bitRingCounter",1);
+	sessionStorage.removeItem("8bitCounter");
 	location.reload();
 });
 
 $("#clear_workspace").click(function(event) {
-	sessionStorage.removeItem('8bitRingCounter');
-	sessionStorage.removeItem('8bitCounter');
+	sessionStorage.removeItem("8bitRingCounter");
+	sessionStorage.removeItem("8bitCounter");
 	location.reload();
 });
 
 $("#freq").change(function(event) {
-	sessionStorage.setItem('OSCfreq', parseInt(this.value));
+	sessionStorage.setItem("OSCfreq", parseInt(this.value,10));
 });
 
 $("#clear_settings").click(function(event) {
