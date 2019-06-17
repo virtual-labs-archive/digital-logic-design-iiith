@@ -1,164 +1,120 @@
-<!doctype html>
+<doctype html>
 <html>
-
-<head>
-  <!--BOOTSTRAP JS CSS LINKS -->
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gudea|PT+Mono" rel="stylesheet">
-  <!--LIBRARIES-->
-  <link rel="stylesheet" type="text/css" href="libraries/simcir/simcir.css">
-  <link rel="stylesheet" type="text/css" href="libraries/simcir/simcir-basicset.css">
-  <!--script src="javascripts/libraries/p5.min.js" type="text/javascript"></script>
-  <script src="javascripts/libraries/p5.dom.js" type="text/javascript"></script>
-  <script src="javascripts/libraries/lodash.js" type="text/javascript"></script-->
-  <!--JS-->
-  <script src="Codes/main.js" type="text/javascript"></script>
-  <script src="libraries/go.js" type="text/javascript"></script>
-  <script src="#" type="text/javascript"></script>
-  <script>
-
-  </script>
-  <!--STYLESHEETS-->
-  <link rel="stylesheet" href="Codes/style.css">
-
-</head>
-
-<body>
-<div class="container">
- 
-<header>
-<div class="top-menubar">
-  <div align="center">
-    <h1>DLD LAB-COMPARATOR</h1>
-    <h3>To Understand & Simulate a 4-bit Comparator </h3>
-    <!--button>LOAD</button>
-     <button>IMPORT</button>
-     <button>SAVE</button>
-     <button>CLEAR</button>
-    </div>
-    <div align="center" class="right-menu">
-      <button>LOAD-IT </button>
+  <head>
       
-      <button>IMPORT</button>
-      <button>STIMULATE</button>
-      <form align="right" padding=25px left=50px top=2px bottom=2px>
-         <select name = "dropdown" align=right>
-            <option value = "COM">Comparator</option>
-            <option value = "2bit-comparator" selected>2-bit Comparator</option>
-         </select>
-      </form>
-    </div-->
-</div>
-</div>
-</header>
-<section>
-<div class="side-menubar" style="width: 15%">
-    <nav>
-      <div class="panel panel-default">
-         <fieldset class="scheduler-border" >
-              <legend class="scheduler-border" style="font-size: 15px"><b>OPTIONS</b>
-              </legend>
-              <div style="margin-top: 40px;" align="center">
-                <button type="button" id="check1" class="clear_workspace" style="font-size: 15px">CLEAR WORKSPACE </button><br><br>
-               <align="center"><button type="button" id="check1" class="save" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" algin=center>SAVE</button><br><br>
-                <button type="button" id="check1" class="import" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">IMPORT</button>
-   <!--select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
-    <option value="Codes/images/and.png" selected>AND</option><
-    <option value="Codes/images/or.png">OR</option>
-    <option value="Codes/images/nand.png">NAND</option>
-    <option value="Codes/images/nor.png">NOR</option>
-    <option value="Codes/images/xor.png">XOR</option>
-    <option value="Codes/images/xnor.png">XNOR</option>
-    <option value="Codes/images/not.png">NOT</option>
-   </select>
-  
-<br><br>
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gudea|PT+Mono" rel="stylesheet">
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="simcir.js"></script>
+        <link rel="stylesheet" type="text/css" href="simcir.css" />
+        <script type="text/javascript" src="simcir-basicset.js"></script>
+        <link rel="stylesheet" type="text/css" href="simcir-basicset.css" />
+        <script type="text/javascript" src="simcir-library.js"></script>
+      
+      <script src="main.js" type="text/javascript"></script>
+      <script src="#" type="text/javascript"></script>
+      
+      <link rel="stylesheet" href="style.css">
+      <script type="text/javascript">
+       
+      </script>
+  </head>
 
-<img id="imageToSwap" class="profile" src="Codes/images/and.png">
-         <form>
-           <select name = "dropdown">
-            <option value = "2" selected>2</option>
-            <option value = "3">3</option>
-            <option value = "4">4</option>
-           </select>
-         </form> 
-         
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px"> SELECT
-                </button>
-                 <br>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">PROBE</button>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">OUT</button>
-                <br>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">NONE</button>
-                <br>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">DELETE ELEMENTS</button>
-                <br>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">DISCONNECT</button>
-                <br>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">CONNECT</button>
-                <br>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px; border: 2px solid #696969;">NAMING</button-->
-
-    </div>     
-    </nav>
-  </fieldset>
-    <article> 
-      <fieldset class="scheduler-border" >
-              <legend class="scheduler-border" style="font-size: 15px"><b>INPUTS</b></legend>
-              <div style="margin-top: 40px;" align="center">
-                 <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">LOAD-IT</button>
-                 <br><br>
-                 <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">LOAD 2-BIT COMPARATOR</button>
-                 <br><br><br><br><br><br><br><br><br><br><br>
-               <!--button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px">1</button>
-               <br>
-              </div>
-              <label style="position: relative; top:-40px; left: 5px;">Available Time Pulse :</label><br><br>
-              <div id="box1" > <textarea type="text" id="textarea" class="md-textarea"></textarea>
-              </div>
-                <button type="button" id="check1" style="margin-top: 50px;" class="btn btn-primary btn-md" style="font-size: 15px">New Time Pulse</button>
-                <<label style="position: relative; top:-40px; left: 5px;">Available Time Pulse :</label>
-                <div style="width:105%; position: relative; top:-40px; left:33px;">
-                   <div id="shift" >
-                   <select id="company" class="form-control">
-                    <option>a</option>
-                    <option>b</option>
-                    <option>c</option>
-                    <option>d</option>
-                  </select>
-                </div>
-                <label style="position: relative; top:5px; left: -28px;">Selected Time Pulse :</label>
-                <button type="button" id="check1" class="btn btn-primary btn-md" style="font-size: 15px; margin-top: 50px;margin-bottom: -90px; margin-left: -30px; width: 100%;">None</button-->
-                </div>
-            </fieldset>
-    </article>
-     </div>
-   </header>
-     
-<div class="row col-sm-9" style="background-color: white; margin-top: 0px; border: solid 2px; margin-left: -5px; width: 100%;height: 15%">
-      <p style="padding-top: 0px; text-align: center; font-size: 18px;" align="right">
-        <b>Develop the Circuit Diagram</b>
-      </p>
-      <div class="col-lg-9 simcir_outer_div">
-        <div class="simcir">
-          {
-        "width":1570,
-        "height":650
-          }
+  <body>
+  <div class="container">
+   
+    <header>
+      <div class="top-menubar">
+        <div align="center">
+          <h1>DLD LAB-COMPARATOR</h1>
+          <h3>To Understand & Simulate a 2-bit Comparator </h3>
         </div>
       </div>
-</div>
+    </header>
+
+  <section>
+  <div class="side-menubar" style="width: 30%">
+      <nav>
+        <div class="panel panel-default">
+           <fieldset class="scheduler-border" >
+                <legend class="scheduler-border" style="font-size: 15px"><b>OPTIONS</b></legend>
+                <div style="margin-top: 40px;" align="center">
+                  <button type="button" id="clear-workspace" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onClick="window.location.reload();">CLEAR WORKSPACE  </button><br> <br>
+                  <button type="button" id="help" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onclick="document.getElementById('dataArea').value = 'Help info to be added blah blah'">HELP</button><br><br>
+                  <textarea id="dataArea" style="width:450px; height:250px;"></textarea><br><br>
+                 <align="center"><button type="button" id="getDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="left">GET CIRCUIT DATA</button>
+                  <button type="button" id="setDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">SET DATA</button><br><br>
+                  <button type="button" id="clearData" class="buttonclass" onclick="document.getElementById('dataArea').value = ''" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="center">CLEAR CIRCUIT DATA BOX </button>
+                </div> 
+            </fieldset>
+        </div>
+      </nav>
+
+      <article> 
+        <fieldset class="scheduler-border" >
+                <legend class="scheduler-border" style="font-size: 15px"><b>INPUTS</b></legend>
+                <div style="margin-top: 40px;" align="center">
+                   <!--button type="button" id="check1" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">LOAD-IT</button-->
+                   <br><br>
+                   <button type="button" id="load2bit" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onclick="myFunction()">LOAD 2-BIT COMPARATOR</button>
+                   <br><br><br><br><br><br><br><br>
+                  </div>
+        </fieldset>
+      </article>
+  </div>
+     
+       
+  <div class="row col-sm-10" style="background-color: white; margin-top: 0px; border: solid 2px; margin-left: -5px; width: 100%;height: 15%">
+        <p style="padding-top: 0px; text-align: center; font-size: 18px;" align="right">
+          <b>Develop the Circuit Diagram</b>
+        </p>
+        <div class="col-lg-9 simcir_outer_div" align="center">
+          <div class="simcir" id="mySimcir">
+        {
+          "width":1100,
+          "height":870,
+          "showToolbox":true,
+          "toolbox":[
+            {"type":"Joint"},
+            {"type":"DC"},
+            {"type":"LED"},
+            {"type":"PushOff"},
+            {"type":"PushOn"},
+            {"type":"Toggle"},
+            {"type":"BUF"},
+            {"type":"NOT"},
+
+            {"type":"AND"},
+            {"type":"AND","numInputs":"3","label":"AND(3in)"},
+            {"type":"NAND"},
+            {"type":"NAND","numInputs":"3","label":"NAND(3in)"},
+            {"type":"OR"},
+            {"type":"OR","numInputs":"3","label":"OR(3in)"},
+            {"type":"NOR"},
+            {"type":"NOR","numInputs":"3","label":"NOR(3in)"},
+            {"type":"XOR"},
+            {"type":"XOR","numInputs":"3","label":"XOR(3in)"},
+            {"type":"XNOR"},
+            {"type":"XNOR","numInputs":"3","label":"XNOR(3in)"},
+            {"type":"OSC"},
+            {"type":"BusIn"},
+            {"type":"BusOut"},
+            {"type":"RS-FF"},
+            {"type":"JK-FF"},
+            {"type":"T-FF"},
+            {"type":"D-FF"},
+            {"type":"D-FF-custom"},
+            {"type":"DSO","numInputs":8}
+          ],
+          "devices":[
+            ],
+          "connectors":[
+            ]
+        }
+          </div>
+        </div>
+  </div>
 
 
-<!-- BOOTSTRAP and JQuery links-->
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript" src="libraries/simcir/simcir.js"></script>
-<script type="text/javascript" src="libraries/simcir/simcir-basicset.js"></script>
-<script type="text/javascript" src="libraries/simcir/simcir-library.js"></script>
-<script type="text/javascript" src="libraries/simcir/simcir-dso.js"></script>
-<!--script type="text/javascript" src="libraries/bootstrap/js/bootstrap.js"></script>
-<script type="text/javascript" src="libraries/bootstrap/js/bootstrap.bundle.js"></script-->
-
-</body>
+  </body>
 </html>

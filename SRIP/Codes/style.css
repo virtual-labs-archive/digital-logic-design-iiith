@@ -11,16 +11,6 @@ body {
     
 }
 
-#logo {
-    float: left;
-    position: fixed;
-    left: 10px;
-    top: 5px;
-    width: 150px;
-    margin: 0px;
-    padding: 5px;
-}
-
 .container {
     width:100%;
     margin: 0 auto;
@@ -40,17 +30,13 @@ body {
     text-align: center;
 }
 
-.dropdown {
-   position: relative;
-   display: inline-block;
-}
 
 section{
    display: -webkit-flex;
    display: flex;
 }
 
-#check1 {
+.buttonclass {
   background-color: lightgray;
   color: black;
   text-align: center;
@@ -58,7 +44,7 @@ section{
   padding: 5px;
   
 }
-#check1:hover {background-color: white; text-align: center;}
+.buttonclass:hover {background-color:#55d6aa ; text-align: center;}
 
 
 nav {
