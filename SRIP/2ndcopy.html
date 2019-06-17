@@ -5,16 +5,16 @@
       <meta charset="UTF-8">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gudea|PT+Mono" rel="stylesheet">
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="simcir.js"></script>
-        <link rel="stylesheet" type="text/css" href="simcir.css" />
-        <script type="text/javascript" src="simcir-basicset.js"></script>
-        <link rel="stylesheet" type="text/css" href="simcir-basicset.css" />
-        <script type="text/javascript" src="simcir-library.js"></script>
+        <script type="text/javascript" src="libraries/simcir.js"></script>
+        <link rel="stylesheet" type="text/css" href="libraries/simcir.css" />
+        <script type="text/javascript" src="libraries/simcir-basicset.js"></script>
+        <link rel="stylesheet" type="text/css" href="libraries/simcir-basicset.css" />
+        <script type="text/javascript" src="libraries/simcir-library.js"></script>
       
-      <script src="main.js" type="text/javascript"></script>
+      <script src="Codes/main.js" type="text/javascript"></script>
       <script src="#" type="text/javascript"></script>
       
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="Codes/style.css">
       <script type="text/javascript">
        
       </script>
@@ -43,7 +43,19 @@
                   <button type="button" id="help" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onclick="document.getElementById('dataArea').value = 'Help info to be added blah blah'">HELP</button><br><br>
                   <textarea id="dataArea" style="width:450px; height:250px;"></textarea><br><br>
                  <align="center"><button type="button" id="getDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="left">GET CIRCUIT DATA</button>
-                  <button type="button" id="setDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">SET DATA</button><br><br>
+              
+                <table>
+                  <tr>
+                      <td>Filename to Save As:</td>
+                      <td><input id="inputFileNameToSaveAs"></input></td>
+                      <td><button onclick="saveTextAsFile()">Save Text to File</button></td>
+                  </tr>
+                  <tr>
+                      <td>Select a File to Load:</td>
+                      <td><input type="file" id="fileToLoad"></td>
+                      <td><button onclick="loadFileAsText()">Load Selected File</button><td>
+                  </tr>
+                </table><br>
                   <button type="button" id="clearData" class="buttonclass" onclick="document.getElementById('dataArea').value = ''" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="center">CLEAR CIRCUIT DATA BOX </button>
                 </div> 
             </fieldset>
@@ -54,10 +66,9 @@
         <fieldset class="scheduler-border" >
                 <legend class="scheduler-border" style="font-size: 15px"><b>INPUTS</b></legend>
                 <div style="margin-top: 40px;" align="center">
-                   <!--button type="button" id="check1" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">LOAD-IT</button-->
-                   <br><br>
+                   
                    <button type="button" id="load2bit" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onclick="myfunction()">LOAD 2-BIT COMPARATOR</button>
-                   <br><br><br><br><br><br><br><br>
+                   <br><br><br>
                   </div>
         </fieldset>
       </article>
