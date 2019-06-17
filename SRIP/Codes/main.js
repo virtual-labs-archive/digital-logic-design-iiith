@@ -21,43 +21,19 @@
     
      $('#setDataBtn').click(function() {
         setCircuitData($('#dataArea').val() );
-     });
+     })
      
   });
 
 // load 2-bit comaparator
-//2-bit
 
-/*{
-  "width":1087.1460000000002,
-  "height":800,
+function myfunction() {
+  
+  var data={
+  "width":1100,
+  "height":870,
   "showToolbox":true,
-  "toolbox":[
-    {"type":"Joint"},
-    {"type":"DC"},
-    {"type":"LED"},
-    {"type":"PushOff"},
-    {"type":"PushOn"},
-    {"type":"Toggle"},
-    {"type":"BUF"},
-    {"type":"NOT"},
-    {"type":"AND"},
-    {"type":"NAND"},
-    {"type":"OR"},
-    {"type":"NOR"},
-    {"type":"NAND","numInputs":"3","label":"NAND(3in)"},
-    {"type":"XOR"},
-    {"type":"XNOR"},
-    {"type":"OSC"},
-    {"type":"BusIn"},
-    {"type":"BusOut"},
-    {"type":"RS-FF"},
-    {"type":"JK-FF"},
-    {"type":"T-FF"},
-    {"type":"D-FF"},
-    {"type":"D-FF-custom"},
-    {"type":"DSO","numInputs":8}
-  ],
+  
   "devices":[
     {"type":"NOR","id":"dev0","x":616,"y":240,"label":"NOR"},
     {"type":"NOR","id":"dev1","x":616,"y":320,"label":"NOR"},
@@ -139,9 +115,8 @@
     {"from":"dev33.in0","to":"dev30.out0"},
     {"from":"dev34.in0","to":"dev4.out0"}
   ]
-}*/
+};
+  var html1=JSON.stringify(data);
+  document.querySelector(".simcir").innerHTML=html1;
 
-function myFunction() {
-  
-  }
-    
+};
