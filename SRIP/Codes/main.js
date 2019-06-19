@@ -154,7 +154,7 @@ function loadFileAsText()
     fileReader.onload = function(fileLoadedEvent) 
     {
         var textFromFileLoaded = fileLoadedEvent.target.result;
-        document.getElementById("dataArea").value = textFromFileLoaded;
+        document.getElementById("inputTextToSave").value = textFromFileLoaded;
     };
     fileReader.readAsText(fileToLoad, "UTF-8");
 }
