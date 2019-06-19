@@ -10,6 +10,11 @@
         <script type="text/javascript" src="libraries/simcir-basicset.js"></script>
         <link rel="stylesheet" type="text/css" href="libraries/simcir-basicset.css" />
         <script type="text/javascript" src="libraries/simcir-library.js"></script>
+        <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script-->
+  
+
       
       <script src="Codes/main.js" type="text/javascript"></script>
       <script src="#" type="text/javascript"></script>
@@ -40,7 +45,7 @@
                 <legend class="scheduler-border" style="font-size: 15px"><b>OPTIONS</b></legend>
                 <div style="margin-top: 40px;" align="center">
                   <button type="button" id="clear-workspace" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onClick="window.location.reload();">CLEAR WORKSPACE  </button><br> <br>
-                  <button type="button" id="help" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onclick="document.getElementById('dataArea').value = 'Help info to be added blah blah'">HELP</button><br><br>
+                  <button type="button" id="help" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" title="button title" onclick=" window.open('help_bootstrap.html', '_blank'); return false;">HELP</button><br><br>
                   <textarea id="dataArea" style="width:450px; height:250px;"></textarea><br><br>
                  <align="center"><button type="button" id="getDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="left">GET CIRCUIT DATA</button>
                 <button type="button" id="setDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">SET DATA</button><br>
