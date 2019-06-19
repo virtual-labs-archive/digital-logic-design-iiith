@@ -21,8 +21,8 @@
       
       <link rel="stylesheet" href="Codes/style.css">
       <script type="text/javascript">
-       </script>
-       <title>COMPARATOR</title>
+       
+      </script>
   </head>
 
   <body>
@@ -53,12 +53,12 @@
                   <tr>
                       <td>Filename to Save As:</td>
                       <td><input id="inputFileNameToSaveAs"></input></td>
-                      <td><button onclick="saveTextAsFile()" class="buttonclass">Save Text to File</button></td>
+                      <td><button onclick="saveTextAsFile()">Save Text to File</button></td>
                   </tr>
                   <tr>
                       <td>Select a File to Load:</td>
                       <td><input type="file" id="fileToLoad"></td>
-                      <td><button onclick="loadFileAsText()" class="buttonclass">Load Selected File</button><td>
+                      <td><button onclick="loadFileAsText()">Load Selected File</button><td>
                   </tr>
                 </table><br>
                   <button type="button" id="clearData" class="buttonclass" onclick="document.getElementById('dataArea').value = ''" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="center">CLEAR CIRCUIT DATA BOX </button>
@@ -72,7 +72,7 @@
                 <legend class="scheduler-border" style="font-size: 15px"><b>INPUTS</b></legend>
                 <div style="margin-top: 40px;" align="center">
                    
-                   <button type="button" id="load2bit" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onclick="window.open('2-bitcompa.html','_blank')">LOAD 2-BIT COMPARATOR</button>
+                   <button type="button" id="load2bit" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onclick="myfunction()">LOAD 2-BIT COMPARATOR</button>
                    <br><br><br>
                   </div>
         </fieldset>
