@@ -20,10 +20,19 @@
      });
     
      $('#setDataBtn').click(function() {
+        if(document.getElementById("dataArea").value.trim() == '')
+        {
+            alert("Please Load the Data into the text box to get its Simulation");
+        }
+
+        else
+        {
         setCircuitData($('#dataArea').val() );
-     })
+        }
+
+    })
      
-  });
+});
 
 // load 2-bit comaparator
 
@@ -117,7 +126,7 @@ function myfunction() {
   ]
 };
   var html1=JSON.stringify(data);
-  document.querySelector(".simcir").innerHTML=html1;
+  //document.querySelector(".simcir").innerHTML=html1;
 
 };
 
@@ -125,20 +134,28 @@ function myfunction() {
 //save as txt and load selected file code
 function saveTextAsFile()
 {
-    var textToSave = document.getElementById("dataArea").value;
-    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
-    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
- 
-    var downloadLink = document.createElement("a");
-    downloadLink.download = fileNameToSaveAs;
-    downloadLink.innerHTML = "Download File";
-    downloadLink.href = textToSaveAsURL;
-    downloadLink.onclick = destroyClickedElement;
-    downloadLink.style.display = "none";
-    document.body.appendChild(downloadLink);
- 
-    downloadLink.click();
+    if (document.getElementById('inputFileNameToSaveAs').value=="" || document.getElementById('inputFileNameToSaveAs').value==undefined)
+    {
+        alert ("Please Enter a File Name");
+        return false;
+    }
+    else{
+                
+        var textToSave = document.getElementById("dataArea").value;
+        var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+        var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+        var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+     
+        var downloadLink = document.createElement("a");
+        downloadLink.download = fileNameToSaveAs;
+        downloadLink.innerHTML = "Download File";
+        downloadLink.href = textToSaveAsURL;
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+     
+        downloadLink.click();
+    }
 }
  
 function destroyClickedElement(event)
@@ -148,13 +165,20 @@ function destroyClickedElement(event)
  
 function loadFileAsText()
 {
-    var fileToLoad = document.getElementById("fileToLoad").files[0];
- 
-    var fileReader = new FileReader();
-    fileReader.onload = function(fileLoadedEvent) 
-    {
-        var textFromFileLoaded = fileLoadedEvent.target.result;
-        document.getElementById("inputTextToSave").value = textFromFileLoaded;
-    };
-    fileReader.readAsText(fileToLoad, "UTF-8");
+        if (!document.getElementById("fileToLoad").value) {
+            event.preventDefault();
+            alert("Please choose a file which has the circuit data!");
+        } 
+        else {
+            
+        var fileToLoad = document.getElementById("fileToLoad").files[0];
+     
+        var fileReader = new FileReader();
+        fileReader.onload = function(fileLoadedEvent) 
+        {
+            var textFromFileLoaded = fileLoadedEvent.target.result;
+            document.getElementById("inputTextToSave").value = textFromFileLoaded;
+        };
+        fileReader.readAsText(fileToLoad, "UTF-8");
+    }
 }
