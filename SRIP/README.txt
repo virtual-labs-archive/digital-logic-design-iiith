@@ -35,4 +35,4 @@ About the Simulator:
 
 		-In order to get a pre-made 2-bit comparator click on the 'Load 2-bit Comparator' button to see its 				simulation.
 
-### [Project Documentation]	(https://gist.github.com/vinaytejab/7d779bf4025abffd1adfa6f8c2d81b31).	
+ Project Documentation ----- (https://gist.github.com/vinaytejab/7d779bf4025abffd1adfa6f8c2d81b31).	
