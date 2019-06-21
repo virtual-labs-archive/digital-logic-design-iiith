@@ -1,6 +1,6 @@
 # LOGIC GATE SIMULATION USING JS,HTML,CSS:
 
-Please Run simulation.html.
+### Please Run ##simulation.html.
 
 About the Simulator:
 
