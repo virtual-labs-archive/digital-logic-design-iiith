@@ -3,10 +3,10 @@
 This lab allows you to design and simulate any digital combinational or sequential circuit. Following instruction help you build the counter circuit. A Javascript-based basic tool and simulation enigne is at the hear of this laboratory. You can create many circuits and test them with fixed or time-varying input signals. You can also see the outputs as values or time-varying waveforms.
 
 Counter
-![Image](https://github.com/gauravggg21/digital-logic-design-iiith/blob/master/SRIP/Codes/images/counter.png?raw=true)
+![Image](https://github.com/gauravggg21/digital-logic-design-iiith/blob/master/SRIP_Project_1/Codes/images/counter.png?raw=true)
 
 Ring Counter
-![Image](https://github.com/gauravggg21/digital-logic-design-iiith/blob/master/SRIP/Codes/images/ringcounter.png?raw=true)
+![Image](https://github.com/gauravggg21/digital-logic-design-iiith/blob/master/SRIP_Project_1/Codes/images/ringcounter.png?raw=true)
 
 The tool consist of mainly two pannels: Left Pannel, Right Pannel.
 
