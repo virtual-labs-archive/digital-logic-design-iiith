@@ -1,6 +1,6 @@
-LOGIC GATE SIMULATION USING JS,HTML,CSS:
+# LOGIC GATE SIMULATION USING JS,HTML,CSS:
 
-Run simulation.html.
+Please Run simulation.html.
 
 About the Simulator:
 
@@ -16,11 +16,11 @@ About the Simulator:
 
     The right pane contains the workspace where you will simulate your experiment.
 
-        The panel on the left contains the pre-made logic circuits you will require to build a counter.
-        Drag them on the right, to place them on your breadboard.
-        The left side contains the inputs, and the right side the outputs.
-        Click on the circle of the input or output to another input/output to draw a line.
-        You can connect only one line to an input, but an output can have multiple lines.
+        -The panel on the left contains the pre-made logic circuits you will require to build a counter.
+        -Drag them on the right, to place them on your breadboard.
+        -The left side contains the inputs, and the right side the outputs.
+        -Click on the circle of the input or output to another input/output to draw a line.
+        -You can connect only one line to an input, but an output can have multiple lines.
 
         -The DC icon outputs digital 1 at all times, connnect it to 
             -push on: to simulate the 1 only when you're pressing on the button
@@ -35,4 +35,4 @@ About the Simulator:
 
 		-In order to get a pre-made 2-bit comparator click on the 'Load 2-bit Comparator' button to see its simulation.
 
-		
+ ### [Project Documentation](https://gist.github.com/vinaytejab/7d779bf4025abffd1adfa6f8c2d81b31).	
