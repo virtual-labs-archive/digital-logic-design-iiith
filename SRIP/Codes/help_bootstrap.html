@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+	
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+</head>
+<body >
+	<div class="modal fade bd-example-modal-lg" id="instructions">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="instructionsTitle">HELP INFO</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="lead">This lab allows you to design and simulate any digital combinational or sequential circuit. Following instruction help you build the multiplexer circuit. A Javascript-based basic tool and simulation enigne is at the hear of this laboratory. You can create many circuits and test them with fixed or time-varying input signals. You can also see the outputs as values or time-varying waveforms. </p>
+					<h6><strong> 2-bit Comparator</strong></h6>
+					
+					<p>The tool consist of mainly two pannels: Left Pannel, Right Pannel.</p>
+					<ul>
+						<li>
+							<p><strong>Left Pannel:</strong>You can change the settings from the left pane.</p>
+							<ol>
+								<li>
+									<strong>Textbox:</strong> It acts as medium to show the circuit data and load the circuit data from your system
+								</li>
+								<li>
+									<p><strong>Save:</strong>Click on the button to save the cicuit data in your system after give a name to your file.</p>
+								</li>
+								<li>
+									<p><strong>Load:</strong>Click on the button to load a file from your system to the textbox.</p>
+								</li>
+								<li>
+									<p><strong>Set Data:</strong>Click on the button to view the loaded circuit data in the grid.</p>
+								</li>
+								
+								<li>
+									<p><strong>Clear Workspace:</strong>Click on the button to discard all your settings and Start a new circuit</p>
+									<div class="alert alert-danger" role="alert">
+										<strong>WARNING</strong>: When you click on Clear Workspace.It Clears everything on the page and starts fresh	
+									</div>
+								</li>
+
+								<li>
+									<p>If you get stuck, and are not able to make the comparator, then use the load comparator button.</p>
+								</li>
+								
+							</ol>
+						</li>
+						<li>
+							<p><strong>Right Pannel:</strong> The right pane contains the workspace where you will simulate your experiment.</p>
+							<ol>
+								<li>
+									<p>The toolbox on the left contains the pre-made logic circuits you will require to build a counter.</p>
+									<div class="alert alert-info" role="alert">
+										In case you want to build a Flip-Flop, please open the Comparator experiment page.
+									</div>
+								</li>
+								<li>
+									<p>Drag them on the right, to place them on your breadboard.</p>
+								</li>
+								<li>
+									<p>The left part of the abstracted circuit contains the inputs, and the right side the outputs.</p>
+								</li>
+								<li>
+									<p>Click on the circle of the input or output to another input/output to make a connection.</p>
+									<div class="alert alert-info" role="alert">
+										You can connect only one line to an input, but an output can have multiple lines.
+									</div>
+								</li>
+								<li>
+									<p>The "DC" icon outputs digital 1 at all times, connnect it to:</p>
+									<ul>
+										<li>
+											<p>-push on: to simulate the 1 only when you're pressing on the button</p>
+										</li>
+										<li>
+											<p>-push off: to simulate 0 when you're pushing the button</p>
+										</li>
+										<li>
+											<p>-toggle: to toggle the output between 1 and 0.</p>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<p>The OSC supplies 1 and 0 in a specific frequency which you set in the settings pane.</p>
+								</li>
+								<li>
+									<p>The joint icon is just a connection, to make your connections look neater, as the lines from an output to an input are straight.</p>
+								</li>
+								<li>
+									<p>The DSO displays the output in a graph format for easy verification. It has 8 inputs, you can choose to use any number of them. If you want more, just drag drop more of them.</p>
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"  data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h4>This page should have been included in the simulation page but due to conflict of bootstrap CSS and my CSS the design of my webpage changes.</h4>
+		<h3 align="center"><a href="help.html" data-toggle="modal" data-target="#instructions">CLICK HERE FOR HELP  </a></h3>
+		<br><br>
+		<h4 align="center"> <a href="javascript:window.open('','_self').close();">Close this tab</a></h4>
+	</div>
+</body>
+</html>
