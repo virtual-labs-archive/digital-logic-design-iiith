@@ -29,10 +29,10 @@ About the Simulator:
 
         -The OSC supplies 1 and 0 in a specific frequency which you set in the settings pane.
 
-        -The joint icon is just a connection, to make your connections look neater, as the lines from an output to an input 		are straight.
+        -The joint icon is just a connection, to make your connections look neater, as the lines from an output to an input are straight.
 
-		-The DSO displays the output in a graph format for easy verification. It has 4 inputs, you can choose to use 			any number of them. If you want more, just drag drop more of them.
+		-The DSO displays the output in a graph format for easy verification. It has 4 inputs, you can choose to use any number of them. If you want more, just drag drop more of them.
 
-		-In order to get a pre-made 2-bit comparator click on the 'Load 2-bit Comparator' button to see its 				simulation.
+		-In order to get a pre-made 2-bit comparator click on the 'Load 2-bit Comparator' button to see its simulation.
 
  ### [Project Documentation](https://gist.github.com/vinaytejab/7d779bf4025abffd1adfa6f8c2d81b31).	
