@@ -43,7 +43,7 @@
            <fieldset class="scheduler-border" >
                 <legend class="scheduler-border" style="font-size: 15px"><b>OPTIONS</b></legend>
                 <div style="margin-top: 40px;" align="center">
-                  <button type="button" id="clear-workspace" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" onClick="window.location.reload();">CLEAR WORKSPACE  </button><br> <br>
+                  <a href="javascript:window.open('','_self').close();">CLEAR WORKSPACE  </a><br> <br>
                   <button type="button" id="help" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" title="button title" onclick=" window.open('help_bootstrap.html', '_blank'); return false;">HELP</button><br><br>
                   <textarea id="dataArea" style="width:450px; height:250px;"></textarea><br><br>
                  <align="center"><button type="button" id="getDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="left">GET CIRCUIT DATA</button>
@@ -60,7 +60,7 @@
                       <td><button onclick="loadFileAsText()">Load Selected File</button><td>
                   </tr>
                 </table><br>
-                  <button type="button" id="clearData" class="buttonclass" onclick="document.getElementById('dataArea').value = ''" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="center">CLEAR CIRCUIT DATA BOX </button>
+                  <button type="button" id="clearData" class="buttonclass" onclick="document.getElementById('dataArea').value = ''" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="center">CLEAR CIRCUIT DATA BOX </button><br><br>
                 </div> 
             </fieldset>
         </div>
@@ -81,7 +81,7 @@
        
   <div class="row col-sm-10" style="background-color: white; margin-top: 0px; border: solid 2px; margin-left: -5px; width: 100%;height: 15%">
         <p style="padding-top: 0px; text-align: center; font-size: 18px;" align="right">
-          <b>Develop the Circuit Diagram</b>
+          <b>Pre-made Circuit diagram of 2-bit comparator</b>
         </p>
         <div class="col-lg-9 simcir_outer_div" align="center">
           <div class="simcir" id="mySimcir">
