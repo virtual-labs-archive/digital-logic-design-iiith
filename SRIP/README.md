@@ -1,4 +1,4 @@
-# Counters
+# Multiplexer
 
 This lab allows you to design and simulate any digital combinational or sequential circuit. Following instruction help you build the multiplexer circuit. A Javascript-based basic tool and simulation enigne is at the hear of this laboratory. You can create many circuits and test them with fixed or time-varying input signals. You can also see the outputs as values or time-varying waveforms.
 
