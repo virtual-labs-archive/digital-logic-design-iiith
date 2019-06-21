@@ -1,0 +1,69 @@
+// this file is to be executed in the end, because the functions and variables used are declared in the library simcir files
+simcir.registerDevice('4bitMUX',
+{
+  "width":520,
+  "height":500,
+  "devices":[
+    {"type":"2bitMultiplexer","id":"dev0","x":96,"y":56,"label":"2bitMultiplexer"},
+    {"type":"2bitMultiplexer","id":"dev1","x":96,"y":168,"label":"2bitMultiplexer"},
+    {"type":"2bitMultiplexer","id":"dev2","x":184,"y":104,"label":"2bitMultiplexer"},
+    {"type":"In","id":"dev3","x":16,"y":8,"label":"I0"},
+    {"type":"In","id":"dev4","x":16,"y":64,"label":"I1"},
+    {"type":"In","id":"dev5","x":16,"y":128,"label":"I2"},
+    {"type":"In","id":"dev6","x":16,"y":184,"label":"I3"},
+    {"type":"Out","id":"dev7","x":280,"y":120,"label":"Q"},
+    {"type":"In","id":"dev8","x":56,"y":240,"label":"S0"},
+    {"type":"In","id":"dev9","x":80,"y":288,"label":"S1"}
+  ],
+  "connectors":[
+    {"from":"dev0.in0","to":"dev3.out0"},
+    {"from":"dev0.in1","to":"dev4.out0"},
+    {"from":"dev0.in2","to":"dev9.out0"},
+    {"from":"dev1.in0","to":"dev5.out0"},
+    {"from":"dev1.in1","to":"dev6.out0"},
+    {"from":"dev1.in2","to":"dev9.out0"},
+    {"from":"dev2.in0","to":"dev0.out0"},
+    {"from":"dev2.in1","to":"dev1.out0"},
+    {"from":"dev2.in2","to":"dev8.out0"},
+    {"from":"dev7.in0","to":"dev2.out0"}
+  ]
+}
+);
+      simcir.registerDevice("2bitMUX",
+{
+  "width":520,
+  "height":500,
+  "devices":[
+    {"type":"DC","id":"dev0","x":56,"y":176,"label":"DC"},
+    {"type":"DC","id":"dev1","x":56,"y":232,"label":"DC"},
+    {"type":"DC","id":"dev2","x":56,"y":288,"label":"DC"},
+    {"type":"Toggle","id":"dev3","x":120,"y":176,"label":"Toggle","state":{"on":false}},
+    {"type":"Toggle","id":"dev4","x":120,"y":232,"label":"Toggle","state":{"on":false}},
+    {"type":"Toggle","id":"dev5","x":120,"y":288,"label":"Toggle","state":{"on":false}},
+    {"type":"AND","id":"dev6","x":312,"y":176,"label":"AND"},
+    {"type":"AND","id":"dev7","x":312,"y":224,"label":"AND"},
+    {"type":"OR","id":"dev8","x":368,"y":200,"label":"OR"},
+    {"type":"NOT","id":"dev9","x":248,"y":288,"label":"NOT"},
+    {"type":"In","id":"dev10","x":192,"y":176,"label":"I0"},
+    {"type":"In","id":"dev11","x":192,"y":232,"label":"I1"},
+    {"type":"In","id":"dev12","x":192,"y":288,"label":"S0"},
+    {"type":"Out","id":"dev13","x":424,"y":200,"label":"Q"}
+  ],
+  "connectors":[
+    {"from":"dev3.in0","to":"dev0.out0"},
+    {"from":"dev4.in0","to":"dev1.out0"},
+    {"from":"dev5.in0","to":"dev2.out0"},
+    {"from":"dev6.in0","to":"dev10.out0"},
+    {"from":"dev6.in1","to":"dev9.out0"},
+    {"from":"dev7.in0","to":"dev11.out0"},
+    {"from":"dev7.in1","to":"dev12.out0"},
+    {"from":"dev8.in0","to":"dev6.out0"},
+    {"from":"dev8.in1","to":"dev7.out0"},
+    {"from":"dev9.in0","to":"dev12.out0"},
+    {"from":"dev10.in0","to":"dev3.out0"},
+    {"from":"dev11.in0","to":"dev4.out0"},
+    {"from":"dev12.in0","to":"dev5.out0"},
+    {"from":"dev13.in0","to":"dev8.out0"}
+  ]
+}
+);
