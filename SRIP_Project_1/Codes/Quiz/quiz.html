@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Comparator-Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body onload="load()">
+
+    <!-- Quiz header -->
+
+    <div id="quizHeading" class="wrapper">
+        <div class="box1">
+            <h2 id="TaskTitle">-- Quiz On Comparator Experiment --</h2>
+            <div id="result" class="hide"></div>
+        </div>
+        <div id="startBtn">
+            <button type="button" class="buttonDecor" style="margin: 4px 2px; padding: 15px 32px;" onclick="startQuiz()">Start</button>
+        </div>
+        <div id="submitBtn">
+                <button type="button" class="buttonDecor" onclick="submitQuiz() ">Submit</button>
+        </div>
+    </div>
+    <br>
+    <div style="width: 50%; height:30em; padding-left: 25%; overflow: auto; ">
+        <!-- Questions -->
+
+        <div id="quizBody" class="hide"></div>
+
+
+        <!--Result place -->
+
+        <div id="displayResult" class="hide"> </div>
+        </br>
+
+    </div>
+    
+</body>
+
+</html>
