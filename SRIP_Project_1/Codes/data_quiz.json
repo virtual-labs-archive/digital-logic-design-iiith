@@ -1,0 +1,75 @@
+{
+    "artciles": [
+        {
+            "q" : "All the comparisons made by comparator is done using ?",
+            "opt1" : "1 circuit",
+            "opt2" : "2 circuit",
+            "opt3" : "3 circuit",
+            "answer" : "1 circuit"
+        },
+        {
+            "q" : " One that is not the outcome of magnitude comparator is  ?",
+            "opt1" : "a > b",
+            "opt2" : "a - b",
+            "opt3" : "a = b",
+            "answer" : "a - b"
+        },
+        {
+            "q" : " If two numbers are not equal then binary variable will be?",
+            "opt1" : "1",
+            "opt2" : "0",
+            "opt3" : "2",
+            "answer" : "0"
+        },
+        {
+            "q" : "How many inputs are required for a digital comparator ?",
+            "opt1" : "1",
+            "opt2" : "2",
+            "opt3" : "4",
+            "answer" : "2"
+        },
+        {
+            "q" : "In a comparator, if we get input as A>B then the output will be?",
+            "opt1" : "1",
+            "opt2" : "0",
+            "opt3" : "A",
+            "answer" : "1"
+        },
+        {
+            "q" : "Which one is a basic comparator ?",
+            "opt1" : "XOR",
+            "opt2" : "XNOR",
+            "opt3" : "OR",
+            "answer" : "XNOR"
+        },
+        {
+            "q" : "Comparators are used in which of the following ?",
+            "opt1" : "Memory",
+            "opt2" : "Motherboard",
+            "opt3" : "CPU",
+            "answer" : " CPU"
+        },
+        {
+            "q" : "How many types of digital comparators are ?",
+            "opt1" : "1",
+            "opt2" : "2",
+            "opt3" : "3",
+            "answer" : "2"
+        },
+        {
+            "q" : "An identify comparator is defined as a digital comparator which has ?",
+            "opt1" : "One output terminal",
+            "opt2" : "Two output terminal",
+            "opt3" : "Four output terminal",
+            "answer" : "One output terminal"
+        },
+        {
+            "q" : "A magnitude comparator is defined as a digital comparator which has ?",
+            "opt1" : "One output terminal",
+            "opt2" : "Two output terminal",
+            "opt3" : "Three output terminal",
+            "answer" : "Three output terminal"
+        }
+         
+    ]
+}
