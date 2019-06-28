@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gudea|PT+Mono" rel="stylesheet">
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-      <link rel="stylesheet" href="Codes/style.css">
+      <link rel="stylesheet" href="style.css">
       <title>2-BIT COMPARATOR</title>
       
   </head>
@@ -33,7 +33,7 @@
                   <h5 align="left"><u>CIRCUIT DATA :</u></h5>
                   <textarea id="dataArea" style="width:450px; height:250px;"></textarea><br><br>
                  <align="center"><button type="button" id="getDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="left">GET CIRCUIT DATA</button>
-                <button type="button" id="setDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">SIMULATE CIRCUIT DATA</button><br>
+                <button type="button" id="setDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">SET DATA</button><br>
                 <table>
                   <tr>
                       <td>Filename to Save As:</td>
@@ -74,7 +74,7 @@
           </div>
         </div>
   </div>
-  <script type="text/javascript">
+    <script type="text/javascript">
         var input = document.getElementById("fileToLoad");
         var text = document.querySelector("textarea");
         var name;
@@ -92,13 +92,13 @@
         }
     </script>
       <!--JS link-->
-        <script src="Codes/main.js" type="text/javascript"></script>
+        <script src="main.js" type="text/javascript"></script>
       <!--Libraries link-->
-        <script type="text/javascript" src="libraries/simcir.js"></script>
-        <link rel="stylesheet" type="text/css" href="libraries/simcir.css" >
-        <script type="text/javascript" src="libraries/simcir-basicset.js"></script>
-        <link rel="stylesheet" type="text/css" href="libraries/simcir-basicset.css">
-        <script type="text/javascript" src="libraries/simcir-library.js"></script>
+        <script type="text/javascript" src="../libraries/simcir.js"></script>
+        <link rel="stylesheet" type="text/css" href="../libraries/simcir.css" >
+        <script type="text/javascript" src="../libraries/simcir-basicset.js"></script>
+        <link rel="stylesheet" type="text/css" href="../libraries/simcir-basicset.css">
+        <script type="text/javascript" src="../libraries/simcir-library.js"></script>
 
   </body>
 </html>

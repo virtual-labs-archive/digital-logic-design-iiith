@@ -69,11 +69,11 @@ function destroyClickedElement(event)
  
 function loadFileAsText()
 {
-        if (!document.getElementById("fileToLoad").value) {
+       /* if (!document.getElementById("fileToLoad").value) {
             event.preventDefault();
             alert("Please choose a file which has the circuit data!");
         } 
-        else {
+        else {*/
             
         var fileToLoad = document.getElementById("fileToLoad").files[0];
      
@@ -84,7 +84,7 @@ function loadFileAsText()
             document.getElementById("inputTextToSave").value = textFromFileLoaded;
         };
         fileReader.readAsText(fileToLoad, "UTF-8");
-    }
+    //}
 }
 
 
@@ -95,7 +95,7 @@ if(sessionStorage.getItem("2bitcomparator"))
     var comparator=
     {
   "width":1100,
-  "height":900,
+  "height":1070,
   "showToolbox":true,
   "toolbox":[
     {"type":"Joint"},
@@ -220,7 +220,7 @@ if(sessionStorage.getItem("2bitcomparator"))
 else{
     var obj={
         "width":1100,
-        "height":900,
+        "height":1070,
         "showToolbox":true,
         "toolbox":[
             {"type":"Joint"},
