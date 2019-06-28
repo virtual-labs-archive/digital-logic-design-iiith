@@ -1,0 +1,149 @@
+html {
+    height: 100%;
+     -ms-overflow-style: none;
+}
+
+body {
+    margin: 0; 
+    height: 100%;
+    background: white;
+    font-family:'Work Sans',sans-serif;
+    
+}
+
+.container {
+    width:100%;
+    margin: 0 auto;
+}
+
+.container::after{
+    content: '';
+    display:table;
+    clear: both;
+}
+
+.top-menubar{
+    background: #55d6aa;
+    padding: 0px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+
+section{
+   display: -webkit-flex;
+   display: flex;
+}
+
+.buttonclass {
+  background-color: lightgray;
+  color: black;
+  text-align: center;
+  border: 2px solid #696969;
+  padding: 5px;
+  
+}
+.buttonclass:hover {background-color:#55d6aa ; text-align: center;}
+
+
+nav {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+   background: #ccc;
+   padding: 20px;
+}
+
+
+nav ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+  
+article {
+   -webkit-flex: 3;
+   -ms-flex: 3;
+   background-color: #ccc;
+   padding: 10px;
+}
+
+.dropbtn {
+   background-color: #3498DB;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+   cursor: pointer;
+   }
+
+.dropbtn:hover, .dropbtn:focus {
+   background-color: #2980B9;
+   }
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+   }
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   overflow: auto;
+   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+   }
+
+.dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   }
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+@media (max-width: 600px) {
+    .display {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    }
+   }
+
+legend.scheduler-border {
+    width:inherit; 
+    padding:0 10px; 
+    border-bottom:none;
+    background-color: #ccc
+}
+textarea.md-textarea {
+  padding: 5px 3px;
+  border-width: 2px;
+  resize: vertical;
+  min-height: 3rem;
+}
+
+#company{
+  border-color: #696969;
+  position: relative;
+  width: 50%;
+  left: 15px;
+}
+#company2{
+  border-color: #696969;
+  position:relative;
+  left:120px;
+  top:-34px;
+  width: 30%;
+
+}
+
+.unclickable{
+  pointer-events: none;
+}
+
