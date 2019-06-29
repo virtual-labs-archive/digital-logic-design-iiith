@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="quiz.js"></script>
+</head>
+
+<body onload="load()" style="width:100%;height: 100%;">
+
+    <!-- Quiz header -->
+    <div class="container">
+        <div class="QuizHeader">
+            <div>
+                <h2 id="TaskTitle"> Quiz on Comparator experiment in DLD lab </h2>
+                <div id="result" style="visibility: hidden;"></div>
+                <div id="startBtn">
+                    <button id="startBtn" type="button" class="buttonDecor" style="margin: 4px 2px; padding: 15px 32px;"
+                        onclick="startQuiz()">Start</button>
+                </div>
+            </div>
+        </div>
+        <div id="instructions">
+            Instructions for the Quiz:-
+            <ul>
+                <li>Quiz contains questions on DLD lab comparator expirement</li>
+                <li>Quiz has total 5 questions only</li>
+                <li>There is no negative marking</li>
+                <li>After submission you can tally your answers</li>
+                <li>Quiz can be restarted again only after submisson or on reloading.</li>
+            </ul>
+        </div>
+        <div class="quiz-contents">
+            <div>
+                <!-- Quiz body -->
+
+                <div id="quizBody" class="hide"></div>
+                <br>
+                <div id="submitBtn" style="display: none; text-align: center;">
+                    <button type="button" class="buttonDecor" onclick="submitQuiz() ">Get Score</button>
+                </div>
+                <!-- Quiz Result -->
+
+                <div id="displayResult" class="hide"></div>
+                </br>
+
+            </div>
+        </div>
+        <div class="footer">
+             *---Digital Logic Design Lab---*
+        </div>
+
+    </div>
+</body>
+
+</html>
