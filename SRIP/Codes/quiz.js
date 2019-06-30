@@ -191,7 +191,7 @@ function submitQuiz() {
     document.getElementById("startBtn").style.visibility = "visible";
     submitAnswers();
     document.getElementById("quizBody").style.display = "none";
-    document.getElementById("result").innerHTML = (CorrectCount).toString() + " out of " + TotalContainer;
+    document.getElementById("result").innerHTML = "You Have scored "+(CorrectCount).toString() + " out of " + TotalContainer;
     putResult();
     document.getElementById("TaskTitle").innerHTML = "Quiz Results";
     document.getElementById("result").style.visibility = "visible";

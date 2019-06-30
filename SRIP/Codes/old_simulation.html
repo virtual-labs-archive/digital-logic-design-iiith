@@ -1,0 +1,104 @@
+<doctype html>
+<html lang="en-US">
+  <head>
+      
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gudea|PT+Mono" rel="stylesheet">
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <title>2-BIT COMPARATOR</title>
+      
+  </head>
+
+  <body>
+  <div class="container">
+   <header>
+      <div class="top-menubar">
+        <div align="center">
+          <h1>DLD LAB-COMPARATOR</h1>
+          <h3>To Understand & Simulate a 2-bit Comparator </h3>
+        </div>
+      </div>
+    </header>
+
+  <section>
+  <div class="side-menubar" style="width: 30%">
+      <nav>
+        <div class="panel panel-default">
+           <fieldset class="scheduler-border" >
+                <legend class="scheduler-border" style="font-size: 15px"><b>OPTIONS</b></legend>
+                <div style="margin-top: 40px;" align="center">
+                  <button type="button" id="clear-workspace" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">CLEAR WORKSPACE  </button><br><br>
+                  <button type="button" id="help" class="buttonclass" style="font-size: 15px;padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" title="button title" onclick=" window.open('help_bootstrap.html', '_blank'); return false;">HELP</button>
+                  <h5 align="left"><u>CIRCUIT DATA :</u></h5>
+                  <textarea id="dataArea" style="width:450px; height:250px;"></textarea><br><br>
+                 <align="center"><button type="button" id="getDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="left">GET CIRCUIT DATA</button>
+                <button type="button" id="setDataBtn" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">SET DATA</button><br>
+                <table>
+                  <tr>
+                      <td>Filename to Save As:</td>
+                      <td><input id="inputFileNameToSaveAs"></input></td>
+                      <td><button onclick="saveTextAsFile()" class="buttonclass">Save Text to File</button></td>
+                  </tr>
+                  <tr>
+                      <td>Select a File to Load:</td>
+                      <td><input type="file" id="fileToLoad"></td>
+                      <!--td><button onclick="loadFileAsText()" class="buttonclass">Load Selected File</button><td-->
+                  </tr>
+                </table><br>
+                  <button type="button" id="clearData" class="buttonclass" onclick="document.getElementById('dataArea').value = ''" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;" align="center">CLEAR CIRCUIT DATA BOX </button>
+                </div> 
+        </div>
+      </nav>
+
+      <article> 
+        <fieldset class="scheduler-border" >
+                <legend class="scheduler-border" style="font-size: 15px"><b>INPUTS</b></legend>
+                <div style="margin-top: 40px;" align="center">
+                   
+                   <button type="button" id="load2bit" class="buttonclass" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">LOAD 2-BIT COMPARATOR</button>
+                   <br><br>
+                  </div>
+        </fieldset>
+      </article>
+  </div>
+     
+       
+  <div class="row col-sm-10" style="background-color: white; margin-top: 0px; border: solid 2px; margin-left: -5px; width: 100%;height: 15%">
+        <p style="padding-top: 0px; text-align: center; font-size: 18px;" align="right">
+          <b>Develop the Circuit Diagram</b>
+        </p>
+        <div class="col-lg-9 simcir_outer_div" align="center">
+          <div class="simcir" id="mySimcir">
+        
+          </div>
+        </div>
+  </div>
+    <script type="text/javascript">
+        var input = document.getElementById("fileToLoad");
+        var text = document.querySelector("textarea");
+        var name;
+
+        input.onchange = function(e) {
+          var reader = new FileReader();
+          reader.onload = function(event) {
+            text.value = event.target.result;
+            button.disabled = false;
+          }
+          name = e.target.files[0].name;
+          reader.readAsText(new Blob([e.target.files[0]], {
+            "type": "application/json"
+          }));
+        }
+    </script>
+      <!--JS link-->
+        <script src="main.js" type="text/javascript"></script>
+      <!--Libraries link-->
+        <script type="text/javascript" src="../libraries/simcir.js"></script>
+        <link rel="stylesheet" type="text/css" href="../libraries/simcir.css" >
+        <script type="text/javascript" src="../libraries/simcir-basicset.js"></script>
+        <link rel="stylesheet" type="text/css" href="../libraries/simcir-basicset.css">
+        <script type="text/javascript" src="../libraries/simcir-library.js"></script>
+
+  </body>
+</html>
