@@ -38,7 +38,7 @@ Technologies :
 2.  CSS
 3.  Javascript
 
-Libraries :
+Libraries :   GoJs
 
 Development Environment
 -----------------
