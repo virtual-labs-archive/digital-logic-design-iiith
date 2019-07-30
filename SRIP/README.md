@@ -11,7 +11,7 @@ Project
 
 **Domain Name : **Computer Science & Engineering
 
-**Lab Name : **Design logic Circuit** **
+**Lab Name : **Design logic Circuit** 
 
 **Experiment Name : **Decoder with seven segment display
 
