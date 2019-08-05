@@ -23,3 +23,8 @@ app.get('/kannada', function (req, res) {
     app.use(express.static(__dirname));
     app.use(express.static(__dirname));
 })
+app.get('/telugu', function (req, res) {
+    res.render(__dirname + "/telugu");
+    app.use(express.static(__dirname));
+    app.use(express.static(__dirname));
+})
