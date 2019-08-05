@@ -17,3 +17,9 @@ app.get('/tamil', function (req, res) {
     app.use(express.static(__dirname));
     app.use(express.static(__dirname));
 })
+
+app.get('/kannada', function (req, res) {
+    res.render(__dirname + "/kannada");
+    app.use(express.static(__dirname));
+    app.use(express.static(__dirname));
+})
