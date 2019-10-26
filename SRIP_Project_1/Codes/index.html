@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="../libraries/simcir/simcir.css" />
+	<link rel="stylesheet" type="text/css" href="../libraries/simcir/simcir-basicset.css" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<style type="text/css">
+		#content{
+			text-align: center;
+		}
+		.container{
+			max-width: 90%;
+		}
+		.unclickable{
+			pointer-events: none;
+		}
+	</style>
+	<title>DLD Counter</title>
+</head>
+<body class="bg-light">
+	<div class="modal fade bd-example-modal-lg" id="instructions" tabindex="-1" role="dialog" aria-labelledby="instructionsTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="instructionsTitle">INSTRUCTIONS</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="lead">This lab allows you to design and simulate any digital combinational or sequential circuit. Following instruction help you build the counter circuit. A Javascript-based basic tool and simulation enigne is at the hear of this laboratory. You can create many circuits and test them with fixed or time-varying input signals. You can also see the outputs as values or time-varying waveforms. </p>
+					<h6>Counter</h6>
+					<img src="images/counter.png" class="img-fluid"><br><br>
+					<h6>Ring Counter</h6>
+					<img src="images/ringcounter.png" class="img-fluid">
+					<hr>
+					<p>The tool consist of mainly two pannels: Left Pannel, Right Pannel.</p>
+					<ul>
+						<li>
+							<p><strong>Left Pannel:</strong>You can change the settings from the left pane.</p>
+							<ol>
+								<li>
+									<p><strong>Frequency Input:</strong>The frequency input changes the frequency of the oscillator named as OSC on the simulation panel</p>
+								</li>
+								<li>
+									<p><strong>Modules:</strong>The checkboxes are to show you the expected output of your circuit. An abstracted version of the circuit will appear in the simulation. Please try to replicate the output.</p>
+									<div class="alert alert-info" role="alert">
+										Please supply DC 1 to the middle input of the ring module counter for it to work properly.
+									</div>
+								</li>
+								<li>
+									<p><strong>Save Settings:</strong>Click on the button to save your settings. You need to do it, in order for the settings to apply.</p>
+								</li>
+								<li>
+									<p><strong>Clear Settings:</strong>Click on the button to discard all your settings.</p>
+									<div class="alert alert-danger" role="alert">
+										<strong>WARNING</strong>: When you click on save settings or clear settings, your circuit gets cleared automatically, so please choose your settings before hand.	
+									</div>
+								</li>
+
+								<li>
+									<p>If you get stuck, and are not able to make the counter, the load counter and load ring counter buttons will help you out.</p>
+								</li>
+								<li>
+									<p>Click the "Clear Workspace" button to clear the simulation.</p>
+								</li>
+							</ol>
+						</li>
+						<li>
+							<p><strong>Right Pannel:</strong> The right pane contains the workspace where you will simulate your experiment.</p>
+							<ol>
+								<li>
+									<p>The toolbox on the left contains the pre-made logic circuits you will require to build a counter.</p>
+									<div class="alert alert-info" role="alert">
+										In case you want to build a Flip-Flop, please open the Flip-Flop experiment page.
+									</div>
+								</li>
+								<li>
+									<p>Drag them on the right, to place them on your breadboard.</p>
+								</li>
+								<li>
+									<p>The left part of the abstracted circuit contains the inputs, and the right side the outputs.</p>
+								</li>
+								<li>
+									<p>Click on the circle of the input or output to another input/output to make a connection.</p>
+									<div class="alert alert-info" role="alert">
+										You can connect only one line to an input, but an output can have multiple lines.
+									</div>
+								</li>
+								<li>
+									<p>The "DC" icon outputs digital 1 at all times, connnect it to:</p>
+									<ul>
+										<li>
+											<p>-push on: to simulate the 1 only when you're pressing on the button</p>
+										</li>
+										<li>
+											<p>-push off: to simulate 0 when you're pushing the button</p>
+										</li>
+										<li>
+											<p>-toggle: to toggle the output between 1 and 0.</p>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<p>The OSC supplies 1 and 0 in a specific frequency which you set in the settings pane.</p>
+								</li>
+								<li>
+									<p>The joint icon is just a connection, to make your connections look neater, as the lines from an output to an input are straight.</p>
+								</li>
+								<li>
+									<p>The DSO displays the output in a graph format for easy verification. It has 8 inputs, you can choose to use any number of them. If you want more, just drag drop more of them.</p>
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content" class="container ">
+		<h1>Counters</h1>
+		<h3>Simulate a counter and a ring counter(<a href="help.html" data-toggle="modal" data-target="#instructions">Click Here to see the instructions</a>)</h3>
+		<hr>
+		<div class="row">
+			<div class="col-lg-3 border border-secondary" style="height: 800px">
+				<div class="mx-auto">
+					<h2>Settings</h2>
+					<form>
+						<div class="form-group">
+							<label for="freq">Frequency of Oscillator</label>
+							<input type="number" class="form-control" id="freq" aria-describedby="range" placeholder="Frequency" min="1", max="10">
+							<small id="range" class="form-text text-muted">Enter frequence between 1 and 10</small>
+						</div>
+						<h6>Avaliable Modules for this experiment</h6>
+						<div class="custom-control custom-switch">
+							<input type="checkbox" class="custom-control-input" id="counter">
+							<label class="custom-control-label" for="counter">8 bit counter</label>
+						</div>
+						<div class="custom-control custom-switch">
+							<input type="checkbox" class="custom-control-input" id="ringcounter">
+							<label class="custom-control-label" for="ringcounter">8 bit ring counter</label>
+						</div><br>
+						<button type="submit" class="btn  btn-outline-success">Save Settings</button><br><br>
+						<button type="submit" class="btn  btn-outline-danger" id="clear_settings">Clear Settings</button>
+					</form>
+					<hr>
+					<div class="mx-auto">
+						<button type="submit" class="btn  btn-outline-info" id="load_counter">Load Counter</button><br><br>
+						<button type="submit" class="btn  btn-outline-info" id="load_rcounter">Load Ring Counter</button><br><br>
+						<button type="submit" class="btn  btn-outline-info" id="clear_workspace">Clear Workspace</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 simcir_outer_div">
+				<div class="simcir">
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="js/main.js">s</script>
+		<script type="text/javascript" src="../libraries/simcir/simcir.js"></script>
+		<script type="text/javascript" src="../libraries/simcir/simcir-basicset.js"></script>
+		<script type="text/javascript" src="../libraries/simcir/simcir-library.js"></script>
+		<script type="text/javascript" src="../libraries/simcir/simcir-dso.js"></script>
+		<script type="text/javascript" src="js/end.js"></script>
+	</div>
+</body>
+</html>
