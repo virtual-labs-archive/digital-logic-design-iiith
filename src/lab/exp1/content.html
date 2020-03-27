@@ -1,34 +1,31 @@
 <!-- This file needs to be edited by the lab developer to suit
-the requirements of their lab in particular.-->
-
-<!-- Add class="default" to include any element as it is
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
 specified in default.html. 
 Do not include class="default" to the elements that you want to
-edit -->
-
-<!DOCTYPE html>
-
-<html>
-
-<head>
+edit --><!DOCTYPE html>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
 
 </head>
-<body onload="setsize()">
+<body onload="setsize()"><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
 
 <div id="experiment"> <!-- The Experiment Document Container-->
 
   <!-- The lab Header contains the logo and the name of the lab,
   usually displayed on the top of the page-->
 
-  <header id="experiment-header" class="default">
+  <header class="default" id="experiment-header">
   
-    <div id="experiment-header-logo" class="logo">
+    <div class="logo" id="experiment-header-logo">
       <!-- Enclose the logo image of your lab or write it in 
       text-->
-      <img src="../images/logo.jpg" />
+      <img src="../images/logo.jpg"/>
     </div>
 
-    <div id="experiment-header-heading" class="heading">
+    <div class="heading" id="experiment-header-heading">
       <!-- Write the name of your lab and link it to the home 
       page of your lab (h1 tag is preferred while writing your 
       lab name)-->
@@ -49,10 +46,10 @@ edit -->
     <!-- The lab article has an header, optional navigational 
     menu, number of sections, an optional sidebar and a closing 
     footer-->
-     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     <div class="breadcrumb" id="experiment-article-breadcrumb">
      </div>
     
-      <header id="experiment-article-heading" class="heading">
+      <header class="heading" id="experiment-article-heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
         Adder Circuit
@@ -62,7 +59,7 @@ edit -->
 
       <!-- Navigation menu is useful to organize the view of 
       multiple sections inside the article-->
-      <nav id="experiment-article-navigation" class="default">
+      <nav class="default" id="experiment-article-navigation">
         <ul id="experiment-article-navigation-menu">
           <!-- The menu can be dynamically generated to contain 
           the headings of your sections or instead write the 
@@ -78,31 +75,28 @@ edit -->
         <!-- First section of the article-->
         <section id="experiment-article-section-1">
           
-          <div id="experiment-article-section-1-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-1-icon">
 	    <!-- Enclose the icon image of your lab -->
-	    <img src="../images/introduction.jpg" />
+	    <img src="../images/introduction.jpg"/>
 	  </div>	
           
           <!-- The heading for the section can be enclosed in a 
           div tag. -->
-          <div id="experiment-article-section-1-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-1-heading">
             Introduction
           </div>
 
           <!-- Write the section content inside a paragraph 
           element, You can also include images with <img> tag -->
-          <div id="experiment-article-section-1-content" 
-          class="content">	
-         <P>This module explains how to build adder circuits. An <B>adder</B>
-	or a <B>summer</B> is a digital circuit that performs addition of
+          <div class="content" id="experiment-article-section-1-content">	
+         <p>This module explains how to build adder circuits. An <b>adder</b>
+	or a <b>summer</b> is a digital circuit that performs addition of
 	binary numbers. Adders are used not only in the arithmetic logic
 	units, but also in other parts of the processor, to calculate
 	addresses, table indices, etc. Adder is a simple circuit, but a
-	fundamental one.</P>
-	<P><IMG SRC="../images/adder1.svg.png" NAME="graphics1" ALIGN=BOTTOM WIDTH=500 HEIGHT=430 BORDER=0>
-		</P>
+	fundamental one.</p>
+	<p><img align="BOTTOM" border="0" height="430" name="graphics1" src="../images/adder1.svg.png" width="500"/>
+		</p>
         </div>
 
 
@@ -111,27 +105,24 @@ edit -->
       <!-- Second section of the article-->
       <section id="experiment-article-section-2">
         
-        <div id="experiment-article-section-2-icon" 
-        class="icon">
+        <div class="icon" id="experiment-article-section-2-icon">
 	  <!-- Enclose the icon image of your lab. -->
-	  <img src="../images/theory.jpg" />
+	  <img src="../images/theory.jpg"/>
 	</div>
 				
         <!-- The heading for the section can be enclosed in a 
         div tag. -->
-        <div id="experiment-article-section-2-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-2-heading">
           Theory
         </div>
 
 
         <!-- Write the section content inside a paragraph 
         element, we can also include images with <img> tag -->
-        <div id="experiment-article-section-2-content" 
-        class="content">
-<H2><B>Half Adder </B>
-	</H2>
-	<P><IMG SRC="../images/Half_Adder.svg.png" NAME="graphics2" ALIGN=LEFT HSPACE=10 ACE=10 WIDTH=200 HEIGHT=111 BORDER=0 />A
+        <div class="content" id="experiment-article-section-2-content">
+<h2><b>Half Adder </b>
+	</h2>
+	<p><img ace="10" align="LEFT" border="0" height="111" hspace="10" name="graphics2" src="../images/Half_Adder.svg.png" width="200"/>A
 	half adder adds two 1-bit binary numbers A and B to generate a 1-bit
 	SUM (S) and a 1-bit CARRY (C) as output. The carry is theoretically
 	carried on to the next bit position. The final sum numerically
@@ -139,282 +130,282 @@ edit -->
 	incorporates an XOR gate for S and an AND gate for C. Half adders
 	cannot be composed to produce larger bit adders as they lack a
 	carry-in input. The outputs S and C can be expressed as logical
-	functions of input variables A,B as follows:</P>
-	<P STYLE="margin-left: 2cm"><BR><B>S = 1</B> either if (<B>A = 0</B>
-	and <B>B = 1</B>) or if (<B>A = 1</B> and <B>B = 0</B>) = <B>A </B><FONT SIZE=2><B>XOR</B></FONT><B>
-	B</B><BR><B>C= 1</B> only if (<B>A = 1</B> and <B>B = 1</B>) = <B>A
-	</B><FONT SIZE=2><B>AND</B></FONT><B> B</B></P>
-	<H3>Truth Table 
-	</H3>
-	<CENTER>
-		<TABLE WIDTH=159 BORDER=3 CELLPADDING=2 CELLSPACING=3>
-			<COL WIDTH=14>
-			<COL WIDTH=13>
-			<COL WIDTH=59>
-			<COL WIDTH=37>
-			<TR>
-				<TD WIDTH=14>
-					<P>A</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>B</P>
-				</TD>
-				<TD WIDTH=59>
-					<P>CARRY</P>
-				</TD>
-				<TD WIDTH=37>
-					<P>SUM</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=59>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=37>
-					<P>0</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=59>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=37>
-					<P>1</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=59>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=37>
-					<P>1</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=59>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=37>
-					<P>0</P>
-				</TD>
-			</TR>
-		</TABLE>
-	</CENTER>
-	<H2>Full Adder 
-	</H2>
-	<P><IMG SRC="../images/Full_Adder.svg.png" NAME="graphics3" ALIGN=LEFT HSPACE=10 VSPACE=10 WIDTH=500 HEIGHT=225 BORDER=0 />A
+	functions of input variables A,B as follows:</p>
+	<p style="margin-left: 2cm"><br/><b>S = 1</b> either if (<b>A = 0</b>
+	and <b>B = 1</b>) or if (<b>A = 1</b> and <b>B = 0</b>) = <b>A </b><font size="2"><b>XOR</b></font><b>
+	B</b><br/><b>C= 1</b> only if (<b>A = 1</b> and <b>B = 1</b>) = <b>A
+	</b><font size="2"><b>AND</b></font><b> B</b></p>
+	<h3>Truth Table 
+	</h3>
+	<center>
+		<table border="3" cellpadding="2" cellspacing="3" width="159">
+			<colgroup><col width="14"></col>
+			<col width="13"></col>
+			<col width="59"></col>
+			<col width="37"></col>
+			</colgroup><tbody><tr>
+				<td width="14">
+					<p>A</p>
+				</td>
+				<td width="13">
+					<p>B</p>
+				</td>
+				<td width="59">
+					<p>CARRY</p>
+				</td>
+				<td width="37">
+					<p>SUM</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>0</p>
+				</td>
+				<td width="13">
+					<p>0</p>
+				</td>
+				<td width="59">
+					<p>0</p>
+				</td>
+				<td width="37">
+					<p>0</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>0</p>
+				</td>
+				<td width="13">
+					<p>1</p>
+				</td>
+				<td width="59">
+					<p>0</p>
+				</td>
+				<td width="37">
+					<p>1</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>1</p>
+				</td>
+				<td width="13">
+					<p>0</p>
+				</td>
+				<td width="59">
+					<p>0</p>
+				</td>
+				<td width="37">
+					<p>1</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>1</p>
+				</td>
+				<td width="13">
+					<p>1</p>
+				</td>
+				<td width="59">
+					<p>1</p>
+				</td>
+				<td width="37">
+					<p>0</p>
+				</td>
+			</tr>
+		</tbody></table>
+	</center>
+	<h2>Full Adder 
+	</h2>
+	<p><img align="LEFT" border="0" height="225" hspace="10" name="graphics3" src="../images/Full_Adder.svg.png" vspace="10" width="500"/>A
 	full adder adds two 1-bit binary numbers along with a carry brought
 	in and produces a sum and carry out as ouputs.1-bit full adder
 	adds three 1-bit numbers, often written as A, B, and Cin, where A
-	and B are the operands, and Cin is a bit carried in from a “past”
+	and B are the operands, and Cin is a bit carried in from a âpastâ
 	addition.Circuit produces a 2-bit output sum typically
 	represented by the signals Cout and S, where the sum numerically
 	equals 2Cout + S . A full adder can be implemented in many different
 	ways using custom transistor-level circuits or using other gates.
-	</P>
-	<P STYLE="margin-left: 2cm"><B>S = A </B><FONT SIZE=2><B>XOR</B></FONT><B>
-	B</B> <FONT SIZE=2><B>XOR</B></FONT> <B>Cin<BR>Cout = (A </B><FONT SIZE=2><B>AND</B></FONT><B>
-	B) </B><FONT SIZE=2><B>OR</B></FONT><B> (Cin </B><FONT SIZE=2><B>AND</B></FONT><B>
-	(A </B><FONT SIZE=2><B>XOR</B></FONT><B> B))</B></P>
-	<H3>Truth Table</H3>
-	<CENTER>
-		<TABLE WIDTH=139 BORDER=3 CELLPADDING=2 CELLSPACING=3>
-			<COL WIDTH=14>
-			<COL WIDTH=13>
-			<COL WIDTH=25>
-			<COL WIDTH=33>
-			<COL WIDTH=11>
-			<TR>
-				<TD WIDTH=14>
-					<P>A</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>B</P>
-				</TD>
-				<TD WIDTH=25>
-					<P>Cin</P>
-				</TD>
-				<TD WIDTH=33>
-					<P>Cout</P>
-				</TD>
-				<TD WIDTH=11>
-					<P>S</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=25>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=33>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=11>
-					<P>0</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=25>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=33>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=11>
-					<P>1</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=25>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=33>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=11>
-					<P>1</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=25>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=33>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=11>
-					<P>0</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=25>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=33>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=11>
-					<P>1</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=25>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=33>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=11>
-					<P>0</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>0</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=25>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=33>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=11>
-					<P>0</P>
-				</TD>
-			</TR>
-			<TR>
-				<TD WIDTH=14>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=13>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=25>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=33>
-					<P>1</P>
-				</TD>
-				<TD WIDTH=11>
-					<P>1</P>
-				</TD>
-			</TR>
-		</TABLE>
-	</CENTER>
-	<H2>Ripple Carry Adder 
-	</H2>
-	<P><IMG SRC="../images/ripple_carry_adder.svg.png" NAME="graphics4" ALIGN=LEFT HSPACE=10 VSPACE=10 WIDTH=500 HEIGHT=200 BORDER=0 />Multiple
+	</p>
+	<p style="margin-left: 2cm"><b>S = A </b><font size="2"><b>XOR</b></font><b>
+	B</b> <font size="2"><b>XOR</b></font> <b>Cin<br/>Cout = (A </b><font size="2"><b>AND</b></font><b>
+	B) </b><font size="2"><b>OR</b></font><b> (Cin </b><font size="2"><b>AND</b></font><b>
+	(A </b><font size="2"><b>XOR</b></font><b> B))</b></p>
+	<h3>Truth Table</h3>
+	<center>
+		<table border="3" cellpadding="2" cellspacing="3" width="139">
+			<colgroup><col width="14"></col>
+			<col width="13"></col>
+			<col width="25"></col>
+			<col width="33"></col>
+			<col width="11"></col>
+			</colgroup><tbody><tr>
+				<td width="14">
+					<p>A</p>
+				</td>
+				<td width="13">
+					<p>B</p>
+				</td>
+				<td width="25">
+					<p>Cin</p>
+				</td>
+				<td width="33">
+					<p>Cout</p>
+				</td>
+				<td width="11">
+					<p>S</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>0</p>
+				</td>
+				<td width="13">
+					<p>0</p>
+				</td>
+				<td width="25">
+					<p>0</p>
+				</td>
+				<td width="33">
+					<p>0</p>
+				</td>
+				<td width="11">
+					<p>0</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>1</p>
+				</td>
+				<td width="13">
+					<p>0</p>
+				</td>
+				<td width="25">
+					<p>0</p>
+				</td>
+				<td width="33">
+					<p>0</p>
+				</td>
+				<td width="11">
+					<p>1</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>0</p>
+				</td>
+				<td width="13">
+					<p>1</p>
+				</td>
+				<td width="25">
+					<p>0</p>
+				</td>
+				<td width="33">
+					<p>0</p>
+				</td>
+				<td width="11">
+					<p>1</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>1</p>
+				</td>
+				<td width="13">
+					<p>1</p>
+				</td>
+				<td width="25">
+					<p>0</p>
+				</td>
+				<td width="33">
+					<p>1</p>
+				</td>
+				<td width="11">
+					<p>0</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>0</p>
+				</td>
+				<td width="13">
+					<p>0</p>
+				</td>
+				<td width="25">
+					<p>1</p>
+				</td>
+				<td width="33">
+					<p>0</p>
+				</td>
+				<td width="11">
+					<p>1</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>1</p>
+				</td>
+				<td width="13">
+					<p>0</p>
+				</td>
+				<td width="25">
+					<p>1</p>
+				</td>
+				<td width="33">
+					<p>1</p>
+				</td>
+				<td width="11">
+					<p>0</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>0</p>
+				</td>
+				<td width="13">
+					<p>1</p>
+				</td>
+				<td width="25">
+					<p>1</p>
+				</td>
+				<td width="33">
+					<p>1</p>
+				</td>
+				<td width="11">
+					<p>0</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="14">
+					<p>1</p>
+				</td>
+				<td width="13">
+					<p>1</p>
+				</td>
+				<td width="25">
+					<p>1</p>
+				</td>
+				<td width="33">
+					<p>1</p>
+				</td>
+				<td width="11">
+					<p>1</p>
+				</td>
+			</tr>
+		</tbody></table>
+	</center>
+	<h2>Ripple Carry Adder 
+	</h2>
+	<p><img align="LEFT" border="0" height="200" hspace="10" name="graphics4" src="../images/ripple_carry_adder.svg.png" vspace="10" width="500"/>Multiple
 	full adders can be used to create adders of greater bit lengths.
 	Each full adder uses the Cout of the previous adder as its Cin. This
-	kind of adder is a <I>ripple carry adder</I>, since the carry bits
-	&quot;ripple&quot; through the full adder stages. Note that the
+	kind of adder is a <i>ripple carry adder</i>, since the carry bits
+	"ripple" through the full adder stages. Note that the
 	first (and only the first) full adder may be replaced by a half
-	adder.</P>
-	<P><BR><BR>
-	</P>
-	<P><FONT SIZE=2><I><B>Source: Wikipedia</B></I></FONT></P>
+	adder.</p>
+	<p><br/><br/>
+	</p>
+	<p><font size="2"><i><b>Source: Wikipedia</b></i></font></p>
 
         </div>
       </section>
@@ -422,19 +413,16 @@ edit -->
 
       <section id="experiment-article-section-3">
         
-        <div id="experiment-article-section-3-icon" 
-        class="icon">
+        <div class="icon" id="experiment-article-section-3-icon">
 	  <!-- Enclose the icon image of your lab. -->
-	  <img src="../images/objective.jpg" />
+	  <img src="../images/objective.jpg"/>
 	</div>
      
-        <div id="experiment-article-section-3-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-3-heading">
           Objective
         </div>
 
-        <div id="experiment-article-section-3-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-3-content">
          <ol>
 <li> The objective of this experiment is to design and analyze different adder circuits. You should make half adder, full adders, and multi-bit adders. </li>
 <li> See the theory page or any standard textbook like the text book by Morris Mano to know about these circuits. </li>
@@ -447,19 +435,16 @@ edit -->
 
       <section id="experiment-article-section-4">
 
-        <div id="experiment-article-section-4-icon" 
-        class="icon">
+        <div class="icon" id="experiment-article-section-4-icon">
 	  <!-- Enclose the icon image of your lab.-->
-	  <img src="../images/simulation.jpg" />
+	  <img src="../images/simulation.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-4-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-4-heading">
           Experiment
         </div>
 
-        <div id="experiment-article-section-4-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-4-content">
 	
 	<p><a href="../documents/java-and-icedtea-plugin.pdf">Install prerequisites to run the simulation</a></p>
 	
@@ -479,7 +464,7 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
 </script>
 	      <div id="applet_embed"></div>-->
-	        <a href="./exp1.html" class="qtlink" onclick="window.open('./exp1.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
+	        <a class="qtlink" href="./exp1.html" onclick="window.open('./exp1.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;">
 
 	For performing experiment Click here
 	</a>
@@ -490,87 +475,84 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
       <section id="experiment-article-section-5">
    
-        <div id="experiment-article-section-5-icon" 
-        class="icon">
+        <div class="icon" id="experiment-article-section-5-icon">
 	  <!-- Enclose the icon image of your lab.-->
-	  <img src="../images/manual.jpg" />
+	  <img src="../images/manual.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-5-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-5-heading">
           Manual
         </div>
 
-        <div id="experiment-article-section-5-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-5-content">
          
-		<H2>Digital Logic Design</H2>
-	<P><BR>This lab allows you to design and simulate any digital
+		<h2>Digital Logic Design</h2>
+	<p><br/>This lab allows you to design and simulate any digital
 	combinational or sequential circuit. Following instruction help you
 	build the circuit. A Java-based basic tool and simulation enigne is
 	at the hear of this laboratory. You can create many circuits and
 	test them with fixed or time-varying input signals. You can also see
 	the outputs as values or time-varying waveforms. 
-	</P>
-	<P>The tool consist of mainly four pannels: Left Pannel, Mid Pannel,
+	</p>
+	<p>The tool consist of mainly four pannels: Left Pannel, Mid Pannel,
 	Right Pannel, and Top Pannel. 
-	</P>
-	<OL>
-		<LI><P STYLE="margin-bottom: 0cm"><B>Left Pannel</B> 
-		</P>
-		<OL>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Gate Buttons: </B>These
-			buttons are used to draw basic gates like <FONT SIZE=2><B>AND, OR,
-			XOR, NOT, NOR, NAND,XNOR </B></FONT><FONT SIZE=3><SPAN STYLE="font-weight: normal">and</SPAN></FONT><FONT SIZE=2><B>CONNECTOR
-			</B></FONT>. Click on these by drop down menu then select the proper number of inputs . Once You have finalized the gate & number of inputs then click on SELECT Button and place the gate where you want
+	</p>
+	<ol>
+		<li><p style="margin-bottom: 0cm"><b>Left Pannel</b> 
+		</p>
+		<ol>
+			<li><p style="margin-bottom: 0cm"><b>Gate Buttons: </b>These
+			buttons are used to draw basic gates like <font size="2"><b>AND, OR,
+			XOR, NOT, NOR, NAND,XNOR </b></font><font size="3"><span style="font-weight: normal">and</span></font><font size="2"><b>CONNECTOR
+			</b></font>. Click on these by drop down menu then select the proper number of inputs . Once You have finalized the gate &amp; number of inputs then click on SELECT Button and place the gate where you want
 			to in the  mid pannel drawing area. 
-			</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Probe:</B> Output at each
+			</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Probe:</b> Output at each
 			terminal is shown by default against it. Iif you want explicitly
 			to watch another node, you can probe it using a feature from the
-			left panel.</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>None: </B>It is used to get
+			left panel.</p>
+			</li><li><p style="margin-bottom: 0cm"><b>None: </b>It is used to get
 			default cursor option back, so that you can do basic operation
-			like drag and drop.</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Delete Element:</B> This is
-			used for explicitly deleting an element. Click on <SPAN STYLE="text-decoration: none">the</SPAN>
-			element after selecting delete mode.</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Connect/Disconnect: </B>This
+			like drag and drop.</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Delete Element:</b> This is
+			used for explicitly deleting an element. Click on <span style="text-decoration: none">the</span>
+			element after selecting delete mode.</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Connect/Disconnect: </b>This
 			mode allows establishing and removing connection between various
 			points. Connection can be established only from output to input.
 			You have to first click to the output node then to the input node
 			(consisting of red square box). For disconnection, you can start
 			by clicking either the input or the output node. 
-			</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Naming: </B>This is used to
+			</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Naming: </b>This is used to
 			give a user-selected name to an input or output node. Click on the
-			node and give the name into the input box that pops up.</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Output:</B> This is used to
+			node and give the name into the input box that pops up.</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Output:</b> This is used to
 			define an output node. See the explanation of import button to
-			learn why this may be necessary.</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Time Pulse:</B> Enter the
+			learn why this may be necessary.</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Time Pulse:</b> Enter the
 			time pulse pattern separated by commas. For example: 0,10,10,10,10
 			defines a clock that is 0 for 10 units and 1 for 10 units. Press
 			enter or click on the new timepulse to create it. It will be
-			available as input in list box.</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Binary One And Zero: </B>These
-			can be used to give fixed values to terminals</P>
-			<P STYLE="margin-bottom: 0cm"></P>
-		</OL>
-		<LI><P STYLE="margin-bottom: 0cm"><B>Top Pannel</B> 
-		</P>
-		<OL>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Clear: </B>Use this to clear
-			every element on the circuit. Caution: <U><B>Everything on the
-			design panel will be lost;  there is no undo</B></U>!</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Save: </B>Use this to save
+			available as input in list box.</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Binary One And Zero: </b>These
+			can be used to give fixed values to terminals</p>
+			<p style="margin-bottom: 0cm"></p>
+		</li></ol>
+		</li><li><p style="margin-bottom: 0cm"><b>Top Pannel</b> 
+		</p>
+		<ol>
+			<li><p style="margin-bottom: 0cm"><b>Clear: </b>Use this to clear
+			every element on the circuit. Caution: <u><b>Everything on the
+			design panel will be lost;  there is no undo</b></u>!</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Save: </b>Use this to save
 			the designed circuit as a file on your machine. This file can be
-			loaded and imported later.</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Load:</B> A circuit saved on
+			loaded and imported later.</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Load:</b> A circuit saved on
 			your machine can be loaded onto the mid panel to as a fresh
 			circuit that can be further edited. 
-			</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Import:</B> This is an
+			</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Import:</b> This is an
 			important feature that lets you construct building blocks. A
 			circuit from your machine is imported to the mid panel, but will
 			appear as a block or a box with input and output terminals. The
@@ -579,8 +561,8 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 			will come in the same order from top to bottom as created. This
 			allows one to build on circuits saved as blocks. For instance, an
 			full adder you design using gates can be saved as a block and used
-			in later circuits as an adder-block.</P>
-			<LI><P STYLE="margin-bottom: 0cm"><B>Simulate: </B>Use this to
+			in later circuits as an adder-block.</p>
+			</li><li><p style="margin-bottom: 0cm"><b>Simulate: </b>Use this to
 			simulate or compute the intermediate and final outputs of the
 			whole circuit, if all the terminal inputs are present. It also
 			computes the gate delays, which is diplayed when the mouse hovers
@@ -588,22 +570,22 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 			fail or give ambiguous result if the circuit does not stablizes
 			with time. This can happen due to improper feedback circuitry. The
 			underlying engine is not a full fledged circuit simulator and can
-			get stuck at constructions involving certain feedback.</P>
-			<P STYLE="margin-bottom: 0cm"></P>
-		</OL>
-		<LI><P STYLE="margin-bottom: 0cm"><B>Mid Pannel:</B> This is the
+			get stuck at constructions involving certain feedback.</p>
+			<p style="margin-bottom: 0cm"></p>
+		</li></ol>
+		</li><li><p style="margin-bottom: 0cm"><b>Mid Pannel:</b> This is the
 		drawing area used to build the circuit. You can move the elements
-		by clicking and dragging.</P>
-		<P STYLE="margin-bottom: 0cm"></P>
-		<LI><P><B>Right Pannel:</B> This area shows the time-varying
+		by clicking and dragging.</p>
+		<p style="margin-bottom: 0cm"></p>
+		</li><li><p><b>Right Pannel:</b> This area shows the time-varying
 		inputs, outputs, and probed points. Name or index associated with
-		points are displayed. Indexes are given top to bottom.</P>
-	</OL>
-	<P STYLE="margin-bottom: 0cm"><B>Note:</B> Sample circuit for each
+		points are displayed. Indexes are given top to bottom.</p>
+	</li></ol>
+	<p style="margin-bottom: 0cm"><b>Note:</b> Sample circuit for each
 	experiment will be given as default. You can try them with the help
-	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</P>
+	of load_it or impor_itt button.It is advised try to built circuit of your own before trying the default circuit.</p>
 
-</ol>
+
 		
 	
 
@@ -613,73 +595,67 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 
         <section id="experiment-article-section-6">
       
-          <div id="experiment-article-section-6-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-6-icon">
 	    <!-- Enclose the icon image of your lab.-->
-	    <img src="../images/quizzes.jpg" />
+	    <img src="../images/quizzes.jpg"/>
 	  </div>
 
-          <div id="experiment-article-section-6-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-6-heading">
             Quiz
           </div>
 
-          <div id="experiment-article-section-6-content" 
-          class="content">
-          <OL>
-		<LI><P><STRONG><SPAN STYLE="font-weight: normal">Design the full
+          <div class="content" id="experiment-article-section-6-content">
+          <ol>
+		<li><p><strong><span style="font-weight: normal">Design the full
 		adder circuit as given in the theory section. Save this full adder
 		circuit so that it can later be imported as a black box, which
 		takes 3 inputs (A, B, and C) and produces 2 outputs (Sum and Carry)
-		</SPAN></STRONG>
-		</P>
-		<LI><P><STRONG><SPAN STYLE="font-weight: normal">Import Full Adder
+		</span></strong>
+		</p>
+		</li><li><p><strong><span style="font-weight: normal">Import Full Adder
 		circuits designed in 1st part and construct a 4 BIT binary adder
 		using 4 full adders. Given two 4 bit binary numbers a3a2a1a0 and
 		b3b2b1b0, the circuit should output s3s2s1s0 and c-out which is the
-		final carry. For circuit diagram, refer to the theory section</SPAN></STRONG></P>
-		<LI><P><STRONG><SPAN STYLE="font-weight: normal">Design a 3 bit
+		final carry. For circuit diagram, refer to the theory section</span></strong></p>
+		</li><li><p><strong><span style="font-weight: normal">Design a 3 bit
 		full subtractor using EX-OR, AND, OR and NOT gates. Given X, Y and
 		Z, the circuit should output D (difference) and B (Borrow). D = X
-		(ex-or) Y (ex-or) Z and B = X'.Y + Y.Z + X'.Z</SPAN></STRONG></P>
-		<LI><P><STRONG><SPAN STYLE="font-weight: normal">Can the Final OR
+		(ex-or) Y (ex-or) Z and B = X'.Y + Y.Z + X'.Z</span></strong></p>
+		</li><li><p><strong><span style="font-weight: normal">Can the Final OR
 		gate in the Full Adder circuit (given in the theory section) be
-		replaced by an EX-OR gate ? If yes why? If no Why not? </SPAN></STRONG>
-		</P>
-	</OL>
-</strong>
+		replaced by an EX-OR gate ? If yes why? If no Why not? </span></strong>
+		</p>
+	</li></ol>
+
           </div>
 
         </section>
 
         <section id="experiment-article-section-7">
 	  
-          <div id="experiment-article-section-7-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-7-icon">
 	    <!-- Enclose the icon image of your lab. -->
-	    <img src="../images/procedure.jpg" />
+	    <img src="../images/procedure.jpg"/>
 	  </div>
 	
-          <div id="experiment-article-section-7-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-7-heading">
 	    Procedure
 	  </div>
 	
-          <div id="experiment-article-section-7-content" 
-          class="content">
-	    <OL>
-		<LI><P>First, make a 1-bit half-adder circuit and test it with
+          <div class="content" id="experiment-article-section-7-content">
+	    <ol>
+		<li><p>First, make a 1-bit half-adder circuit and test it with
 		different inputs. You should also try giving time-varying waves as
 		inputs and anlyze the change in the outputs. Read the manual page
-		carefully to learn how this can be done.</P>
-		<LI><P>Next, design 1-bit full adder circuit and test it out
+		carefully to learn how this can be done.</p>
+		</li><li><p>Next, design 1-bit full adder circuit and test it out
 		similarly. Feel free to try other implementations of full-adder
-		circuits.</P>
-		<LI><P>Save the full adder circuit. You can now load it as a block
-		and connect them to make larger adders.</P>
-		<LI><P STYLE="margin-bottom: 0cm">Make a 4-bit adder by connecting
-		four full adders. Study its output for different kinds of inputs.</P>
-	</OL>
+		circuits.</p>
+		</li><li><p>Save the full adder circuit. You can now load it as a block
+		and connect them to make larger adders.</p>
+		</li><li><p style="margin-bottom: 0cm">Make a 4-bit adder by connecting
+		four full adders. Study its output for different kinds of inputs.</p>
+	</li></ol>
 	  </div>
 	
         </section>
@@ -687,59 +663,56 @@ document.getElementById("applet_embed").innerHTML='<applet code="dldvirtuallabs.
 		
         <section id="experiment-article-section-8">
    
-          <div id="experiment-article-section-8-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-8-icon">
 	    <!-- Enclose the icon image of your lab.-->
-	    <img src="../images/readings.jpg" />
+	    <img src="../images/readings.jpg"/>
 	  </div>
 
-          <div id="experiment-article-section-8-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-8-heading">
             Read
           </div>
 
-          <div id="experiment-article-section-8-content" 
-          class="content">
-            <OL>
-		<LI><P STYLE="margin-bottom: 0cm"><A HREF="http://en.wikipedia.org/wiki/Adder_(electronics)" TARGET="_blank">Adders
-		- Wikipedia </A>
-		</P>
-		<LI><P>Chapter 4: Combinational Logic, &quot;Digital Logic and
-		Computer Design&quot; by Morris Mano 
-		</P>
-	</OL>
+          <div class="content" id="experiment-article-section-8-content">
+            <ol>
+		<li><p style="margin-bottom: 0cm"><a href="http://en.wikipedia.org/wiki/Adder_(electronics)" target="_blank">Adders
+		- Wikipedia </a>
+		</p>
+		</li><li><p>Chapter 4: Combinational Logic, "Digital Logic and
+		Computer Design" by Morris Mano 
+		</p>
+	</li></ol>
           </div>
 
         </section>
 	<section id="lab-article-section-9">
 
-<div id="lab-article-section-9-icon" class="icon">
+<div class="icon" id="lab-article-section-9-icon">
 <!-- Enclose the icon image for the section. -->
-<img src="../images/manual.jpg" />
+<img src="../images/manual.jpg"/>
 </div>
 
 
 <!-- The heading for the section can be enclosed in a
 div tag and shown with a <h2> tag -->
-<div id="lab-article-section-9-heading" class="heading">
+<div class="heading" id="lab-article-section-9-heading">
 Feedback S/W
 </div>
 
 <!-- Write the section content inside a paragraph
 element, You can also include images with <img> tag -->
-<div id="lab-article-section-9-content" class="content">
+<div class="content" id="lab-article-section-9-content">
 <p>
-<ul>
-<li><a href="http://virtual-labs.ac.in/feedback/?lab=cse15" >Feedback<a>.</li>
+</p><ul>
+<li><a href="http://virtual-labs.ac.in/feedback/?lab=cse15">Feedback</a><a>.</a></li><a>
 
-</ul>
-</p>
-</div>
+</a></ul><a>
+<p></p>
+</a></div><a>
 
-</section>
+</a></section><a>
 
 
-      </div>
+      </a></div><a>
 <style type="text/css">
 #lab-footer, .footer {
 float:left;
@@ -751,21 +724,52 @@ width: 90%;
 }
 </style>
 
-<footer id="lab-footer" class="footer">
-<!-- Put the content here-->
-<p style="align:center">
-<br />
-<br />
-<a href="http://virtual-labs.ac.in/nmeict/" >Sponsered by MHRD (NME-ICT)
-<a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank">
-Licensing Terms <a>
-</p>
-</footer>
+</a><footer class="footer" id="footer"><div class="footer-top" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h4>Community Links</h4>
+        <p>
+	  <a href="http://www.sakshat.ac.in/">Sakshat Portal</a>
+	</p>
+        <p>
+	  <a href="http://outreach.vlabs.ac.in/">Outreach Portal</a>
+	</p>
+        <p>
+	  <a href="http://vlab.co.in/faq">FAQ : Virtual Labs</a>
+	</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>Contact Us</h4>
+	<p> <strong>Phone:</strong> General Information : 011-26582050 </p>
+	<p> <strong>Email:</strong> support@vlab.co.in </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+	<h4>Follow Us</h4>
+	<div class="social-links">
+	  <a class="twitter" href="https://twitter.com/TheVirtualLabs" style="background: #55acee;">
+	    <i class="fa fa-twitter"></i>
+	  </a>
+	  <a class="facebook" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/" style="background: #3b5998;">
+	    <i class="fa fa-facebook"></i>
+	  </a>
+	  <a class="google-plus" href="https://www.youtube.com/watch?v=asxRaOgk6a0" style="background: #e52d27;">
+	    <i class="fa fa-youtube"></i>
+	  </a>
+	  <a class="linkedin" href="https://in.linkedin.com/in/virtual-labs-008ba9136" style="background: #2867B2;">
+	    <i class="fa fa-linkedin"></i>
+	  </a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer><a>
 
     <!-- An article can have a sidebar that contain related 
     links and additional material (however it is kept optional 
     at this moment) -->
-    <aside id="lab-article-sidebar" class="default">
+    <aside class="default" id="lab-article-sidebar">
       <!-- put the content that you want to appear in the 
       sidebar -->	
     </aside>
@@ -773,11 +777,11 @@ Licensing Terms <a>
 
     <!-- Article footer can display related content and 
     additional links -->						
-    <footer id="lab-article-footer" class="default">
+    <footer class="default" id="lab-article-footer">
       <!-- Put the content that you want to appear here -->
     </footer>
 
-  </article>
+  </a></article><a>
 
 
   <!-- Links to other labs, about us page can be kept the lab 
@@ -786,8 +790,9 @@ Licensing Terms <a>
 
 
 
-</div>		
+</a></div><a>		
 
-</body>
 
-</html>
+
+
+</a></body></html>
