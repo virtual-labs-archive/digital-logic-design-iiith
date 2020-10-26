@@ -104,7 +104,7 @@
 						<a class="sidebar-a" href="Theory.html?domain=Computer Science&amp;lab=DLD Lab">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px; "> Theory </h3> </a>
 						<a class="sidebar-a" href="Objective.html?domain=Computer Science&amp;lab=DLD Lab">
-							<h3 class="text-h3-darkblue" style="margin-top: 2px; color: #ff6600 !important;"> Objective </h3> </a>
+							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Objective </h3> </a>
 						<a class="sidebar-a" href="Manual.html?domain=Computer Science&amp;lab=DLD Lab">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Manual </h3> </a>
 						<a class="sidebar-a" href="Procedure.html?domain=Computer Science&amp;lab=DLD Lab">
@@ -112,18 +112,23 @@
 						<a class="sidebar-a" href="Experiment.html?domain=Computer Science&amp;lab=DLD Lab">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Experiment </h3> </a>
 						<a class="sidebar-a" href="Quizzes.html?domain=Computer Science&amp;lab=DLD Lab">
-							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Quizzes </h3> </a>
+							<h3 class="text-h3-darkblue" style="margin-top: 2px; color: #ff6600 !important;"> Quizzes </h3> </a>
 						<a class="sidebar-a" href="Feedback.html?domain=Computer Science&amp;lab=DLD Lab">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Feedback </h3> </a>
 					</div>
 					<div class="col-md-10 lab-list-col-10">
 						<!--edit -->
-						<h1 class="text-h1-lightblue">Registers</h1>
-						<div class="content" id="experiment-article-section-3-content">
-							<ol>
-								<li> The objective of this experiment is to understand the working of the Shift Registers. </li>
-								<li> Try to make basic Shift Register and Parallel Shift Register.</li>
-							</ol>
+						<h1 class="text-h1-lightblue">Counters</h1>
+						<div class="content" id="experiment-article-section-6-content">
+							<p> 1) Design a 4 bit Synchronous UP counter using 4 JK flip flops, a common clock pulse, and basic gates.
+								<br/>
+								<br/> 2) Design a synchromous BCD counter which counts from 0000 (0) to 1001 (9) and then back to 0000 (0).You can use 'T' flip flops / Jk flip flops and some basic gates in the design. All the flip flops should have a common clock pulse. There must be a 'Count Enable' input which enables the counter. Save this counter so that it can be used in other designs.
+								<br/>
+								<br/> 3) Import the BCD counter designed in 2nd question. Import 3 such counters. Design a 3-decade decimal counter using these 3 BCD counters. The entire system should be able to count from 000 to 999, where each counter individually generates 1 digit of the number.
+								<br/>
+								<br/> HINT: The 'Count enable' input of 2nd BCD counter will be 1 only when first counter is at 9, and 'Count enable' of 3rd counter will be 1 only when both first and second counters are at 9.
+								<br/>
+								<br/> 4) Import the BCD to seven segment display decoder circuit designed in experiment 3. It takes BCD code as input and displays its decimal equivalent on 7-segment LED display. Import the BCD counter designed in question 2. Connect the output lines of BCD counter to the input lines of 'BCD to seven segment display' circuit. Verify that appropriate number is being displayed by the LED in the count sequence. </p>
 						</div>
 					</div>
 				</div>
