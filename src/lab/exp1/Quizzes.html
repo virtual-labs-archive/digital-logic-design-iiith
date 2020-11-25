@@ -102,7 +102,7 @@
 						<a class="sidebar-a" href="Introduction.html?domain=Computer Science&amp;lab=DLD Lab">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Introduction </h3> </a>
 						<a class="sidebar-a" href="Theory.html?domain=Computer Science&amp;lab=DLD Lab">
-							<h3 class="text-h3-darkblue" style="margin-top: 2px; color: #ff6600 !important;"> Theory </h3> </a>
+							<h3 class="text-h3-darkblue" style="margin-top: 2px; "> Theory </h3> </a>
 						<a class="sidebar-a" href="Objective.html?domain=Computer Science&amp;lab=DLD Lab">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Objective </h3> </a>
 						<a class="sidebar-a" href="Manual.html?domain=Computer Science&amp;lab=DLD Lab">
@@ -112,293 +112,34 @@
 						<a class="sidebar-a" href="Experiment.html?domain=Computer Science&amp;lab=DLD Lab">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Experiment </h3> </a>
 						<a class="sidebar-a" href="Quizzes.html?domain=Computer Science&amp;lab=DLD Lab">
-							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Quizzes </h3> </a>
+							<h3 class="text-h3-darkblue" style="margin-top: 2px; color: #ff6600 !important;"> Quizzes </h3> </a>
 						<a class="sidebar-a" href="Feedback.html?domain=Computer Science&amp;lab=DLD Lab">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;"> Feedback </h3> </a>
 					</div>
 					<div class="col-md-10 lab-list-col-10">
 						<!--edit -->
 						<h1 class="text-h1-lightblue">Adder Circuit</h1>
-						<div class="content" id="experiment-article-section-2-content">
-							<h2><b>Half Adder </b>
-</h2>
-							<p><img ace="10" align="LEFT" border="0" height="111" hspace="10" name="graphics2" src="../images/Half_Adder.svg.png" width="200" />A half adder adds two 1-bit binary numbers A and B to generate a 1-bit SUM (S) and a 1-bit CARRY (C) as output. The carry is theoretically carried on to the next bit position. The final sum numerically equals 2C + S. The simplest half-adder design, shown in the picture, incorporates an XOR gate for S and an AND gate for C. Half adders cannot be composed to produce larger bit adders as they lack a carry-in input. The outputs S and C can be expressed as logical functions of input variables A,B as follows:</p>
-							<p style="margin-left: 2cm">
-								<br/><b>S = 1</b> either if (<b>A = 0</b> and <b>B = 1</b>) or if (<b>A = 1</b> and <b>B = 0</b>) = <b>A </b><font size="2"><b>XOR</b></font><b>
-	B</b>
-								<br/><b>C= 1</b> only if (<b>A = 1</b> and <b>B = 1</b>) = <b>A
-	</b><font size="2"><b>AND</b></font><b> B</b>
-								<br/>
-								<br/>
-							</p>
-							<h3>Truth Table 
-	</h3>
-							<center>
-								<table border="3" cellpadding="2" cellspacing="3" width="159">
-									<colgroup>
-										<col width="14"></col>
-										<col width="13"></col>
-										<col width="59"></col>
-										<col width="37"></col>
-									</colgroup>
-									<tbody>
-										<tr>
-											<td width="14">
-												<p>A</p>
-											</td>
-											<td width="13">
-												<p>B</p>
-											</td>
-											<td width="59">
-												<p>CARRY</p>
-											</td>
-											<td width="37">
-												<p>SUM</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>0</p>
-											</td>
-											<td width="13">
-												<p>0</p>
-											</td>
-											<td width="59">
-												<p>0</p>
-											</td>
-											<td width="37">
-												<p>0</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>0</p>
-											</td>
-											<td width="13">
-												<p>1</p>
-											</td>
-											<td width="59">
-												<p>0</p>
-											</td>
-											<td width="37">
-												<p>1</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>1</p>
-											</td>
-											<td width="13">
-												<p>0</p>
-											</td>
-											<td width="59">
-												<p>0</p>
-											</td>
-											<td width="37">
-												<p>1</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>1</p>
-											</td>
-											<td width="13">
-												<p>1</p>
-											</td>
-											<td width="59">
-												<p>1</p>
-											</td>
-											<td width="37">
-												<p>0</p>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</center>
-							<h2>Full Adder 
-	</h2>
-							<p><img align="LEFT" border="0" height="225" hspace="10" name="graphics3" src="../images/Full_Adder.svg.png" vspace="10" width="500" />A full adder adds two 1-bit binary numbers along with a carry brought in and produces a sum and carry out as ouputs.1-bit full adder adds three 1-bit numbers, often written as A, B, and Cin, where A and B are the operands, and Cin is a bit carried in from a âpastâ addition.Circuit produces a 2-bit output sum typically represented by the signals Cout and S, where the sum numerically equals 2Cout + S . A full adder can be implemented in many different ways using custom transistor-level circuits or using other gates. </p>
-							<p style="margin-left: 2cm"><b>S = A </b><font size="2"><b>XOR</b></font><b>
-	B</b> <font size="2"><b>XOR</b></font> <b>Cin<br/>Cout = (A <br/></b><font size="2"><b>AND</b></font><b>
-	B) </b><font size="2"><b>OR</b></font><b> (Cin </b><font size="2"><b>AND</b></font><b>
-	(A </b><font size="2"><b>XOR</b></font><b> B))</b></p>
-							<h3>Truth Table</h3>
-							<center>
-								<table border="3" cellpadding="2" cellspacing="3" width="139">
-									<colgroup>
-										<col width="14"></col>
-										<col width="13"></col>
-										<col width="25"></col>
-										<col width="33"></col>
-										<col width="11"></col>
-									</colgroup>
-									<tbody>
-										<tr>
-											<td width="14">
-												<p>A</p>
-											</td>
-											<td width="13">
-												<p>B</p>
-											</td>
-											<td width="25">
-												<p>Cin</p>
-											</td>
-											<td width="33">
-												<p>Cout</p>
-											</td>
-											<td width="11">
-												<p>S</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>0</p>
-											</td>
-											<td width="13">
-												<p>0</p>
-											</td>
-											<td width="25">
-												<p>0</p>
-											</td>
-											<td width="33">
-												<p>0</p>
-											</td>
-											<td width="11">
-												<p>0</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>1</p>
-											</td>
-											<td width="13">
-												<p>0</p>
-											</td>
-											<td width="25">
-												<p>0</p>
-											</td>
-											<td width="33">
-												<p>0</p>
-											</td>
-											<td width="11">
-												<p>1</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>0</p>
-											</td>
-											<td width="13">
-												<p>1</p>
-											</td>
-											<td width="25">
-												<p>0</p>
-											</td>
-											<td width="33">
-												<p>0</p>
-											</td>
-											<td width="11">
-												<p>1</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>1</p>
-											</td>
-											<td width="13">
-												<p>1</p>
-											</td>
-											<td width="25">
-												<p>0</p>
-											</td>
-											<td width="33">
-												<p>1</p>
-											</td>
-											<td width="11">
-												<p>0</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>0</p>
-											</td>
-											<td width="13">
-												<p>0</p>
-											</td>
-											<td width="25">
-												<p>1</p>
-											</td>
-											<td width="33">
-												<p>0</p>
-											</td>
-											<td width="11">
-												<p>1</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>1</p>
-											</td>
-											<td width="13">
-												<p>0</p>
-											</td>
-											<td width="25">
-												<p>1</p>
-											</td>
-											<td width="33">
-												<p>1</p>
-											</td>
-											<td width="11">
-												<p>0</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>0</p>
-											</td>
-											<td width="13">
-												<p>1</p>
-											</td>
-											<td width="25">
-												<p>1</p>
-											</td>
-											<td width="33">
-												<p>1</p>
-											</td>
-											<td width="11">
-												<p>0</p>
-											</td>
-										</tr>
-										<tr>
-											<td width="14">
-												<p>1</p>
-											</td>
-											<td width="13">
-												<p>1</p>
-											</td>
-											<td width="25">
-												<p>1</p>
-											</td>
-											<td width="33">
-												<p>1</p>
-											</td>
-											<td width="11">
-												<p>1</p>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</center>
-							<h2>Ripple Carry Adder 
-	</h2>
-							<p><img align="LEFT" border="0" height="200" hspace="10" name="graphics4" src="../images/ripple_carry_adder.svg.png" vspace="10" width="500" />Multiple full adders can be used to create adders of greater bit lengths. Each full adder uses the Cout of the previous adder as its Cin. This kind of adder is a <i>ripple carry adder</i>, since the carry bits "ripple" through the full adder stages. Note that the first (and only the first) full adder may be replaced by a half adder.</p>
-							<p>
-								<br/>
-								<br/>
-								<br/>
-								<br/>
-							</p>
-							<p><font size="2"><i><b>Source: Wikipedia</b></i></font></p>
+						<div class="content" id="experiment-article-section-6-content">
+							<ol>
+								<li>
+									<p>Design the full adder circuit as given in the theory section. Save this full adder circuit so that it can later be imported as a black box, which takes 3 inputs (A, B, and C) and produces 2 outputs (Sum and Carry) </p>
+								</li>
+								<li>
+									<p>Import Full Adder circuits designed in 1st part and construct a 4 BIT binary adder using 4 full adders. Given two 4 bit binary numbers a3a2a1a0 and b3b2b1b0, the circuit should output s3s2s1s0 and c-out which is the final carry. For circuit diagram, refer to the theory section</span>
+										</strong>
+									</p>
+								</li>
+								<li>
+									<p>Design a 3 bit full subtractor using EX-OR, AND, OR and NOT gates. Given X, Y and Z, the circuit should output D (difference) and B (Borrow). D = X (ex-or) Y (ex-or) Z and B = X'.Y + Y.Z + X'.Z</span>
+										</strong>
+									</p>
+								</li>
+								<li>
+									<p>Can the Final OR gate in the Full Adder circuit (given in the theory section) be replaced by an EX-OR gate ? If yes why? If no Why not? </span>
+										</strong>
+									</p>
+								</li>
+							</ol>
 						</div>
 					</div>
 				</div>
