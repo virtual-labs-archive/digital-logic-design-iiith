@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Logic Circuit</title>
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css">
+  <meta name="description" content="A simple logic circuit editor and simulator." />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Copyright 1998-2019 by Northwoods Software Corporation. -->
+  <script>
+    Data= { "class": "GraphLinksModel",
+  "linkFromPortIdProperty": "fromPort",
+  "linkToPortIdProperty": "toPort",
+  "nodeDataArray": [ 
+{"category":"input", "key":-1, "loc":"-470 -300"},
+{"category":"input", "key":-2, "loc":"-260 -300"},
+{"category":"input", "key":-3, "loc":"-70 -300"},
+{"category":"input", "key":-4, "loc":"150 -300"},
+{"category":"not", "key":-8, "loc":"-380 -210"},
+{"category":"not", "key":-6, "loc":"-160 -210"},
+{"category":"not", "key":-7, "loc":"60 -220"},
+{"category":"not", "key":-9, "loc":"260 -220"},
+{"category":"and", "key":-10, "loc":"-270 -100"},
+{"category":"and", "key":-11, "loc":"-70 -100"},
+{"category":"or4", "key":-12, "loc":"130 -100"},
+{"category":"output1", "key":-13, "loc":"420 -110"},
+{"category":"and", "key":-14, "loc":"-250 40"},
+{"category":"and", "key":-15, "loc":"50 40"},
+{"category":"or3", "key":-5, "loc":"260 40"},
+{"category":"output2", "key":-16, "loc":"420 40"},
+{"category":"or3", "key":-17, "loc":"260 140"},
+{"category":"output3", "key":-18, "loc":"420 140"},
+{"category":"and", "key":-19, "loc":"-340 220"},
+{"category":"and", "key":-20, "loc":"-470 220"},
+{"category":"and", "key":-21, "loc":"-190 220"},
+{"category":"and", "key":-22, "loc":"-10 220"},
+{"category":"and", "key":-23, "loc":"130 210"},
+{"category":"or4", "key":-24, "loc":"240 220"},
+{"category":"or", "key":-25, "loc":"340 220"},
+{"category":"output4", "key":-26, "loc":"430 220"},
+{"category":"and", "key":-27, "loc":"-340 300"},
+{"category":"and", "key":-28, "loc":"-110 300"},
+{"category":"or", "key":-29, "loc":"90 300"},
+{"category":"output5", "key":-30, "loc":"390 290"},
+{"category":"and", "key":-31, "loc":"-340 390"},
+{"category":"and", "key":-32, "loc":"-130 390"},
+{"category":"and", "key":-33, "loc":"70 390"},
+{"category":"or4", "key":-34, "loc":"240 390"},
+{"category":"output6", "key":-35, "loc":"390 390"},
+{"category":"xor", "key":-36, "loc":"-150 470"},
+{"category":"and", "key":-37, "loc":"30 470"},
+{"category":"or3", "key":-38, "loc":"260 470"},
+{"category":"output7", "key":-39, "loc":"400 470"}
+ ],
+  "linkDataArray": [ 
+{"from":-2, "to":-6, "fromPort":"", "toPort":"in"},
+{"from":-4, "to":-9, "fromPort":"", "toPort":"in"},
+{"from":-9, "to":-10, "fromPort":"out", "toPort":"in1"},
+{"from":-6, "to":-10, "fromPort":"out", "toPort":"in2"},
+{"from":-2, "to":-11, "fromPort":"", "toPort":"in1"},
+{"from":-4, "to":-11, "fromPort":"", "toPort":"in2"},
+{"from":-11, "to":-12, "fromPort":"out", "toPort":"in1"},
+{"from":-10, "to":-12, "fromPort":"out", "toPort":"in2"},
+{"from":-1, "to":-12, "fromPort":"", "toPort":"in3"},
+{"from":-3, "to":-12, "fromPort":"", "toPort":"in4"},
+{"from":-12, "to":-13, "fromPort":"out", "toPort":""},
+{"from":-3, "to":-7, "fromPort":"", "toPort":"in"},
+{"from":-7, "to":-14, "fromPort":"out", "toPort":"in1"},
+{"from":-9, "to":-14, "fromPort":"out", "toPort":"in2"},
+{"from":-3, "to":-15, "fromPort":"", "toPort":"in1"},
+{"from":-4, "to":-15, "fromPort":"", "toPort":"in2"},
+{"from":-14, "to":-5, "fromPort":"out", "toPort":"in1"},
+{"from":-15, "to":-5, "fromPort":"out", "toPort":"in2"},
+{"from":-6, "to":-5, "fromPort":"out", "toPort":"in3"},
+{"from":-5, "to":-16, "fromPort":"out", "toPort":""},
+{"from":-7, "to":-17, "fromPort":"out", "toPort":"in1"},
+{"from":-2, "to":-17, "fromPort":"", "toPort":"in2"},
+{"from":-4, "to":-17, "fromPort":"", "toPort":"in3"},
+{"from":-17, "to":-18, "fromPort":"out", "toPort":""},
+{"from":-6, "to":-20, "fromPort":"out", "toPort":"in1"},
+{"from":-9, "to":-20, "fromPort":"out", "toPort":"in2"},
+{"from":-3, "to":-19, "fromPort":"", "toPort":"in1"},
+{"from":-9, "to":-19, "fromPort":"out", "toPort":"in2"},
+{"from":-2, "to":-22, "fromPort":"", "toPort":"in1"},
+{"from":-7, "to":-22, "fromPort":"out", "toPort":"in2"},
+{"from":-22, "to":-23, "fromPort":"out", "toPort":"in1"},
+{"from":-4, "to":-23, "fromPort":"", "toPort":"in2"},
+{"from":-6, "to":-21, "fromPort":"out", "toPort":"in1"},
+{"from":-3, "to":-21, "fromPort":"", "toPort":"in2"},
+{"from":-23, "to":-24, "fromPort":"out", "toPort":"in1"},
+{"from":-21, "to":-24, "fromPort":"out", "toPort":"in2"},
+{"from":-19, "to":-24, "fromPort":"out", "toPort":"in3"},
+{"from":-20, "to":-24, "fromPort":"out", "toPort":"in4"},
+{"from":-24, "to":-25, "fromPort":"out", "toPort":"in1"},
+{"from":-1, "to":-25, "fromPort":"", "toPort":"in2"},
+{"from":-25, "to":-26, "fromPort":"out", "toPort":""},
+{"from":-6, "to":-27, "fromPort":"out", "toPort":"in1"},
+{"from":-9, "to":-27, "fromPort":"out", "toPort":"in2"},
+{"from":-3, "to":-28, "fromPort":"", "toPort":"in1"},
+{"from":-9, "to":-28, "fromPort":"out", "toPort":"in2"},
+{"from":-28, "to":-29, "fromPort":"out", "toPort":"in1"},
+{"from":-27, "to":-29, "fromPort":"out", "toPort":"in2"},
+{"from":-29, "to":-30, "fromPort":"out", "toPort":""},
+{"from":-7, "to":-31, "fromPort":"out", "toPort":"in1"},
+{"from":-9, "to":-31, "fromPort":"out", "toPort":"in2"},
+{"from":-7, "to":-32, "fromPort":"out", "toPort":"in1"},
+{"from":-2, "to":-32, "fromPort":"", "toPort":"in2"},
+{"from":-2, "to":-33, "fromPort":"", "toPort":"in1"},
+{"from":-9, "to":-33, "fromPort":"out", "toPort":"in2"},
+{"from":-31, "to":-34, "fromPort":"out", "toPort":"in1"},
+{"from":-33, "to":-34, "fromPort":"out", "toPort":"in2"},
+{"from":-32, "to":-34, "fromPort":"out", "toPort":"in3"},
+{"from":-1, "to":-34, "fromPort":"", "toPort":"in4"},
+{"from":-34, "to":-35, "fromPort":"out", "toPort":""},
+{"from":-2, "to":-36, "fromPort":"", "toPort":"in1"},
+{"from":-3, "to":-36, "fromPort":"", "toPort":"in2"},
+{"from":-9, "to":-37, "fromPort":"out", "toPort":"in2"},
+{"from":-3, "to":-37, "fromPort":"", "toPort":"in1"},
+{"from":-37, "to":-38, "fromPort":"out", "toPort":"in1"},
+{"from":-36, "to":-38, "fromPort":"", "toPort":"in2"},
+{"from":-1, "to":-38, "fromPort":"", "toPort":"in3"},
+{"from":-38, "to":-39, "fromPort":"out", "toPort":""}
+ ]}
+</script>
+ 
+  <script src="../../libraries/release/go.js"></script>
+  <script src="../../libraries/extensions/Figures.js"></script>
+
+  <script id="code">
+
+    var red = "orangered";  // 0 or false
+    var green = "forestgreen";  // 1 or true
+
+    function init() {
+      if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
+      var $ = go.GraphObject.make;  // for conciseness in defining templates
+
+      myDiagram =
+        $(go.Diagram, "myDiagramDiv",  // create a new Diagram in the HTML DIV element "myDiagramDiv"
+          {
+            "draggingTool.isGridSnapEnabled": true,   // dragged nodes will snap to a grid of 10x10 cells
+            
+            "undoManager.isEnabled": true
+          });
+
+      // when the document is modified, add a "*" to the title and enable the "Save" button
+      myDiagram.addDiagramListener("Modified", function(e) {
+        var button = document.getElementById("saveModel");
+        if (button) button.disabled = !myDiagram.isModified;
+        var idx = document.title.indexOf("*");
+        if (myDiagram.isModified) {
+          if (idx < 0) document.title += "*";
+        } else {
+          if (idx >= 0) document.title = document.title.substr(0, idx);
+        }
+      });
+      myDiagram.grid =
+    $(go.Panel, "Grid",
+      {
+        name: "GRID",
+        visible: false,
+        gridCellSize: new go.Size(10, 10),
+        gridOrigin: new go.Point(0, 0)
+      },
+      $(go.Shape, "LineH", { stroke: "lightgray", strokeWidth: 0.5, interval: 1 }),
+      $(go.Shape, "LineH", { stroke: "gray", strokeWidth: 0.5, interval: 5 }),
+      $(go.Shape, "LineH", { stroke: "gray", strokeWidth: 1.0, interval: 10 }),
+      $(go.Shape, "LineV", { stroke: "lightgray", strokeWidth: 0.5, interval: 1 }),
+      $(go.Shape, "LineV", { stroke: "gray", strokeWidth: 0.5, interval: 5 }),
+      $(go.Shape, "LineV", { stroke: "gray", strokeWidth: 1.0, interval: 10 })
+    );
+
+  myDiagram.grid.visible = true;  // so that this example shows the standard grid
+  myDiagram.div.style.background = "white";
+
+      var palette = new go.Palette("palette");
+     
+
+        // create a new Palette in the HTML DIV element "palette"
+
+      // creates relinkable Links that will avoid crossing Nodes when possible and will jump over other Links in their paths
+      myDiagram.linkTemplate =
+        $(go.Link,
+          {
+            routing: go.Link.AvoidsNodes,
+            curve: go.Link.Beizier,
+            corner: 3,
+            relinkableFrom: true, relinkableTo: true,
+            selectionAdorned: false, // Links are not adorned when selected so that their color remains visible.
+            shadowOffset: new go.Point(0, 0), shadowBlur: 5, shadowColor: "blue",
+          },
+          new go.Binding("isShadowed", "isSelected").ofObject(),
+          $(go.Shape,
+            { name: "SHAPE", strokeWidth: 2, stroke: 'black', parameter1: "" }));
+
+      // node template helpers
+      var sharedToolTip =
+        $("ToolTip",
+          { "Border.figure": "RoundedRectangle" },
+          $(go.TextBlock, { margin: 2 },
+            new go.Binding("text", "", function(d) { return d.category; })));
+
+      // define some common property settings
+      function nodeStyle() {
+        return [new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
+        new go.Binding("isShadowed", "isSelected").ofObject(),
+        {
+          selectionAdorned: false,
+          shadowOffset: new go.Point(0, 0),
+          shadowBlur: 15,
+          shadowColor: "blue",
+          toolTip: sharedToolTip
+        }];
+      }
+
+      function shapeStyle() {
+        return {
+          name: "NODESHAPE",
+          fill: "lightgray",
+          stroke: "darkslategray",
+          desiredSize: new go.Size(45, 45),
+          strokeWidth: 2
+        };
+      }
+      function portStyle(input) {
+        return {
+          desiredSize: new go.Size(6, 6),
+          fill: "black",
+          name: "PORTSHAPE",
+          fromSpot: go.Spot.Right,
+          fromLinkable: !input,
+          toSpot: go.Spot.Left,
+          toLinkable: input,
+          toMaxLinks: 1,
+          cursor: "pointer"
+        }
+      }
+
+
+       function portStyle1(input) {
+        return {
+          desiredSize: new go.Size(6, 6),
+          fill: "black",
+          name: "PORTSHAPE1",
+          fromSpot: go.Spot.Right,
+          fromLinkable: !input,
+          toSpot: go.Spot.Left,
+          toLinkable: input,
+          toMaxLinks: 1,
+          cursor: "pointer"
+        }
+      }
+      function portStyle2(input) {
+        return {
+          desiredSize: new go.Size(6, 6),
+          fill: "black",
+          name: "PORTSHAPE2",
+          fromSpot: go.Spot.Right,
+          fromLinkable: !input,
+          toSpot: go.Spot.Left,
+          toLinkable: input,
+          toMaxLinks: 1,
+          cursor: "pointer"
+        }
+      }
+        function portStyle3(input) {
+        return {
+          desiredSize: new go.Size(6, 6),
+          fill: "black",
+          name: "PORTSHAPE3",
+          fromSpot: go.Spot.Right,
+          fromLinkable: !input,
+          toSpot: go.Spot.Left,
+          toLinkable: input,
+          toMaxLinks: 1,
+          cursor: "pointer"
+        }
+         
+  
+      }
+      
+
+      // define templates for each type of node
+      var inputTemplate =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Circle", shapeStyle(),
+            { fill: red, parameter1: "" }), 
+           // override the default fill (from shapeStyle()) to be red
+          $(go.Shape, "Rectangle",  portStyle(false),  // the only port
+            { portId: "",  alignment: new go.Spot(1, 0.5) }),
+           
+          { // if double-clicked, an input node will change its value, represented by the color.
+            doubleClick: function (e, obj) {
+              e.diagram.startTransaction("Toggle Input");
+              var shp = obj.findObject("NODESHAPE");
+              var input1 = prompt("Please enter value");
+              shp.parameter1 = input1;
+              if(input1 == 1){
+              shp.fill = green;
+              }else{
+                shp.fill = red;
+              }
+              //console.log(shp.parameter1);
+              updateStates();
+              e.diagram.commitTransaction("Toggle Input");
+              
+            }
+
+          }
+        );
+
+      var output1Template =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Rectangle", shapeStyle(),
+          
+          
+            { fill: 'gray', parameter1: "" }),  // override the default fill (from shapeStyle()) to be green
+          $(go.Shape, "Rectangle", portStyle(true),  // the only port
+            { portId: "", alignment: new go.Spot(0, 0.5) })
+        );
+        var output3Template =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Rectangle", shapeStyle(),
+          
+          
+            { fill: 'gray', parameter1: "" }),  // override the default fill (from shapeStyle()) to be green
+          $(go.Shape, "Rectangle", portStyle(true),  // the only port
+            { portId: "", alignment: new go.Spot(0, 0.5) })
+        );  
+        var output2Template =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Rectangle", shapeStyle(),
+          
+            { fill:  'gray', parameter1: "" }),  // override the default fill (from shapeStyle()) to be green
+          $(go.Shape, "Rectangle", portStyle(true),  // the only port
+            { portId: "", alignment: new go.Spot(0, 0.5) })
+        );
+        var output4Template =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Rectangle", shapeStyle(),
+          
+            { fill:  'gray', parameter1: "" }),  // override the default fill (from shapeStyle()) to be green
+          $(go.Shape, "Rectangle", portStyle(true),  // the only port
+            { portId: "", alignment: new go.Spot(0, 0.5) })
+        );
+        var output5Template =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Rectangle", shapeStyle(),
+          
+            { fill:  'gray', parameter1: "" }),  // override the default fill (from shapeStyle()) to be green
+          $(go.Shape, "Rectangle", portStyle(true),  // the only port
+            { portId: "", alignment: new go.Spot(0, 0.5) })
+        );
+        var output6Template =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Rectangle", shapeStyle(),
+          
+            { fill:  'gray', parameter1: "" }),  // override the default fill (from shapeStyle()) to be green
+          $(go.Shape, "Rectangle", portStyle(true),  // the only port
+            { portId: "", alignment: new go.Spot(0, 0.5) })
+        );
+        var output7Template =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Rectangle", shapeStyle(),
+          
+            { fill:  'gray', parameter1: "" }),  // override the default fill (from shapeStyle()) to be green
+          $(go.Shape, "Rectangle", portStyle(true),  // the only port
+            { portId: "", alignment: new go.Spot(0, 0.5) })
+        );
+
+      var andTemplate =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "AndGate", shapeStyle()),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in1", alignment: new go.Spot(0, 0.3) }),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in2", alignment: new go.Spot(0, 0.7) }),
+          $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "out", alignment: new go.Spot(1, 0.5) })
+        );
+        var orTemplate =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "OrGate", shapeStyle()),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in1", alignment: new go.Spot(0.16, 0.3) }),
+            $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in2", alignment: new go.Spot(0.16, 0.7) }),  
+          $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "out", alignment: new go.Spot(1, 0.5) })
+        );
+
+      var orTemplate3 =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "OrGate", shapeStyle()),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in1", alignment: new go.Spot(0.16, 0.25) }),
+            $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in2", alignment: new go.Spot(0.16, 0.5) }),  
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in3", alignment: new go.Spot(0.16, 0.75) }),
+          $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "out", alignment: new go.Spot(1, 0.5) })
+        );
+        var orTemplate4 =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "OrGate", shapeStyle()),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in1", alignment: new go.Spot(0.16, 0.2) }),
+            $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in2", alignment: new go.Spot(0.16, 0.4) }),  
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in3", alignment: new go.Spot(0.16, 0.6) }),
+            $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in4", alignment: new go.Spot(0.16, 0.8) }),
+          $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "out", alignment: new go.Spot(1, 0.5) })
+        );
+  
+
+      var xorTemplate =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "XorGate", shapeStyle()),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in1", alignment: new go.Spot(0.26, 0.3) }),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in2", alignment: new go.Spot(0.26, 0.7) }),
+          $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "", alignment: new go.Spot(1, 0.5) })
+        );
+
+      var norTemplate =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "NorGate", shapeStyle()),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in1", alignment: new go.Spot(0.16, 0.3) }),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in2", alignment: new go.Spot(0.16, 0.7) }),
+          $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "out", alignment: new go.Spot(1, 0.5) })
+        );
+
+      var xnorTemplate =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "XnorGate", shapeStyle()),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in1", alignment: new go.Spot(0.26, 0.3) }),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in2", alignment: new go.Spot(0.26, 0.7) }),
+          $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "out", alignment: new go.Spot(1, 0.5) })
+        );
+
+      var nandTemplate =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "NandGate", shapeStyle()),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in1", alignment: new go.Spot(0, 0.3) }),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in2", alignment: new go.Spot(0, 0.7) }),
+          $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "out", alignment: new go.Spot(1, 0.5) })
+        );
+
+      var notTemplate =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Inverter", shapeStyle()),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in", alignment: new go.Spot(0, 0.5) }),
+          $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "out", alignment: new go.Spot(1, 0.5) })
+        );
+
+            var multiplexarTemplate =
+        $(go.Node, "Spot", nodeStyle(),
+          $(go.Shape, "Rectangle",  { name: "NODESHAPE", width: 50, height: 80, margin: 4, fill: "lightgray",  stroke: "darkslategray", strokeWidth: 2 }), 
+          $(go.Shape, "Rectangle", portStyle1(true),
+            { portId: "in1", parameter1: "", alignment: new go.Spot(0, 0.2) }),
+             new go.Binding("parameter2", "1"),
+          $(go.Shape, "Rectangle", portStyle2(true),
+            { portId: "in2",  parameter1: "", alignment: new go.Spot(0, 0.4) }),
+            new go.Binding("parameter2", "1"),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in3",  parameter1: "", alignment: new go.Spot(0, 0.6) }),  
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in4", alignment: new go.Spot(0, 0.8) }),
+          $(go.Shape, "Rectangle",  portStyle(true),
+            { portId: "in5", parameter1: "", alignment: new go.Spot(0.3, 1) }),
+          $(go.Shape, "Rectangle", portStyle(true),
+            { portId: "in6", parameter1: "", alignment: new go.Spot(0.65, 1) }),
+            $(go.Shape, "Rectangle", portStyle(false),
+            { portId: "out", alignment: new go.Spot(1, 0.5) }) 
+        )
+        myDiagram.model =
+        $(go.GraphLinksModel,
+          {
+            linkFromPortIdProperty: "fromPort",
+            linkToPortIdProperty: "toPort",
+            linkDataArray: []
+          },
+         
+          ); 
+        //console.log(myDiagram.model.toJson());
+    
+
+      // add the templates created above to myDiagram and palette
+      myDiagram.nodeTemplateMap.add("input", inputTemplate);
+      myDiagram.nodeTemplateMap.add("output1", output1Template);
+      myDiagram.nodeTemplateMap.add("and", andTemplate);
+      myDiagram.nodeTemplateMap.add("or", orTemplate);
+      myDiagram.nodeTemplateMap.add("or3", orTemplate3);
+      myDiagram.nodeTemplateMap.add("or4", orTemplate4);
+      myDiagram.nodeTemplateMap.add("xor", xorTemplate);
+      myDiagram.nodeTemplateMap.add("not", notTemplate);
+      myDiagram.nodeTemplateMap.add("nand", nandTemplate);
+      myDiagram.nodeTemplateMap.add("nor", norTemplate);
+      myDiagram.nodeTemplateMap.add("xnor", xnorTemplate);
+      myDiagram.nodeTemplateMap.add("mux",  multiplexarTemplate);
+      myDiagram.nodeTemplateMap.add("output2", output2Template);
+      myDiagram.nodeTemplateMap.add("output3", output3Template);
+      myDiagram.nodeTemplateMap.add("output4", output4Template);
+      myDiagram.nodeTemplateMap.add("output5", output5Template);
+      myDiagram.nodeTemplateMap.add("output6", output6Template);
+      myDiagram.nodeTemplateMap.add("output7", output7Template);
+
+
+
+      // share the template map with the Palette
+      palette.nodeTemplateMap = myDiagram.nodeTemplateMap;
+
+      palette.model.nodeDataArray = [
+        { category: "input" },
+        { category: "output1" },
+        { category: "and" },
+        { category: "or" },
+        { category: "or3" },
+        { category: "or4" },
+        { category: "xor" },
+        { category: "not" },
+        { category: "nand" },
+        { category: "nor" },
+        { category: "xnor" },
+        { category: "mux"},
+        {category: "output2" },
+        {category: "output3" },
+        {category: "output4" },
+        {category: "output5" },
+        {category: "output6" },
+        {category: "output7" }
+
+      ];
+
+      // load the initial diagram
+      //load();
+
+      // continually update the diagram
+      loop();
+    }
+
+    // update the diagram every 250 milliseconds
+    function loop() {
+      setTimeout(function() { updateStates(); loop(); }, 250);
+    }
+
+    // update the value and appearance of each node according to its type and input values
+    function updateStates() {
+      var oldskip = myDiagram.skipsUndoManager;
+      myDiagram.skipsUndoManager = true;
+      // do all "input" nodes first
+      myDiagram.nodes.each(function(node) {
+        if (node.category === "input") {
+          doInput(node);
+        }
+      });
+      // now we can do all other kinds of nodes
+      myDiagram.nodes.each(function(node) {
+        switch (node.category) {
+          case "and": doAnd(node); break;
+          case "or": doOr(node); break;
+          case "or3": doOr(node); break;
+          case "or4": doOr(node); break;
+          case "xor": doXor(node); break;
+          case "not": doNot(node); break;
+          case "nand": doNand(node); break;
+          case "nor": doNor(node); break;
+          case "xnor": doXnor(node); break;
+          case "output1": doOutput1(node); break;
+          case "output2": doOutput2(node); break;
+          case "output3": doOutput3(node); break;
+          case "output4": doOutput4(node); break;
+          case "output5": doOutput5(node); break;
+          case "output6": doOutput6(node); break;
+          case "output7": doOutput7(node); break;
+          case "mux": domux(node); break;
+          case "input": break;  // doInput already called, above
+        }
+      });
+      myDiagram.skipsUndoManager = oldskip;
+    }
+
+    // helper predicate
+    function linkIsTrue(link) {  // assume the given Link has a Shape named "SHAPE"
+      return link.findObject("SHAPE").parameter1 === '1';
+      
+    }
+
+
+    // helper function for propagating results
+    function setOutputLinks(node, color) {
+      node.findLinksOutOf().each(function(link) { link.findObject("SHAPE").parameter1 = color; });
+    }
+
+    // update nodes by the specific function for its type
+    // determine the color of links coming out of this node based on those coming in and node type
+
+    function doInput(node) {
+     
+      
+      // the output is just the node's Shape.fill
+    
+      setOutputLinks(node, node.findObject("NODESHAPE").parameter1);
+      
+      
+      
+    }
+
+    function doAnd(node) {
+      var color = node.findLinksInto().all(linkIsTrue) ? '1' : '0';
+      setOutputLinks(node, color);
+      }
+      //node.findPort('in2') == link.findObject("SHAPE").parameter1;
+      //var in2 = node.findPort('in2').value;
+       //node.linksConnected.each(function(link)
+       //{
+          //node.findObject("NODESHAPE").parameter1 = link.findObject("SHAPE").parameter1; });
+
+      //console.log( node.findPort('in2'));
+    
+    function doNand(node) {
+      var color = !node.findLinksInto().all(linkIsTrue) ? '1' : '0';
+      setOutputLinks(node, color);
+    }
+    function doNot(node) {
+      var color = !node.findLinksInto().all(linkIsTrue) ? '1' : '0';
+      //
+      //console.log(color);
+      setOutputLinks(node, color);
+      
+    }
+
+    function doOr(node) {
+      var color = node.findLinksInto().any(linkIsTrue) ? '1' : '0';
+      console.log(color);
+      setOutputLinks(node, color);
+    }
+    function doNor(node) {
+      var color = !node.findLinksInto().any(linkIsTrue) ? '1' : '0';
+      setOutputLinks(node, color);
+    }
+
+    function doXor(node) {
+      var truecount = 0;
+      node.findLinksInto().each(function(link) { if (linkIsTrue(link)) truecount++; });
+      var color = truecount % 2 !== 0 ? '1' : '0';
+      setOutputLinks(node, color);
+    }
+    function doXnor(node) {
+      var truecount = 0;
+     
+      var color = truecount % 2 === 0 ? '1' : '0';
+      setOutputLinks(node, color);
+    }
+    function domux(node) {
+         
+         var f = [];
+         //count = 0;
+        
+          
+         node.findLinksInto().each( function(link) {
+          //count = count + 1
+             f.push(link.findObject("SHAPE").parameter1);
+             
+           
+           //console.log(f);
+           //console.log(count);
+           if (f[4] == '0'&& f[5] == '0')
+           var color = f[0];
+           if (f[4] == '0'&& f[5] == '1')
+           var color = (f[1]);
+           if (f[4] == '1'&& f[5] == '0')
+           var color = (f[2]);
+           if (f[4] == '1'&& f[5] == '1')
+           var color = (f[3]);
+           setOutputLinks(node, color);
+      
+        //f = link.findObject("SHAPE").parameter1;
+         }
+         
+         )
+    
+        
+        
+         //myDiagram.addDiagramListener("LinkDrawn" ,  function (e) {
+          //console.log(e.subject.toPortId);
+        //var q = node.findObject("PORTSHAPE1").parameter1;
+       //console.log(q);
+       //if  (e.subject.toPortId == 'in3')
+       //console.log(e.subject.toPortId);
+       //console.log(f[2]);
+        //var w = node.findObject("PORTSHAPE2").parameter1;
+       //console.log(linkIsTrue);
+        //var m = link.findObject("SHAPE").parameter1;
+        //console.log(m);
+        //(link.findObject("SHAPE").parameter1[1]);
+
+//})
+//});
+
+      
+
+    
+    }
+
+    function doOutput1(node){ node.linksConnected.each(function(link)
+       {
+          node.findObject("NODESHAPE").parameter1 = link.findObject("SHAPE").parameter1; });
+         
+          //document.getElementById("demo2").innerHTML = node.findObject("NODESHAPE").parameter1;
+          if(
+            node.findObject("NODESHAPE").parameter1 == '1'){
+              document.getElementById("A").style.fill = 'rgba(255,0,0,1)';
+              
+    }else{
+      document.getElementById("A").style.fill = 'rgba(255,0,0,0)';
+    }
+          
+    }
+    function doOutput2(node) {
+      // assume there is just one input link
+      // we just need to update the node's Shape.fill
+      node.linksConnected.each(function(link)
+       {
+          node.findObject("NODESHAPE").parameter1 = link.findObject("SHAPE").parameter1; });
+         
+          //document.getElementById("demo2").innerHTML = node.findObject("NODESHAPE").parameter1;
+          if(
+            node.findObject("NODESHAPE").parameter1 == '1'){
+              document.getElementById("B").style.fill = 'rgba(255,0,0,1)';
+              
+    }else{
+      document.getElementById("B").style.fill = 'rgba(255,0,0,0)';
+    }
+          
+    }
+    function doOutput3(node) {
+      // assume there is just one input link
+      // we just need to update the node's Shape.fill
+      node.linksConnected.each(function(link)
+       {
+          node.findObject("NODESHAPE").parameter1 = link.findObject("SHAPE").parameter1; });
+         
+          //document.getElementById("demo2").innerHTML = node.findObject("NODESHAPE").parameter1;
+          if(
+            node.findObject("NODESHAPE").parameter1 == '1'){
+              document.getElementById("C").style.fill = 'rgba(255,0,0,1';
+              
+    }else{
+      document.getElementById("C").style.fill = 'rgba(255,0,0,0)';
+    }
+          
+    }
+    function doOutput4(node) {
+      // assume there is just one input link
+      // we just need to update the node's Shape.fill
+      node.linksConnected.each(function(link)
+       {
+          node.findObject("NODESHAPE").parameter1 = link.findObject("SHAPE").parameter1; });
+         
+          //document.getElementById("demo2").innerHTML = node.findObject("NODESHAPE").parameter1;
+          if(
+            node.findObject("NODESHAPE").parameter1 == '1'){
+              document.getElementById("D").style.fill = 'rgba(255,0,0,1';
+              
+    }else{
+      document.getElementById("D").style.fill = 'rgba(255,0,0,0)';
+    }
+          
+    }
+    function doOutput5(node) {
+      // assume there is just one input link
+      // we just need to update the node's Shape.fill
+      node.linksConnected.each(function(link)
+       {
+          node.findObject("NODESHAPE").parameter1 = link.findObject("SHAPE").parameter1; });
+         
+          //document.getElementById("demo2").innerHTML = node.findObject("NODESHAPE").parameter1;
+          if(
+            node.findObject("NODESHAPE").parameter1 == '1'){
+              document.getElementById("E").style.fill = 'rgba(255,0,0,1';
+              
+    }else{
+      document.getElementById("E").style.fill = 'rgba(255,0,0,0)';
+    }
+          
+    }
+    function doOutput6(node) {
+      // assume there is just one input link
+      // we just need to update the node's Shape.fill
+      node.linksConnected.each(function(link)
+       {
+          node.findObject("NODESHAPE").parameter1 = link.findObject("SHAPE").parameter1; });
+         
+          //document.getElementById("demo2").innerHTML = node.findObject("NODESHAPE").parameter1;
+          if(
+            node.findObject("NODESHAPE").parameter1 == '1'){
+              document.getElementById("F").style.fill = 'rgba(255,0,0,1';
+              
+    }else{
+      document.getElementById("F").style.fill = 'rgba(255,0,0,0)';
+    }
+          
+    }
+    function doOutput7(node) {
+      // assume there is just one input link
+      // we just need to update the node's Shape.fill
+      node.linksConnected.each(function(link)
+       {
+          node.findObject("NODESHAPE").parameter1 = link.findObject("SHAPE").parameter1; });
+         
+          //document.getElementById("demo2").innerHTML = node.findObject("NODESHAPE").parameter1;
+          if(
+            node.findObject("NODESHAPE").parameter1 == '1'){
+              document.getElementById("G").style.fill = 'rgba(255,0,0,1';
+              
+    }else{
+      document.getElementById("G").style.fill = 'rgba(255,0,0,0)';
+    }
+          
+    }
+    
+
+
+    // save a model to and load a model from JSON text, displayed below the Diagram
+    function save() {
+       var json = myDiagram.model.toJson();
+       console.log(json);
+       myDiagram.isModified = false;
+    }
+    function load() {
+      myDiagram.model = go.Model.fromJson(Data);
+    }
+    
+  
+  </script>
+</head>
+<body onload="init()">
+<div id="sample">
+  <div style="width: 100%; display: flex; justify-content: space-between">
+    
+    <div id="palette" style=" top: 0px; width: 150px; height: 650px; padding-top: 0px; margin-right: 2px; background-color: whitesmoke; border: solid 1px black; top: 10px;">
+    
+    </div>
+    <button style="position:absolute; top: 610px; left: 10px; z-index:3;" class="btn btn-primary"  onclick="load()">Load</button>
+    <button style="position:absolute; top: 610px; left: 80px; z-index:3;" class="btn btn-danger" onclick="location.reload()">Clear</button>    
+     <h1  style="position:absolute; top: 500px; left: 30px; z-index:3;"  id="demo"></h1>
+     <h2  style="position:absolute; top: 500px; left: 50px; z-index:3;"  id="demo2"></h2>
+     <div>
+      <svg width="100" height="100" style="position:absolute; z-index:3; left:1190px; padding:none;">
+        <rect width="100" height="100" style="position:absolute; fill:lightgray;stroke-width:3;stroke:rgb(0,0,0) " />
+      
+      <svg class="seven-segment" style="position:absolute; top: 550px; left: 35px; z-index:3;" 
+           width="80" height="100"
+           viewBox="0 0 22 36" preserveAspectRatio="xMidYMid">
+        <g stroke="#000" fill="rgba(255,0,0,0)" stroke-width="0.1"> 
+          <polygon id="A" points=" 5, 4  7, 6 15, 6 17, 4 15, 2  7, 2">
+           
+          </polygon>
+          
+          <polygon id="B" points="18, 5 16, 7 16,15 18,17 20,15 20, 7">
+           
+          </polygon>
+          
+          <polygon id="C" points="18,19 16,21 16,29 18,31 20,29 20,21">
+           
+          </polygon>
+          
+          <polygon id="D" points=" 5,32  7,34 15,34 17,32 15,30  7,30">
+           
+          </polygon>    
+          
+          <polygon id="E" points=" 4,19  2,21  2,29  4,31  6,29  6,21">
+            
+          </polygon>
+          
+          <polygon id="F" points=" 4, 5  2, 7  2,15  4,17  6,15  6, 7">
+            
+          </polygon>
+          
+          <polygon id="G" points=" 5,18  7,20 15,20 17,18 15,16  7,16">
+          </polygon>
+        </g>
+      </svg>
+    </svg>
+      </div>
+      
+      
+      
+      
+      
+      
+    
+    <div id="myDiagramDiv" style="flex-grow: 1; height: 650px; border: solid 1px black"></div>
+
+    
+    
+    
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- main wavesurfer.js lib -->
+       <script src="https://unpkg.com/wavesurfer.js"></script>
+      <script type="plugin" src="./timeline.js"></script>
+<nav class="shift">
+    <ul>
+        <li><a href="http://localhost:3000/">Hindi</a></li>
+        <li><a href="http://localhost:3000/tamil">Tamil</a></li>
+        <li><a href="http://localhost:3000/telugu">Telugu</a></li>
+        <li><a href="http://localhost:3000/kannada">Kannada</a></li>
+      </ul>
+  </nav>
+
+  <div class="jumbotron"><h1 class="font-size:400px;">Hindi</h1></div>
+<div id="waveform-timeline"></div>
+<div id="waveform" style="width: 500px; position: relative; left: 400px;"></div>
+
+
+<div style="text-align: center">
+  
+  <button class="btn btn-primary" onclick="wavesurfer.playPause()">
+    <i class="glyphicon glyphicon-play"></i>
+    Play
+  </button>
+
+  <p class="row">
+    <div class="col-xs-1">
+      <i class="glyphicon glyphicon-zoom-in"></i>
+    </div>
+
+    <div class="col-xs-10">
+      <input id="slider" type="range" min="1" max="200" value="1" style="width: 100px;" />
+    </div>
+
+    <div class="col-xs-1">
+      <i class="glyphicon glyphicon-zoom-out"></i>
+    </div>
+  </p>
+</div>
+<button class="collapsible btn btn-primary" >Subwords</button>
+<div class="content container">
+  <div class="jumbotron">
+    <h1>SubWords</h1>   
+    </div>         
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td><b>Utterance</b></td>
+          <td>मान ना मान मैं तेरा मेहमान</td>
+        </tr>
+        <tr>
+          <td><b>Transliteration</b></td>
+          <td>Maan na maan mai tera mehmaan</td>
+        <tr>
+          <td><b>Subword units</b></td>
+          <td>Maan na maan mai tera mehmaan</td>
+        </tr>
+      </tbody>
+    </table>
+<table>
+    <tbody>
+      <tr>
+    <td><div id="waveform_1" style="width: 500px; position: relative; left: 300px;"></div></td>
+    <td><button  style="position: relative; top: -60px; left: 400px;" class="btn btn-primary" onclick="wavesurfer_1.playPause()">
+        <i class="glyphicon glyphicon-play"></i>
+        Maan
+      </button></td>
+    </tr>
+    <tr>
+        <td><div id="waveform_2" style="width: 500px; position: relative; left: 300px;"></div></td>
+        <td><button style="position: relative;  top: -80px; left: 400px;" class="btn btn-primary" onclick="wavesurfer_2.playPause()">
+            <i class="glyphicon glyphicon-play"></i>
+            Na
+          </button></td>
+        </tr>
+  
+        <tr>
+            <td><div id="waveform_3" style="width: 500px; position: relative; left: 300px;"></div></td>
+            <td><button  style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_3.playPause()">
+                <i class="glyphicon glyphicon-play"></i>
+                Maan
+              </button></td>
+            </tr>
+            <tr>
+                <td><div id="waveform_4" style="width: 500px; position: relative; left: 300px;"></div></td>
+                <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_4.playPause()">
+                    <i class="glyphicon glyphicon-play"></i>
+                    Main
+                     </button></td>
+                </tr>
+                <tr>
+                    <td><div id="waveform_5" style="width: 500px; position: relative; left: 300px;"></div></td>
+                    <td><button  style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_5.playPause()">
+                        <i class="glyphicon glyphicon-play"></i>
+                        Tera
+                      </button></td>
+                    </tr>
+                    <tr>
+                        <td><div id="waveform_6" style="width: 500px; position: relative; left: 300px;"></div></td>
+                        <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_6.playPause()">
+                            <i class="glyphicon glyphicon-play"></i>
+                            Mehmaan
+                          </button></td>
+                        </tr>
+    
+  </tbody>
+  </table>
+  </div>
+<button class="collapsible btn btn-primary">Syllables</button>
+<div class="content">
+    <div class="content container">
+        <div class="jumbotron">
+          <h1>Syllables</h1>   
+          </div>         
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td><b>Utterance</b></td>
+                <td>मान ना मान मैं तेरा मेहमान</td>
+              </tr>
+              <tr>
+                <td><b>Transliteration</b></td>
+                <td>Maan na maan mai tera mehmaan</td>
+              <tr>
+                <td><b>Syllables</b></td>
+                <td>Maan na maan mai te ra meh maan</td>
+              </tr>
+            </tbody>
+          </table>
+      <table>
+          <tbody>
+            <tr>
+          <td><div id="waveform_7" style="width: 500px; position: relative; left: 300px;"></div></td>
+          <td><button  style="position: relative; top: 0px; left: 400px;" class="btn btn-primary" onclick="wavesurfer_7.playPause()">
+              <i class="glyphicon glyphicon-play"></i>
+              Maan
+            </button></td>
+          </tr>
+          <tr>
+              <td><div id="waveform_8" style="width: 500px; position: relative; left: 300px;"></div></td>
+              <td><button style="position: relative;  top: 0px; left: 400px;" class="btn btn-primary" onclick="wavesurfer_8.playPause()">
+                  <i class="glyphicon glyphicon-play"></i>
+                  Na
+                </button></td>
+              </tr>
+        
+              <tr>
+                  <td><div id="waveform_9" style="width: 500px; position: relative; left: 300px;"></div></td>
+                  <td><button  style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_9.playPause()">
+                      <i class="glyphicon glyphicon-play"></i>
+                      Maan
+                    </button></td>
+                  </tr>
+                  <tr>
+                      <td><div id="waveform_10" style="width: 500px; position: relative; left: 300px;"></div></td>
+                      <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_10.playPause()">
+                          <i class="glyphicon glyphicon-play"></i>
+                          Mai
+                        </button></td>
+                      </tr>
+                      <tr>
+                          <td><div id="waveform_11" style="width: 500px; position: relative; left: 300px;"></div></td>
+                          <td><button  style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_11.playPause()">
+                              <i class="glyphicon glyphicon-play"></i>
+                              Te
+                            </button></td>
+                          </tr>
+                          <tr>
+                              <td><div id="waveform_12" style="width: 500px; position: relative; left: 300px;"></div></td>
+                              <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_12.playPause()">
+                                  <i class="glyphicon glyphicon-play"></i>
+                                  ra
+                                </button></td>
+                              </tr>
+                              <tr>
+                                  <td><div id="waveform_13" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                  <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_13.playPause()">
+                                      <i class="glyphicon glyphicon-play"></i>
+                                      meh
+                                    </button></td>
+                                  </tr>  
+                                  <tr>
+                                      <td><div id="waveform_14" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                      <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_14.playPause()">
+                                          <i class="glyphicon glyphicon-play"></i>
+                                          maan
+                                        </button></td>
+                                      </tr>   
+                                       </tbody>
+        </table>
+        </div>
+</div>
+<button class="collapsible btn btn-primary">Phoneme</button>
+<div class="content">
+    <div class="content container">
+        <div class="jumbotron">
+          <h1>Phoneme</h1>   
+          </div>         
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td><b>Utterance</b></td>
+                <td>मान ना मान मैं तेरा मेहमान</td>
+              </tr>
+              <tr>
+                <td><b>Transliteration</b></td>
+                <td>Maan na maan mai tera mehmaan</td>
+              <tr>
+                <td><b>Phoneme</b></td>
+                <td>M aa n n a m aa n m a i t e r a m e h m aa n</td>
+              </tr>
+            </tbody>
+          </table>
+      <table>
+          <tbody>
+            <tr>
+          <td><div id="waveform_15" style="width: 500px; position: relative; left: 300px;"></div></td>
+          <td><button  style="position: relative;  left: 400px;" class="btn btn-primary" onclick="wavesurfer_15.playPause()">
+              <i class="glyphicon glyphicon-play"></i>
+              M
+            </button></td>
+          </tr>
+          <tr>
+              <td><div id="waveform_16" style="width: 500px; position: relative; left: 300px;"></div></td>
+              <td><button style="position: relative;  left: 400px;" class="btn btn-primary" onclick="wavesurfer_16.playPause()">
+                  <i class="glyphicon glyphicon-play"></i>
+                  aa
+                </button></td>
+              </tr>
+        
+              <tr>
+                  <td><div id="waveform_17" style="width: 500px; position: relative; left: 300px;"></div></td>
+                  <td><button  style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_17.playPause()">
+                      <i class="glyphicon glyphicon-play"></i>
+                      n
+                    </button></td>
+                  </tr>
+                  <tr>
+                      <td><div id="waveform_18" style="width: 500px; position: relative; left: 300px;"></div></td>
+                      <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_18.playPause()">
+                          <i class="glyphicon glyphicon-play"></i>
+                          n
+                        </button></td>
+                      </tr>
+                      <tr>
+                          <td><div id="waveform_19" style="width: 500px; position: relative; left: 300px;"></div></td>
+                          <td><button  style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_19.playPause()">
+                              <i class="glyphicon glyphicon-play"></i>
+                              a
+                            </button></td>
+                          </tr>
+                          <tr>
+                              <td><div id="waveform_20" style="width: 500px; position: relative; left: 300px;"></div></td>
+                              <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_31.playPause()">
+                                  <i class="glyphicon glyphicon-play"></i>
+                                  M
+                                </button></td>
+                              </tr>
+                              <tr>
+                                <td><div id="waveform_21" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_21.playPause()">
+                                <i class="glyphicon glyphicon-play"></i>
+                                aa
+                                </button></td>
+                              </tr> 
+                              <tr>
+                                  <td><div id="waveform_22" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                  <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_22.playPause()">
+                                  <i class="glyphicon glyphicon-play"></i>
+                                  n
+                                  </button></td>
+                                </tr> 
+                                <tr>
+                                    <td><div id="waveform_23" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                    <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_23.playPause()">
+                                    <i class="glyphicon glyphicon-play"></i>
+                                    M
+                                    </button></td>
+                                  </tr>    
+                                  <tr>
+                                      <td><div id="waveform_24" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                      <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_24.playPause()">
+                                      <i class="glyphicon glyphicon-play"></i>
+                                      ai
+                                      </button></td>
+                                    </tr>    
+                                    <tr>
+                                   <td><div id="waveform_25" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                        <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_25.playPause()">
+                                        <i class="glyphicon glyphicon-play"></i>
+                                        n
+                                        </button></td>
+                                      </tr>    
+                                      <td><div id="waveform_26" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                      <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_26.playPause()">
+                                      <i class="glyphicon glyphicon-play"></i>
+                                      t
+                                      </button></td>
+                                    </tr>    
+                                    <td><div id="waveform_27" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                    <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_27.playPause()">
+                                    <i class="glyphicon glyphicon-play"></i>
+                                    er
+                                    </button></td>
+                                  </tr>    
+                                  <td><div id="waveform_28" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                  <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_28.playPause()">
+                                  <i class="glyphicon glyphicon-play"></i>
+                                  a
+                                  </button></td>
+                                </tr> 
+                                  <td><div id="waveform_29" style="width: 500px; position: relative;  left: 300px;"></div></td>
+                                  <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_29.playPause()">
+                                  <i class="glyphicon glyphicon-play"></i>
+                                  M
+                                  </button></td>
+                                </tr> 
+                                  <td><div id="waveform_30" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                  <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_30.playPause()">
+                                  <i class="glyphicon glyphicon-play"></i>
+                                  eh
+                                  </button></td>
+                                </tr> 
+                                  <td><div id="waveform_31" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                  <td><button style="position: relative; left: 400px; top: -70px;" class="btn btn-primary" onclick="wavesurfer_31.playPause()">
+                                  <i class="glyphicon glyphicon-play"></i>
+                                  M
+                                  </button></td>
+                                </tr>    
+                                <td><div id="waveform_32" style="width: 500px; position: relative; left: 300px;"></div></td>
+                                <td><button style="position: relative; top: -80px; left: 400px;" class="btn btn-primary" onclick="wavesurfer_32.playPause()">
+                                <i class="glyphicon glyphicon-play"></i>
+                                aa
+                                </button></td>
+                              </tr>    
+                              <td><div id="waveform_33" style="width: 500px; position: relative; left: 300px;"></div></td>
+                              <td><button style="position: relative; left: 400px;" class="btn btn-primary" onclick="wavesurfer_33.playPause()">
+                              <i class="glyphicon glyphicon-play"></i>
+                              n
+                              </button></td>
+                            </tr>    
+            
+        </tbody>
+        </table>
+    </div>
+    </div>
+        
+        <button class="collapsible btn btn-primary">Translation</button>
+     <div class="content">
+    <div class="content container">
+        <div class="jumbotron">
+          <h1>Translation</h1>
+
+        </div>
+        <div class="row">
+        <table>
+<tr>
+  <td><b>
+    English</b>
+  </td>
+      
+<td style="position: relative; left:630px;"><b>Hindi</b>
+  
+</td>
+<td>
+  <input type="button" style="position: relative; right:45px;" class="btn btn-primary" id="btnTranslate" value="Translate" />
+</td>
+
+</tr>
+<tr>
+  <td colspan="2" rows="4">
+      <textarea id="txtSource" rows="5" cols="50"></textarea>
+  </td>
+  
+  <td colspan="2">
+      <textarea id="txtTarget" rows="5" cols="50"></textarea>
+  </td>
+  <td>
+  </td>
+</tr>
+<tr>
+  
+      <td colspan="2" rows="4">
+          <textarea id="txtSource" rows="10" cols="50" readonly>a aa i ii u uu rx rx~ e ei ai o oo au an: ah:ka kha ga gha ng~a
+cha chha ja jha nj~a
+t:a t:ha d:a d:ha nd~a
+ta tha da dha na
+pa pha ba bha ma
+ya ra la va
+sa sha shha ha l:a 
+ka kaa ki kii ku kuu krx krx~ ke kei kai ko koo kau kan: kah:
+      </textarea>
+        </td>
+        <td colspan="2" rows="4">
+            <textarea id="txtSource" rows="10" cols="50" readonly>अ आ इ ई उ ऊ ऋ ॠ ए ए ऐ ओ ओ औ अं अः 
+ 
+                क ख ग घ ङ 
+                च छ ज झ ञ 
+                ट ठ ड ढ ण 
+                त थ द ध न 
+                प फ ब भ म 
+                य र ल व 
+                स श ष ह ळ 
+                 
+                क का कि की कु कू कृ कॄ के के कै को को कौ कं कः 
+        </textarea>
+          </td>
+</tr>
+
+        </table>
+        </div>
+</div>
+</div>
+
+
+
+
+
+    <script src="./waveform.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+    
+     $("#btnTranslate").click(function (){
+      var text = document.getElementById("txtSource").value;
+    $.ajax({ 
+        url: "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190804T064408Z.c92c3ae5f6a48dd4.cce77243eae589eb6cc923432e9b3e7b280396cd&lang=hi&text=" +text,
+    }
+).done(function(data){
+  document.getElementById("txtTarget").value = data.text;
+})
+})
+      var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
+// adding and initialising a plugin after initialisation
+//    wavesurfer.addPlugin(WaveSurfer.timeline.create, {
+  //      container: '#wave-timeline',
+    //    waveColor: 'violet',
+      //  progressColor: 'purple'
+   // }).initPlugin('timeline')
+var wavesurfer = WaveSurfer.create({
+container: '#waveform',
+ waveColor: 'violet',
+  progressColor: 'purple' ,
+
+
+  });
+  
+ 
+
+// adding and initialising a plugin after initialisation
+   
+   wavesurfer.load('/slices/hindi.mp3');
+
+
+
+var wavesurfer_1 = WaveSurfer.create({
+  container: '#waveform_1',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+
+wavesurfer_1.load('/slices/maan1.wav');
+
+
+var wavesurfer_2 = WaveSurfer.create({
+  container: '#waveform_1',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_2.load('/slices/na.wav');
+var wavesurfer_3 = WaveSurfer.create({
+  container: '#waveform_3',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+
+wavesurfer_3.load('/slices/maan2.wav');
+
+
+var wavesurfer_4 = WaveSurfer.create({
+  container: '#waveform_4',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_4.load('/slices/main.wav');
+
+
+var wavesurfer_5 = WaveSurfer.create({
+  container: '#waveform_5',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+
+wavesurfer_5.load('/slices/Tera.wav');
+
+
+var wavesurfer_6 = WaveSurfer.create({
+  container: '#waveform_6',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_6.load('/slices/Mehmaan.wav');
+
+
+
+var wavesurfer_7 = WaveSurfer.create({
+  container: '#waveform_7',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+
+wavesurfer_7.load('/slices/maan1.wav');
+
+
+var wavesurfer_8 = WaveSurfer.create({
+  container: '#waveform_8',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_8.load('/slices/na.wav');
+
+var wavesurfer_9 = WaveSurfer.create({
+  container: '#waveform_9',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+
+wavesurfer_9.load('/slices/maan2.wav');
+
+
+var wavesurfer_10 = WaveSurfer.create({
+  container: '#waveform_10',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_10.load('/slices/main.wav');
+
+
+var wavesurfer_11 = WaveSurfer.create({
+  container: '#waveform_11',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+
+wavesurfer_11.load('/slices/Te.wav');
+
+
+var wavesurfer_12 = WaveSurfer.create({
+  container: '#waveform_12',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_12.load('/slices/ra.wav');
+
+
+var wavesurfer_13 = WaveSurfer.create({
+  container: '#waveform_13',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+wavesurfer_13.load('/slices/Meh.wav');
+
+
+var wavesurfer_14 = WaveSurfer.create({
+  container: '#waveform_14',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_14.load('/slices/maan.wav');
+
+var slider = document.querySelector('#slider');
+
+var wavesurfer_15 = WaveSurfer.create({
+  container: '#waveform_15',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_15.load('/slices/phones/maan1.wav');
+
+var wavesurfer_16 = WaveSurfer.create({
+  container: '#waveform_16',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_16.load('/slices/phones/maan2.wav');
+
+var wavesurfer_17 = WaveSurfer.create({
+  container: '#waveform_17',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_17.load('/slices/phones/maan3.wav');
+
+var wavesurfer_18 = WaveSurfer.create({
+  container: '#waveform_18',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_18.load('/slices/phones/na1.wav');
+var wavesurfer_19 = WaveSurfer.create({
+  container: '#waveform_19',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_19.load('/slices/phones/na2.wav');
+
+var wavesurfer_20 = WaveSurfer.create({
+  container: '#waveform_20',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_20.load('/slices/phones/na2.wav');
+
+var wavesurfer_21 = WaveSurfer.create({
+  container: '#waveform_21',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_21.load('/slices/phones/maan2.wav');
+
+var wavesurfer_22 = WaveSurfer.create({
+  container: '#waveform_22',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_22.load('/slices/phones/maan3.wav');
+
+var wavesurfer_23 = WaveSurfer.create({
+  container: '#waveform_23',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_23.load('/slices/phones/main1.wav');
+
+var wavesurfer_24 = WaveSurfer.create({
+  container: '#waveform_24',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_24.load('/slices/phones/main2.wav');
+
+var wavesurfer_25 = WaveSurfer.create({
+  container: '#waveform_25',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_25.load('/slices/phones/main3.wav');
+
+var wavesurfer_26 = WaveSurfer.create({
+  container: '#waveform_26',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_26.load('/slices/phones/tera1.wav');
+
+var wavesurfer_27 = WaveSurfer.create({
+  container: '#waveform_27',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_27.load('/slices/phones/tera2.wav');
+
+var wavesurfer_28 = WaveSurfer.create({
+  container: '#waveform_28',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_28.load('/slices/phones/tera3.wav');
+
+var wavesurfer_29 = WaveSurfer.create({
+  container: '#waveform_29',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_29.load('/slices/phones/Meh1.wav');
+
+var wavesurfer_30 = WaveSurfer.create({
+  container: '#waveform_30',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_30.load('/slices/phones/meh2.wav');
+
+var wavesurfer_31 = WaveSurfer.create({
+  container: '#waveform_31',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_31.load('/slices/phones/maan1.wav');
+
+var wavesurfer_32 = WaveSurfer.create({
+  container: '#waveform_31',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_32.load('/slices/phones/maan2.wav');
+
+var wavesurfer_33 = WaveSurfer.create({
+  container: '#waveform_33',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer_33.load('/slices/phones/maan3.wav');
+var slider = document.querySelector('#slider');
+
+slider.oninput = function () {
+  var zoomLevel = Number(slider.value);
+  wavesurfer.zoom(zoomLevel);
+};
+
+
+
+    
+    
+    </script>
+</body>
+</html>

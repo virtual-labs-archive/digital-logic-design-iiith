@@ -1,0 +1,258 @@
+{
+    "artciles": [
+        {
+            "quiztitle":"Quiz for Experiment BCD to seven segment display",
+            "containers":"5"
+        },
+        {
+            "q": "Which gate does X + Y represent?",
+            "option": [
+                "AND Gate",
+                "OR Gate",
+                "NOT Gate"
+            ],
+            "answer": "Option 2",
+            "description": "X + Y is represented by X + Y"
+        },
+        {
+            "q": "The output of an AND gate with three inputs, A, B, and C, is HIGH when ",
+            "option": [
+                "A = 1, B = 1, C = 0",
+                "A = 0, B = 0, C = 0",
+                "A = 1, B = 1, C = 1"
+            ],
+            "answer": "Option 3",
+            "description": "Explanation for Question 2"
+        },
+        {
+            "q": "If a signal passing through a gate is inhibited by sending a LOW into one of the inputs  and the output is HIGH  the gate is a(n)",
+            "option": [
+                "AND",
+                "NAND",
+                "NOR"
+            ],
+            "answer": "Option 2",
+            "description": "NAND is !(X.Y)"
+        },
+        {
+            "q": "The output of a NOT gate is HIGH when",
+            "option": [
+                "the input is LOW",
+                "the input is HIGH",
+                "power is applied to the gate's IC"
+            ],
+            "answer": "Option 1",
+            "description": "NOT gives complement of input signal"
+        },
+        {
+            "q": "Which of the following logical operations is represented by the + sign in Boolean algebra?",
+            "option": [
+                "inversion",
+                "AND",
+                "OR"
+            ],
+            "answer": "Option 3",
+            "description": "OR Gate is X + Y"
+        },
+        {
+            "q": "The output of a NOR gate is HIGH if ",
+            "option": [
+                "all inputs are HIGH",
+                "any input is LOW",
+                "all inputs are LOW"
+            ],
+            "answer": "Option 3",
+            "description": "logic gates based question"
+        },
+        {
+            "q": "If the input to a NOT gate is A and the output is X, then",
+            "option": [
+                "X = A",
+                "X = !A",
+                "X = 0"
+            ],
+            "answer": "Option 2",
+            "description": "logic gates based question"
+        },
+        {
+            "q": "Which of the segments on a 7 segment LED display need to be illuminated to display the decimal number 4?",
+            "option": [
+                "a) Segments b, c, f, g",
+                "b) Segments a, f, b, c",
+                "c) Segments a, f, e, c"
+            ],
+            "answer": "Option a",
+            "description": "As described in documentation"
+        },
+        {
+            "q": "The output of an XOR gate is HIGH only when ",
+            "option": [
+                "both inputs = 0",
+                "both inputs = 1",
+                "the two inputs are unequal"
+            ],
+            "answer": "Option 3",
+            "description": "XOR gate is based on this concept"
+        },
+        {
+            "q": "The format used to present the logic output for the various combinations of logic inputs to a gate is called a(n):",
+            "option": [
+                "Boolean constant",
+                "Boolean variable",
+                "truth table"
+            ],
+            "answer": "Option 3",
+            "description": "Based on Concept"
+        },
+        {
+            "q": "If a 3-input AND gate has eight input possibilities, how many of those possibilities will result in a HIGH output?",
+            "option": [
+                "1",
+                "2",
+                "&"
+            ],
+            "answer": "Option 1",
+            "description": "Output will be 1 1 and 1 only once"
+        },
+        {
+            "q": "The Boolean expression for a 3-input AND gate is",
+            "option": [
+                "X = AB",
+                "X = ABC",
+                "X = A + B + C"
+            ],
+            "answer": "Option 2",
+            "description": "three inputs will give ABC"
+        },
+        {
+            "q": "If A is LOW or B is LOW or BOTH are LOW, then X is LOW. If A is HIGH and B is HIGH, then X is HIGH. These rules specify the operation of a(n)",
+            "option": [
+                "AND Gate",
+                "OR Gate",
+                "NAND Gate"
+            ],
+            "answer": "Option 1",
+            "description": "Based on logic gates concept"
+        },
+        {
+            "q": "The number of input combinations for a 4-input gate is",
+            "option": [
+                "4",
+                "8",
+                "16"
+            ],
+            "answer": "Option 3",
+            "description": "1 input will have 2 possible outputs 1 0r 0 so 2^4 = 16"
+        },
+        {
+            "q": "LED seven-segment display uses seven individual",
+            "option": [
+                "light emitting diodes",
+                "light restoring diodes",
+                "Capacitors"
+            ],
+            "answer": "Option 1",
+            "description": "LED is Light emitting diode"
+        },
+        {
+            "q": "Input bits 0-7 are represented by",
+            "option": [
+                "eight linear expression",
+                "seven linear expression",
+                "eight Boolean expression"
+            ],
+            "answer": "Option 3",
+            "description": "Input bits can have only two values i.e one or zero"
+        },
+        {
+            "q": "4 to 1 mux would have",
+            "option": [
+                "2 inputs",
+                "3 inputs",
+                "4 inputs"
+            ],
+            "answer": "Option 3",
+            "description": "Based on mux concept"
+        },
+        {
+            "q": "A multiplexer is also called as a",
+            "option": [
+                "Data selector",
+                "parallel adder",
+                "Coder"
+            ],
+            "answer": "Option 3",
+            "description": "Multiplexer has n lines called select lines and takes 2^n input to select a single output "
+        },
+        {
+            "q": "Multiplexing means transmitting a large number of information units over",
+            "option": [
+                "1 channel",
+                "1 line",
+                "both a and b"
+            ],
+            "answer": "Option 3",
+            "description": "Based on multiplexer concept"
+        },
+        {
+            "q": "When does the output of a NOR gate = 0?",
+            "option": [
+                "Whenever a 0 is present at an input",
+                "Only when all inputs = 0",
+                "Whenever a 1 is present at an input"
+            ],
+            "answer": "Option 3",
+            "description": "Based on logic gate concept"
+        },
+        {
+            "q": "A device which converts BCD to seven segment is called",
+            "option": [
+                "encoder",
+                "decoder",
+                "multiplexer"
+            ],
+            "answer": "Option 2",
+            "description": "Conceptual question"
+        },
+        {
+            "q": "BCD input 1000 is fed to a 7 segment display through a BCD to 7 segment decoder/driver. The segments which will lit up are",
+            "option": [
+                "a, b, d",
+                "a, b, c",
+                "all"
+            ],
+            "answer": "Option 3",
+            "description": "1000 is binary equivalent of 8 so all segments are required to be lit up"
+        },
+        {
+            "q": "The number of digits in octal system is",
+            "option": [
+                "8",
+                "7",
+                "9"
+            ],
+            "answer": "Option 1",
+            "description": "Based on concept"
+        },
+        {
+            "q": "The number of switching functions of 3 variables are",
+            "option": [
+                "3",
+                "8",
+                "16"
+            ],
+            "answer": "Option 2",
+            "description": "2^3 is 8"
+        },
+        {
+            "q": "In a 4 input OR gate, the total number of High outputs for the 16 input states are",
+            "option": [
+                "16",
+                "15",
+                "14"
+            ],
+            "answer": "Option 2",
+            "description": "OR gate gives high output when one or more inputs are high"
+        }
+    ]
+}
